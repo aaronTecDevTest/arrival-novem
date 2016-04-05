@@ -488,3 +488,18 @@
 2016-04-05 17:50:54,460 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:45) - Main view show up!!
 2016-04-05 17:51:17,401 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - Main view show down!!
 2016-04-05 17:51:17,403 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:33) - Stop -- Mexxon - ImportExportTool
+2016-04-06 00:20:40,019 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:38) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-06 00:20:40,024 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-06 00:20:40,030 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:45) - Main view show up!!
+2016-04-06 00:22:03,265 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - Main view show down!!
+2016-04-06 00:22:03,266 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:33) - Stop -- Mexxon - ImportExportTool
+2016-04-06 01:25:27,052 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:38) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-06 01:25:27,065 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-06 01:25:27,076 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:45) - Main view show up!!
+2016-04-06 01:25:50,905 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - Main view show down!!
+2016-04-06 01:25:50,906 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:33) - Stop -- Mexxon - ImportExportTool
+2016-04-06 01:27:16,090 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:38) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-06 01:27:16,097 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-06 01:27:16,103 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:45) - Main view show up!!
+2016-04-06 01:27:43,531 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:47) - Main view show down!!
+2016-04-06 01:27:43,531 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:33) - Stop -- Mexxon - ImportExportTool
