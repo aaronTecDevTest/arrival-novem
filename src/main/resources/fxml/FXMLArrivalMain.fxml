@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root prefHeight="700.0" prefWidth="1300.0" type="VBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
+
+    <children>
+        <MenuBar VBox.vgrow="ALWAYS">
+            <menus>
+                <Menu fx:id="mnuFile" mnemonicParsing="false" text="\%menu.title.file">
+                    <items>
+                        <MenuItem fx:id="mnuNew" mnemonicParsing="false" text="\%menu.title.login" />
+                        <MenuItem fx:id="mnuOpen" mnemonicParsing="false" text="\%menu.title.exit" />
+                    </items>
+                </Menu>
+                <Menu fx:id="mnuHelp" mnemonicParsing="false" text="\%menu.title.help">
+                    <items>
+                        <MenuItem fx:id="mnuAbout" mnemonicParsing="false" text="\%menu.title.about" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <BorderPane VBox.vgrow="ALWAYS">
+            <top>
+                <ToolBar>
+                    <items>
+                        <Button fx:id="btnExit" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Exit">
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                            </padding>
+                            <tooltip>
+                                <Tooltip text="\%toolbar.exit" />
+                            </tooltip>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                        <Button fx:id="btnAllStates" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="All States" textAlignment="CENTER">
+                            <padding>
+                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                            </padding>
+                            <tooltip>
+                                <Tooltip text="\\%toolbar.help" />
+                            </tooltip>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                            </graphic>
+                        </Button>
+                        <Pane prefHeight="34.0" prefWidth="1174.0" />
+                  <Button fx:id="btnLogInOut" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="LogInOut" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\\%toolbar.help" />
+                     </tooltip>
+                  </Button>
+                    </items>
+                </ToolBar>
+            </top>
+         <center>
+            <SplitPane dividerPositions="0.6878130217028381" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
+              <items>
+                  <TableView prefHeight="242.0" prefWidth="1298.0">
+                    <columns>
+                      <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                      <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C2" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
+                    </columns>
+                  </TableView>
+                <AnchorPane>
+                     <children>
+                        <Button fx:id="btnReset" layoutX="558.0" layoutY="150.0" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Open Testsuite">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <tooltip>
+                              <Tooltip text="\%toolbar.openTestsuite" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="btnStop" layoutX="725.0" layoutY="150.0" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Open Testsuite">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <tooltip>
+                              <Tooltip text="\%toolbar.openTestsuite" />
+                           </tooltip>
+                        </Button>
+                        <Button fx:id="btnRun" layoutX="475.0" layoutY="150.0" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Open Testsuite">
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <padding>
+                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                           </padding>
+                           <tooltip>
+                              <Tooltip text="\%toolbar.openTestsuite" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+        </BorderPane>
+        <HBox fillHeight="false" maxHeight="30.0" prefHeight="30.0" VBox.vgrow="ALWAYS">
+            <children>
+                <Pane prefHeight="30.0" HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+    </children>
+</fx:root>

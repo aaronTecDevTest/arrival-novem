@@ -1,11 +1,10 @@
 package com.mexxon;
 
-import com.mexxon.notification.EMail;
-import com.mexxon.scheduler.SchedulerController;
-
+import com.mexxon.utilities.SystemPreferences;
+import com.mexxon.windows.view.ViewArrivalMainApp;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.quartz.SchedulerException;
+
 
 /**
  * @author: Aaron Kutekidila
@@ -17,27 +16,18 @@ import org.quartz.SchedulerException;
 
 public class ArrivalNovemMain {
     private static final Logger log = LogManager.getLogger(ArrivalNovemMain.class);
-
-    public ArrivalNovemMain() {
-    }
+    public ViewArrivalMainApp mainView;
 
     public static void main(String[] args) {
-        log.info("Main: ArrvalNovem is run!!");
-        /*
-        SchedulerController schedulerController = new SchedulerController();
-        try {
-            schedulerController.iniJob();
-        } catch (InterruptedException e) {
-            log.error("InterruptedException: " + e.getMessage());
-        } catch (SchedulerException e) {
-            log.error("SchedulerException: " + e.getMessage());
-        }*/
+        SystemPreferences.getInstance();
+        ArrivalNovemMain app = new ArrivalNovemMain();
+        app.runLogIn();
+    }
 
-        EMail eMail = new EMail();
-        if(eMail.sendEmail())
-            log.info("Email success");
-        else
-            log.info("Email fail");
-
+    public void runLogIn() {
+        log.info("Start -- Mexxon - ImportExportTool");
+        mainView = new ViewArrivalMainApp();
+        mainView.run();
+        log.info("Stop -- Mexxon - ImportExportTool");
     }
 }

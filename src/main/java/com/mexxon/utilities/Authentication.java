@@ -13,12 +13,15 @@ import org.apache.logging.log4j.Logger;
 
 public class Authentication {
     private static final Logger log = LogManager.getLogger(Authentication.class);
+
+
     private String username;
     private String userpassword;
 
 
 
     public Authentication() {
+
     }
 
     public void enterLogin(){

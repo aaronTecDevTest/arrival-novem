@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mexxon.windows.controller.FXMLArrivalLogInController">
+    <children>
+        <Pane style="-fx-background-color: grey;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="20.0">
+            <children>
+            <VBox layoutX="38.0" layoutY="4.0">
+               <children>
+                      <PasswordField fx:id="pwfPassword" focusTraversable="false" prefHeight="32.0" prefWidth="290.0" promptText="Password" />
+                      <TextField fx:id="txfUsername" focusTraversable="false" prefHeight="32.0" prefWidth="290.0" promptText="Username/E-Mail-Adresse">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TextField>
+                      <Label fx:id="lblFailLogIn" focusTraversable="false" prefHeight="53.0" prefWidth="290.0" text="Username or Password is wrong. Please change your login and try again." textFill="#863f3fbd" visible="false" wrapText="true">
+                          <font>
+                              <Font name="Calibri Bold" size="12.0" />
+                          </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                      </Label>
+                      <Button fx:id="btnLogIn" mnemonicParsing="false" onAction="#clickLogIn" prefHeight="32.0" prefWidth="290.0" text="LogIn">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </Pane>
+    </children>
+</AnchorPane>

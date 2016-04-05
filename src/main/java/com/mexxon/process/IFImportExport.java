@@ -1,4 +1,4 @@
-package com.mexxon.controller;
+package com.mexxon.process;
 
 /**
  * @author: Aaron Kutekidila
@@ -11,6 +11,11 @@ package com.mexxon.controller;
 public interface IFImportExport {
 
     void importFromCSV();
-
     void exportToCSV();
+
+    void readCSV();
+    void writeCSV();
+
+    void readDB();
+    void writeDB();
 }
