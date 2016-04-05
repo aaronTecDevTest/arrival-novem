@@ -27,7 +27,7 @@
         </MenuBar>
         <BorderPane VBox.vgrow="ALWAYS">
             <top>
-                <ToolBar>
+                <ToolBar prefHeight="44.0" prefWidth="1159.0">
                     <items>
                         <Button fx:id="btnExit" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Exit">
                             <opaqueInsets>
@@ -43,6 +43,36 @@
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
                             </graphic>
                         </Button>
+                  <Separator orientation="VERTICAL" prefHeight="34.0" prefWidth="29.0" />
+                  <Button fx:id="btnExit11" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Exit">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.exit" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnExit1" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Exit">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.exit" />
+                     </tooltip>
+                  </Button>
+                  <Separator orientation="VERTICAL" prefHeight="34.0" prefWidth="29.0" />
                         <Button fx:id="btnAllStates" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="All States" textAlignment="CENTER">
                             <padding>
                                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
@@ -54,7 +84,7 @@
                                 <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
                             </graphic>
                         </Button>
-                        <Pane prefHeight="34.0" prefWidth="1174.0" />
+                        <Pane prefHeight="34.0" prefWidth="1028.0" />
                   <Button fx:id="btnLogInOut" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showLogInOut" prefHeight="34.0" prefWidth="34.0" text="LogInOut" textAlignment="CENTER">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
