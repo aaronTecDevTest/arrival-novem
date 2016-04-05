@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Configuration>
+    <Properties>
+        <Property name='projectPrefix'>arrivalNovemLogger</Property>
+        <Property name='rawPattern'>%d %-5p [%t] %C{2} (%F:%L) - %m%n</Property>
+
+        <Property name='coloredFullPattern'>%d %highlight{%-5p}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=cyan,
+            DEBUG=green, TRACE=bright blue} %style{[%t] %C{2} (%F:%L) -}{black,blue} %m%n
+        </Property>
+
+        <Property name='coloredMediumPattern'>%d %highlight{%-5p}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=cyan,
+            DEBUG=green, TRACE=bright blue} %style{[%t] (%F:%L) -}{black,blue} %m%n
+        </Property>
+
+        <Property name='coloredShortPattern'>%d %highlight{%-5p}{FATAL=bright red, ERROR=red, WARN=yellow, INFO=cyan,
+            DEBUG=green, TRACE=bright blue} %style{[%t] -}{bright,blue} %m%n
+        </Property>
+
+        <Property name='fileName'>src/main/resources/log/${projectPrefix}.log</Property>
+        <Property name='filePattern'>src/main/resources/log/${projectPrefix}-%i.log</Property>
+    </Properties>
+    <Appenders>
+        <Console name='Stdout' target='SYSTEM_OUT'>
+            <!--PatternLayout pattern='${coloredFullPattern}'/-->
+            <PatternLayout pattern='${coloredMediumPattern}'/>
+            <!--PatternLayout pattern='${coloredShortPattern}'/-->
+            <!--PatternLayout pattern='${rawPattern}'/-->
+        </Console>
+        <RollingFile name='Logfile' fileName='${fileName}' filePattern='${filePattern}'>
+            <PatternLayout pattern='${rawPattern}'/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size='16 MB'/>
+            </Policies>
+            <DefaultRolloverStrategy fileIndex='min' max='16'/>
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name='com.arrival.com.mexxon.utilities.log' level='debug'/>
+        <Root level='trace'>
+            <AppenderRef ref='Stdout'/>
+            <AppenderRef ref='Logfile'/>
+        </Root>
+    </Loggers>
+</Configuration>
