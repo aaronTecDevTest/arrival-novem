@@ -25,9 +25,6 @@ public class ViewArrivalMainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        log.info("Main view show up!!");
-        SystemPreferences.getInstance();
-
         SystemPreferences.getInstance();
 
         URL urlMain = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
@@ -42,10 +39,11 @@ public class ViewArrivalMainApp extends Application {
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
 
         primaryStage.show();
-        log.info("Main view show down!!");
     }
 
     public void run() {
+        log.info("Main view show up!!");
         launch();
+        log.info("Main view show down!!");
     }
 }

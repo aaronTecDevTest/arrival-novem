@@ -36,8 +36,6 @@ public class ViewArrivalLogIn extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        log.info("LogIn show up");
-
         SystemPreferences.getInstance();
         url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
         applicationIcon = getClass().getResource("/icon/appIcons.png");
@@ -48,16 +46,15 @@ public class ViewArrivalLogIn extends Application {
         scene.getStylesheets().add("/css/arrivalLogIn.css");
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Mexxon - LogIn");
+        primaryStage.setTitle("Maxxon: ImportExportTool - LogInOut");
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
 
         primaryStage.setResizable(false);
         primaryStage.show();
-
-
     }
 
     public void run() {
+        log.info("LogIn show up");
         launch();
         log.info("LogIn show down");
     }

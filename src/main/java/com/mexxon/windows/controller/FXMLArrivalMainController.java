@@ -62,18 +62,18 @@ public class FXMLArrivalMainController implements Initializable {
     public void showLogInOut(ActionEvent actionEvent) {
         try {
 
-            URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
+            URL url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
 
             Parent root = loader.load();
-            Scene mainAppScene = new Scene(root, 1300, 530);
+            Scene mainAppScene = new Scene(root); //1300, 530);
             Stage mainAppStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
             mainAppScene.getStylesheets().add("/css/arrivalLogIn.css");
 
-            mainAppStage.hide();
+            //mainAppStage.hide();
             mainAppStage.setScene(mainAppScene);
-            mainAppStage.setTitle("Main - ArrivalOcto");
+            mainAppStage.setTitle("");
             mainAppStage.setResizable(true);
             mainAppStage.show();
 

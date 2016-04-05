@@ -55,7 +55,25 @@ public class FXMLArrivalLogInController implements Initializable {
     @FXML
     public void clickLogIn(ActionEvent actionEvent) {
         lblFailLogIn.setVisible(! lblFailLogIn.isVisible());
+        try {
+            URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
+            FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
 
+            Parent root = loader.load();
+            Scene mainAppScene = new Scene(root,1300, 530);
+            Stage mainAppStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+
+            mainAppScene.getStylesheets().add("/css/arrivalMain.css");
+
+            //mainAppStage.hide();
+            mainAppStage.setScene(mainAppScene);
+            mainAppStage.setTitle("");
+            mainAppStage.setResizable(true);
+            mainAppStage.show();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
