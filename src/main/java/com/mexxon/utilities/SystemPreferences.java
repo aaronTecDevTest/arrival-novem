@@ -29,6 +29,7 @@ public class SystemPreferences {
     private static String osData;
 
     private static ResourceBundle bundleArrivalMain;
+    private static ResourceBundle bundleArrivalLogIn;
     private static ResourceBundle bundleConfig;
     private static ResourceBundle bundleSQL;
 
@@ -97,6 +98,7 @@ public class SystemPreferences {
     private void setUpResourceBundle() {
         try {
             bundleArrivalMain = loadBundle("bundles/arrivalMain.properties");
+            bundleArrivalLogIn = loadBundle("bundles/arrivalLogIn.properties");
             bundleConfig = loadBundle("bundles/config.properties");
             bundleSQL = loadBundle("bundles/sql.properties");
         } catch (Exception e) {
@@ -123,6 +125,8 @@ public class SystemPreferences {
             return bundleSQL;
         } else if (bundleName.equals("arrivalMain")) {
             return bundleArrivalMain;
+        } else if (bundleName.equals("arrivalLogIn")) {
+            return bundleArrivalLogIn;
         } else {
             return null;
         }
@@ -153,7 +157,7 @@ public class SystemPreferences {
         return osName + " " + osCountry + " " + osLanguage;
     }
 
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         System.out.println(SystemPreferences.getResourceBundle("arrivalMain"));
-    }
+    }*/
 }

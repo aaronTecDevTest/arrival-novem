@@ -36,7 +36,8 @@ public class ViewArrivalLogIn extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        log.info("Start App with LogIn");
+        log.info("LogIn show up");
+
         SystemPreferences.getInstance();
         url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
         applicationIcon = getClass().getResource("/icon/appIcons.png");
@@ -52,10 +53,12 @@ public class ViewArrivalLogIn extends Application {
 
         primaryStage.setResizable(false);
         primaryStage.show();
-        log.info("LogIn show up");
+
+
     }
 
     public void run() {
         launch();
+        log.info("LogIn show down");
     }
 }

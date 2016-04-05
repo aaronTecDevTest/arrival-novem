@@ -32,8 +32,6 @@ public class FXMLArrivalLogInController implements Initializable {
     @FXML
     private Button btnLogIn;
     @FXML
-    private Button btnSignIn;
-    @FXML
     private Label lblFailLogIn;
     @FXML
     private TextField txfUsername;
@@ -57,35 +55,11 @@ public class FXMLArrivalLogInController implements Initializable {
     @FXML
     public void clickLogIn(ActionEvent actionEvent) {
         lblFailLogIn.setVisible(! lblFailLogIn.isVisible());
-      /*  try {
 
-            URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
-            FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
-
-            Parent root = loader.load();
-            Scene mainAppScene = new Scene(root, 1300, 530);
-            Stage mainAppStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-
-            mainAppScene.getStylesheets().add("/css/arrivalMain.css");
-
-            mainAppStage.hide();
-            mainAppStage.setScene(mainAppScene);
-            mainAppStage.setTitle("Main - ArrivalOcto");
-            mainAppStage.setResizable(true);
-            mainAppStage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
     }
 
     @FXML
-    public void clickSignIn(ActionEvent actionEvent) {
+    public void clickSignInOut(ActionEvent actionEvent) {
         log.info("Sign In");
-    }
-
-    @FXML
-    public void clickLogInWithoutSignIn(ActionEvent actionEvent) {
-        log.info("Log in without Sign");
     }
 }

@@ -14,20 +14,22 @@ import org.apache.logging.log4j.Logger;
  * Package: main
  */
 
-public class ArrivalNovemMain {
-    private static final Logger log = LogManager.getLogger(ArrivalNovemMain.class);
+public class ImportExportMain {
+    private static final Logger log = LogManager.getLogger(ImportExportMain.class);
     public ViewArrivalMainApp mainView;
 
     public static void main(String[] args) {
         SystemPreferences.getInstance();
-        ArrivalNovemMain app = new ArrivalNovemMain();
+        ImportExportMain app = new ImportExportMain();
         app.runLogIn();
     }
 
     public void runLogIn() {
         log.info("Start -- Mexxon - ImportExportTool");
-        mainView = new ViewArrivalMainApp();
-        mainView.run();
+        {
+            mainView = new ViewArrivalMainApp();
+            mainView.run();
+        }
         log.info("Stop -- Mexxon - ImportExportTool");
     }
 }

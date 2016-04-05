@@ -23,30 +23,26 @@ import java.net.URL;
 public class ViewArrivalMainApp extends Application {
     private static final Logger log = LogManager.getLogger(ViewArrivalMainApp.class);
 
-    private FXMLLoader loader;
-    private Parent root;
-    private URL urlMain;
-    private URL applicationIcon;
-
     @Override
     public void start(Stage primaryStage) throws IOException {
-        log.info("Start MainApp!!");
+        log.info("Main view show up!!");
         SystemPreferences.getInstance();
 
-        urlMain = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
-        applicationIcon = getClass().getResource("/icon/appIcons.png");
-        loader = FXMLLoader.load(urlMain, SystemPreferences.getResourceBundle("arrivalMain"));
-        root = loader.load();
+        SystemPreferences.getInstance();
+
+        URL urlMain = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
+        URL applicationIcon = getClass().getResource("/icon/appIcons.png");
+        Parent root = FXMLLoader.load(urlMain, SystemPreferences.getResourceBundle("arrivalMain"));
 
         Scene scene = new Scene(root, 1300, 530);
         scene.getStylesheets().add("/css/arrivalMain.css");
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Mexxon - ImportExportTool");
+        primaryStage.setTitle("Maxxon: ImportExportTool");
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
 
         primaryStage.show();
-        log.info("MainApp show up!!");
+        log.info("Main view show down!!");
     }
 
     public void run() {

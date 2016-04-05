@@ -406,3 +406,50 @@
 2016-04-05 16:37:35,274 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
 2016-04-05 16:37:35,278 INFO  [main] mexxon.ArrivalNovemMain (ArrivalNovemMain.java:28) - Start -- Mexxon - ImportExportTool
 2016-04-05 16:37:35,415 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 16:44:56,435 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 16:44:56,443 INFO  [main] mexxon.ArrivalNovemMain (ArrivalNovemMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-05 16:44:56,742 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 16:45:20,360 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 16:45:20,375 INFO  [main] mexxon.ArrivalNovemMain (ArrivalNovemMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-05 16:45:20,566 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 16:52:54,006 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 16:52:54,020 INFO  [main] mexxon.ArrivalNovemMain (ArrivalNovemMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-05 16:52:54,331 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 16:53:39,367 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 16:53:39,382 INFO  [main] mexxon.ArrivalNovemMain (ArrivalNovemMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-05 16:53:39,569 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 16:55:52,506 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 16:55:52,519 INFO  [main] mexxon.ArrivalNovemMain (ArrivalNovemMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-05 16:55:52,688 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 16:58:26,002 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 16:58:26,006 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 16:58:30,572 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 16:58:30,583 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 16:59:43,362 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 16:59:43,369 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:04:36,833 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 17:04:36,837 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:05:06,377 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 17:05:06,381 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:05:35,488 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Start MainApp!!
+2016-04-05 17:05:35,500 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:11:32,315 INFO  [JavaFX Application Thread] view.ViewArrivalLogIn (ViewArrivalLogIn.java:39) - Start App with LogIn
+2016-04-05 17:11:32,320 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:11:33,504 INFO  [JavaFX Application Thread] view.ViewArrivalLogIn (ViewArrivalLogIn.java:55) - LogIn show up
+2016-04-05 17:12:33,749 INFO  [JavaFX Application Thread] view.ViewArrivalLogIn (ViewArrivalLogIn.java:39) - LogIn show up
+2016-04-05 17:12:33,756 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:12:34,514 INFO  [JavaFX Application Thread] view.ViewArrivalLogIn (ViewArrivalLogIn.java:55) - LogIn show down
+2016-04-05 17:13:06,925 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Main view show up!!
+2016-04-05 17:13:06,929 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:21:11,012 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:33) - Main view show up!!
+2016-04-05 17:21:11,016 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:37) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:21:11,728 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:50) - Main view show down!!
+2016-04-05 17:34:24,486 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:38) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:34:24,500 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-05 17:34:24,649 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:28) - Main view show up!!
+2016-04-05 17:34:25,515 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:45) - Main view show down!!
+2016-04-05 17:37:06,422 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:38) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-05 17:37:06,435 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:28) - Start -- Mexxon - ImportExportTool
+2016-04-05 17:37:06,632 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:28) - Main view show up!!
+2016-04-05 17:37:07,326 INFO  [JavaFX Application Thread] view.ViewArrivalMainApp (ViewArrivalMainApp.java:45) - Main view show down!!
+2016-04-05 17:37:18,071 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:33) - Stop -- Mexxon - ImportExportTool

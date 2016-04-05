@@ -7,7 +7,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<fx:root prefHeight="700.0" prefWidth="1300.0" type="VBox" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
+<VBox prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
 
     <children>
         <MenuBar VBox.vgrow="ALWAYS">
@@ -55,7 +55,7 @@
                             </graphic>
                         </Button>
                         <Pane prefHeight="34.0" prefWidth="1174.0" />
-                  <Button fx:id="btnLogInOut" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="LogInOut" textAlignment="CENTER">
+                  <Button fx:id="btnLogInOut" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showLogInOut" prefHeight="34.0" prefWidth="34.0" text="LogInOut" textAlignment="CENTER">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
                      </graphic>
@@ -138,11 +138,13 @@
               </items>
             </SplitPane>
          </center>
+         <bottom>
+              <HBox fillHeight="false" maxHeight="30.0" prefHeight="30.0" BorderPane.alignment="CENTER">
+                  <children>
+                      <Pane prefHeight="30.0" HBox.hgrow="ALWAYS" />
+                  </children>
+              </HBox>
+         </bottom>
         </BorderPane>
-        <HBox fillHeight="false" maxHeight="30.0" prefHeight="30.0" VBox.vgrow="ALWAYS">
-            <children>
-                <Pane prefHeight="30.0" HBox.hgrow="ALWAYS" />
-            </children>
-        </HBox>
     </children>
-</fx:root>
+</VBox>
