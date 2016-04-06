@@ -24,27 +24,28 @@ public class CSVImportProcess {
 
     public void readCSV() {
         try {
-            CSVReader reader = new CSVReader(new FileReader("upload.csv"), ',');
+            CSVReader reader = new CSVReader(new FileReader("/testingData/fileToImport.csv"), ',');
             Connection connection = DBConnection.getConnection();
 
             String insertQuery = "Insert into txn_tbl (txn_id,txn_amount, card_number, terminal_id) values (null,?,?,?)";
-            PreparedStatement pstmt = connection.prepareStatement(insertQuery);
+            PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
+
             String[] rowData = null;
             int i = 0;
             while ((rowData = reader.readNext()) != null) {
                 for (String data : rowData) {
-                    pstmt.setString((i % 3) + 1, data);
+                    preparedStatement.setString((i % 3) + 1, data);
 
                     if (++i % 3 == 0)
-                        pstmt.addBatch();// add batch
+                        preparedStatement.addBatch();// add batch
 
                     if (i % 30 == 0)// insert when the batch size is 10
-                        pstmt.executeBatch();
+                        preparedStatement.executeBatch();
                 }
             }
-            System.out.println("Data Successfully Uploaded");
+            log.info("Data Successfully import!");
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getStackTrace());
         }
 
     }
@@ -56,11 +57,11 @@ public class CSVImportProcess {
                     + "' INTO TABLE txn_tbl FIELDS TERMINATED BY ','"
                     + " LINES TERMINATED BY '\n' (txn_amount, card_number, terminal_id) ";
 
-            System.out.println(loadQuery);
+            log.info(loadQuery);
             Statement stmt = connection.createStatement();
             stmt.execute(loadQuery);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.error(e.getStackTrace());
         }
     }
 

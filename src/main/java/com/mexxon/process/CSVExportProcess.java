@@ -11,6 +11,8 @@ import org.apache.logging.log4j.Logger;
  * Package: com.mexxon.controller
  */
 
+//http://www.java-tips.org/other-api-tips-100035/69-jdbc/354-import-data-from-txt-or-csv-files-into-mysql-database-tables.html
+
 public class CSVExportProcess implements IFImportExport{
     private static final Logger log = LogManager.getLogger(CSVExportProcess.class);
 
