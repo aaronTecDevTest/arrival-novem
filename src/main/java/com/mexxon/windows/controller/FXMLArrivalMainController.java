@@ -39,6 +39,10 @@ public class FXMLArrivalMainController implements Initializable {
     private Button btnRun;
     @FXML
     private Button btnStop;
+    @FXML
+    private Button btnUpdate;
+    @FXML
+    private Button btnLoadConfig;
 
     /**
      * @param bundle For Internationalization
@@ -74,7 +78,8 @@ public class FXMLArrivalMainController implements Initializable {
             //mainAppStage.hide();
             mainAppStage.setScene(mainAppScene);
             mainAppStage.setTitle("");
-            mainAppStage.setResizable(true);
+            mainAppStage.setResizable(false);
+
             mainAppStage.show();
 
         } catch (IOException e) {

@@ -1,27 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
+<VBox prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
 
     <children>
-        <MenuBar VBox.vgrow="ALWAYS">
+        <MenuBar VBox.vgrow="NEVER">
             <menus>
                 <Menu fx:id="mnuFile" mnemonicParsing="false" text="\%menu.title.file">
                     <items>
@@ -36,10 +24,246 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <BorderPane VBox.vgrow="ALWAYS">
-            <top>
-                <ToolBar prefHeight="44.0" prefWidth="1159.0">
+      <BorderPane prefHeight="700.0">
+         <center>
+            <TableView BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobID" />
+                <TableColumn maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobTyp" />
+                  <TableColumn maxWidth="600.0" minWidth="205.0" prefWidth="-1.0" text="ImportFilePath" />
+                  <TableColumn maxWidth="600.0" minWidth="205.0" prefWidth="-1.0" text="ExportTableName" />
+                  <TableColumn maxWidth="600.0" minWidth="205.0" prefWidth="-1.0" text="ImportTableName" />
+                  <TableColumn maxWidth="600.0" minWidth="205.0" prefWidth="-1.0" text="ExportFilePath" />
+                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="StartTime" />
+                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="EndTime" />
+                  <TableColumn maxWidth="600.0" minWidth="95.0" prefWidth="-1.0" text="SchedulerTyp" />
+              </columns>
+            </TableView>
+         </center>
+         <bottom>
+            <GridPane minWidth="-Infinity" prefWidth="1300.0" style="-fx-background-color: CBC8CC;" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" prefWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Button fx:id="btnReset" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Reset" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/reset.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.reset" />
+                     </tooltip>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btnStop" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Stop" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/stop.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.stop" />
+                     </tooltip>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="btnRun" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Run" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/run.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\%toolbar.run" />
+                     </tooltip>
+                     <GridPane.margin>
+                        <Insets bottom="5.0" top="10.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Label text="ImportFilePath:">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="ExportTableName:" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="ImportTableName:" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="ExportFilePath:" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField disable="true" GridPane.columnIndex="1" />
+                  <TextField disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField disable="true" GridPane.columnIndex="6">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField disable="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField disable="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <TextField disable="true" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets right="5.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Start Time" GridPane.columnIndex="5">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="End Time:" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Scheduler:" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label text="Expired Time:" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </GridPane.margin>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </GridPane>
+         </bottom>
+         <top>
+                <ToolBar BorderPane.alignment="CENTER">
                     <items>
+                  <Button fx:id="btnUpdate" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Update">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/update.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\\%toolbar.Update" />
+                     </tooltip>
+                  </Button>
+                  <Button fx:id="btnLoadConfig" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="LoadConfig">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/loadConfig.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\\%toolbar.LoadConfig" />
+                     </tooltip>
+                  </Button>
+                  <Separator orientation="VERTICAL" prefHeight="34.0" prefWidth="20.0" />
+                        <Button fx:id="btnAllStates" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="All States" textAlignment="CENTER">
+                            <padding>
+                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                            </padding>
+                            <tooltip>
+                                <Tooltip text="\\%toolbar.allStates" />
+                            </tooltip>
+                            <graphic>
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/allStatus.png" />
+                           </image>
+                        </ImageView>
+                            </graphic>
+                        </Button>
+                  <Pane maxHeight="34.0" minWidth="1075.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="btnLogInOut" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showLogInOut" prefHeight="34.0" prefWidth="34.0" text="LogInOut" textAlignment="CENTER">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/login.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\\%toolbar.logInOut" />
+                     </tooltip>
+                  </Button>
+                  <Separator orientation="VERTICAL" prefWidth="20.0" />
                         <Button fx:id="btnExit" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Exit">
                             <opaqueInsets>
                                 <Insets />
@@ -51,141 +275,17 @@
                                 <Tooltip text="\%toolbar.exit" />
                             </tooltip>
                             <graphic>
-                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
+                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/exit.png" />
+                           </image>
+                        </ImageView>
                             </graphic>
                         </Button>
-                  <Separator orientation="VERTICAL" prefHeight="34.0" prefWidth="29.0" />
-                  <Button fx:id="btnExit11" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Exit">
-                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
-                     </graphic>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                     <tooltip>
-                        <Tooltip text="\%toolbar.exit" />
-                     </tooltip>
-                  </Button>
-                  <Button fx:id="btnExit1" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Exit">
-                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
-                     </graphic>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                     <tooltip>
-                        <Tooltip text="\%toolbar.exit" />
-                     </tooltip>
-                  </Button>
-                  <Separator orientation="VERTICAL" prefHeight="34.0" prefWidth="29.0" />
-                        <Button fx:id="btnAllStates" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="All States" textAlignment="CENTER">
-                            <padding>
-                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                            </padding>
-                            <tooltip>
-                                <Tooltip text="\\%toolbar.help" />
-                            </tooltip>
-                            <graphic>
-                                <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
-                            </graphic>
-                        </Button>
-                        <Pane prefHeight="34.0" prefWidth="856.0" />
-                  <Button fx:id="btnLogInOut" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showLogInOut" prefHeight="34.0" prefWidth="34.0" text="LogInOut" textAlignment="CENTER">
-                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
-                     </graphic>
-                     <padding>
-                        <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
-                     </padding>
-                     <tooltip>
-                        <Tooltip text="\\%toolbar.help" />
-                     </tooltip>
-                  </Button>
                     </items>
                 </ToolBar>
-            </top>
-         <center>
-            <SplitPane dividerPositions="0.6878130217028381" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" BorderPane.alignment="CENTER">
-              <items>
-                  <TableView prefHeight="242.0" prefWidth="1298.0">
-                    <columns>
-                      <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                      <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C2" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                        <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="C1" />
-                    </columns>
-                  </TableView>
-                <AnchorPane>
-                     <children>
-                        <Button fx:id="btnReset" layoutX="558.0" layoutY="150.0" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Open Testsuite">
-                           <graphic>
-                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
-                           </graphic>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <padding>
-                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                           </padding>
-                           <tooltip>
-                              <Tooltip text="\%toolbar.openTestsuite" />
-                           </tooltip>
-                        </Button>
-                        <Button fx:id="btnStop" layoutX="725.0" layoutY="150.0" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Open Testsuite">
-                           <graphic>
-                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
-                           </graphic>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <padding>
-                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                           </padding>
-                           <tooltip>
-                              <Tooltip text="\%toolbar.openTestsuite" />
-                           </tooltip>
-                        </Button>
-                        <Button fx:id="btnRun" layoutX="475.0" layoutY="150.0" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Open Testsuite">
-                           <graphic>
-                              <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" />
-                           </graphic>
-                           <opaqueInsets>
-                              <Insets />
-                           </opaqueInsets>
-                           <padding>
-                              <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                           </padding>
-                           <tooltip>
-                              <Tooltip text="\%toolbar.openTestsuite" />
-                           </tooltip>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-              </items>
-            </SplitPane>
-         </center>
-         <bottom>
-              <HBox fillHeight="false" maxHeight="30.0" prefHeight="30.0" BorderPane.alignment="CENTER">
-                  <children>
-                      <Pane prefHeight="30.0" HBox.hgrow="ALWAYS" />
-                  </children>
-              </HBox>
-         </bottom>
-        </BorderPane>
+         </top>
+      </BorderPane>
+      <Pane prefHeight="7.0" prefWidth="1300.0" />
     </children>
 </VBox>

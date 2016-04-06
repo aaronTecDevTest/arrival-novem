@@ -10,9 +10,9 @@ import org.apache.logging.log4j.Logger;
  * @since: 1.0
  * Package: com.mexxon.model
  */
-public class DBParsingTable {
-    private static final Logger log = LogManager.getLogger(DBParsingTable.class);
+public class DBPendingTable {
+    private static final Logger log = LogManager.getLogger(DBPendingTable.class);
 
-    public DBParsingTable() {
+    public DBPendingTable() {
     }
 }

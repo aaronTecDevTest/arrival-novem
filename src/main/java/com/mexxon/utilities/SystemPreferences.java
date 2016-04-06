@@ -30,8 +30,10 @@ public class SystemPreferences {
 
     private static ResourceBundle bundleArrivalMain;
     private static ResourceBundle bundleArrivalLogIn;
-    private static ResourceBundle bundleConfig;
-    private static ResourceBundle bundleSQL;
+    private static ResourceBundle bundleArrivalDialogs;
+    private static ResourceBundle bundleArrivalConfig;
+    private static ResourceBundle bundleArrivalSQL;
+
 
 
     private SystemPreferences() {
@@ -99,8 +101,10 @@ public class SystemPreferences {
         try {
             bundleArrivalMain = loadBundle("bundles/arrivalMain.properties");
             bundleArrivalLogIn = loadBundle("bundles/arrivalLogIn.properties");
-            bundleConfig = loadBundle("bundles/config.properties");
-            bundleSQL = loadBundle("bundles/sql.properties");
+            bundleArrivalDialogs = loadBundle("bundles/arrivalDialogs.properties");
+            bundleArrivalConfig = loadBundle("bundles/arrivalConfig.properties");
+            bundleArrivalSQL = loadBundle("bundles/arrivalSQL.properties");
+
         } catch (Exception e) {
             log.error(e.getStackTrace());
             e.printStackTrace();
@@ -119,14 +123,16 @@ public class SystemPreferences {
     }
 
     public static ResourceBundle getResourceBundle(String bundleName) {
-        if (bundleName.equals("config")) {
-            return bundleConfig;
-        } else if (bundleName.equals("sql")) {
-            return bundleSQL;
+        if (bundleName.equals("arrivalConfig")) {
+            return bundleArrivalConfig;
+        } else if (bundleName.equals("arrivalSQL")) {
+            return bundleArrivalSQL;
         } else if (bundleName.equals("arrivalMain")) {
             return bundleArrivalMain;
         } else if (bundleName.equals("arrivalLogIn")) {
             return bundleArrivalLogIn;
+        } else if (bundleName.equals("arrivalDialogs")) {
+            return bundleArrivalDialogs;
         } else {
             return null;
         }

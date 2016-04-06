@@ -10,7 +10,9 @@ package com.mexxon.windows.controller;
 
 import com.mexxon.utilities.SystemPreferences;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -19,11 +21,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class FXMLArrivalLogInController implements Initializable {
@@ -60,7 +64,7 @@ public class FXMLArrivalLogInController implements Initializable {
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
 
             Parent root = loader.load();
-            Scene mainAppScene = new Scene(root,1300, 530);
+            Scene mainAppScene = new Scene(root);//,1300, 530);
             Stage mainAppStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
             mainAppScene.getStylesheets().add("/css/arrivalMain.css");
@@ -68,9 +72,8 @@ public class FXMLArrivalLogInController implements Initializable {
             //mainAppStage.hide();
             mainAppStage.setScene(mainAppScene);
             mainAppStage.setTitle("");
-            mainAppStage.setResizable(true);
+            mainAppStage.setResizable(false);
             mainAppStage.show();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
