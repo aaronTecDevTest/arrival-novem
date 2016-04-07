@@ -13,8 +13,8 @@
             <menus>
                 <Menu fx:id="mnuFile" mnemonicParsing="false" text="\%menu.title.file">
                     <items>
-                        <MenuItem fx:id="mnuNew" mnemonicParsing="false" text="\%menu.title.login" />
-                        <MenuItem fx:id="mnuOpen" mnemonicParsing="false" text="\%menu.title.exit" />
+                        <MenuItem fx:id="mnuLogin" mnemonicParsing="false" text="\%menu.title.login" />
+                        <MenuItem fx:id="mnuExit" mnemonicParsing="false" text="\%menu.title.exit" />
                     </items>
                 </Menu>
                 <Menu fx:id="mnuHelp" mnemonicParsing="false" text="\%menu.title.help">

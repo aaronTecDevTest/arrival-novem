@@ -9,6 +9,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -26,6 +28,18 @@ import java.util.ResourceBundle;
  */
 public class FXMLArrivalMainController implements Initializable {
     private static final Logger log = LogManager.getLogger(FXMLArrivalMainController.class);
+
+    @FXML
+    private Menu mnuFile;
+    @FXML
+    private Menu mnuHelp;
+    @FXML
+    private MenuItem mnuExit;
+    @FXML
+    private MenuItem mnuLogin;
+    @FXML
+    private MenuItem mnuAbout;
+
 
     @FXML
     private Button btnAllStates;
@@ -59,7 +73,28 @@ public class FXMLArrivalMainController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-         bundle = resources;
+        bundle = resources;
+        iniBundleResources();
+    }
+
+    private void iniBundleResources() {
+        mnuFile.setText(bundle.getString("menu.title.file"));
+        mnuHelp.setText(bundle.getString("menu.title.help"));
+
+        mnuLogin.setText(bundle.getString("menu.title.login"));
+        mnuExit.setText(bundle.getString("menu.title.exit"));
+        mnuAbout.setText(bundle.getString("menu.title.about"));
+
+
+        btnAllStates.getTooltip().setText(bundle.getString("button.allStatus"));
+        btnExit.getTooltip().setText(bundle.getString("button.exit"));
+        btnLogInOut.getTooltip().setText(bundle.getString("button.login"));
+        btnReset.getTooltip().setText(bundle.getString("button.reset"));
+        btnRun.getTooltip().setText(bundle.getString("button.run"));
+        btnStop.getTooltip().setText(bundle.getString("button.stop"));
+        btnUpdate.getTooltip().setText(bundle.getString("button.Update"));
+        btnLoadConfig.getTooltip().setText(bundle.getString("button.LoadConfig"));
+
     }
 
     @FXML
