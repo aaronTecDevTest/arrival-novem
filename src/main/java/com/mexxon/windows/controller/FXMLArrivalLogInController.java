@@ -64,16 +64,16 @@ public class FXMLArrivalLogInController implements Initializable {
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
 
             Parent root = loader.load();
-            Scene mainAppScene = new Scene(root);//,1300, 530);
-            Stage mainAppStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);//,1300, 530);
+            Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
-            mainAppScene.getStylesheets().add("/css/arrivalMain.css");
+            scene.getStylesheets().add("/css/arrivalMain.css");
 
-            //mainAppStage.hide();
-            mainAppStage.setScene(mainAppScene);
-            mainAppStage.setTitle("");
-            mainAppStage.setResizable(false);
-            mainAppStage.show();
+            //primaryStage.hide();
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("");
+            primaryStage.setResizable(false);
+            primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }

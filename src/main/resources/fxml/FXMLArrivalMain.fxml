@@ -59,7 +59,7 @@
                   <RowConstraints vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button fx:id="btnReset" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Reset" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                  <Button fx:id="btnReset" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#resetJob" prefHeight="34.0" prefWidth="34.0" text="Reset" GridPane.columnIndex="3" GridPane.rowIndex="4">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -80,7 +80,7 @@
                         <Insets bottom="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="btnStop" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Stop" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                  <Button fx:id="btnStop" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#stopJob" prefHeight="34.0" prefWidth="34.0" text="Stop" GridPane.columnIndex="4" GridPane.rowIndex="4">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -101,7 +101,7 @@
                         <Insets bottom="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="btnRun" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Run" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <Button fx:id="btnRun" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#runJob" prefHeight="34.0" prefWidth="34.0" text="Run" GridPane.columnIndex="2" GridPane.rowIndex="4">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -195,25 +195,7 @@
          <top>
                 <ToolBar BorderPane.alignment="CENTER">
                     <items>
-                  <Button fx:id="btnUpdate" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Update">
-                     <graphic>
-                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../icon/update.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <padding>
-                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
-                     </padding>
-                     <tooltip>
-                        <Tooltip text="\\%toolbar.Update" />
-                     </tooltip>
-                  </Button>
-                  <Button fx:id="btnLoadConfig" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="LoadConfig">
+                  <Button fx:id="btnLoadConfig" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#loadConfig" prefHeight="34.0" prefWidth="34.0" text="LoadConfig">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -231,8 +213,26 @@
                         <Tooltip text="\\%toolbar.LoadConfig" />
                      </tooltip>
                   </Button>
+                  <Button fx:id="btnUpdate" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#updateConfigTable" prefHeight="34.0" prefWidth="34.0" text="Update">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../icon/update.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </padding>
+                     <tooltip>
+                        <Tooltip text="\\%toolbar.Update" />
+                     </tooltip>
+                  </Button>
                   <Separator orientation="VERTICAL" prefHeight="34.0" prefWidth="20.0" />
-                        <Button fx:id="btnAllStates" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="All States" textAlignment="CENTER">
+                        <Button fx:id="btnAllStatus" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showAllStatus" prefHeight="34.0" prefWidth="34.0" text="All States" textAlignment="CENTER">
                             <padding>
                                 <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
                             </padding>
@@ -264,7 +264,7 @@
                      </tooltip>
                   </Button>
                   <Separator orientation="VERTICAL" prefWidth="20.0" />
-                        <Button fx:id="btnExit" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="34.0" text="Exit">
+                        <Button fx:id="btnExit" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#closeApp" prefHeight="34.0" prefWidth="34.0" text="Exit">
                             <opaqueInsets>
                                 <Insets />
                             </opaqueInsets>

@@ -85,7 +85,6 @@ public class FXMLArrivalMainController implements Initializable {
         mnuExit.setText(bundle.getString("menu.title.exit"));
         mnuAbout.setText(bundle.getString("menu.title.about"));
 
-
         btnAllStates.getTooltip().setText(bundle.getString("button.allStatus"));
         btnExit.getTooltip().setText(bundle.getString("button.exit"));
         btnLogInOut.getTooltip().setText(bundle.getString("button.login"));
@@ -98,6 +97,40 @@ public class FXMLArrivalMainController implements Initializable {
     }
 
     @FXML
+    public void showAllStatus(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void closeApp(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void loadConfig(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void resetJob(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void runJob(ActionEvent actionEvent) {
+
+    }
+    @FXML
+    public void stopJob(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void updateConfigTable(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
     public void showLogInOut(ActionEvent actionEvent) {
         try {
 
@@ -105,17 +138,17 @@ public class FXMLArrivalMainController implements Initializable {
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
 
             Parent root = loader.load();
-            Scene mainAppScene = new Scene(root); //1300, 530);
-            Stage mainAppStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root); //1300, 530);
+            Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
-            mainAppScene.getStylesheets().add("/css/arrivalLogIn.css");
+            scene.getStylesheets().add("/css/arrivalLogIn.css");
 
-            //mainAppStage.hide();
-            mainAppStage.setScene(mainAppScene);
-            mainAppStage.setTitle("");
-            mainAppStage.setResizable(false);
+            //primaryStage.hide();
+            primaryStage.setScene(scene);
+            primaryStage.setTitle("");
+            primaryStage.setResizable(false);
 
-            mainAppStage.show();
+            primaryStage.show();
 
         } catch (IOException e) {
             e.printStackTrace();
