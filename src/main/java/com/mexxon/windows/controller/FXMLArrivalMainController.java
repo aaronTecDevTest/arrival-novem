@@ -93,7 +93,6 @@ public class FXMLArrivalMainController implements Initializable {
         btnStop.getTooltip().setText(bundle.getString("button.stop"));
         btnUpdate.getTooltip().setText(bundle.getString("button.Update"));
         btnLoadConfig.getTooltip().setText(bundle.getString("button.LoadConfig"));
-
     }
 
     @FXML
@@ -133,7 +132,6 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void showLogInOut(ActionEvent actionEvent) {
         try {
-
             URL url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
 
@@ -149,7 +147,6 @@ public class FXMLArrivalMainController implements Initializable {
             primaryStage.setResizable(false);
 
             primaryStage.show();
-
         } catch (IOException e) {
             e.printStackTrace();
         }

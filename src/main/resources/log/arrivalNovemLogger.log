@@ -580,3 +580,26 @@
 2016-04-08 13:31:36,466 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
 2016-04-08 13:32:28,570 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:73) - Main view show down!!
 2016-04-08 13:32:28,571 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:33) - Stop -- Mexxon - ImportExportTool
+2016-04-08 18:28:26,921 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-08 18:28:26,926 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:27) - Start -- Mexxon - ImportExportTool
+2016-04-08 18:28:26,934 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
+2016-04-08 18:52:57,474 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-08 18:52:57,479 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:27) - Start -- Mexxon - ImportExportTool
+2016-04-08 18:52:57,533 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
+2016-04-09 17:58:07,761 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 17:58:07,788 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:27) - Start -- Mexxon - ImportExportTool
+2016-04-09 17:58:07,807 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
+2016-04-09 18:07:14,192 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 18:07:14,198 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:27) - Start -- Mexxon - ImportExportTool
+2016-04-09 18:07:14,209 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
+2016-04-09 18:18:12,235 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 18:18:12,241 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:27) - Start -- Mexxon - ImportExportTool
+2016-04-09 18:18:12,251 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
+2016-04-09 18:27:35,902 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 18:27:35,907 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:27) - Start -- Mexxon - ImportExportTool
+2016-04-09 18:27:35,914 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
+2016-04-09 18:28:40,608 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 18:28:40,613 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:27) - Start -- Mexxon - ImportExportTool
+2016-04-09 18:28:40,623 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
+2016-04-09 18:33:22,655 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 18:37:52,400 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!

@@ -5,7 +5,6 @@ import com.mexxon.windows.view.ViewArrivalMainApp;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0

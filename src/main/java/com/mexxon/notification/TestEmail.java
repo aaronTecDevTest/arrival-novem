@@ -15,8 +15,8 @@ package com.mexxon.notification;
 
 public class TestEmail {
 
-    private static String USER_NAME = "aaron.pichou.kutekidila@gmail.com";  // GMail user name (just the part before "@gmail.com")
-    private static String PASSWORD = "1405%Eva2"; // GMail password
+    private static String USER_NAME = "";  // GMail user name (just the part before "@gmail.com")
+    private static String PASSWORD = ""; // GMail password
 
     private static String RECIPIENT = "aaron.pichou.kutekidila@gmail.com";
 
