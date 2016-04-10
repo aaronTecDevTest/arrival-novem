@@ -9,7 +9,7 @@ package com.mexxon.notification;
  */
 
 
-        import java.util.*;
+import java.util.*;
         import javax.mail.*;
         import javax.mail.internet.*;
 

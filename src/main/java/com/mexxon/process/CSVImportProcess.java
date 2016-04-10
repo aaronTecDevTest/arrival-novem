@@ -20,11 +20,13 @@ import java.sql.Statement;
 
 public class CSVImportProcess {
     private static final Logger log = LogManager.getLogger(CSVImportProcess.class);
+
     private FileReader fileReader;
+    private String filePath = "../arrival-novem/src/main/resources/testingData/fileToImport.csv";
 
     public void readCSV() {
         try {
-            CSVReader reader = new CSVReader(new FileReader("/testingData/fileToImport.csv"), ',');
+            CSVReader reader = new CSVReader(new FileReader(filePath), ',');
             Connection connection = DBConnection.getConnection();
 
             String insertQuery = "Insert into txn_tbl (txn_id,txn_amount, card_number, terminal_id) values (null,?,?,?)";
@@ -47,19 +49,22 @@ public class CSVImportProcess {
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }
-
     }
 
-    public void readCSVUsingLoad() {
+    public void readCSVUsingDBLoad() {
         try (Connection connection = DBConnection.getConnection()) {
-            String loadQuery = "LOAD DATA LOCAL INFILE '"
-                    + "C:\\upload.csv"
-                    + "' INTO TABLE txn_tbl FIELDS TERMINATED BY ','"
-                    + " LINES TERMINATED BY '\n' (txn_amount, card_number, terminal_id) ";
+            String loadQuery =
+                    "LOAD DATA LOCAL INFILE '"
+                    + filePath
+                    + "' INTO TABLE txn_tbl "
+                    + "FIELDS TERMINATED BY ','"
+                    + " LINES TERMINATED BY '\n' "
+                    + "(txn_amount, card_number, terminal_id) ";
 
-            log.info(loadQuery);
             Statement stmt = connection.createStatement();
             stmt.execute(loadQuery);
+            log.info(loadQuery);
+            log.info("Data Successfully import!");
         } catch (Exception e) {
             log.error(e.getStackTrace());
         }
@@ -67,16 +72,16 @@ public class CSVImportProcess {
 
     public static void main(String[] args) {
         /**
-         * CREATE TABLE `txn_tbl` (
+         *
+         CREATE TABLE `txn_tbl` (
          `txn_id`  int(11) NOT NULL AUTO_INCREMENT ,
          `txn_amount`  double NOT NULL ,
          `card_number`  bigint(20) NOT NULL ,
          `terminal_id`  bigint(20) NULL DEFAULT NULL ,
-         PRIMARY KEY (`txn_id`)
-         )
+         PRIMARY KEY (`txn_id`))
          */
-        CSVImportProcess csvImportPorcess = new CSVImportProcess();
-        csvImportPorcess.readCSV();
-        csvImportPorcess.readCSVUsingLoad();
+        CSVImportProcess csvImportProcess = new CSVImportProcess();
+        //csvImportProcess.readCSV();
+        //csvImportProcess.readCSVUsingDBLoad();
     }
 }

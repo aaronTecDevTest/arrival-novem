@@ -603,3 +603,76 @@
 2016-04-09 18:28:40,623 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
 2016-04-09 18:33:22,655 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
 2016-04-09 18:37:52,400 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 19:50:09,369 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 19:53:04,169 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 19:53:07,203 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:107) - Exit Clicked:Exit
+2016-04-09 19:53:17,910 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:107) - Exit Clicked:Exit
+2016-04-09 19:53:18,747 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:107) - Exit Clicked:Exit
+2016-04-09 20:08:19,290 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 20:08:24,600 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:131) - LoadConfig Clicked:LoadConfig
+2016-04-09 20:08:25,301 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:155) - UpdateConfig Clicked:Update
+2016-04-09 20:08:26,019 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:102) - ShowAllStatus Clicked:All States
+2016-04-09 20:08:27,493 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:161) - ShowLog Clicked:LogInOut
+2016-04-09 20:08:31,344 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:108) - Exit Clicked:Exit
+2016-04-09 20:08:33,169 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:143) - Run Clicked:Run
+2016-04-09 20:08:33,805 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:137) - Reset Clicked:Reset
+2016-04-09 20:08:34,651 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:149) - Stop Clicked:Stop
+2016-04-09 20:09:22,038 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:108) - Exit Clicked:Exit
+2016-04-09 20:09:22,759 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:108) - Exit Clicked:Exit
+2016-04-09 20:09:22,905 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:108) - Exit Clicked:Exit
+2016-04-09 20:09:23,458 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:161) - ShowLog Clicked:LogInOut
+2016-04-09 20:10:22,509 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 20:46:16,687 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:48) - [Ljava.lang.StackTraceElement;@3bfdc050
+2016-04-09 20:46:16,693 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 20:46:16,697 ERROR [main] database.DBConnection (DBConnection.java:37) - [Ljava.lang.StackTraceElement;@91161c7
+2016-04-09 20:46:16,698 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:59) - LOAD DATA LOCAL INFILE 'C:\upload.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-09 20:46:16,699 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:63) - [Ljava.lang.StackTraceElement;@604ed9f0
+2016-04-09 20:48:09,779 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:48) - [Ljava.lang.StackTraceElement;@478190fc
+2016-04-09 20:48:09,787 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 20:48:09,793 ERROR [main] database.DBConnection (DBConnection.java:37) - [Ljava.lang.StackTraceElement;@223d2c72
+2016-04-09 20:48:09,794 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:59) - LOAD DATA LOCAL INFILE 'C:\upload.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-09 20:48:09,795 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:63) - [Ljava.lang.StackTraceElement;@8f4ea7c
+2016-04-09 20:51:00,365 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 20:51:00,434 ERROR [main] database.DBConnection (DBConnection.java:37) - [Ljava.lang.StackTraceElement;@77847718
+2016-04-09 20:51:13,210 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:48) - [Ljava.lang.StackTraceElement;@7f3b84b8
+2016-04-09 20:51:13,211 ERROR [main] database.DBConnection (DBConnection.java:37) - [Ljava.lang.StackTraceElement;@57a3af25
+2016-04-09 20:51:13,211 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:59) - LOAD DATA LOCAL INFILE 'C:\upload.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-09 20:51:13,211 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:63) - [Ljava.lang.StackTraceElement;@2b662a77
+2016-04-09 20:53:40,693 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 20:55:10,586 ERROR [main] database.DBConnection (DBConnection.java:37) - [Ljava.lang.StackTraceElement;@77847718
+2016-04-09 20:55:10,587 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:48) - [Ljava.lang.StackTraceElement;@7f3b84b8
+2016-04-09 20:55:10,589 ERROR [main] database.DBConnection (DBConnection.java:37) - [Ljava.lang.StackTraceElement;@57a3af25
+2016-04-09 20:55:10,589 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:59) - LOAD DATA LOCAL INFILE 'C:\upload.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-09 20:55:10,589 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:63) - [Ljava.lang.StackTraceElement;@2b662a77
+2016-04-09 20:55:16,677 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 21:05:56,654 ERROR [main] database.DBConnection (DBConnection.java:42) - [Ljava.lang.StackTraceElement;@7f0eb4b4
+2016-04-09 21:05:56,656 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:48) - [Ljava.lang.StackTraceElement;@5c33f1a9
+2016-04-09 21:05:56,657 ERROR [main] database.DBConnection (DBConnection.java:42) - [Ljava.lang.StackTraceElement;@c8c12ac
+2016-04-09 21:05:56,658 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:59) - LOAD DATA LOCAL INFILE 'C:\upload.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-09 21:05:56,658 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:63) - [Ljava.lang.StackTraceElement;@6adbc9d
+2016-04-09 21:06:18,155 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 21:09:06,095 ERROR [main] database.DBConnection (DBConnection.java:42) - [Ljava.lang.StackTraceElement;@672872e1
+2016-04-09 21:09:06,095 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:48) - [Ljava.lang.StackTraceElement;@32910148
+2016-04-09 21:09:52,571 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 21:12:09,536 INFO  [main] database.DBConnection (DBConnection.java:40) - Successfully login to MySQLDB!
+2016-04-09 21:12:09,594 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:46) - Data Successfully import!
+2016-04-09 21:12:14,801 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:59) - LOAD DATA LOCAL INFILE 'C:\upload.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-09 21:12:14,821 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:63) - [Ljava.lang.StackTraceElement;@3541cb24
+2016-04-09 21:24:32,917 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 21:24:36,542 INFO  [main] database.DBConnection (DBConnection.java:40) - Successfully login to MySQLDB!
+2016-04-09 21:24:36,542 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:59) - LOAD DATA LOCAL INFILE 'C:\upload.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-09 21:31:24,920 ERROR [main] process.CSVImportProcess (CSVImportProcess.java:63) - [Ljava.lang.StackTraceElement;@87a85e1
+2016-04-09 21:32:20,028 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 21:32:20,812 INFO  [main] database.DBConnection (DBConnection.java:40) - Successfully login to MySQLDB!
+2016-04-09 21:32:37,053 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:62) - LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-09 22:03:16,713 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-09 22:03:17,194 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!
+2016-04-09 22:03:33,199 INFO  [main] database.DBConnection (DBConnection.java:47) - Successfully logout from MySQLDB!

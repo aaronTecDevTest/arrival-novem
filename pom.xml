@@ -21,6 +21,7 @@
         <version.javax.mail>1.5.0-b01</version.javax.mail>
         <version.commons.csv>1.2</version.commons.csv>
         <version.opencsv>3.7</version.opencsv>
+        <version.mysql.connector.java>5.1.38</version.mysql.connector.java>
 
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -62,16 +63,22 @@
                 <version>${version.javax.mail-api}</version>
             </dependency>
 
-            <dependency>
+            <!--dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-csv</artifactId>
                 <version>${version.commons.csv}</version>
-            </dependency>
+            </dependency-->
 
             <dependency>
                 <groupId>com.opencsv</groupId>
                 <artifactId>opencsv</artifactId>
                 <version>${version.opencsv}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${version.mysql.connector.java}</version>
             </dependency>
         </dependencies>
     <!--/dependencyManagement-->
