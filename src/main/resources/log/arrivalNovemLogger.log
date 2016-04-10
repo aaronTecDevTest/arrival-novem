@@ -691,3 +691,17 @@
 2016-04-10 15:07:29,232 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:67) - Data Successfully import!
 2016-04-10 16:00:32,168 INFO  [main] utilities.BOMEncoding (BOMEncoding.java:57) - null
 2016-04-10 16:04:08,083 INFO  [main] utilities.BOMEncoding (BOMEncoding.java:57) - null
+2016-04-10 20:40:43,125 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-10 20:40:43,553 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!
+2016-04-10 20:46:07,930 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-10 20:46:08,379 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!
+2016-04-10 20:51:12,397 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-10 20:51:12,789 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!
+2016-04-10 20:53:24,145 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-10 20:53:24,551 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!
+2016-04-10 21:00:38,107 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-10 21:00:38,486 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!
+2016-04-10 21:04:07,055 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-10 21:04:07,452 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!
+2016-04-10 21:09:25,441 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-10 21:09:25,835 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!

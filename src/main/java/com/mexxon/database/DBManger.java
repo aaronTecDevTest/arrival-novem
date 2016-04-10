@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -33,7 +34,7 @@ public class DBManger {
 
     public static long writeJavaObject(Connection conn, Object object) throws Exception {
         String className = object.getClass().getName();
-        PreparedStatement pstmt = conn.prepareStatement(WRITE_OBJECT_SQL);
+        PreparedStatement pstmt = conn.prepareStatement(WRITE_OBJECT_SQL, Statement.RETURN_GENERATED_KEYS);
 
         // set input parameters
         pstmt.setString(1, className);
