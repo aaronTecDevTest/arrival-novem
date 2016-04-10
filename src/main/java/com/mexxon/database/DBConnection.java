@@ -29,12 +29,14 @@ public class DBConnection {
         if (connection != null)
             return connection;
 
-        //Class.forName("com.mysql.jdbc.Driver");
         try {
+            Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(url, username, password);
             log.info("Successfully login to MySQLDB!");
         } catch (SQLException e) {
             log.error(e.getStackTrace());
+        }catch (ClassNotFoundException ex) {
+            log.error(ex.getStackTrace());
         }
         return connection;
     }

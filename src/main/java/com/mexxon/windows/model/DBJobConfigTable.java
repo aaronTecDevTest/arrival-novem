@@ -14,10 +14,10 @@ import org.apache.logging.log4j.Logger;
 /**
  * ClassModel for Config and Process Status
  */
-public class DBConfigTable {
-    private static final Logger log = LogManager.getLogger(DBConfigTable.class);
+public class DBJobConfigTable {
+    private static final Logger log = LogManager.getLogger(DBJobConfigTable.class);
 
-    public DBConfigTable() {
+    public DBJobConfigTable() {
     }
 
 

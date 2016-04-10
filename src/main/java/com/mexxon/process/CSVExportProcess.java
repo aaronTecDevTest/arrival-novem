@@ -1,7 +1,14 @@
 package com.mexxon.process;
 
+import com.mexxon.database.DBConnection;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.io.FileWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
 /**
  * @author: Aaron Kutekidila
@@ -11,40 +18,35 @@ import org.apache.logging.log4j.Logger;
  * Package: com.mexxon.controller
  */
 
-//http://www.java-tips.org/other-api-tips-100035/69-jdbc/354-import-data-from-txt-or-csv-files-into-mysql-database-tables.html
-
-public class CSVExportProcess implements IFImportExport{
+public class CSVExportProcess{
     private static final Logger log = LogManager.getLogger(CSVExportProcess.class);
 
     public CSVExportProcess(){
 
     }
 
-    public void importFromCSV(){
-
-    }
-
     public void exportToCSV(){
-
-    }
-
-    @Override
-    public void readCSV() {
-
-    }
-
-    @Override
-    public void writeCSV() {
-
-    }
-
-    @Override
-    public void readDB() {
-
-    }
-
-    @Override
-    public void writeDB() {
-
+        String filename ="Desktop:test.csv";
+        try {
+            FileWriter fw = new FileWriter(filename);
+            Connection conn = DBConnection.getConnection();
+            String query = "select * from testtable";
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+            while (rs.next()) {
+                fw.append(rs.getString(1));
+                fw.append(',');
+                fw.append(rs.getString(2));
+                fw.append(',');
+                fw.append(rs.getString(3));
+                fw.append('\n');
+            }
+            fw.flush();
+            fw.close();
+            conn.close();
+            System.out.println("CSV File is created successfully.");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
