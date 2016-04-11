@@ -705,3 +705,17 @@
 2016-04-10 21:04:07,452 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!
 2016-04-10 21:09:25,441 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
 2016-04-10 21:09:25,835 INFO  [main] database.DBConnection (DBConnection.java:35) - Successfully login to MySQLDB!
+2016-04-11 09:26:58,252 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-11 09:26:58,264 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:27) - Start -- Mexxon - ImportExportTool
+2016-04-11 09:26:58,268 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:71) - Main view show up!!
+2016-04-11 09:27:02,727 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:108) - Exit Clicked:Exit
+2016-04-11 09:27:07,015 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:108) - Exit Clicked:Exit
+2016-04-11 09:27:08,935 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:161) - ShowLog Clicked:LogInOut
+2016-04-11 09:27:11,943 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:102) - ShowAllStatus Clicked:All States
+2016-04-11 09:27:12,343 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:131) - LoadConfig Clicked:LoadConfig
+2016-04-11 09:27:12,935 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:155) - UpdateConfig Clicked:Update
+2016-04-11 09:27:14,199 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:137) - Reset Clicked:Reset
+2016-04-11 09:27:14,655 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:143) - Run Clicked:Run
+2016-04-11 09:27:15,143 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:149) - Stop Clicked:Stop
+2016-04-11 11:59:19,296 INFO  [main] view.ViewArrivalMainApp (ViewArrivalMainApp.java:73) - Main view show down!!
+2016-04-11 11:59:19,297 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:32) - Stop -- Mexxon - ImportExportTool

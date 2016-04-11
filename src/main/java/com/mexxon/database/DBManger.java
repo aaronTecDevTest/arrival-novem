@@ -68,12 +68,12 @@ public class DBManger {
         return object;
     }
     public static void main(String args[])throws Exception {
-        /*
-         * mysql> CREATE TABLE java_objects (
-         * id INT AUTO_INCREMENT,
-         * name varchar(128),
-         * object_value BLOB,
-         * primary key (id));
+        /**
+         CREATE TABLE java_objects (
+         id INT AUTO_INCREMENT,
+         name varchar(128),
+         object_value BLOB,
+         primary key (id));
          **/
 
         Connection conn = null;
