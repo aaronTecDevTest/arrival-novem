@@ -37,7 +37,7 @@ public class ViewArrivalMainApp extends Application {
         URL applicationIcon = getClass().getResource("/icon/appIcons.png");
         Parent root = FXMLLoader.load(urlMain, SystemPreferences.getResourceBundle("arrivalMain"));
 
-        Scene scene = new Scene(root);//, 1300, 530);
+        Scene scene = new Scene(root, 1300, 746);
         scene.getStylesheets().add("/css/arrivalMain.css");
 
         primaryStage.setScene(scene);
@@ -64,6 +64,10 @@ public class ViewArrivalMainApp extends Application {
                 }
             }
         });
+/*
+        Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+        primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
+        primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);*/
         primaryStage.show();
     }
 

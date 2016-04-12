@@ -1,16 +1,21 @@
 package com.mexxon.windows.controller;
 
+import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
+import com.mexxon.windows.model.DBJobConfigTable;
 import javafx.application.Platform;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.apache.logging.log4j.LogManager;
@@ -30,6 +35,7 @@ import java.util.ResourceBundle;
  */
 public class FXMLArrivalMainController implements Initializable {
     private static final Logger log = LogManager.getLogger(FXMLArrivalMainController.class);
+    private Authentication authentication = Authentication.getInstance();
 
     @FXML
     private Menu mnuFile;
@@ -60,10 +66,14 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private Button btnLoadConfig;
 
+    @FXML
+    private TableView <DBJobConfigTable> tbvJobConfig;
+
     /**
      * @param bundle For Internationalization
      */
     private ResourceBundle bundle;
+    private ObservableList<DBJobConfigTable> jobConfig;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -106,6 +116,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void closeApp(ActionEvent actionEvent) {
         log.info("Exit Clicked:" + ((Button)actionEvent.getSource()).getText());
+        authentication.logout();
 
         new EventHandler<WindowEvent>() {
             @Override
@@ -165,7 +176,7 @@ public class FXMLArrivalMainController implements Initializable {
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
 
             Parent root = loader.load();
-            Scene scene = new Scene(root); //1300, 530);
+            Scene scene = new Scene(root,400, 240);
             Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
             scene.getStylesheets().add("/css/arrivalLogIn.css");
@@ -175,6 +186,9 @@ public class FXMLArrivalMainController implements Initializable {
             primaryStage.setTitle("");
             primaryStage.setResizable(false);
 
+            Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+            primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
+            primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);
             primaryStage.show();
         } catch (IOException e) {
             log.error(e.getStackTrace());

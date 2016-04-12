@@ -40,12 +40,13 @@ public class Authentication {
         this.username = username;
         this.userpassword = userpassword;
         Connection connection = dbConnection.getConnection(username, userpassword);
-
-        try {
-            if (!connection.isClosed())
-                 loginStatus = true;
-        } catch (SQLException e) {
-            log.error(e.getStackTrace());
+        if(connection != null){
+            try {
+                if (!connection.isClosed())
+                     loginStatus = true;
+            } catch (SQLException e) {
+                log.error(e.getMessage());
+            }
         }
         return loginStatus;
     }
@@ -56,7 +57,7 @@ public class Authentication {
             if(connection.isClosed())
                 loginStatus = false;
         } catch (SQLException e) {
-            log.error(e.getStackTrace());
+            log.error(e.getMessage());
         }
         return loginStatus;
     }

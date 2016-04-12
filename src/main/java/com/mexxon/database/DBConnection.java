@@ -55,7 +55,7 @@ public class DBConnection {
             connection = DriverManager.getConnection(url, username, password);
             log.info("Successfully login to MySQLDB!");
         } catch (SQLException e) {
-            log.error(e.getStackTrace());
+            log.info(e.getMessage());
         }catch (ClassNotFoundException ex) {
             log.error(ex.getStackTrace());
         }

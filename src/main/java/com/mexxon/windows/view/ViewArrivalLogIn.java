@@ -11,9 +11,11 @@ package com.mexxon.windows.view;
 import com.mexxon.utilities.SystemPreferences;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -42,7 +44,7 @@ public class ViewArrivalLogIn extends Application {
         loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
         root = loader.load();
 
-        Scene scene = new Scene(root);//, 400, 300);
+        Scene scene = new Scene(root, 400, 240);
         scene.getStylesheets().add("/css/arrivalLogIn.css");
 
         primaryStage.setScene(scene);
@@ -50,6 +52,10 @@ public class ViewArrivalLogIn extends Application {
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
 
         primaryStage.setResizable(false);
+/*
+        Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+        primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
+        primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);*/
         primaryStage.show();
     }
 

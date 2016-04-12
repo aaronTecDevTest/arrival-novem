@@ -14,6 +14,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -21,6 +22,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -57,22 +59,21 @@ public class FXMLArrivalLogInController implements Initializable {
 
     @FXML
     public void clickLogIn(ActionEvent actionEvent) {
-
         String loginTyp = btnLogIn.getText();
+
         if (loginTyp.equals("LogIn")) {
             String username = txfUsername.getText();
             String password = pwfPassword.getText();
-            if(username.isEmpty())
-                username ="";
 
-            if( password.isEmpty())
-                password="";
-
-            authentication.login(username, password);
-            if (authentication.getLoginStatus()) {
-                showMainView(actionEvent);
-            } else {
-                lblFailLogIn.setVisible(lblFailLogIn.isVisible());
+            if(username.isEmpty() && password.isEmpty()){
+                lblFailLogIn.setVisible(true);
+            }else {
+                authentication.login(username, password);
+                if (authentication.getLoginStatus()) {
+                    showMainView(actionEvent);
+                } else {
+                    lblFailLogIn.setVisible(true);
+                }
             }
         }
 
@@ -92,7 +93,7 @@ public class FXMLArrivalLogInController implements Initializable {
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
 
             Parent root = loader.load();
-            Scene scene = new Scene(root);//,1300, 530);
+            Scene scene = new Scene(root,1300, 746);
             Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
             scene.getStylesheets().add("/css/arrivalMain.css");
@@ -101,6 +102,10 @@ public class FXMLArrivalLogInController implements Initializable {
             primaryStage.setScene(scene);
             primaryStage.setTitle("");
             primaryStage.setResizable(false);
+
+            Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
+            primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
+            primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);
             primaryStage.show();
         } catch (IOException e) {
             log.error(e.getStackTrace());
@@ -114,5 +119,4 @@ public class FXMLArrivalLogInController implements Initializable {
             btnLogIn.setText("LogOut");
         }
     }
-
 }
