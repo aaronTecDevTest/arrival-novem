@@ -30,25 +30,25 @@
               <columns>
                 <TableColumn maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobID" />
                 <TableColumn maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobTyp" />
-                  <TableColumn maxWidth="600.0" minWidth="205.0" prefWidth="-1.0" text="ImportFilePath" />
-                  <TableColumn maxWidth="600.0" minWidth="205.0" prefWidth="-1.0" text="ExportTableName" />
-                  <TableColumn maxWidth="600.0" minWidth="205.0" prefWidth="-1.0" text="ImportTableName" />
-                  <TableColumn maxWidth="600.0" minWidth="205.0" prefWidth="-1.0" text="ExportFilePath" />
-                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="StartTime" />
-                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="-1.0" text="EndTime" />
-                  <TableColumn maxWidth="600.0" minWidth="95.0" prefWidth="-1.0" text="SchedulerTyp" />
+                  <TableColumn maxWidth="600.0" minWidth="205.0" prefWidth="325.0" text="ExportSQL" />
+                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="118.0" text="StartTime" />
+                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="116.0" text="EndTime" />
+                  <TableColumn maxWidth="600.0" minWidth="95.0" prefWidth="-1.0" text="Scheduler" />
+                  <TableColumn maxWidth="600.0" minWidth="85.0" prefWidth="161.0" text="xxxx" />
+                  <TableColumn maxWidth="600.0" minWidth="74.0" prefWidth="134.0" text="xxxx" />
+                  <TableColumn maxWidth="600.0" minWidth="111.0" prefWidth="166.0" text="xxxx" />
               </columns>
             </TableView>
          </center>
          <bottom>
             <GridPane minWidth="-Infinity" prefWidth="1300.0" style="-fx-background-color: CBC8CC;" BorderPane.alignment="CENTER">
                <columnConstraints>
-                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" prefWidth="10.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="50.0" />
                   <ColumnConstraints hgrow="SOMETIMES" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
-                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" prefWidth="10.0" />
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="50.0" />
                   <ColumnConstraints hgrow="SOMETIMES" />
                </columnConstraints>
                <rowConstraints>
@@ -122,22 +122,22 @@
                         <Insets bottom="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Label text="ImportFilePath:">
+                  <Label text="From:">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="ExportTableName:" GridPane.rowIndex="1">
+                  <Label text="Start Time:" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="ImportTableName:" GridPane.rowIndex="2">
+                  <Label text="Job ID:" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="ExportFilePath:" GridPane.rowIndex="3">
+                  <Label text="Job Typ:" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
@@ -166,7 +166,7 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Label text="Start Time" GridPane.columnIndex="5">
+                  <Label text="To:" GridPane.columnIndex="5">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>

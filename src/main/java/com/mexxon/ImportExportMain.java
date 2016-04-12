@@ -1,7 +1,8 @@
 package com.mexxon;
 
+import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
-import com.mexxon.windows.view.ViewArrivalMainApp;
+import com.mexxon.windows.view.ViewArrivalLogIn;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -15,10 +16,12 @@ import org.apache.logging.log4j.Logger;
 
 public class ImportExportMain {
     private static final Logger log = LogManager.getLogger(ImportExportMain.class);
-    public ViewArrivalMainApp mainView;
+    public ViewArrivalLogIn logInView;
 
     public static void main(String[] args) {
         SystemPreferences.getInstance();
+        Authentication.getInstance();
+
         ImportExportMain app = new ImportExportMain();
         app.runLogIn();
     }
@@ -26,8 +29,8 @@ public class ImportExportMain {
     public void runLogIn() {
         log.info("Start -- Mexxon - ImportExportTool");
         {
-            mainView = new ViewArrivalMainApp();
-            mainView.run();
+            logInView = new ViewArrivalLogIn();
+            logInView.run();
         }
         log.info("Stop -- Mexxon - ImportExportTool");
     }

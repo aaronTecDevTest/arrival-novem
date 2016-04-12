@@ -8,30 +8,30 @@ package com.mexxon.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
+import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
-
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class FXMLArrivalLogInController implements Initializable {
     private static final Logger log = LogManager.getLogger(FXMLArrivalLogInController.class);
+    private Authentication authentication = Authentication.getInstance();
 
     @FXML
     private Button btnLogIn;
@@ -41,8 +41,6 @@ public class FXMLArrivalLogInController implements Initializable {
     private TextField txfUsername;
     @FXML
     private PasswordField pwfPassword;
-    @FXML
-    private CheckBox chbNoLogIn;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -54,11 +52,33 @@ public class FXMLArrivalLogInController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        checkAuthentication();
     }
 
     @FXML
     public void clickLogIn(ActionEvent actionEvent) {
-        lblFailLogIn.setVisible(! lblFailLogIn.isVisible());
+
+        String loginTyp = btnLogIn.getText();
+        if (loginTyp.equals("LogIn")) {
+            authentication.login(txfUsername.getText(), pwfPassword.getText());
+            if (authentication.getLoginStatus()) {
+                showMainView(actionEvent);
+            } else {
+                lblFailLogIn.setVisible(lblFailLogIn.isVisible());
+            }
+        }
+
+        if (loginTyp.equals("LogOut")) {
+            authentication.logout();
+            if(!authentication.getLoginStatus()){
+                txfUsername.setText("");
+                pwfPassword.setText("");
+                btnLogIn.setText("LogIn");
+            }
+        }
+    }
+
+    private void showMainView(ActionEvent actionEvent) {
         try {
             URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
             FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
@@ -75,12 +95,16 @@ public class FXMLArrivalLogInController implements Initializable {
             primaryStage.setResizable(false);
             primaryStage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getStackTrace());
         }
     }
 
-    @FXML
-    public void clickSignInOut(ActionEvent actionEvent) {
-        log.info("Sign In");
+    private void checkAuthentication(){
+        if(authentication.getLoginStatus()) {
+            txfUsername.setText(authentication.getUsername());
+            pwfPassword.setText(authentication.getUserpassword());
+            btnLogIn.setText("LogOut");
+        }
     }
+
 }

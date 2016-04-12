@@ -177,7 +177,7 @@ public class FXMLArrivalMainController implements Initializable {
 
             primaryStage.show();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getStackTrace());
         }
     }
 }

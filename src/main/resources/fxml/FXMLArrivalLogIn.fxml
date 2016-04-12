@@ -15,12 +15,15 @@
             <children>
             <VBox layoutX="38.0" layoutY="4.0">
                <children>
-                      <PasswordField fx:id="pwfPassword" focusTraversable="false" prefHeight="32.0" prefWidth="290.0" promptText="Password" />
                       <TextField fx:id="txfUsername" focusTraversable="false" prefHeight="32.0" prefWidth="290.0" promptText="Username/E-Mail-Adresse">
                      <VBox.margin>
-                        <Insets top="10.0" />
+                        <Insets />
                      </VBox.margin>
                   </TextField>
+                      <PasswordField fx:id="pwfPassword" focusTraversable="false" prefHeight="32.0" prefWidth="290.0" promptText="Password">
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin></PasswordField>
                       <Label fx:id="lblFailLogIn" focusTraversable="false" prefHeight="53.0" prefWidth="290.0" text="Username or Password is wrong. Please change your login and try again." textFill="#863f3fbd" visible="false" wrapText="true">
                           <font>
                               <Font name="Calibri Bold" size="12.0" />

@@ -78,7 +78,9 @@ public class DBManger {
 
         Connection conn = null;
         try {
-            conn = DBConnection.getConnection();
+            DBConnection dbConnection = new DBConnection();
+
+            conn = dbConnection.getConnection();
             System.out.println("conn=" + conn);
             conn.setAutoCommit(false);
             List<Object> list = new ArrayList<Object>();

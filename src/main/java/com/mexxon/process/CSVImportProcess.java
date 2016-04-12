@@ -27,7 +27,9 @@ public class CSVImportProcess {
     public void importCSV() {
         try {
             CSVReader reader = new CSVReader(new FileReader(filePath), ',');
-            Connection connection = DBConnection.getConnection();
+
+            DBConnection dbConnection = new DBConnection();
+            Connection connection = dbConnection.getConnection();
 
             String insertQuery = "Insert into txn_tbl (txn_id,txn_amount, card_number, terminal_id) values (null,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
@@ -53,7 +55,9 @@ public class CSVImportProcess {
     }
 
     public void importCSVUsingDBLoad() {
-        try (Connection connection = DBConnection.getConnection()) {
+        DBConnection dbConnection = new DBConnection();
+
+        try (Connection connection = dbConnection.getConnection()) {
             String loadQuery =
                     "LOAD DATA LOCAL INFILE '"
                     + filePath

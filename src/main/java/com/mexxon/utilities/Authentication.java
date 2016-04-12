@@ -1,5 +1,9 @@
 package com.mexxon.utilities;
 
+import com.mexxon.database.DBConnection;
+import java.sql.Connection;
+import java.sql.SQLException;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -13,34 +17,85 @@ import org.apache.logging.log4j.Logger;
 
 public class Authentication {
     private static final Logger log = LogManager.getLogger(Authentication.class);
-
+    private static Authentication ourInstance = new Authentication();
 
     private String username;
     private String userpassword;
+    private boolean loginStatus;
+    private static DBConnection dbConnection;
 
-
-
-    public Authentication() {
-
+    private Authentication() {
+        log.info(Authentication.class + " is loaded!!");
+        username = null;
+        userpassword = null;
+        loginStatus = false;
+        dbConnection = new DBConnection();
     }
 
-    public void enterLogin(){
-
+    public static Authentication getInstance() {
+        return ourInstance;
     }
 
-    public void login(){
+    public boolean login(String username,String userpassword ){
+        this.username = username;
+        this.userpassword = userpassword;
+        Connection connection = dbConnection.getConnection(username, userpassword);
 
+        try {
+            if (!connection.isClosed())
+                 loginStatus = true;
+        } catch (SQLException e) {
+            log.error(e.getStackTrace());
+        }
+        return loginStatus;
     }
 
-    public void logout(){
-
+    public boolean logout(){
+        Connection connection = dbConnection.closeConnection();
+        try {
+            if(connection.isClosed())
+                loginStatus = false;
+        } catch (SQLException e) {
+            log.error(e.getStackTrace());
+        }
+        return loginStatus;
     }
 
-    private boolean checkLogin(){
-        return false;
+    public boolean getLoginStatus(){
+        return loginStatus;
     }
 
-    private boolean checkLogout(){
-        return false;
+    public static DBConnection getDbConnection(){
+        return dbConnection;
     }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUserpassword() {
+        return userpassword;
+    }
+
+    public void setUserpassword(String userpassword) {
+        this.userpassword = userpassword;
+    }
+    /*
+    public static void main(String[] args) {
+        Authentication authentication = Authentication.getInstance();
+        authentication.login("test","test");
+        log.info("LogStatus:" + authentication.getLoginStatus());
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        authentication.logout();
+        log.info("LogStatus: " + authentication.getLoginStatus());
+    }
+  */
 }

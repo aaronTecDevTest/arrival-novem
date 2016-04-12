@@ -29,7 +29,7 @@ public class CSVExportProcess{
         String filename ="Desktop:test.csv";
         try {
             FileWriter fw = new FileWriter(filename);
-            Connection conn = DBConnection.getConnection();
+            Connection conn = new DBConnection().getConnection();
             String query = "select * from testtable";
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
