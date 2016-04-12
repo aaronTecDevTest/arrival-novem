@@ -60,7 +60,15 @@ public class FXMLArrivalLogInController implements Initializable {
 
         String loginTyp = btnLogIn.getText();
         if (loginTyp.equals("LogIn")) {
-            authentication.login(txfUsername.getText(), pwfPassword.getText());
+            String username = txfUsername.getText();
+            String password = pwfPassword.getText();
+            if(username.isEmpty())
+                username ="";
+
+            if( password.isEmpty())
+                password="";
+
+            authentication.login(username, password);
             if (authentication.getLoginStatus()) {
                 showMainView(actionEvent);
             } else {
