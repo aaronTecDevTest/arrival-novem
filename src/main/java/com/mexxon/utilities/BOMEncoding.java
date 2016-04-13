@@ -16,7 +16,6 @@ import java.io.*;
 public class BOMEncoding {
     private static final Logger log = LogManager.getLogger(BOMEncoding.class);
 
-
     private FileInputStream fis = null;
     private InputStreamReader isr = null;
     private String s;
@@ -24,6 +23,14 @@ public class BOMEncoding {
     public BOMEncoding() {
     }
 
+    public static void main(String[] args) {
+        BOMEncoding bomEncoding = new BOMEncoding();
+        try {
+            log.info(bomEncoding.fileEncodedAS());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public String readInput() {
         StringBuffer buffer = new StringBuffer();
@@ -43,7 +50,7 @@ public class BOMEncoding {
         return buffer.toString();
     }
 
-    public void encodeFileTo(String encoding){
+    public void encodeFileTo(String encoding) {
         try {
             FileOutputStream fos = new FileOutputStream("test.txt");
             Writer out = new OutputStreamWriter(fos, "UTF8");
@@ -54,7 +61,7 @@ public class BOMEncoding {
         }
     }
 
-    public String fileEncodedAS() throws IOException{
+    public String fileEncodedAS() throws IOException {
         try {
             // new input stream reader is created
             fis = new FileInputStream("../arrival-novem/src/main/resources/testingData/fileToImport.csv");
@@ -67,7 +74,7 @@ public class BOMEncoding {
         } catch (Exception e) {
             // print error
             System.out.print("The stream is already closed");
-        }finally {
+        } finally {
             // closes the stream and releases resources associated
             if (fis != null)
                 fis.close();
@@ -75,14 +82,5 @@ public class BOMEncoding {
                 isr.close();
         }
         return s;
-    }
-
-    public static void main(String[] args){
-        BOMEncoding bomEncoding = new BOMEncoding();
-        try {
-            log.info(bomEncoding.fileEncodedAS());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }

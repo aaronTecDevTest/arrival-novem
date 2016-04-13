@@ -1,5 +1,6 @@
 package com.mexxon.windows.view;
 
+import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -60,6 +61,7 @@ public class ViewArrivalMainApp extends Application {
 
                         Optional<ButtonType> result = alert.showAndWait();
                 if (result.get() == ButtonType.OK){
+                    Authentication.getInstance().getDbConnection().closeConnection();
                     Platform.exit();
                 }
             }

@@ -1,11 +1,11 @@
 package com.mexxon.utilities;
 
 import com.mexxon.database.DBConnection;
-import java.sql.Connection;
-import java.sql.SQLException;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import java.sql.Connection;
+import java.sql.SQLException;
 
 /**
  * @author: Aaron Kutekidila

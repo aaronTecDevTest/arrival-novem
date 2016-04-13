@@ -1036,3 +1036,294 @@
 2016-04-12 22:47:55,691 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
 2016-04-12 22:48:00,198 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:65) - LogIn show down
 2016-04-12 22:48:00,199 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 09:36:31,527 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 09:36:31,543 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 09:36:31,546 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 09:36:31,555 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show up
+2016-04-13 09:37:20,669 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Access denied for user 'jddj'@'localhost' (using password: YES)
+2016-04-13 09:37:22,070 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Access denied for user 'jddj'@'localhost' (using password: YES)
+2016-04-13 09:37:35,846 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 09:38:04,836 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:172) - ShowLog Clicked:LogInOut
+2016-04-13 09:38:13,677 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 09:38:26,386 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 09:38:36,062 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:118) - Exit Clicked:Exit
+2016-04-13 09:38:36,063 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 09:38:36,302 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:118) - Exit Clicked:Exit
+2016-04-13 09:38:36,302 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 09:38:36,454 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:118) - Exit Clicked:Exit
+2016-04-13 09:38:36,454 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 09:39:35,136 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:142) - LoadConfig Clicked:LoadConfig
+2016-04-13 09:39:48,809 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:166) - UpdateConfig Clicked:Update
+2016-04-13 09:39:50,313 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:112) - ShowAllStatus Clicked:All States
+2016-04-13 09:39:57,990 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:65) - LogIn show down
+2016-04-13 09:39:57,991 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 09:48:42,775 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 09:48:42,818 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 09:48:42,830 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 09:48:42,843 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show up
+2016-04-13 09:48:55,061 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:65) - LogIn show down
+2016-04-13 09:48:55,063 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 09:49:22,442 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 09:49:22,504 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 09:49:22,507 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 09:49:22,516 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show up
+2016-04-13 09:49:29,220 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:65) - LogIn show down
+2016-04-13 09:49:29,221 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 09:51:12,209 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 09:51:12,273 INFO  [JavaFX Application Thread] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 10:36:02,630 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 10:36:02,923 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 11:29:39,306 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 11:31:25,164 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 11:31:25,571 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 11:31:25,607 INFO  [main] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 11:36:04,957 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 11:36:05,303 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 11:36:05,318 INFO  [main] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 11:36:33,136 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 11:36:33,475 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 11:36:33,488 INFO  [main] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 11:37:36,711 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 11:37:37,042 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 11:37:37,063 INFO  [main] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 12:12:54,097 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 12:12:54,550 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 12:21:39,104 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 12:21:39,463 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 12:22:46,056 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 12:22:46,478 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 12:24:52,382 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 12:24:52,753 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 12:25:48,358 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 12:25:48,757 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 12:29:57,759 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 12:29:58,150 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 13:06:42,585 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 13:06:42,893 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 13:17:53,870 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 13:17:54,223 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:20:06,915 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:20:07,225 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:20:07,257 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:20:07,271 INFO  [main] database.DBManger (DBManger.java:152) - --- SQLException caught ---
+2016-04-13 14:20:07,272 INFO  [main] database.DBManger (DBManger.java:155) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'importexport.job_config VALUES;('1.0','import','c:\dadf\dd','txn_tbl','2016-04-1' at line 1
+2016-04-13 14:20:07,272 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 14:20:07,273 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1064
+2016-04-13 14:20:07,273 INFO  [main] database.DBManger (DBManger.java:158) - ----------------------------------
+2016-04-13 14:22:25,465 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:22:25,714 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:22:25,783 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:24:42,387 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:24:42,669 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:24:42,717 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:25:46,752 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:25:47,074 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:25:47,112 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:27:35,826 INFO  [main] database.DBManger (DBManger.java:152) - --- SQLException caught ---
+2016-04-13 14:27:35,827 INFO  [main] database.DBManger (DBManger.java:155) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'importexport.job_config VALUES;('1.0','import','c:\dadf\dd','txn_tbl','2016-04-1' at line 1
+2016-04-13 14:27:35,827 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 14:27:35,828 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1064
+2016-04-13 14:27:35,828 INFO  [main] database.DBManger (DBManger.java:158) - ----------------------------------
+2016-04-13 14:28:28,233 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:28:28,498 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:28:28,569 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:28:42,508 INFO  [main] database.DBManger (DBManger.java:152) - --- SQLException caught ---
+2016-04-13 14:28:42,509 INFO  [main] database.DBManger (DBManger.java:155) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'importexport.job_config VALUES('1.0','import','c:\dadf\dd','txn_tbl','2016-04-12' at line 1
+2016-04-13 14:28:42,509 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 14:28:42,510 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1064
+2016-04-13 14:28:42,510 INFO  [main] database.DBManger (DBManger.java:158) - ----------------------------------
+2016-04-13 14:31:51,493 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:31:51,759 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:31:51,788 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:31:53,452 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 14:31:53,453 INFO  [main] database.DBManger (DBManger.java:155) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'importexport.job_config VALUES('??','import','c:\dadf\dd','txn_tbl','2016-04-12 ' at line 1
+2016-04-13 14:31:53,453 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 14:31:53,454 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1064
+2016-04-13 14:31:53,454 INFO  [main] database.DBManger (DBManger.java:158) - ------------------------------------------------------------------------------------------------------------
+2016-04-13 14:32:29,829 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:32:30,163 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:32:30,190 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:33:39,110 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:33:39,404 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:33:39,431 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:39:47,189 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:39:47,521 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:39:47,554 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:41:08,696 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 14:41:08,696 INFO  [main] database.DBManger (DBManger.java:155) - Message   : Query was empty
+2016-04-13 14:41:08,696 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 14:41:08,697 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1065
+2016-04-13 14:41:08,697 INFO  [main] database.DBManger (DBManger.java:158) - ----------------------------------------------------------------------------------------------------------
+2016-04-13 14:42:56,993 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:42:57,318 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:42:57,356 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:44:42,200 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 14:44:42,201 INFO  [main] database.DBManger (DBManger.java:155) - Message   : Query was empty
+2016-04-13 14:44:42,201 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 14:44:42,202 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1065
+2016-04-13 14:44:42,202 INFO  [main] database.DBManger (DBManger.java:158) - ----------------------------------------------------------------------------------------------------------
+2016-04-13 14:46:31,947 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:46:32,387 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:46:32,424 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:47:28,735 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 14:47:28,736 INFO  [main] database.DBManger (DBManger.java:155) - Message   : Query was empty
+2016-04-13 14:47:28,737 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 14:47:28,738 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1065
+2016-04-13 14:47:28,739 INFO  [main] database.DBManger (DBManger.java:158) - --------------------------------------------------------------------------------------------------------
+2016-04-13 14:51:28,885 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:51:29,217 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:51:29,256 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:51:29,270 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 14:51:29,271 INFO  [main] database.DBManger (DBManger.java:155) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'nullINSERT INTO importexport.job_config VALUES(NULL,'import','c:\dadf\dd','txn_t' at line 1
+2016-04-13 14:51:29,271 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 14:51:29,271 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1064
+2016-04-13 14:51:29,272 INFO  [main] database.DBManger (DBManger.java:158) - --------------------------------------------------------------------------------------------------------
+2016-04-13 14:56:03,357 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 14:56:03,701 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:56:03,739 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 14:58:53,900 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 14:58:53,901 INFO  [main] database.DBManger (DBManger.java:155) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO importexport.job_config VALUES(NULL,'export','txn_tbl','c:\dadf\dd',' at line 1
+2016-04-13 14:58:53,901 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 14:58:53,902 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1064
+2016-04-13 14:58:53,902 INFO  [main] database.DBManger (DBManger.java:158) - --------------------------------------------------------------------------------------------------------
+2016-04-13 15:00:21,601 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 15:00:21,972 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:00:22,018 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:07:44,342 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 15:07:44,342 INFO  [main] database.DBManger (DBManger.java:155) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO importexport.job_config VALUES(NULL,'export','txn_tbl','c:\dadf\dd',' at line 1
+2016-04-13 15:07:44,343 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 15:07:44,343 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1064
+2016-04-13 15:07:44,344 INFO  [main] database.DBManger (DBManger.java:158) - --------------------------------------------------------------------------------------------------------
+2016-04-13 15:07:45,370 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 15:07:45,776 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:07:45,815 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:23:29,735 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 15:23:29,736 INFO  [main] database.DBManger (DBManger.java:155) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO importexport.job_config VALUES(NULL,'export','txn_tbl','c:\dadf\dd',' at line 1
+2016-04-13 15:23:29,736 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 15:23:29,737 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1064
+2016-04-13 15:23:29,737 INFO  [main] database.DBManger (DBManger.java:158) - --------------------------------------------------------------------------------------------------------
+2016-04-13 15:23:34,049 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 15:23:34,350 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:23:34,395 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:23:37,242 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 15:23:37,243 INFO  [main] database.DBManger (DBManger.java:155) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO importexport.job_config VALUES(NULL,'export','txn_tbl','c:\dadf\dd',' at line 1
+2016-04-13 15:23:37,243 INFO  [main] database.DBManger (DBManger.java:156) - SQLState  : 42000
+2016-04-13 15:23:37,244 INFO  [main] database.DBManger (DBManger.java:157) - ErrorCode : 1064
+2016-04-13 15:23:37,244 INFO  [main] database.DBManger (DBManger.java:158) - --------------------------------------------------------------------------------------------------------
+2016-04-13 15:28:11,290 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 15:28:11,621 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:28:11,653 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:31:24,010 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 15:31:24,345 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:31:24,378 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:32:01,911 INFO  [main] database.DBManger (DBManger.java:153) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 15:32:01,912 INFO  [main] database.DBManger (DBManger.java:156) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO importexport.job_config VALUES(NULL,'export','txn_tbl','c:\dadf\dd',' at line 1
+2016-04-13 15:32:01,912 INFO  [main] database.DBManger (DBManger.java:157) - SQLState  : 42000
+2016-04-13 15:32:01,913 INFO  [main] database.DBManger (DBManger.java:158) - ErrorCode : 1064
+2016-04-13 15:32:01,913 INFO  [main] database.DBManger (DBManger.java:159) - --------------------------------------------------------------------------------------------------------
+2016-04-13 15:34:38,744 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 15:34:39,164 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:34:39,203 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:35:18,426 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 15:35:18,783 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:35:18,810 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:38:47,880 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 15:38:48,159 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:38:48,191 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:38:51,715 INFO  [main] database.DBManger (DBManger.java:154) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-13 15:38:51,715 INFO  [main] database.DBManger (DBManger.java:157) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INSERT INTO importexport.job_config VALUES(NULL,'export','txn_tbl','c:\dadf\dd',' at line 1
+2016-04-13 15:38:51,716 INFO  [main] database.DBManger (DBManger.java:158) - SQLState  : 42000
+2016-04-13 15:38:51,716 INFO  [main] database.DBManger (DBManger.java:159) - ErrorCode : 1064
+2016-04-13 15:38:51,717 INFO  [main] database.DBManger (DBManger.java:160) - --------------------------------------------------------------------------------------------------------
+2016-04-13 15:54:32,175 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 15:54:32,531 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 15:54:32,559 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:04:43,367 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:04:43,736 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:04:43,767 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:04:54,845 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:04:54,859 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 16:04:54,862 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 16:04:54,870 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 16:05:12,708 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Access denied for user 'test'@'localhost' (using password: YES)
+2016-04-13 16:07:28,002 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 16:07:35,919 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:198) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:07:35,929 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:08:06,391 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show down
+2016-04-13 16:08:06,392 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 16:13:01,987 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:13:02,001 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 16:13:02,003 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 16:13:02,008 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 16:13:14,649 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 16:13:20,734 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:198) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:13:20,749 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:14:08,812 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:14:08,851 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 16:14:08,853 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 16:14:08,859 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 16:18:22,817 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 16:18:24,620 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:198) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:18:24,628 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:19:57,992 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:198) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:19:57,992 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:212) - Job Configuration Table already loaded!!
+2016-04-13 16:20:13,353 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:174) - Exit Clicked:Exit
+2016-04-13 16:20:13,355 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 16:20:14,265 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:174) - Exit Clicked:Exit
+2016-04-13 16:20:14,265 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 16:20:20,984 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:174) - Exit Clicked:Exit
+2016-04-13 16:20:20,985 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 16:20:22,206 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show down
+2016-04-13 16:20:22,207 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 16:24:14,819 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:24:14,847 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 16:24:14,850 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 16:24:14,856 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 16:24:23,009 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 16:24:25,252 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:198) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:24:25,259 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:24:35,972 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:198) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:24:35,973 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:212) - Job Configuration Table already loaded!!
+2016-04-13 16:24:39,243 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show down
+2016-04-13 16:24:39,244 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 16:27:54,156 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:27:54,192 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 16:27:54,193 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 16:27:54,199 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 16:28:06,808 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 16:28:08,973 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:198) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:28:08,982 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:28:58,189 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:28:58,204 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 16:28:58,206 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 16:28:58,213 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 16:29:04,295 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 16:29:10,760 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:198) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:29:10,768 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:31:12,892 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:31:12,906 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 16:31:12,908 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 16:31:12,913 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 16:31:19,025 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 16:31:22,086 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:198) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:31:22,093 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:31:48,949 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show down
+2016-04-13 16:31:48,950 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 16:54:47,827 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:54:47,911 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 16:54:47,913 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 16:54:47,920 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 16:55:00,027 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 16:55:01,520 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:200) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:55:01,527 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:55:30,262 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show down
+2016-04-13 16:55:30,264 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 16:55:47,743 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 16:55:47,757 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 16:55:47,759 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 16:55:47,764 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 16:55:54,227 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 16:55:56,197 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:201) - LoadConfig Clicked:LoadConfig
+2016-04-13 16:55:56,203 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 16:56:33,890 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show down
+2016-04-13 16:56:33,892 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool

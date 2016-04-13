@@ -2,10 +2,8 @@ package com.mexxon.scheduler;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
-
 
 import java.util.concurrent.CountDownLatch;
 

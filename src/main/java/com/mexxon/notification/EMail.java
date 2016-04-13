@@ -4,17 +4,15 @@ import com.mexxon.utilities.SystemPreferences;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.io.File;
-import java.util.Properties;
-import java.util.ArrayList;
-
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Properties;
 
 
 

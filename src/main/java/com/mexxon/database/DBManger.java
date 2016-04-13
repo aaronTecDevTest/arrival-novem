@@ -1,15 +1,12 @@
 package com.mexxon.database;
 
+import com.mexxon.utilities.SystemPreferences;
+import com.mexxon.windows.model.DBJobConfigTable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 /**
  * @author: Aaron Kutekidila
@@ -21,82 +18,136 @@ import java.util.List;
 
 public class DBManger {
     private static final Logger log = LogManager.getLogger(DBManger.class);
-
-    static final String WRITE_OBJECT_SQL = "INSERT INTO java_objects(name, object_value) VALUES (?, ?)";
-
-    static final String READ_OBJECT_SQL = "SELECT object_value FROM java_objects WHERE id = ?";
-
-    private ArrayList<String>  sqlTabelSeceltList = new ArrayList<String>();
+    PreparedStatement preparedStatement = null;
+    ResultSet resultSet = null;
 
     public DBManger() {
     }
 
 
-    public static long writeJavaObject(Connection conn, Object object) throws Exception {
-        String className = object.getClass().getName();
-        PreparedStatement pstmt = conn.prepareStatement(WRITE_OBJECT_SQL, Statement.RETURN_GENERATED_KEYS);
+    public static void main(String args[]) {
 
-        // set input parameters
-        pstmt.setString(1, className);
-        pstmt.setObject(2, object);
-        pstmt.executeUpdate();
+        DBConnection dbConnection = new DBConnection();
+        String sql = "SELECT * FROM importexport.job_config;";
+        DBManger dbManger = new DBManger();
+        ArrayList<DBJobConfigTable> listJobConfig = dbManger.getJobConfigTable(dbConnection.getConnection(), sql);
 
-        // get the generated key for the id
-        ResultSet rs = pstmt.getGeneratedKeys();
-        int id = -1;
-        if (rs.next()) {
-            id = rs.getInt(1);
+        //Test read from db
+        for (DBJobConfigTable jobConfigTable : listJobConfig) {
+            System.out.println(jobConfigTable.getJob_id());
+            System.out.println(jobConfigTable.getJob_typ());
+            System.out.println(jobConfigTable.getEnd_time());
+            System.out.println(jobConfigTable.end_timeProperty());
         }
 
-        rs.close();
-        pstmt.close();
-        System.out.println("writeJavaObject: done serializing: " + className);
-        return id;
+        //Test write to db
+        dbManger.setJobConfigTable(dbConnection.getConnection(),listJobConfig);
     }
 
-    public static Object readJavaObject(Connection conn, long id) throws Exception {
-        PreparedStatement pstmt = conn.prepareStatement(READ_OBJECT_SQL);
-        pstmt.setLong(1, id);
-        ResultSet rs = pstmt.executeQuery();
-        rs.next();
-        Object object = rs.getObject(1);
-        String className = object.getClass().getName();
-
-        rs.close();
-        pstmt.close();
-        System.out.println("readJavaObject: done de-serializing: " + className);
-        return object;
+    public void writeToDB(Connection connection, ArrayList<String> sqlList) throws SQLException {
+        preparedStatement = connection.prepareStatement("");
+        for (String sqlTemp: sqlList) {
+            preparedStatement.execute(sqlTemp);
+        }
     }
-    public static void main(String args[])throws Exception {
-        /**
-         CREATE TABLE java_objects (
-         id INT AUTO_INCREMENT,
-         name varchar(128),
-         object_value BLOB,
-         primary key (id));
-         **/
 
-        Connection conn = null;
+    public ResultSet readFromDB(Connection connection, String sql) throws SQLException {
+        preparedStatement = connection.prepareStatement(sql);
+        preparedStatement.execute();
+        resultSet = preparedStatement.getResultSet();
+        return resultSet;
+    }
+
+    public boolean setJobConfigTable(Connection connection, ArrayList<DBJobConfigTable> dbJobConfigTables) {
+        boolean updateSuccessful = false;
+        ArrayList<String> sqlList = new ArrayList<String>();
+
         try {
-            DBConnection dbConnection = new DBConnection();
-
-            conn = dbConnection.getConnection();
-            System.out.println("conn=" + conn);
-            conn.setAutoCommit(false);
-            List<Object> list = new ArrayList<Object>();
-            list.add("This is a short string.");
-            list.add(new Integer(1234));
-            list.add(new Date());
-
-            long objectID = writeJavaObject(conn, list);
-            conn.commit();
-            System.out.println("Serialized objectID => " + objectID);
-            List listFromDatabase = (List) readJavaObject(conn, objectID);
-            System.out.println("[After De-Serialization] list=" + listFromDatabase);
-        } catch (Exception e) {
-            e.printStackTrace();
+            for (DBJobConfigTable data: dbJobConfigTables){
+                String sql = SystemPreferences.getResourceBundle("arrivalSQL").getString("table.job_config.setData");
+                sql = sql +"("
+                        +"NULL,"
+                        +"'" + data.getJob_typ() +"',"
+                        +"'" + data.getFrom() +"',"
+                        +"'" + data.getTo() +"',"
+                        +"'" + data.getStart_time() +"',"
+                        +"'" + data.getEnd_time() +"',"
+                        +"'" + data.getScheduler() +"',"
+                        +"'" + data.getExpired_time() +"',"
+                        +"'" + data.getExport_sql() +"'"
+                        +");";
+                sqlList.add(sql);
+            }
+            writeToDB(connection, sqlList);
+        } catch (SQLException e) {
+            // something went wrong, we are handling the exception here
+            if (connection != null) {
+                try {
+                    connection.rollback();
+                    connection.setAutoCommit(true);
+                } catch (SQLException e1) {
+                }
+            }
+            // iterate and get all of the errors as much as possible.
+            slqErrorMessage(e);
         } finally {
-            conn.close();
+            try {
+                resultSet.close();
+                preparedStatement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return updateSuccessful;
+    }
+
+    public ArrayList<DBJobConfigTable> getJobConfigTable (Connection connection, String sql){
+        ArrayList<DBJobConfigTable> jobConfigTables = new ArrayList<>();
+        try {
+            resultSet = readFromDB(connection, sql);
+            while (resultSet.next()) {
+                DBJobConfigTable temp = new DBJobConfigTable();
+                temp.setJob_id(resultSet.getDouble(1));
+                temp.setJob_typ(resultSet.getString(2));
+                temp.setFrom(resultSet.getString(3));
+                temp.setTo(resultSet.getString(4));
+                temp.setStart_time(resultSet.getString(5));
+                temp.setEnd_time(resultSet.getString(6));
+                temp.setScheduler(resultSet.getString(7));
+                temp.setExpired_time(resultSet.getString(8));
+                temp.setExport_sql(resultSet.getString(9));
+                jobConfigTables.add(temp);
+            }
+        } catch (SQLException e) {
+            // something went wrong, we are handling the exception here
+            if (connection != null) {
+                try {
+                    connection.rollback();
+                    connection.setAutoCommit(true);
+                } catch (SQLException e1) {
+                }
+            }
+            slqErrorMessage(e);
+        } finally {
+            try {
+                resultSet.close();
+                preparedStatement.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return jobConfigTables;
+    }
+
+    private void slqErrorMessage(SQLException e) {
+        log.info("------------------------------------------ SQLException caught --------------------------------------");
+        // iterate and get all of the errors as much as possible.
+        while (e != null) {
+            log.info("Message   : " + e.getMessage());
+            log.info("SQLState  : " + e.getSQLState());
+            log.info("ErrorCode : " + e.getErrorCode());
+            log.info("------------------------------------------- SQLException end ----------------------------------------");
+            e = e.getNextException();
         }
     }
 }
