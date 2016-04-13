@@ -24,9 +24,8 @@ public class DBManger {
     public DBManger() {
     }
 
-
+/*
     public static void main(String args[]) {
-
         DBConnection dbConnection = new DBConnection();
         String sql = "SELECT * FROM importexport.job_config;";
         DBManger dbManger = new DBManger();
@@ -42,7 +41,7 @@ public class DBManger {
 
         //Test write to db
         dbManger.setJobConfigTable(dbConnection.getConnection(),listJobConfig);
-    }
+    }*/
 
     public void writeToDB(Connection connection, ArrayList<String> sqlList) throws SQLException {
         preparedStatement = connection.prepareStatement("");

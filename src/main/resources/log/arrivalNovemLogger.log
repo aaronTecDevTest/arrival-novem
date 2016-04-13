@@ -1327,3 +1327,46 @@
 2016-04-13 16:55:56,203 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
 2016-04-13 16:56:33,890 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show down
 2016-04-13 16:56:33,892 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 20:41:15,048 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 20:41:15,065 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 20:41:15,067 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 20:41:15,073 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 20:41:39,029 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-13 20:42:38,197 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:201) - LoadConfig Clicked:LoadConfig
+2016-04-13 20:42:38,223 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-13 20:48:28,246 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:177) - Exit Clicked:Exit
+2016-04-13 20:48:28,259 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 20:48:38,171 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:177) - Exit Clicked:Exit
+2016-04-13 20:48:38,172 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-13 20:48:39,567 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show down
+2016-04-13 20:48:39,569 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 21:02:38,884 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 21:02:38,890 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 21:02:38,892 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 21:02:38,897 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:61) - LogIn show up
+2016-04-13 21:03:00,613 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-04-13 21:03:02,617 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-04-13 21:03:24,764 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-04-13 21:03:26,767 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-04-13 21:03:40,872 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:63) - LogIn show down
+2016-04-13 21:03:40,872 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-13 21:04:46,990 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 21:04:47,042 INFO  [JavaFX Application Thread] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 21:05:18,286 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:233) - ShowLog Clicked:LogInOut
+2016-04-13 21:15:20,288 INFO  [JavaFX Application Thread] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 21:15:20,337 INFO  [JavaFX Application Thread] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 21:15:50,683 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-13 21:15:50,689 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-13 21:15:50,690 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-13 21:15:50,696 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:93) - LogIn show up
+2016-04-13 21:15:55,173 ERROR [JavaFX Application Thread] view.ViewArrivalLogIn$1 (ViewArrivalLogIn.java:84) - null
+2016-04-13 21:15:55,184 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:95) - LogIn show down
+2016-04-13 21:15:55,185 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool

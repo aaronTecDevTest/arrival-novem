@@ -18,6 +18,7 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.Optional;
 
 /**
@@ -46,26 +47,6 @@ public class ViewArrivalMainApp extends Application {
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
 
         primaryStage.setResizable(false);
-
-        //For all CloseRequest (CloseButton)
-        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-                    @Override
-                    public void handle(WindowEvent event) {
-                        // consume event
-                        event.consume();
-                        // show close dialog
-                        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                        alert.setTitle("Exit Confirmation");
-                        alert.setHeaderText("Do you really want to quit?");
-                        alert.initOwner( primaryStage);
-
-                        Optional<ButtonType> result = alert.showAndWait();
-                if (result.get() == ButtonType.OK){
-                    Authentication.getInstance().getDbConnection().closeConnection();
-                    Platform.exit();
-                }
-            }
-        });
 /*
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);

@@ -177,12 +177,6 @@ public class FXMLArrivalMainController implements Initializable {
         log.info("Exit Clicked:" + ((Button)actionEvent.getSource()).getText());
         authentication.logout();
 
-        new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
-                // consume event
-                actionEvent.consume();
-                // show close dialog
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
                 alert.setTitle("Exit Confirmation");
                 alert.setHeaderText("Do you really want to quit?");
@@ -190,23 +184,21 @@ public class FXMLArrivalMainController implements Initializable {
 
                 Optional<ButtonType> result = alert.showAndWait();
                 if (result.get() == ButtonType.OK) {
+                    try {
+                        Authentication.getInstance().getDbConnection().closeConnection();
+                    }
+                    catch (Exception e){
+                        log.error(e.getMessage());
+                    }
                     Platform.exit();
                 }
-            }
-        };
     }
 
     @FXML
     public void loadConfig(ActionEvent actionEvent) {
         log.info("LoadConfig Clicked:" + ((Button) actionEvent.getSource()).getText());
         if (dataJobConfig.isEmpty()) {
-            ArrayList<DBJobConfigTable> temptDataList = new ArrayList<>();
-            DBManger dbManger = new DBManger();
-            temptDataList =  dbManger.getJobConfigTable(Authentication.getDbConnection().getConnection(),
-                                        SystemPreferences.getResourceBundle("arrivalSQL").getString("table.job_config.getData"));
-
-            dataJobConfig = FXCollections.observableArrayList(temptDataList);
-            tbvJobConfig.setItems(dataJobConfig);
+            getJobConfFromDB();
         } else {
             log.info("Job Configuration Table already loaded!!");
         }
@@ -233,7 +225,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     public void updateConfigTable(ActionEvent actionEvent) {
         log.info("UpdateConfig Clicked:" + ((Button)actionEvent.getSource()).getText());
-
+        getJobConfFromDB();
     }
 
     @FXML
@@ -264,6 +256,15 @@ public class FXMLArrivalMainController implements Initializable {
         }
     }
 
+    private void getJobConfFromDB(){
+        ArrayList<DBJobConfigTable> temptDataList = new ArrayList<>();
+        DBManger dbManger = new DBManger();
+        temptDataList =  dbManger.getJobConfigTable(Authentication.getDbConnection().getConnection(),
+                SystemPreferences.getResourceBundle("arrivalSQL").getString("table.job_config.getData"));
+
+        dataJobConfig = FXCollections.observableArrayList(temptDataList);
+        tbvJobConfig.setItems(dataJobConfig);
+    }
     private void addTableViewListener() {
         tbvJobConfig.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
@@ -275,6 +276,7 @@ public class FXMLArrivalMainController implements Initializable {
                 txtJobTyp.setText(tempData.getExport_sql());
                 txtScheduler.setText(tempData.getExport_sql());
                 txtProcessUser.setText(tempData.getExport_sql());
+                txtStartTime.setText(tempData.getStart_time());
             }
         });
     }
