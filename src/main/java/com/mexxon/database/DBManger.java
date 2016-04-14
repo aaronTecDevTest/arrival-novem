@@ -24,7 +24,6 @@ public class DBManger {
     public DBManger() {
     }
 
-
     public static void main(String args[]) {
         DBConnection dbConnection = new DBConnection();
         String sql = "SELECT * FROM importexport.job_configuration;";

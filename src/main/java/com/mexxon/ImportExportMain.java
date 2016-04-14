@@ -27,11 +27,11 @@ public class ImportExportMain {
     }
 
     public void runLogIn() {
-        log.info("Start -- Mexxon - ImportExportTool");
+        log.info("Start ------------------------- Mexxon ------------------------ ImportExportTool");
         {
             logInView = new ViewArrivalLogIn();
             logInView.run();
         }
-        log.info("Stop -- Mexxon - ImportExportTool");
+        log.info("Stop -------------------------- Mexxon ------------------------- ImportExportTool");
     }
 }

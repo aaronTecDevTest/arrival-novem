@@ -7,16 +7,17 @@ package com.mexxon.database;
  * @since: 1.0
  * Package: com.mexxon.database
  */
-public class SQLQuerie {
-    private long sqlID;
-    private String sqlQuerie;
 
-    public SQLQuerie() {
+public class SQLQuery {
+    private long sqlID;
+    private String sqlQuery;
+
+    public SQLQuery() {
     }
 
-    public SQLQuerie(long querieID, String sqlQuerie) {
+    public SQLQuery(long querieID, String sqlQuery) {
         this.sqlID = querieID;
-        this.sqlQuerie = sqlQuerie;
+        this.sqlQuery = sqlQuery;
     }
 
     public long getSqlID() {
@@ -50,6 +51,6 @@ public class SQLQuerie {
      */
     @Override
     public String toString() {
-        return sqlID +": " + sqlQuerie;
+        return sqlID +": " + sqlQuery;
     }
 }

@@ -34,7 +34,6 @@ import org.apache.logging.log4j.Logger;
  ******************************************************************************************************************************************************************
  INSERT INTO importexport.job_configuration VALUES(NULL,'import','import to    the db','c:\dadf\dd','txn_tbl','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
  INSERT INTO importexport.job_configuration VALUES(NULL,'export','export frome the db','txn_tbl','c:\dadf\dd','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
-
  */
 
 public class DBJobConfigTable {
@@ -68,7 +67,6 @@ public class DBJobConfigTable {
         this.expired_time = new SimpleStringProperty(expired_time);
         this.export_sql = new SimpleStringProperty(export_sql);
         this.csv_separator = new SimpleStringProperty(csv_separator);
-
     }
 
 

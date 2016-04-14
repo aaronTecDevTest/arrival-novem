@@ -131,5 +131,4 @@ public class SchedulerListener implements org.quartz.SchedulerListener{
            log.info("Error getting scheduler name" + e);
         }
     }
-
 }

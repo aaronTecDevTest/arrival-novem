@@ -16,13 +16,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 import java.net.URL;
 
@@ -37,7 +34,6 @@ public class ViewArrivalLogIn extends Application {
     private Parent root;
     private URL url;
     private URL applicationIcon;
-
 
     @Override
     public void start(Stage primaryStage) throws IOException {

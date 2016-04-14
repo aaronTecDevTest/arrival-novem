@@ -11,7 +11,6 @@ import org.apache.logging.log4j.Logger;
  * Package: com.mexxon.scheduler
  */
 public class JobManger {
-
     private static final Logger log = LogManager.getLogger(JobManger.class);
 
     public JobManger() {

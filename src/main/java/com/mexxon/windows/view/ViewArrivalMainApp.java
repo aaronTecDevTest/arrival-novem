@@ -1,25 +1,16 @@
 package com.mexxon.windows.view;
 
-import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 import java.io.IOException;
 import java.net.URL;
-import java.sql.SQLException;
-import java.util.Optional;
 
 /**
  * @author: Aaron Kutekidila
@@ -28,6 +19,7 @@ import java.util.Optional;
  * @since: 1.0
  * Package: com.mexxon.windows.view
  */
+
 public class ViewArrivalMainApp extends Application {
     private static final Logger log = LogManager.getLogger(ViewArrivalMainApp.class);
 

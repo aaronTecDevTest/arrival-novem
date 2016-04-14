@@ -1653,3 +1653,37 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2016-04-14 16:43:47,681 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
 2016-04-14 16:43:47,693 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:78) - LogIn show down
 2016-04-14 16:43:47,695 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-14 19:49:19,411 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 19:49:19,800 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 19:49:19,849 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 19:50:54,112 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 19:50:54,119 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-14 19:50:54,120 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start -- Mexxon - ImportExportTool
+2016-04-14 19:50:54,126 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:76) - LogIn show up
+2016-04-14 19:51:15,057 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-14 19:51:33,775 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:184) - LoadConfig Clicked:LoadConfig
+2016-04-14 19:51:33,785 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 19:52:41,885 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:177) - Exit Clicked:Exit
+2016-04-14 19:52:41,896 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-14 19:52:48,078 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-14 19:52:48,099 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:78) - LogIn show down
+2016-04-14 19:52:48,100 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-14 20:02:03,804 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 20:02:03,811 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-14 20:02:03,813 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start ------------------------- Mexxon ------------------------ ImportExportTool
+2016-04-14 20:02:03,820 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:76) - LogIn show up
+2016-04-14 20:02:17,533 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-14 20:02:22,347 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:184) - LoadConfig Clicked:LoadConfig
+2016-04-14 20:02:22,355 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 20:03:20,489 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:177) - Exit Clicked:Exit
+2016-04-14 20:03:20,491 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-14 20:03:50,042 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 20:03:50,439 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 20:03:50,524 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 20:04:00,009 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:212) - UpdateConfig Clicked:Update
+2016-04-14 20:04:00,026 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 20:04:38,323 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:177) - Exit Clicked:Exit
+2016-04-14 20:04:38,324 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-14 20:05:27,132 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-14 20:05:27,159 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:78) - LogIn show down
+2016-04-14 20:05:27,163 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -------------------------- Mexxon ------------------------- ImportExportTool
