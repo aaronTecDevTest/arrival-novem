@@ -24,10 +24,10 @@ public class DBManger {
     public DBManger() {
     }
 
-/*
+
     public static void main(String args[]) {
         DBConnection dbConnection = new DBConnection();
-        String sql = "SELECT * FROM importexport.job_config;";
+        String sql = "SELECT * FROM importexport.job_configuration;";
         DBManger dbManger = new DBManger();
         ArrayList<DBJobConfigTable> listJobConfig = dbManger.getJobConfigTable(dbConnection.getConnection(), sql);
 
@@ -41,7 +41,7 @@ public class DBManger {
 
         //Test write to db
         dbManger.setJobConfigTable(dbConnection.getConnection(),listJobConfig);
-    }*/
+    }
 
     public void writeToDB(Connection connection, ArrayList<String> sqlList) throws SQLException {
         preparedStatement = connection.prepareStatement("");
@@ -74,7 +74,8 @@ public class DBManger {
                         +"'" + data.getEnd_time() +"',"
                         +"'" + data.getScheduler() +"',"
                         +"'" + data.getExpired_time() +"',"
-                        +"'" + data.getExport_sql() +"'"
+                        +"'" + data.getExport_sql() +"',"
+                        +"'" + data.getCsv_separator() +"'"
                         +");";
                 sqlList.add(sql);
             }
@@ -117,6 +118,7 @@ public class DBManger {
                 temp.setScheduler(resultSet.getString(8));
                 temp.setExpired_time(resultSet.getString(9));
                 temp.setExport_sql(resultSet.getString(10));
+                temp.setCsv_separator(resultSet.getString(11));
                 jobConfigTables.add(temp);
             }
         } catch (SQLException e) {

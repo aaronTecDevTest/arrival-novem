@@ -1541,3 +1541,59 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2016-04-14 14:56:43,892 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
 2016-04-14 14:56:43,905 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:78) - LogIn show down
 2016-04-14 14:56:43,906 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -- Mexxon - ImportExportTool
+2016-04-14 15:54:24,263 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 15:54:24,547 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 15:54:24,571 INFO  [main] database.DBManger (DBManger.java:146) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-14 15:54:24,572 INFO  [main] database.DBManger (DBManger.java:149) - Message   : Table 'importexport.job_config' doesn't exist
+2016-04-14 15:54:24,572 INFO  [main] database.DBManger (DBManger.java:150) - SQLState  : 42S02
+2016-04-14 15:54:24,572 INFO  [main] database.DBManger (DBManger.java:151) - ErrorCode : 1146
+2016-04-14 15:54:24,573 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-14 15:54:45,197 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 15:54:45,662 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 15:54:45,685 INFO  [main] database.DBManger (DBManger.java:146) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-14 15:54:45,685 INFO  [main] database.DBManger (DBManger.java:149) - Message   : Table 'importexport.job_configurator' doesn't exist
+2016-04-14 15:54:45,685 INFO  [main] database.DBManger (DBManger.java:150) - SQLState  : 42S02
+2016-04-14 15:54:45,686 INFO  [main] database.DBManger (DBManger.java:151) - ErrorCode : 1146
+2016-04-14 15:54:45,686 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-14 15:55:33,408 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 15:55:33,794 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 15:56:13,186 INFO  [main] database.DBManger (DBManger.java:146) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-14 15:56:13,186 INFO  [main] database.DBManger (DBManger.java:149) - Message   : Table 'importexport.job_configurator' doesn't exist
+2016-04-14 15:56:13,187 INFO  [main] database.DBManger (DBManger.java:150) - SQLState  : 42S02
+2016-04-14 15:56:13,187 INFO  [main] database.DBManger (DBManger.java:151) - ErrorCode : 1146
+2016-04-14 15:56:13,187 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-14 15:56:15,523 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 15:56:15,847 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 15:56:24,447 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 15:56:24,461 INFO  [main] database.DBManger (DBManger.java:146) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-14 15:56:24,461 INFO  [main] database.DBManger (DBManger.java:149) - Message   : Column count doesn't match value count at row 1
+2016-04-14 15:56:24,461 INFO  [main] database.DBManger (DBManger.java:150) - SQLState  : 21S01
+2016-04-14 15:56:24,462 INFO  [main] database.DBManger (DBManger.java:151) - ErrorCode : 1136
+2016-04-14 15:56:24,462 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-14 15:57:25,093 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 15:57:25,442 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 15:57:25,474 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 16:01:56,007 INFO  [main] database.DBManger (DBManger.java:146) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-14 16:01:56,008 INFO  [main] database.DBManger (DBManger.java:149) - Message   : Column count doesn't match value count at row 1
+2016-04-14 16:01:56,009 INFO  [main] database.DBManger (DBManger.java:150) - SQLState  : 21S01
+2016-04-14 16:01:56,009 INFO  [main] database.DBManger (DBManger.java:151) - ErrorCode : 1136
+2016-04-14 16:01:56,010 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-14 16:01:58,262 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 16:01:58,624 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 16:01:58,652 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 16:01:59,568 INFO  [main] database.DBManger (DBManger.java:146) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-14 16:01:59,568 INFO  [main] database.DBManger (DBManger.java:149) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';')' at line 1
+2016-04-14 16:01:59,569 INFO  [main] database.DBManger (DBManger.java:150) - SQLState  : 42000
+2016-04-14 16:01:59,569 INFO  [main] database.DBManger (DBManger.java:151) - ErrorCode : 1064
+2016-04-14 16:01:59,569 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-14 16:02:22,894 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 16:02:23,162 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 16:02:23,191 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 16:03:04,798 INFO  [main] database.DBManger (DBManger.java:146) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-14 16:03:04,798 INFO  [main] database.DBManger (DBManger.java:149) - Message   : You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ';')' at line 1
+2016-04-14 16:03:04,799 INFO  [main] database.DBManger (DBManger.java:150) - SQLState  : 42000
+2016-04-14 16:03:04,799 INFO  [main] database.DBManger (DBManger.java:151) - ErrorCode : 1064
+2016-04-14 16:03:04,800 INFO  [main] database.DBManger (DBManger.java:152) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-14 16:03:07,063 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-14 16:03:07,357 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-14 16:03:07,384 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
