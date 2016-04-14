@@ -79,8 +79,6 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TextField txtProcessUser;
     @FXML
-    private TextField txtJobTyp;
-    @FXML
     private TextField txtExpiredTime;
     @FXML
     private TextField txtEndTime;
@@ -95,7 +93,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TableColumn<DBJobConfigTable, String> tbcJobTyp;
     @FXML
-    private TableColumn<DBJobConfigTable, String> tbcJobDecription;
+    private TableColumn<DBJobConfigTable, String> tbcJobDescription;
     @FXML
     private TableColumn<DBJobConfigTable, String> tbcExportSQL;
 
@@ -127,7 +125,7 @@ public class FXMLArrivalMainController implements Initializable {
         //Setup Table-Column Properties
         tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_id"));
         tbcJobTyp.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_typ"));
-        tbcJobDecription.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_decription"));
+        tbcJobDescription.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_description"));
         tbcExportSQL.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("export_sql"));
         /*tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
         tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
@@ -258,7 +256,6 @@ public class FXMLArrivalMainController implements Initializable {
                 txtExpiredTime.setText(tempData.getExport_sql());
                 txtFrom.setText(tempData.getExport_sql());
                 txtTo.setText(tempData.getExport_sql());
-                txtJobTyp.setText(tempData.getExport_sql());
                 txtScheduler.setText(tempData.getExport_sql());
                 txtProcessUser.setText(tempData.getExport_sql());
                 txtStartTime.setText(tempData.getStart_time());

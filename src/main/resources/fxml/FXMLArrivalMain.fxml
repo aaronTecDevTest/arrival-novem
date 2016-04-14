@@ -31,9 +31,9 @@
                   <TableColumn fx:id="tbcJobID" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobID" />
                   <TableColumn fx:id="tbcJobTyp" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobTyp" />
                   <TableColumn fx:id="tbcJobDescription" maxWidth="600.0" minWidth="100.0" prefWidth="213.0" text="JobDescription" />
-                  <TableColumn fx:id="tbcExportSQL" maxWidth="600.0" minWidth="205.0" prefWidth="343.0" text="ExportSQL" />
-                  <TableColumn fx:id="tbcCSVSeparator" maxWidth="600.0" minWidth="57.0" prefWidth="103.0" text="xxxx" />
-                  <TableColumn maxWidth="600.0" minWidth="60.0" prefWidth="97.0" text="xxx" />
+                  <TableColumn fx:id="tbcExportSQL" maxWidth="600.0" minWidth="205.0" prefWidth="360.0" text="ExportSQL" />
+                  <TableColumn fx:id="tbcCSVSeparator" maxWidth="600.0" minWidth="56.0" prefWidth="94.0" text="CSVSeparator" />
+                  <TableColumn maxWidth="600.0" minWidth="60.0" prefWidth="89.0" text="xxx" />
                   <TableColumn maxWidth="600.0" minWidth="85.0" prefWidth="106.0" text="xxxx" />
                   <TableColumn maxWidth="600.0" minWidth="74.0" prefWidth="139.0" text="xxxx" />
                   <TableColumn maxWidth="600.0" minWidth="111.0" prefWidth="114.0" text="xxxx" />
@@ -144,8 +144,8 @@
                   </Label>
                   <TextField fx:id="txtFrom" disable="true" GridPane.columnIndex="1" />
                   <TextField fx:id="txtStartTime" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtProcessUser" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="txtJobTyp" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtSeper" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtProcessUser" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <TextField fx:id="txtTo" disable="true" GridPane.columnIndex="6">
                      <GridPane.margin>
                         <Insets right="5.0" />
