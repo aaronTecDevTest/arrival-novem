@@ -11,6 +11,8 @@ package com.mexxon.windows.controller;
 import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,6 +24,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
@@ -43,6 +48,8 @@ public class FXMLArrivalLogInController implements Initializable {
     private TextField txfUsername;
     @FXML
     private PasswordField pwfPassword;
+    @FXML
+    private AnchorPane login;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -59,33 +66,20 @@ public class FXMLArrivalLogInController implements Initializable {
 
     @FXML
     public void clickLogIn(ActionEvent actionEvent) {
-        String loginTyp = btnLogIn.getText();
+        login(actionEvent);
+    }
 
-        if (loginTyp.equals("LogIn")) {
-            String username = txfUsername.getText();
-            String password = pwfPassword.getText();
-
-            if(username.isEmpty() && password.isEmpty()){
-                lblFailLogIn.setVisible(true);
-            }else {
-                authentication.login(username, password);
-                if (authentication.getLoginStatus()) {
-                    showMainView(actionEvent);
-                } else {
-                    lblFailLogIn.setVisible(true);
+  /* @FXML
+    public void enterPressed(KeyEvent keyEvent){
+        login.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent event) {
+                if(event.getCode() == KeyCode.ENTER) {
+                    login(new ActionEvent());
                 }
             }
-        }
-
-        if (loginTyp.equals("LogOut")) {
-            authentication.logout();
-            if(!authentication.getLoginStatus()){
-                txfUsername.setText("");
-                pwfPassword.setText("");
-                btnLogIn.setText("LogIn");
-            }
-        }
-    }
+        });
+    }*/
 
     private void showMainView(ActionEvent actionEvent) {
         try {
@@ -117,6 +111,34 @@ public class FXMLArrivalLogInController implements Initializable {
             txfUsername.setText(authentication.getUsername());
             pwfPassword.setText(authentication.getUserpassword());
             btnLogIn.setText("LogOut");
+        }
+    }
+
+    private void login(ActionEvent actionEvent){
+        String loginTyp = btnLogIn.getText();
+        if (loginTyp.equals("LogIn")) {
+            String username = txfUsername.getText();
+            String password = pwfPassword.getText();
+
+            if(username.isEmpty() && password.isEmpty()){
+                lblFailLogIn.setVisible(true);
+            }else {
+                authentication.login(username, password);
+                if (authentication.getLoginStatus()) {
+                    showMainView(actionEvent);
+                } else {
+                    lblFailLogIn.setVisible(true);
+                }
+            }
+        }
+
+        if (loginTyp.equals("LogOut")) {
+            authentication.logout();
+            if(!authentication.getLoginStatus()){
+                txfUsername.setText("");
+                pwfPassword.setText("");
+                btnLogIn.setText("LogIn");
+            }
         }
     }
 }

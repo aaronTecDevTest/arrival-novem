@@ -8,17 +8,16 @@ package com.mexxon.windows.view;
  * Package: com.arrival.windows.view
  */
 
-import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
+import com.mexxon.utilities.WindowsDialogs;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.apache.logging.log4j.LogManager;
@@ -26,7 +25,6 @@ import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 import java.net.URL;
-import java.util.Optional;
 
 
 /**
@@ -55,9 +53,8 @@ public class ViewArrivalLogIn extends Application {
         primaryStage.setScene(scene);
         primaryStage.setTitle("Maxxon: ImportExportTool - LogInOut");
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
-
         primaryStage.setResizable(false);
-/*
+        /*
         Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();
         primaryStage.setX((primScreenBounds.getWidth() - primaryStage.getWidth()) / 2);
         primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);*/
@@ -70,21 +67,7 @@ public class ViewArrivalLogIn extends Application {
                 // consume event
                 event.consume();
                 // show close dialog
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Exit Confirmation");
-                alert.setHeaderText("Do you really want to quit?");
-                alert.initOwner( primaryStage);
-
-                Optional<ButtonType> result = alert.showAndWait();
-                if (result.get() == ButtonType.OK){
-                    try {
-                        Authentication.getInstance().getDbConnection().closeConnection();
-                    }
-                    catch (Exception e){
-                        log.error(e.getMessage());
-                    }
-                    Platform.exit();
-                }
+                new WindowsDialogs().closeWindowsConfirmation(log, primaryStage);
             }
         });
     }

@@ -8,19 +8,27 @@ package com.mexxon.utilities;
  * Package: com.arrival.utilities
  */
 
+import javafx.application.Platform;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import org.apache.logging.log4j.Logger;
 
+import java.net.URL;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class WindowsDialogs {
     private ResourceBundle bundle = SystemPreferences.getResourceBundle("bundleDialogs");
+    private URL iconURL =  getClass().getResource("/icon/appIcons.png");
 
     public WindowsDialogs() {
+
     }
 
-    public static String setTestsuiteNameDialog() {
+    public  String setTestsuiteNameDialog() {
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Testsuite name");
         dialog.setHeaderText("Enter the Testsuite name:");
@@ -36,7 +44,7 @@ public class WindowsDialogs {
         return entered;
     }
 
-    public static void noTestConfigSet() {
+    public  void noTestConfigSet() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
@@ -45,7 +53,7 @@ public class WindowsDialogs {
         alert.showAndWait();
     }
 
-    public static void optionsIsNull() {
+    public  void optionsIsNull() {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
@@ -54,7 +62,7 @@ public class WindowsDialogs {
         alert.showAndWait();
     }
 
-    public static void wrongPlatform(String ios) {
+    public  void wrongPlatform(String ios) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
@@ -62,7 +70,7 @@ public class WindowsDialogs {
         alert.showAndWait();
     }
 
-    public static void testCaseInTestsuite(){
+    public  void testCaseInTestsuite(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
@@ -70,7 +78,24 @@ public class WindowsDialogs {
         alert.showAndWait();
     }
 
-    public static void closeWindows(){
+    public  void closeWindowsConfirmation(Logger log, Stage primaryStage){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Exit Confirmation");
+        alert.setHeaderText("Do you really want to quit?");
+        alert.initOwner( primaryStage);
 
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image(iconURL.toString()));
+
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.get() == ButtonType.OK){
+            try {
+                Authentication.getInstance().getDbConnection().closeConnection();
+            }
+            catch (Exception e){
+                log.error(e.getMessage());
+            }
+            Platform.exit();
+        }
     }
 }

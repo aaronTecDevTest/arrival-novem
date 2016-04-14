@@ -13,8 +13,8 @@
             <menus>
                 <Menu fx:id="mnuFile" mnemonicParsing="false" text="\%menu.title.file">
                     <items>
-                        <MenuItem fx:id="mnuLogin" mnemonicParsing="false" text="\%menu.title.login" />
-                        <MenuItem fx:id="mnuExit" mnemonicParsing="false" text="\%menu.title.exit" />
+                        <MenuItem fx:id="mnuLogin" mnemonicParsing="false" onAction="#showLogInOut" text="\%menu.title.login" />
+                        <MenuItem fx:id="mnuExit" mnemonicParsing="false" onAction="#closeApp" text="\%menu.title.exit" />
                     </items>
                 </Menu>
                 <Menu fx:id="mnuHelp" mnemonicParsing="false" text="\%menu.title.help">
@@ -30,9 +30,9 @@
               <columns>
                   <TableColumn fx:id="tbcJobID" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobID" />
                   <TableColumn fx:id="tbcJobTyp" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobTyp" />
-                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="213.0" text="JobDescription" />
+                  <TableColumn fx:id="tbcJobDescription" maxWidth="600.0" minWidth="100.0" prefWidth="213.0" text="JobDescription" />
                   <TableColumn fx:id="tbcExportSQL" maxWidth="600.0" minWidth="205.0" prefWidth="343.0" text="ExportSQL" />
-                  <TableColumn maxWidth="600.0" minWidth="57.0" prefWidth="103.0" text="xxxx" />
+                  <TableColumn fx:id="tbcCSVSeparator" maxWidth="600.0" minWidth="57.0" prefWidth="103.0" text="xxxx" />
                   <TableColumn maxWidth="600.0" minWidth="60.0" prefWidth="97.0" text="xxx" />
                   <TableColumn maxWidth="600.0" minWidth="85.0" prefWidth="106.0" text="xxxx" />
                   <TableColumn maxWidth="600.0" minWidth="74.0" prefWidth="139.0" text="xxxx" />

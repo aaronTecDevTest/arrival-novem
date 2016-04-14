@@ -16,19 +16,25 @@ import org.apache.logging.log4j.Logger;
 /**
  * ClassModel for Config and Process Status
  *
-  CREATE TABLE `job_config` (
+ CREATE TABLE `job_configuration` (
  `job_id` double NOT NULL AUTO_INCREMENT,
  `job_typ` char(100) NOT NULL,
+ `job_description` char(100) NOT NULL,
  `from` char(100) NOT NULL COMMENT 'Kann eine TabelleName in der DB oder eine Dateinpath+Dateiname sein (C:....xxx.csv).',
  `to` char(100) NOT NULL COMMENT 'Kann eine TabelleName in der DB oder eine Dateinpath+Dateiname sein (C:....xxx.csv).',
  `start_time` datetime DEFAULT '2030-11-20 16:00:00',
  `end_time` datetime DEFAULT '2030-11-20 16:00:00',
  `scheduler` char(100) DEFAULT NULL COMMENT 'Eine Liste mit dem Werte: Daily, Weekly, 1st of the Month,15th of the Month',
  `expired_time` time DEFAULT NULL,
- `export_sql` text(500) DEFAULT NULL,
+ `export_sql` text,
+ `csv_separator` CHAR(1),
  PRIMARY KEY (`job_id`),
  KEY `job_config_job_id_index` (`job_id`)
  ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+ ******************************************************************************************************************************************************************
+ INSERT INTO importexport.job_configuration VALUES(NULL,'import','import to    the db','c:\dadf\dd','txn_tbl','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
+ INSERT INTO importexport.job_configuration VALUES(NULL,'export','export frome the db','txn_tbl','c:\dadf\dd','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
+
  */
 
 public class DBJobConfigTable {
@@ -36,6 +42,7 @@ public class DBJobConfigTable {
 
     private SimpleDoubleProperty job_id;
     private SimpleStringProperty job_typ;
+    private SimpleStringProperty job_description;
     private SimpleStringProperty from;
     private SimpleStringProperty to;
     private SimpleStringProperty start_time;
@@ -43,14 +50,16 @@ public class DBJobConfigTable {
     private SimpleStringProperty scheduler;
     private SimpleStringProperty expired_time;
     private SimpleStringProperty export_sql;
+    private SimpleStringProperty csv_separator;
 
     public DBJobConfigTable() {
-        this(0.0,"","","","","","","","");
+        this(0.0,"","","","","","","","","","");
     }
 
-    public DBJobConfigTable(Double job_id, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql) {
+    public DBJobConfigTable(Double job_id, String job_desription, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator) {
         this.job_id = new SimpleDoubleProperty(job_id);
         this.job_typ = new SimpleStringProperty(job_typ);
+        this.job_description = new SimpleStringProperty(job_desription);
         this.from = new SimpleStringProperty(from);
         this.to = new SimpleStringProperty(to);
         this.start_time = new SimpleStringProperty(start_time);
@@ -58,6 +67,8 @@ public class DBJobConfigTable {
         this.scheduler = new SimpleStringProperty(scheduler);
         this.expired_time = new SimpleStringProperty(expired_time);
         this.export_sql = new SimpleStringProperty(export_sql);
+        this.csv_separator = new SimpleStringProperty(csv_separator);
+
     }
 
 
@@ -83,6 +94,18 @@ public class DBJobConfigTable {
 
     public void setJob_typ(String job_typ) {
         this.job_typ.set(job_typ);
+    }
+
+    public String getJob_description() {
+        return job_description.get();
+    }
+
+    public SimpleStringProperty job_descriptionProperty() {
+        return job_description;
+    }
+
+    public void setJob_description(String job_description) {
+        this.job_description.set(job_description);
     }
 
     public String getFrom() {
@@ -167,5 +190,17 @@ public class DBJobConfigTable {
 
     public void setExport_sql(String export_sql) {
         this.export_sql.set(export_sql);
+    }
+
+    public String getCsv_separator() {
+        return csv_separator.get();
+    }
+
+    public SimpleStringProperty csv_separatorProperty() {
+        return csv_separator;
+    }
+
+    public void setCsv_separator(String csv_separator) {
+        this.csv_separator.set(csv_separator);
     }
 }

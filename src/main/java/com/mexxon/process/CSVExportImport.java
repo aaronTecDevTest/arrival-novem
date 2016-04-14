@@ -16,18 +16,20 @@ public class CSVExportImport {
     protected String endTime;
     protected String scheduler;
     protected String processUser;
+    protected String separator;
     protected DBJobConfigTable jobConfig;
 
     public CSVExportImport() {
     }
 
-    public CSVExportImport(String from, String to, String startTime, String endTime, String scheduler, String processUser, DBJobConfigTable jobConfig) {
+    public CSVExportImport(String from, String to, String startTime, String endTime, String scheduler, String processUser,String separator, DBJobConfigTable jobConfig) {
         this.from = from;
         this.to = to;
         this.startTime = startTime;
         this.endTime = endTime;
         this.scheduler = scheduler;
         this.processUser = processUser;
+        this.separator = separator;
         this.jobConfig = jobConfig;
     }
 
@@ -87,6 +89,14 @@ public class CSVExportImport {
         this.jobConfig = jobConfig;
     }
 
+    public String getSeparator() {
+        return separator;
+    }
+
+    public void setSeparator(String separator) {
+        this.separator = separator;
+    }
+
     @Override
     public String toString() {
         return "CSVExportImport: {" +
@@ -96,6 +106,7 @@ public class CSVExportImport {
                 ", endTime='" + endTime + '\'' +
                 ", scheduler='" + scheduler + '\'' +
                 ", processUser='" + processUser + '\'' +
+                ", separator='" + separator + '\'' +
                 ", jobConfig=" + jobConfig +
                 '}';
     }

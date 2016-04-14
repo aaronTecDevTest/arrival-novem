@@ -67,6 +67,7 @@ public class DBManger {
                 sql = sql +"("
                         +"NULL,"
                         +"'" + data.getJob_typ() +"',"
+                        +"'" + data.getJob_description() +"',"
                         +"'" + data.getFrom() +"',"
                         +"'" + data.getTo() +"',"
                         +"'" + data.getStart_time() +"',"
@@ -108,13 +109,14 @@ public class DBManger {
                 DBJobConfigTable temp = new DBJobConfigTable();
                 temp.setJob_id(resultSet.getDouble(1));
                 temp.setJob_typ(resultSet.getString(2));
-                temp.setFrom(resultSet.getString(3));
-                temp.setTo(resultSet.getString(4));
-                temp.setStart_time(resultSet.getString(5));
-                temp.setEnd_time(resultSet.getString(6));
-                temp.setScheduler(resultSet.getString(7));
-                temp.setExpired_time(resultSet.getString(8));
-                temp.setExport_sql(resultSet.getString(9));
+                temp.setJob_description(resultSet.getString(3));
+                temp.setFrom(resultSet.getString(4));
+                temp.setTo(resultSet.getString(5));
+                temp.setStart_time(resultSet.getString(6));
+                temp.setEnd_time(resultSet.getString(7));
+                temp.setScheduler(resultSet.getString(8));
+                temp.setExpired_time(resultSet.getString(9));
+                temp.setExport_sql(resultSet.getString(10));
                 jobConfigTables.add(temp);
             }
         } catch (SQLException e) {

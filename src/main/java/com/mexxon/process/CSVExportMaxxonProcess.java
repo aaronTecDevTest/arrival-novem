@@ -17,8 +17,6 @@ public class CSVExportMaxxonProcess extends CSVExportImport implements IFImportE
     public CSVExportMaxxonProcess() {
     }
 
-
-
     @Override
     public void setProcessID(Long processID) {
         this.processID = processID;
