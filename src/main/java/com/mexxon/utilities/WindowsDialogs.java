@@ -69,4 +69,8 @@ public class WindowsDialogs {
         alert.setContentText("Testcase is not all ready in Testsuite!");
         alert.showAndWait();
     }
+
+    public static void closeWindows(){
+
+    }
 }

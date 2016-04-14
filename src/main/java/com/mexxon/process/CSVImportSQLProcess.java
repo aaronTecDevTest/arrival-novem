@@ -18,10 +18,9 @@ import java.sql.Statement;
  * Package: com.mexxon.controller
  */
 
-public class CSVImportProcess extends CSVExportImport implements IFImportExport{
-    private static final Logger log = LogManager.getLogger(CSVImportProcess.class);
+public class CSVImportSQLProcess extends CSVExportImport implements IFImportExport{
+    private static final Logger log = LogManager.getLogger(CSVImportSQLProcess.class);
     private static Long processID;
-
 
     private FileReader fileReader;
     private String filePath = "../arrival-novem/src/main/resources/testingData/fileToImport.csv";
@@ -36,7 +35,7 @@ public class CSVImportProcess extends CSVExportImport implements IFImportExport{
          `terminal_id`  bigint(20) NULL DEFAULT NULL ,
          PRIMARY KEY (`txn_id`))
          */
-        CSVImportProcess csvImportProcess = new CSVImportProcess();
+        CSVImportSQLProcess csvImportProcess = new CSVImportSQLProcess();
         //csvImportProcess.importCSV();
         csvImportProcess.importCSVUsingDBLoad();
     }

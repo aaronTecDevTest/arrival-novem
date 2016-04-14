@@ -10,13 +10,5 @@ package com.mexxon.process;
 
 
 public interface IFImportExport {
-
-    void importFromCSV();
-    void exportToCSV();
-
-    void readCSV();
-    void writeCSV();
-
-    void readDB();
-    void writeDB();
+    void setProcessID(Long processID);
 }

@@ -17,11 +17,11 @@ import java.sql.Statement;
  * Package: com.mexxon.controller
  */
 
-public class CSVExportProcess extends CSVExportImport implements IFImportExport{
-    private static final Logger log = LogManager.getLogger(CSVExportProcess.class);
+public class CSVExportSQLProcess extends CSVExportImport implements IFImportExport{
+    private static final Logger log = LogManager.getLogger(CSVExportSQLProcess.class);
     private static Long processID;
 
-    public CSVExportProcess(){
+    public CSVExportSQLProcess(){
 
     }
 

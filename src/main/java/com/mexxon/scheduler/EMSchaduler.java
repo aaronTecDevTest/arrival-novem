@@ -8,4 +8,10 @@ package com.mexxon.scheduler;
  * Package: com.mexxon.utilities
  */
 public enum EMSchaduler {
+    EVERY_MIN,
+    EVERY_HOUR,
+    DAILY,
+    WEEKLY,
+    MONTHLY,
+    YEARLY;
 }

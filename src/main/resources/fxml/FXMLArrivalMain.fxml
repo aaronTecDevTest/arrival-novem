@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8"
-      fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
+
+<VBox prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
 
     <children>
         <MenuBar VBox.vgrow="NEVER">
@@ -27,30 +28,27 @@
          <center>
             <TableView fx:id="tbvJobConfig" BorderPane.alignment="CENTER">
               <columns>
-                  <TableColumn fx:id="tbcJobID" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobID"/>
-                  <TableColumn fx:id="tbcJobTyp" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobTyp"/>
-                  <TableColumn fx:id="tbcExportSQL" maxWidth="600.0" minWidth="205.0" prefWidth="325.0"
-                               text="ExportSQL"/>
-                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="118.0" text="xxxx"/>
-                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="116.0" text="xxxx"/>
-                  <TableColumn maxWidth="600.0" minWidth="95.0" prefWidth="-1.0" text="xxx"/>
-                  <TableColumn maxWidth="600.0" minWidth="85.0" prefWidth="161.0" text="xxxx" />
-                  <TableColumn maxWidth="600.0" minWidth="74.0" prefWidth="134.0" text="xxxx" />
-                  <TableColumn maxWidth="600.0" minWidth="111.0" prefWidth="166.0" text="xxxx" />
+                  <TableColumn fx:id="tbcJobID" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobID" />
+                  <TableColumn fx:id="tbcJobTyp" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobTyp" />
+                  <TableColumn maxWidth="600.0" minWidth="100.0" prefWidth="213.0" text="JobDescription" />
+                  <TableColumn fx:id="tbcExportSQL" maxWidth="600.0" minWidth="205.0" prefWidth="343.0" text="ExportSQL" />
+                  <TableColumn maxWidth="600.0" minWidth="57.0" prefWidth="103.0" text="xxxx" />
+                  <TableColumn maxWidth="600.0" minWidth="60.0" prefWidth="97.0" text="xxx" />
+                  <TableColumn maxWidth="600.0" minWidth="85.0" prefWidth="106.0" text="xxxx" />
+                  <TableColumn maxWidth="600.0" minWidth="74.0" prefWidth="139.0" text="xxxx" />
+                  <TableColumn maxWidth="600.0" minWidth="111.0" prefWidth="114.0" text="xxxx" />
               </columns>
             </TableView>
          </center>
          <bottom>
             <GridPane minWidth="-Infinity" prefWidth="1300.0" style="-fx-background-color: CBC8CC;" BorderPane.alignment="CENTER">
                <columnConstraints>
-                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0"
-                                      prefWidth="50.0"/>
+                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="50.0" />
                   <ColumnConstraints hgrow="SOMETIMES" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
-                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0"
-                                      prefWidth="50.0"/>
+                   <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="50.0" />
                   <ColumnConstraints hgrow="SOMETIMES" />
                </columnConstraints>
                <rowConstraints>
@@ -250,7 +248,7 @@
                             </graphic>
                         </Button>
                   <Pane maxHeight="34.0" minWidth="1075.0" HBox.hgrow="ALWAYS" />
-                  <Button fx:id="btnLogInOut" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showLogInOut" prefHeight="34.0" prefWidth="34.0" text="LogInOut" textAlignment="CENTER">
+                  <Button fx:id="btnLogInOut" disable="true" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#showLogInOut" prefHeight="34.0" prefWidth="34.0" text="LogInOut" textAlignment="CENTER" visible="false">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>

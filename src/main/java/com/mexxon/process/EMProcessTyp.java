@@ -7,5 +7,10 @@ package com.mexxon.process;
  * @since: 1.0
  * Package: com.mexxon.utilities
  */
-public enum EMProcess {
+public enum EMProcessTyp {
+    IMPORT,
+    EXPORT,
+    IMPORT_WITH_SQL,
+    EXPORT_WITH_SQL,
+    EXPORT_MAXXON_CSV;
 }
