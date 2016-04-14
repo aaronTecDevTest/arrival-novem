@@ -132,19 +132,19 @@
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Process User:" GridPane.rowIndex="2">
+                  <Label text="CSV Separator: " GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Job Typ:" GridPane.rowIndex="3">
+                  <Label text="Process User:" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
                   <TextField fx:id="txtFrom" disable="true" GridPane.columnIndex="1" />
                   <TextField fx:id="txtStartTime" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtSeper" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtSeparator" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField fx:id="txtProcessUser" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <TextField fx:id="txtTo" disable="true" GridPane.columnIndex="6">
                      <GridPane.margin>

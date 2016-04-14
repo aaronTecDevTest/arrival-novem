@@ -82,6 +82,9 @@ public class FXMLArrivalMainController implements Initializable {
     private TextField txtExpiredTime;
     @FXML
     private TextField txtEndTime;
+    @FXML
+    private TextField txtSeparator;
+
 
 
     @FXML
@@ -252,13 +255,14 @@ public class FXMLArrivalMainController implements Initializable {
         tbvJobConfig.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 DBJobConfigTable tempData = tbvJobConfig.getSelectionModel().getSelectedItem();
-                txtEndTime.setText(tempData.getExport_sql());
-                txtExpiredTime.setText(tempData.getExport_sql());
-                txtFrom.setText(tempData.getExport_sql());
-                txtTo.setText(tempData.getExport_sql());
-                txtScheduler.setText(tempData.getExport_sql());
-                txtProcessUser.setText(tempData.getExport_sql());
+                txtEndTime.setText(tempData.getEnd_time());
+                txtExpiredTime.setText(tempData.getExpired_time());
+                txtFrom.setText(tempData.getFrom());
+                txtTo.setText(tempData.getTo());
+                txtScheduler.setText(tempData.getScheduler());
+                txtProcessUser.setText(tempData.getCsv_separator());
                 txtStartTime.setText(tempData.getStart_time());
+                txtSeparator.setText(tempData.getCsv_separator());
             }
         });
     }
