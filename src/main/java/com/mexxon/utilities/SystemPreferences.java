@@ -106,7 +106,7 @@ public class SystemPreferences {
             bundleArrivalSQL = loadBundle("bundles/arrivalSQL.properties");
 
         } catch (Exception e) {
-            log.error(e.getStackTrace());
+            log.error(e.getMessage());
             e.printStackTrace();
         }
     }

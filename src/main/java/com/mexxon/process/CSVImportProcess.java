@@ -1,14 +1,20 @@
 package com.mexxon.process;
 
 import com.mexxon.database.DBConnection;
+import com.mexxon.windows.model.DBJobConfigTable;
 import com.opencsv.CSVReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
 
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
+
+import static com.mexxon.process.EMProcessTyp.IMPORT;
 
 /**
  * @author: Aaron Kutekidila
@@ -18,13 +24,16 @@ import java.sql.Statement;
  * Package: com.mexxon.controller
  */
 
-public class CSVImportProcess extends CSVExportImport implements IFImportExport{
+public class CSVImportProcess implements IFImportExport, Job{
     private static final Logger log = LogManager.getLogger(CSVImportProcess.class);
+    private static final EMProcessTyp processTyp = IMPORT;
+
+
     private static Long processID;
-
-
     private FileReader fileReader;
     private String filePath = "../arrival-novem/src/main/resources/testingData/fileToImport.csv";
+
+
 
     public static void main(String[] args) {
         /**
@@ -67,7 +76,7 @@ public class CSVImportProcess extends CSVExportImport implements IFImportExport{
             connection.close();
             log.info("Data Successfully import!");
         } catch (Exception e) {
-            log.error(e.getStackTrace());
+            log.error(e.getMessage());
         }
     }
 
@@ -88,10 +97,29 @@ public class CSVImportProcess extends CSVExportImport implements IFImportExport{
             log.info(loadQuery);
             log.info("Data Successfully import!");
         } catch (Exception e) {
-            log.error(e.getStackTrace());
+            log.error(e.getMessage());
         }
     }
 
+    @Override
+    public void setJobConfig(DBJobConfigTable jobConfig) {
+
+    }
+
+    @Override
+    public DBJobConfigTable getJobConfig() {
+        return null;
+    }
+
+    @Override
+    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+
+    }
+
+    @Override
+    public void runProcess() {
+
+    }
 
     @Override
     public void setProcessID(Long processID) {

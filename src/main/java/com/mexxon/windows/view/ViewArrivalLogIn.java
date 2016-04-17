@@ -47,7 +47,7 @@ public class ViewArrivalLogIn extends Application {
         scene.getStylesheets().add("/css/arrivalLogIn.css");
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Maxxon: ImportExportTool - LogInOut");
+        primaryStage.setTitle("Mexxon: ImportExportTool - LogInOut");
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
         primaryStage.setResizable(false);
         /*

@@ -1,13 +1,19 @@
 package com.mexxon.process;
 
 import com.mexxon.database.DBConnection;
+import com.mexxon.windows.model.DBJobConfigTable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.quartz.Job;
+import org.quartz.JobExecutionContext;
+import org.quartz.JobExecutionException;
 
 import java.io.FileWriter;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+
+import static com.mexxon.process.EMProcessTyp.EXPORT_WITH_SQL;
 
 /**
  * @author: Aaron Kutekidila
@@ -17,8 +23,11 @@ import java.sql.Statement;
  * Package: com.mexxon.controller
  */
 
-public class CSVExportSQLProcess extends CSVExportImport implements IFImportExport{
+public class CSVExportSQLProcess implements IFImportExport, Job{
     private static final Logger log = LogManager.getLogger(CSVExportSQLProcess.class);
+    private static final EMProcessTyp processTyp = EXPORT_WITH_SQL;
+
+
     private static Long processID;
 
     public CSVExportSQLProcess(){
@@ -48,6 +57,26 @@ public class CSVExportSQLProcess extends CSVExportImport implements IFImportExpo
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void setJobConfig(DBJobConfigTable jobConfig) {
+
+    }
+
+    @Override
+    public DBJobConfigTable getJobConfig() {
+        return null;
+    }
+
+    @Override
+    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+
+    }
+
+    @Override
+    public void runProcess() {
+
     }
 
     @Override

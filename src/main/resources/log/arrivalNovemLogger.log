@@ -1687,3 +1687,273 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2016-04-14 20:05:27,132 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
 2016-04-14 20:05:27,159 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:78) - LogIn show down
 2016-04-14 20:05:27,163 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -------------------------- Mexxon ------------------------- ImportExportTool
+2016-04-15 15:37:05,708 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 15:37:05,711 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-15 15:37:05,712 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start ------------------------- Mexxon ------------------------ ImportExportTool
+2016-04-15 15:37:05,715 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:72) - LogIn show up
+2016-04-15 15:37:17,788 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-04-15 15:39:09,755 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-04-15 15:39:11,760 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-04-15 15:39:20,498 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:58) - Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+2016-04-15 15:43:25,245 ERROR [JavaFX Application Thread] utilities.WindowsDialogs (WindowsDialogs.java:96) - null
+2016-04-15 15:43:25,253 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:74) - LogIn show down
+2016-04-15 15:43:25,254 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -------------------------- Mexxon ------------------------- ImportExportTool
+2016-04-15 22:09:13,837 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:09:14,136 ERROR [main] database.DBConnection (DBConnection.java:38) - [Ljava.lang.StackTraceElement;@a1cdc6d
+2016-04-15 22:09:28,574 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:09:28,801 ERROR [main] database.DBConnection (DBConnection.java:38) - [Ljava.lang.StackTraceElement;@a1cdc6d
+2016-04-15 22:11:25,817 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:11:26,035 ERROR [main] database.DBConnection (DBConnection.java:38) - [Ljava.lang.StackTraceElement;@a1cdc6d
+2016-04-15 22:13:03,000 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:16:00,732 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:16:04,839 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-15 22:16:04,856 INFO  [main] database.DBManger (DBManger.java:145) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-15 22:16:04,856 INFO  [main] database.DBManger (DBManger.java:148) - Message   : Table 'mexxon_local.job_configuration' doesn't exist
+2016-04-15 22:16:04,856 INFO  [main] database.DBManger (DBManger.java:149) - SQLState  : 42S02
+2016-04-15 22:16:04,856 INFO  [main] database.DBManger (DBManger.java:150) - ErrorCode : 1146
+2016-04-15 22:16:04,857 INFO  [main] database.DBManger (DBManger.java:151) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-15 22:16:45,008 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:16:48,666 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-15 22:16:48,685 INFO  [main] database.DBManger (DBManger.java:145) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-15 22:16:48,685 INFO  [main] database.DBManger (DBManger.java:148) - Message   : No database selected
+2016-04-15 22:16:48,686 INFO  [main] database.DBManger (DBManger.java:149) - SQLState  : 3D000
+2016-04-15 22:16:48,686 INFO  [main] database.DBManger (DBManger.java:150) - ErrorCode : 1046
+2016-04-15 22:16:48,686 INFO  [main] database.DBManger (DBManger.java:151) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-15 22:17:46,120 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:17:50,327 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-15 22:17:50,344 INFO  [main] database.DBManger (DBManger.java:145) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-15 22:17:50,344 INFO  [main] database.DBManger (DBManger.java:148) - Message   : Table 'mexxon_local.job_configuration' doesn't exist
+2016-04-15 22:17:50,344 INFO  [main] database.DBManger (DBManger.java:149) - SQLState  : 42S02
+2016-04-15 22:17:50,345 INFO  [main] database.DBManger (DBManger.java:150) - ErrorCode : 1146
+2016-04-15 22:17:50,345 INFO  [main] database.DBManger (DBManger.java:151) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-15 22:18:21,873 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:18:24,993 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-15 22:18:25,009 INFO  [main] database.DBManger (DBManger.java:145) - ------------------------------------------ SQLException caught --------------------------------------
+2016-04-15 22:18:25,009 INFO  [main] database.DBManger (DBManger.java:148) - Message   : No database selected
+2016-04-15 22:18:25,010 INFO  [main] database.DBManger (DBManger.java:149) - SQLState  : 3D000
+2016-04-15 22:18:25,010 INFO  [main] database.DBManger (DBManger.java:150) - ErrorCode : 1046
+2016-04-15 22:18:25,010 INFO  [main] database.DBManger (DBManger.java:151) - ------------------------------------------- SQLException end ----------------------------------------
+2016-04-15 22:28:52,625 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:29:23,532 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:29:32,002 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-15 22:29:32,035 INFO  [main] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-15 22:30:42,660 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 22:30:42,670 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-15 22:30:42,671 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start ------------------------- Mexxon ------------------------ ImportExportTool
+2016-04-15 22:30:42,674 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:72) - LogIn show up
+2016-04-15 22:30:53,627 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:56) - Successfully login to MySQLDB!
+2016-04-15 22:30:59,231 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:177) - Exit Clicked:Exit
+2016-04-15 22:30:59,232 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-15 22:31:03,617 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:184) - LoadConfig Clicked:LoadConfig
+2016-04-15 22:31:03,621 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-15 22:33:35,123 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:212) - UpdateConfig Clicked:Update
+2016-04-15 22:33:35,126 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:36) - Successfully login to MySQLDB!
+2016-04-15 22:34:36,355 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:194) - Reset Clicked:Reset
+2016-04-15 22:34:37,841 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:200) - Run Clicked:Run
+2016-04-15 22:34:38,919 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:194) - Reset Clicked:Reset
+2016-04-15 22:34:39,842 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:206) - Stop Clicked:Stop
+2016-04-15 23:08:43,916 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:177) - Exit Clicked:Exit
+2016-04-15 23:08:43,916 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-15 23:08:46,038 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:71) - Successfully logout from MySQLDB!
+2016-04-15 23:08:46,047 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:74) - LogIn show down
+2016-04-15 23:08:46,049 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -------------------------- Mexxon ------------------------- ImportExportTool
+2016-04-15 23:08:51,856 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 23:08:51,859 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-15 23:08:51,859 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start ------------------------- Mexxon ------------------------ ImportExportTool
+2016-04-15 23:08:51,862 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:72) - LogIn show up
+2016-04-15 23:09:05,702 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-04-15 23:09:08,533 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:186) - LoadConfig Clicked:LoadConfig
+2016-04-15 23:09:08,537 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-15 23:10:43,947 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:179) - Exit Clicked:Exit
+2016-04-15 23:10:43,948 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-15 23:10:45,408 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:179) - Exit Clicked:Exit
+2016-04-15 23:10:45,409 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-15 23:10:48,296 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:179) - Exit Clicked:Exit
+2016-04-15 23:10:48,297 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-15 23:10:49,428 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:179) - Exit Clicked:Exit
+2016-04-15 23:10:49,428 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-15 23:23:18,261 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 23:23:18,534 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-15 23:23:18,564 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-15 23:23:30,237 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-15 23:23:30,241 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-15 23:23:30,242 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start ------------------------- Mexxon ------------------------ ImportExportTool
+2016-04-15 23:23:30,247 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:72) - LogIn show up
+2016-04-15 23:23:38,799 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-04-15 23:23:41,689 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:187) - LoadConfig Clicked:LoadConfig
+2016-04-15 23:23:41,693 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-15 23:24:42,229 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:180) - Exit Clicked:Exit
+2016-04-15 23:24:42,231 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-15 23:24:47,382 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:180) - Exit Clicked:Exit
+2016-04-15 23:24:47,382 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-15 23:24:51,744 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-15 23:24:51,749 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:74) - LogIn show down
+2016-04-15 23:24:51,750 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -------------------------- Mexxon ------------------------- ImportExportTool
+2016-04-15 23:31:00,005 INFO  [main] utilities.BOMEncoding (BOMEncoding.java:29) - UTF8
+2016-04-16 07:57:30,696 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:128) - Scheduler starting: DefaultQuartzScheduler
+2016-04-16 07:57:30,699 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:92) - Scheduler started: DefaultQuartzScheduler
+2016-04-16 07:57:30,709 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:54) - Job added: myJob
+2016-04-16 07:57:30,710 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:23) - Job scheduled: myTrigger
+2016-04-16 07:57:30,716 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:28) - Job count 1
+2016-04-16 07:57:30,716 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 07:57:30,719 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 07:57:30 CEST 2016
+2016-04-16 07:57:30,719 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 07:57:30,719 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: group1.myJob
+2016-04-16 07:57:30,719 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Sat Apr 16 07:57:34 CEST 2016
+2016-04-16 07:57:30,719 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+
+2016-04-16 07:57:34,707 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:28) - Job count 2
+2016-04-16 07:57:34,707 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 07:57:34,707 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 07:57:34 CEST 2016
+2016-04-16 07:57:34,707 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 07:57:34,708 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: group1.myJob
+2016-04-16 07:57:34,708 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Sat Apr 16 07:57:38 CEST 2016
+2016-04-16 07:57:34,708 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+
+2016-04-16 07:57:34,708 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.SchedulerListener (SchedulerListener.java:78) - Scheduler Error: org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.RuntimeException: Some RuntimeException!]
+2016-04-16 07:57:38,707 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:28) - Job count 3
+2016-04-16 07:57:38,707 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 07:57:38,707 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 07:57:38 CEST 2016
+2016-04-16 07:57:38,707 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 07:57:38,707 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: group1.myJob
+2016-04-16 07:57:38,707 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Sat Apr 16 07:57:42 CEST 2016
+2016-04-16 07:57:38,707 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+
+2016-04-16 07:57:42,706 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:28) - Job count 4
+2016-04-16 07:57:42,706 INFO  [main] scheduler.SchedulerController (SchedulerController.java:99) - All triggers executed. Shutdown scheduler
+2016-04-16 07:57:42,706 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 07:57:42,709 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 07:57:42 CEST 2016
+2016-04-16 07:57:42,709 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:83) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-04-16 07:57:42,709 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 07:57:42,709 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:110) - Scheduler shutting down: DefaultQuartzScheduler
+2016-04-16 07:57:42,709 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: group1.myJob
+2016-04-16 07:57:42,710 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:101) - Scheduler shutdown: DefaultQuartzScheduler
+2016-04-16 07:57:42,710 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: null
+2016-04-16 07:57:42,710 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+
+2016-04-16 07:57:42,710 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.SchedulerListener (SchedulerListener.java:31) - Job trigger finalized: myTrigger
+2016-04-16 07:57:42,710 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.SchedulerListener (SchedulerListener.java:58) - Job deleted: myJob
+2016-04-16 11:38:53,780 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-16 11:38:53,781 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-04-16 11:38:53,788 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:51) - Job added: myJob
+2016-04-16 11:38:53,789 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:23) - Job scheduled: myTrigger
+2016-04-16 11:38:59,137 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:28) - Job count 1
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:28) - Job count 2
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 11:38:53 CEST 2016
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 11:38:59 CEST 2016
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:38) - JobExecution end: -1, key: group1.myJob
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:38) - JobExecution end: -1, key: group1.myJob
+2016-04-16 11:38:59,138 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:39) - JobExecution next scheduled time: Sat Apr 16 11:38:57 CEST 2016
+2016-04-16 11:38:59,139 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:39) - JobExecution next scheduled time: Sat Apr 16 11:39:01 CEST 2016
+2016-04-16 11:38:59,139 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+
+2016-04-16 11:38:59,139 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+
+2016-04-16 11:39:01,786 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:28) - Job count 3
+2016-04-16 11:39:01,786 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 11:39:01,786 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 11:39:01 CEST 2016
+2016-04-16 11:39:01,786 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 11:39:01,787 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:38) - JobExecution end: -1, key: group1.myJob
+2016-04-16 11:39:01,787 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:39) - JobExecution next scheduled time: Sat Apr 16 11:39:05 CEST 2016
+2016-04-16 11:39:01,787 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+
+2016-04-16 11:39:05,787 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:28) - Job count 4
+2016-04-16 11:39:05,787 INFO  [main] scheduler.SchedulerController (SchedulerController.java:99) - All triggers executed. Shutdown scheduler
+2016-04-16 11:39:05,787 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 11:39:05,787 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-04-16 11:39:05,788 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 11:39:05 CEST 2016
+2016-04-16 11:39:05,788 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-04-16 11:39:05,788 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 11:39:05,788 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-04-16 11:39:05,788 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:38) - JobExecution end: -1, key: group1.myJob
+2016-04-16 11:39:05,788 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:39) - JobExecution next scheduled time: null
+2016-04-16 11:39:05,788 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+
+2016-04-16 11:39:05,788 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.SchedulerListener (SchedulerListener.java:31) - Job trigger finalized: myTrigger
+2016-04-16 11:39:05,789 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.SchedulerListener (SchedulerListener.java:55) - Job deleted: myJob
+2016-04-16 14:28:50,112 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-16 14:28:50,113 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-04-16 14:28:50,122 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:51) - Job added: myJob
+2016-04-16 14:28:50,122 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:23) - Job scheduled: myTrigger
+2016-04-16 14:28:50,127 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:28) - Job count 1
+2016-04-16 14:28:50,127 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 14:28:50,129 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 14:28:50 CEST 2016
+2016-04-16 14:28:50,129 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 14:28:50,129 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:38) - JobExecution end: -1, key: group1.myJob
+2016-04-16 14:28:50,130 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:39) - JobExecution next scheduled time: Sat Apr 16 14:28:54 CEST 2016
+2016-04-16 14:28:50,130 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+
+2016-04-16 14:28:54,118 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:28) - Job count 2
+2016-04-16 14:28:54,118 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 14:28:54,118 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 14:28:54 CEST 2016
+2016-04-16 14:28:54,118 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 14:28:54,119 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:38) - JobExecution end: -1, key: group1.myJob
+2016-04-16 14:28:54,119 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:39) - JobExecution next scheduled time: Sat Apr 16 14:28:58 CEST 2016
+2016-04-16 14:28:54,119 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+
+2016-04-16 14:28:58,118 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:28) - Job count 3
+2016-04-16 14:28:58,118 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 14:28:58,118 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 14:28:58 CEST 2016
+2016-04-16 14:28:58,119 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 14:28:58,119 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:38) - JobExecution end: -1, key: group1.myJob
+2016-04-16 14:28:58,119 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:39) - JobExecution next scheduled time: Sat Apr 16 14:29:02 CEST 2016
+2016-04-16 14:28:58,119 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+
+2016-04-16 14:29:02,119 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:28) - Job count 4
+2016-04-16 14:29:02,119 INFO  [main] scheduler.SchedulerController (SchedulerController.java:99) - All triggers executed. Shutdown scheduler
+2016-04-16 14:29:02,119 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:29) - --------------------------------------------------------------------
+2016-04-16 14:29:02,119 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-04-16 14:29:02,119 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:30) - JobExecution start: Sat Apr 16 14:29:02 CEST 2016
+2016-04-16 14:29:02,119 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-04-16 14:29:02,119 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:31) - Job name is: com.mexxon.controller.SchedulerController
+2016-04-16 14:29:02,120 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:38) - JobExecution end: -1, key: group1.myJob
+2016-04-16 14:29:02,120 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-04-16 14:29:02,120 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:39) - JobExecution next scheduled time: null
+2016-04-16 14:29:02,120 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+
+2016-04-16 14:29:02,120 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.SchedulerListener (SchedulerListener.java:31) - Job trigger finalized: myTrigger
+2016-04-16 14:29:02,120 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.SchedulerListener (SchedulerListener.java:55) - Job deleted: myJob
+2016-04-16 14:29:06,127 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-16 14:29:06,130 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-16 14:29:06,131 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start ------------------------- Mexxon ------------------------ ImportExportTool
+2016-04-16 14:29:06,140 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:72) - LogIn show up
+2016-04-16 14:29:13,418 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-04-16 14:29:21,821 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:192) - LoadConfig Clicked:LoadConfig
+2016-04-16 14:29:21,825 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-16 14:29:24,768 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:205) - Run Clicked:Run
+2016-04-16 14:29:40,250 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:205) - Run Clicked:Run
+2016-04-16 14:29:54,005 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-16 14:29:54,013 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:74) - LogIn show down
+2016-04-16 14:29:54,013 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:35) - Stop -------------------------- Mexxon ------------------------- ImportExportTool
+2016-04-16 15:25:28,495 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-16 15:25:28,498 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-16 15:25:28,499 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:30) - Start ------------------------- Mexxon ------------------------ ImportExportTool
+2016-04-16 15:25:28,501 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:72) - LogIn show up
+2016-04-16 15:25:36,840 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-04-16 15:26:24,615 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:185) - LoadConfig Clicked:LoadConfig
+2016-04-16 15:26:24,620 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-16 15:26:31,243 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:196) - Run Clicked:Run
+2016-04-16 15:26:35,409 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:212) - Reset Clicked:Reset
+2016-04-16 15:26:40,426 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:228) - Stop Clicked:Stop
+2016-04-17 14:13:57,890 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-17 14:13:57,891 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-04-17 14:13:57,897 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:51) - Job added: myJob
+2016-04-17 14:13:57,898 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:23) - Job scheduled: myTrigger
+2016-04-17 14:13:57,898 INFO  [main] scheduler.SchedulerController (SchedulerController.java:103) - All triggers executed. Shutdown scheduler
+2016-04-17 14:13:57,898 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-04-17 14:13:57,898 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-04-17 14:13:57,898 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-04-17 15:26:39,928 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-17 15:26:39,930 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler

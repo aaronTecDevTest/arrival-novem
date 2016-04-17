@@ -69,7 +69,6 @@ public class DBJobConfigTable {
         this.csv_separator = new SimpleStringProperty(csv_separator);
     }
 
-
     public double getJob_id() {
         return job_id.get();
     }

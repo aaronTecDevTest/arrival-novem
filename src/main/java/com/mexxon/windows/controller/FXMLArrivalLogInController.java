@@ -102,7 +102,7 @@ public class FXMLArrivalLogInController implements Initializable {
             primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);
             primaryStage.show();
         } catch (IOException e) {
-            log.error(e.getStackTrace());
+            log.error(e.getMessage());
         }
     }
 

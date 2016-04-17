@@ -25,7 +25,6 @@ public class WindowsDialogs {
     private URL iconURL =  getClass().getResource("/icon/appIcons.png");
 
     public WindowsDialogs() {
-
     }
 
     public  String setTestsuiteNameDialog() {
@@ -44,41 +43,37 @@ public class WindowsDialogs {
         return entered;
     }
 
-    public  void noTestConfigSet() {
+    public void jobRunDialog(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
-        alert.setContentText("No Platform is set up!");
-
+        alert.setContentText("Job is all ready running!");
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image(iconURL.toString()));
         alert.showAndWait();
     }
 
-    public  void optionsIsNull() {
+    public void jobRestDialog(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
-        alert.setContentText("Options is not set up!");
-
+        alert.setContentText("Job is not running!");
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image(iconURL.toString()));
         alert.showAndWait();
     }
 
-    public  void wrongPlatform(String ios) {
+    public void jobStopDialog(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);
-        alert.setContentText("Testcase is not a " + ios + " Platform. " + "Wrong Platform!");
+        alert.setContentText("Job is not running!");
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image(iconURL.toString()));
         alert.showAndWait();
     }
 
-    public  void testCaseInTestsuite(){
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information Dialog");
-        alert.setHeaderText(null);
-        alert.setContentText("Testcase is not all ready in Testsuite!");
-        alert.showAndWait();
-    }
-
-    public  void closeWindowsConfirmation(Logger log, Stage primaryStage){
+    public void closeWindowsConfirmation(Logger log, Stage primaryStage){
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Exit Confirmation");
         alert.setHeaderText("Do you really want to quit?");

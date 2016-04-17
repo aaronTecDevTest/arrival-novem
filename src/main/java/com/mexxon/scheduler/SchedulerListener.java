@@ -28,8 +28,7 @@ public class SchedulerListener implements org.quartz.SchedulerListener{
     }
 
     public void triggerFinalized(Trigger trigger) {
-       log.info("Job trigger finalized: "
-                + trigger.getKey().getName());
+       log.info("Job trigger finalized: " + trigger.getKey().getName());
     }
 
     public void triggerPaused(TriggerKey triggerKey) {
@@ -37,8 +36,7 @@ public class SchedulerListener implements org.quartz.SchedulerListener{
     }
 
     public void triggersPaused(String triggerGroup) {
-       log.info("Job triggers paused for trigger group: "
-                + triggerGroup);
+       log.info("Job triggers paused for trigger group: " + triggerGroup);
     }
 
     public void triggerResumed(TriggerKey triggerKey) {
@@ -46,8 +44,7 @@ public class SchedulerListener implements org.quartz.SchedulerListener{
     }
 
     public void triggersResumed(String triggerGroup) {
-       log.info("Job triggers resumed for trigger group: "
-                + triggerGroup);
+       log.info("Job triggers resumed for trigger group: " + triggerGroup);
     }
 
     public void jobAdded(JobDetail jobDetail) {
@@ -80,37 +77,33 @@ public class SchedulerListener implements org.quartz.SchedulerListener{
 
     public void schedulerInStandbyMode() {
         try {
-           log.info("Scheduler put in standby mode: "
-                    + scheduler.getSchedulerName());
+           log.info("Scheduler put in standby mode: " + scheduler.getSchedulerName());
         } catch (SchedulerException e) {
-           log.info("Error getting scheduler name" + e);
+           log.info("Error getting scheduler name" + e.getMessage());
         }
     }
 
     public void schedulerStarted() {
         try {
-           log.info("Scheduler started: "
-                    + scheduler.getSchedulerName());
+           log.info("Scheduler started: " + scheduler.getSchedulerName());
         } catch (SchedulerException e) {
-           log.info("Error getting scheduler name" + e);
+           log.info("Error getting scheduler name" + e.getMessage());
         }
     }
 
     public void schedulerShutdown() {
         try {
-           log.info("Scheduler shutdown: "
-                    + scheduler.getSchedulerName());
+           log.info("Scheduler shutdown: " + scheduler.getSchedulerName());
         } catch (SchedulerException e) {
-           log.info("Error getting scheduler name" + e);
+           log.info("Error getting scheduler name" + e.getMessage());
         }
     }
 
     public void schedulerShuttingdown() {
         try {
-           log.info("Scheduler shutting down: "
-                    + scheduler.getSchedulerName());
+           log.info("Scheduler shutting " + scheduler.getSchedulerName());
         } catch (SchedulerException e) {
-           log.info("Error getting scheduler name" + e);
+           log.info("Error getting scheduler name" + e.getMessage());
         }
     }
 

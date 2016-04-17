@@ -1,5 +1,7 @@
 package com.mexxon.process;
 
+import com.mexxon.windows.model.DBJobConfigTable;
+
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
@@ -10,5 +12,8 @@ package com.mexxon.process;
 
 
 public interface IFImportExport {
-    void setProcessID(Long processID);
+    void runProcess();
+    void setProcessID (Long processID);
+    void setJobConfig (DBJobConfigTable jobConfig);
+    DBJobConfigTable getJobConfig();
 }

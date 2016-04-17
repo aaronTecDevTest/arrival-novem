@@ -1,5 +1,6 @@
 package com.mexxon.scheduler;
 
+import com.mexxon.windows.model.DBJobConfigTable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,5 +15,30 @@ public class JobManger {
     private static final Logger log = LogManager.getLogger(JobManger.class);
 
     public JobManger() {
+    }
+
+    public boolean addJob(DBJobConfigTable jobConfig){
+        boolean jobadded = false;
+
+
+        return jobadded;
+    }
+
+    public void runJob(DBJobConfigTable jobConfig){
+
+    }
+
+    public  void resetJob(DBJobConfigTable jobConfig){
+
+    }
+
+    public void stopJob(DBJobConfigTable jobConfig){
+
+    }
+
+    public boolean isJobRunning(DBJobConfigTable jobConfig){
+        boolean isJobRunning = false;
+
+        return isJobRunning;
     }
 }

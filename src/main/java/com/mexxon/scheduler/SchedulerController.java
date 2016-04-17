@@ -1,11 +1,12 @@
 package com.mexxon.scheduler;
 
+import com.mexxon.process.CSVImportSQLProcess;
+import com.mexxon.process.IFImportExport;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
-import java.util.concurrent.CountDownLatch;
 
 /**
  * @author: Aaron Kutekidila
@@ -13,14 +14,16 @@ import java.util.concurrent.CountDownLatch;
  * Created: 31.03.2016.
  * @since: 1.0
  * Package: com.mexxon.controller
- *
  */
 
 /**
  * For more Info: "https://examples.javacodegeeks.com/enterprise-java/quartz/quartz-scheduler-tutorial/
  *  Cron Triggers
- *  CronTrigger instances are built using TriggerBuilder and another helper class called CronScheduleBuilder which we can use to set the CronTrigger-specific properties. Cron-Expressions are used to
- *  configure instances of CronTrigger. Cron-Expressions are strings that are actually made up of seven sub-expressions, that describe individual details of the schedule. These sub-expression are
+ *  CronTrigger instances are built using TriggerBuilder and another helper class called CronScheduleBuilder which we
+ *  can use to set the CronTrigger-specific properties. Cron-Expressions are used to
+ *  configure instances of CronTrigger. Cron-Expressions are strings that are actually made up of seven sub-expressions,
+ *  that describe individual details of the schedule. These sub-expression are
+ *
  *  separated with white-space, and represent:
  *  1 Seconds
  *  2 Minutes
@@ -39,16 +42,34 @@ import java.util.concurrent.CountDownLatch;
  *  In the below Example of Crone trigger, the trigger is setup to fire after a min from the current date time."
  */
 
-public class SchedulerController implements IFLatch {
+public class SchedulerController  {
     private static final Logger log = LogManager.getLogger(SchedulerController.class);
-
-    private int repeatCount = 3;
-    private CountDownLatch latch = new CountDownLatch(repeatCount + 1);
+    private IFImportExport ifImportExport;
+    private String simpelName;
+    private String className;
 
     /**
      * Standard Constructor
      **/
-    public SchedulerController() {
+    public SchedulerController(IFImportExport ifImportExport, String simpleName, String className) {
+        this.ifImportExport = ifImportExport;
+        this.simpelName = simpleName;
+        this.className = className;
+    }
+
+    public static void main(String[] args) {
+        CSVImportSQLProcess csvImportSQLProcess = new CSVImportSQLProcess();
+        SchedulerController schedulerController = new SchedulerController((IFImportExport) csvImportSQLProcess,
+                csvImportSQLProcess.getClass().getSimpleName(),
+                csvImportSQLProcess.getClass().getName());
+
+        try {
+            schedulerController.iniJob();
+        } catch (SchedulerException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public void iniJob() throws SchedulerException, InterruptedException {
@@ -62,11 +83,11 @@ public class SchedulerController implements IFLatch {
         // Define the job and tie it to our HelloJob class
         JobBuilder jobBuilder = JobBuilder.newJob(JobExecution.class);
         JobDataMap data = new JobDataMap();
-        data.put("latch", this);
+        data.put("ifImportExport", ifImportExport);
 
-        JobDetail jobDetail = jobBuilder.usingJobData("example", "com.mexxon.controller.SchedulerController")
+        JobDetail jobDetail = jobBuilder.usingJobData(simpelName, className)
                 .usingJobData(data)
-                .withIdentity("myJob", "group1")
+                .withIdentity(String.valueOf(ifImportExport.getJobConfig().getJob_id()), "group1")
                 .build();
 
         // Trigger the job to run now, and then every 40 seconds
@@ -75,21 +96,25 @@ public class SchedulerController implements IFLatch {
                 .startNow()
                 //.startAt(DateBuilder.todayAt(13,32,00))
                 .withSchedule(SimpleScheduleBuilder.simpleSchedule()
-                        .withRepeatCount(repeatCount)
                         .withIntervalInSeconds(4))
                 //.withSchedule(CronScheduleBuilder.cronSchedule("0 " + "(min + 1)" + " " + "hour" + " * * ? *"))
                 .build();
 
         // Tell quartz to schedule the job using our trigger
         scheduler.scheduleJob(jobDetail, trigger);
-        latch.await();
 
         //End the scheduler
         log.info("All triggers executed. Shutdown scheduler");
         scheduler.shutdown();
     }
 
-    public void countDown() {
-        latch.countDown();
+    public IFImportExport getIfImportExport() {
+        return ifImportExport;
     }
+
+    public void setIfImportExport(IFImportExport ifImportExport) {
+        this.ifImportExport = ifImportExport;
+    }
+
+
 }

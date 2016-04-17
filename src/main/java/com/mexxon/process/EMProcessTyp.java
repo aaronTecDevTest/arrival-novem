@@ -12,5 +12,5 @@ public enum EMProcessTyp {
     EXPORT,
     IMPORT_WITH_SQL,
     EXPORT_WITH_SQL,
-    EXPORT_MAXXON_CSV;
+    EXPORT_MEXXON_CSV;
 }

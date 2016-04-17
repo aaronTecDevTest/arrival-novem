@@ -25,17 +25,18 @@ public class BOMEncoding {
 
     public static void main(String[] args) {
         BOMEncoding bomEncoding = new BOMEncoding();
+        String url = "../arrival-novem/src/main/resources/testingData/fileToImport.csv";
         try {
-            log.info(bomEncoding.fileEncodedAS());
+            log.info(bomEncoding.fileEncodedAS(url));
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
     }
 
-    public String readInput() {
+    public String readInput(String url) {
         StringBuffer buffer = new StringBuffer();
         try {
-            FileInputStream fis = new FileInputStream("test.txt");
+            FileInputStream fis = new FileInputStream(url);
             InputStreamReader isr = new InputStreamReader(fis, "UTF8");
             Reader in = new BufferedReader(isr);
             int ch;
@@ -44,36 +45,35 @@ public class BOMEncoding {
             }
             in.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
             return null;
         }
         return buffer.toString();
     }
 
-    public void encodeFileTo(String encoding) {
+    public void encodeFileTo(String encoding, String file) {
         try {
-            FileOutputStream fos = new FileOutputStream("test.txt");
+            FileOutputStream fos = new FileOutputStream(file);
             Writer out = new OutputStreamWriter(fos, "UTF8");
             out.write(s);
             out.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
     }
 
-    public String fileEncodedAS() throws IOException {
+    public String fileEncodedAS(String filePath) throws IOException {
         try {
             // new input stream reader is created
-            fis = new FileInputStream("../arrival-novem/src/main/resources/testingData/fileToImport.csv");
+            fis = new FileInputStream(filePath);
             isr = new InputStreamReader(fis);
 
             // the name of the character encoding returned
             s = isr.getEncoding();
-            System.out.print("Character Encoding: " + s);
 
         } catch (Exception e) {
             // print error
-            System.out.print("The stream is already closed");
+            log.error("The stream is already closed" + e.getMessage());
         } finally {
             // closes the stream and releases resources associated
             if (fis != null)

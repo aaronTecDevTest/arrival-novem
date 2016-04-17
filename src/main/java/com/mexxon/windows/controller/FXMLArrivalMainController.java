@@ -1,6 +1,7 @@
 package com.mexxon.windows.controller;
 
 import com.mexxon.database.DBManger;
+import com.mexxon.scheduler.JobManger;
 import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
 import com.mexxon.utilities.WindowsDialogs;
@@ -36,8 +37,11 @@ import java.util.ResourceBundle;
  */
 public class FXMLArrivalMainController implements Initializable {
     private static final Logger log = LogManager.getLogger(FXMLArrivalMainController.class);
+    /**
+     * @param jobManger for all scheduler Job from DB
+     */
+    private static JobManger jobManger = new JobManger();
     private Authentication authentication = Authentication.getInstance();
-
     @FXML
     private Menu mnuFile;
     @FXML
@@ -48,8 +52,6 @@ public class FXMLArrivalMainController implements Initializable {
     private MenuItem mnuLogin;
     @FXML
     private MenuItem mnuAbout;
-
-
     @FXML
     private Button btnAllStates;
     @FXML
@@ -66,8 +68,6 @@ public class FXMLArrivalMainController implements Initializable {
     private Button btnUpdate;
     @FXML
     private Button btnLoadConfig;
-
-
     @FXML
     private TextField txtTo;
     @FXML
@@ -84,13 +84,8 @@ public class FXMLArrivalMainController implements Initializable {
     private TextField txtEndTime;
     @FXML
     private TextField txtSeparator;
-
-
-
     @FXML
     private TableView<DBJobConfigTable> tbvJobConfig;
-
-
     @FXML
     private TableColumn<DBJobConfigTable, String> tbcJobID;
     @FXML
@@ -99,11 +94,11 @@ public class FXMLArrivalMainController implements Initializable {
     private TableColumn<DBJobConfigTable, String> tbcJobDescription;
     @FXML
     private TableColumn<DBJobConfigTable, String> tbcExportSQL;
-
-
-
+    @FXML
+    private TableColumn<DBJobConfigTable, String> tbcCSVSeparator;
     /**
-     * @param bundle For Internationalization
+     * @param bundle for Internationalization
+     * @param dataJobConfig observer list for all config data in the DB
      */
     private ResourceBundle bundle;
     private ObservableList<DBJobConfigTable> dataJobConfig;
@@ -130,6 +125,8 @@ public class FXMLArrivalMainController implements Initializable {
         tbcJobTyp.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_typ"));
         tbcJobDescription.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_description"));
         tbcExportSQL.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("export_sql"));
+        tbcCSVSeparator.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("csv_separator"));
+
         /*tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
         tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
         tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
@@ -147,6 +144,7 @@ public class FXMLArrivalMainController implements Initializable {
         tbvJobConfig.setItems(dataJobConfig);
         addTableViewListener();
     }
+
 
     private void iniBundleResources() {
         mnuFile.setText(bundle.getString("menu.title.file"));
@@ -166,18 +164,21 @@ public class FXMLArrivalMainController implements Initializable {
         btnLoadConfig.getTooltip().setText(bundle.getString("button.LoadConfig"));
     }
 
+
     @FXML
     public void showAllStatus(ActionEvent actionEvent) {
         log.info("ShowAllStatus Clicked:" + ((Button) actionEvent.getSource()).getText());
 
     }
 
+
     @FXML
     public void closeApp(ActionEvent actionEvent) {
         log.info("Exit Clicked:" + ((Button) actionEvent.getSource()).getText());
         authentication.logout();
-        new WindowsDialogs().closeWindowsConfirmation(log,null);
+        new WindowsDialogs().closeWindowsConfirmation(log, null);
     }
+
 
     @FXML
     public void loadConfig(ActionEvent actionEvent) {
@@ -189,22 +190,52 @@ public class FXMLArrivalMainController implements Initializable {
         }
     }
 
-    @FXML
-    public void resetJob(ActionEvent actionEvent) {
-        log.info("Reset Clicked:" + ((Button) actionEvent.getSource()).getText());
-
-    }
 
     @FXML
     public void runJob(ActionEvent actionEvent) {
         log.info("Run Clicked:" + ((Button) actionEvent.getSource()).getText());
-
+        try {
+            DBJobConfigTable jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
+            if (jobManger.isJobRunning(jobConfig)) {
+                jobManger.runJob(jobConfig);
+            } else {
+                new WindowsDialogs().jobRunDialog();
+            }
+        } catch (Exception e) {
+            log.error("" + e.getMessage());
+        }
     }
+
+
+    @FXML
+    public void resetJob(ActionEvent actionEvent) {
+        log.info("Reset Clicked:" + ((Button) actionEvent.getSource()).getText());
+        try {
+            DBJobConfigTable jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
+            if (jobManger.isJobRunning(jobConfig)) {
+                jobManger.resetJob(jobConfig);
+            } else {
+                new WindowsDialogs().jobRestDialog();
+            }
+        } catch (Exception e) {
+            log.error("" + e.getMessage());
+        }
+    }
+
 
     @FXML
     public void stopJob(ActionEvent actionEvent) {
         log.info("Stop Clicked:" + ((Button) actionEvent.getSource()).getText());
-
+        try {
+            DBJobConfigTable jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
+            if (jobManger.isJobRunning(jobConfig)) {
+                jobManger.stopJob(jobConfig);
+            } else {
+                new WindowsDialogs().jobStopDialog();
+            }
+        } catch (Exception e) {
+            log.error("" + e.getMessage());
+        }
     }
 
     @FXML
@@ -237,11 +268,29 @@ public class FXMLArrivalMainController implements Initializable {
             primaryStage.setY((primScreenBounds.getHeight() - primaryStage.getHeight()) / 2);
             primaryStage.show();
         } catch (IOException e) {
-            log.error(e.getStackTrace());
+            log.error(e.getMessage());
         }
     }
 
-    private void getJobConfFromDB() {
+    @FXML
+    public void menuCloseApp(ActionEvent actionEvent){
+        log.info("Exit Clicked:" + ((MenuItem) actionEvent.getSource()).getText());
+        authentication.logout();
+        new WindowsDialogs().closeWindowsConfirmation(log, null);
+    }
+
+    @FXML
+    public void menuAbout(ActionEvent actionEvent) {
+
+    }
+
+    @FXML
+    public void menuLogin(ActionEvent actionEvent) {
+
+    }
+
+
+        private void getJobConfFromDB() {
         ArrayList<DBJobConfigTable> temptDataList = new ArrayList<>();
         DBManger dbManger = new DBManger();
         temptDataList = dbManger.getJobConfigTable(Authentication.getDbConnection().getConnection(),

@@ -35,7 +35,7 @@ public class ViewArrivalMainApp extends Application {
         scene.getStylesheets().add("/css/arrivalMain.css");
 
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Maxxon: ImportExportTool");
+        primaryStage.setTitle("Mexxon: ImportExportTool");
         primaryStage.getIcons().add(new Image(applicationIcon.toString()));
 
         primaryStage.setResizable(false);
