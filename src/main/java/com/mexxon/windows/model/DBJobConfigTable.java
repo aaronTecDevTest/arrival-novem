@@ -1,6 +1,7 @@
 package com.mexxon.windows.model;
 
 import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +18,7 @@ import org.apache.logging.log4j.Logger;
  * ClassModel for Config and Process Status
  *
  CREATE TABLE `job_configuration` (
- `job_id` double NOT NULL AUTO_INCREMENT,
+ `job_id` long NOT NULL AUTO_INCREMENT,
  `job_typ` char(100) NOT NULL,
  `job_description` char(100) NOT NULL,
  `from` char(100) NOT NULL COMMENT 'Kann eine TabelleName in der DB oder eine Dateinpath+Dateiname sein (C:....xxx.csv).',
@@ -34,12 +35,14 @@ import org.apache.logging.log4j.Logger;
  ******************************************************************************************************************************************************************
  INSERT INTO importexport.job_configuration VALUES(NULL,'import','import to    the db','c:\dadf\dd','txn_tbl','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
  INSERT INTO importexport.job_configuration VALUES(NULL,'export','export frome the db','txn_tbl','c:\dadf\dd','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
+ INSERT INTO importexport.job_configuration VALUES(NULL,'import_sql','import to    the db','c:\dadf\dd','txn_tbl','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
+ INSERT INTO importexport.job_configuration VALUES(NULL,'export_sql','export frome the db','txn_tbl','c:\dadf\dd','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
  */
 
 public class DBJobConfigTable {
     private static final Logger log = LogManager.getLogger(DBJobConfigTable.class);
 
-    private SimpleDoubleProperty job_id;
+    private SimpleIntegerProperty job_id;
     private SimpleStringProperty job_typ;
     private SimpleStringProperty job_description;
     private SimpleStringProperty from;
@@ -52,13 +55,13 @@ public class DBJobConfigTable {
     private SimpleStringProperty csv_separator;
 
     public DBJobConfigTable() {
-        this(0.0,"","","","","","","","","","");
+        this(0,"","","","","","","","","","");
     }
 
-    public DBJobConfigTable(Double job_id, String job_desription, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator) {
-        this.job_id = new SimpleDoubleProperty(job_id);
+    public DBJobConfigTable(Integer job_id, String job_description, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator) {
+        this.job_id = new SimpleIntegerProperty(job_id);
         this.job_typ = new SimpleStringProperty(job_typ);
-        this.job_description = new SimpleStringProperty(job_desription);
+        this.job_description = new SimpleStringProperty(job_description);
         this.from = new SimpleStringProperty(from);
         this.to = new SimpleStringProperty(to);
         this.start_time = new SimpleStringProperty(start_time);
@@ -73,11 +76,11 @@ public class DBJobConfigTable {
         return job_id.get();
     }
 
-    public SimpleDoubleProperty job_idProperty() {
+    public SimpleIntegerProperty job_idProperty() {
         return job_id;
     }
 
-    public void setJob_id(double job_id) {
+    public void setJob_id(Integer job_id) {
         this.job_id.set(job_id);
     }
 

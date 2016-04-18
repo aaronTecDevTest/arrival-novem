@@ -215,7 +215,7 @@ public class FXMLArrivalMainController implements Initializable {
             if (jobManger.isJobRunning(jobConfig)) {
                 jobManger.resetJob(jobConfig);
             } else {
-                new WindowsDialogs().jobRestDialog();
+                new WindowsDialogs().jobStopResetDialog();
             }
         } catch (Exception e) {
             log.error("" + e.getMessage());
@@ -231,7 +231,7 @@ public class FXMLArrivalMainController implements Initializable {
             if (jobManger.isJobRunning(jobConfig)) {
                 jobManger.stopJob(jobConfig);
             } else {
-                new WindowsDialogs().jobStopDialog();
+                new WindowsDialogs().jobStopResetDialog();
             }
         } catch (Exception e) {
             log.error("" + e.getMessage());

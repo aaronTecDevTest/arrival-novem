@@ -30,7 +30,12 @@ public class CSVExportMexxonProcess implements IFImportExport, Job {
 
     @Override
     public void runProcess() {
-
+        try {
+            log.info("run is am laufen!!");
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

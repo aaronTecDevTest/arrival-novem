@@ -107,7 +107,7 @@ public class DBManger {
             resultSet = readFromDB(connection, sql);
             while (resultSet.next()) {
                 DBJobConfigTable temp = new DBJobConfigTable();
-                temp.setJob_id(resultSet.getDouble(1));
+                temp.setJob_id(resultSet.getInt(1));
                 temp.setJob_typ(resultSet.getString(2));
                 temp.setJob_description(resultSet.getString(3));
                 temp.setFrom(resultSet.getString(4));

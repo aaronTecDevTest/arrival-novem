@@ -52,7 +52,7 @@ public class WindowsDialogs {
         stage.getIcons().add(new Image(iconURL.toString()));
         alert.showAndWait();
     }
-
+/*
     public void jobRestDialog(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
@@ -61,9 +61,9 @@ public class WindowsDialogs {
         Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
         stage.getIcons().add(new Image(iconURL.toString()));
         alert.showAndWait();
-    }
+    }*/
 
-    public void jobStopDialog(){
+    public void jobStopResetDialog(){
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Information Dialog");
         alert.setHeaderText(null);

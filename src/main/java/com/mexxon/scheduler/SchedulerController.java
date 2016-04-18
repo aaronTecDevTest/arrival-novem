@@ -45,7 +45,7 @@ import org.quartz.impl.StdSchedulerFactory;
 public class SchedulerController  {
     private static final Logger log = LogManager.getLogger(SchedulerController.class);
     private IFImportExport ifImportExport;
-    private String simpelName;
+    private String simpleName;
     private String className;
 
     /**
@@ -53,7 +53,7 @@ public class SchedulerController  {
      **/
     public SchedulerController(IFImportExport ifImportExport, String simpleName, String className) {
         this.ifImportExport = ifImportExport;
-        this.simpelName = simpleName;
+        this.simpleName = simpleName;
         this.className = className;
     }
 
@@ -85,9 +85,10 @@ public class SchedulerController  {
         JobDataMap data = new JobDataMap();
         data.put("ifImportExport", ifImportExport);
 
-        JobDetail jobDetail = jobBuilder.usingJobData(simpelName, className)
+        JobDetail jobDetail = jobBuilder.usingJobData(simpleName, className)
                 .usingJobData(data)
-                .withIdentity(String.valueOf(ifImportExport.getJobConfig().getJob_id()), "group1")
+                //.withIdentity(String.valueOf(ifImportExport.getJobConfig().getJob_id()), "group1")
+                .withIdentity("ifImportExport", "group1")
                 .build();
 
         // Trigger the job to run now, and then every 40 seconds
@@ -115,6 +116,4 @@ public class SchedulerController  {
     public void setIfImportExport(IFImportExport ifImportExport) {
         this.ifImportExport = ifImportExport;
     }
-
-
 }
