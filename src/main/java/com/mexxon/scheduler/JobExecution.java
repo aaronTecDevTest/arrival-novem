@@ -23,7 +23,6 @@ public class JobExecution implements Job{
         JobDetail jobDetail = jobContext.getJobDetail();
 
         IFImportExport csvImportExport = (IFImportExport) jobDetail.getJobDataMap().get("csvImportExport");
-        csvImportExport.runProcess();
 
         log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
         log.info("--------------------------------------------------------------------");

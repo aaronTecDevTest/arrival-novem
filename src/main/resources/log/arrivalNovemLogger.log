@@ -2004,3 +2004,22 @@ The last packet sent successfully to the server was 0 milliseconds ago. The driv
 2016-04-18 17:23:34,985 INFO  [WorkerThread-LastJob] scheduler.SchedulerListener (SchedulerListener.java:75) - Scheduler Error: org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
 2016-04-18 17:23:34,986 INFO  [WorkerThread-LastJob] scheduler.SchedulerListener (SchedulerListener.java:31) - Job trigger finalized: myTrigger
 2016-04-18 17:23:34,988 INFO  [WorkerThread-LastJob] scheduler.SchedulerListener (SchedulerListener.java:55) - Job deleted: ifImportExport
+2016-04-18 17:25:40,077 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-18 17:25:40,079 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-04-18 17:25:40,093 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:51) - Job added: ifImportExport
+2016-04-18 17:25:40,093 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:23) - Job scheduled: myTrigger
+2016-04-18 17:25:40,094 INFO  [main] scheduler.SchedulerController (SchedulerController.java:108) - All triggers executed. Shutdown scheduler
+2016-04-18 17:25:40,094 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-04-18 17:25:40,094 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-04-18 17:25:40,095 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-04-18 17:26:11,006 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-18 17:26:11,010 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-04-18 17:26:11,028 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:51) - Job added: ifImportExport
+2016-04-18 17:26:11,029 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:23) - Job scheduled: myTrigger
+2016-04-18 17:26:11,029 INFO  [main] scheduler.SchedulerController (SchedulerController.java:108) - All triggers executed. Shutdown scheduler
+2016-04-18 17:26:11,030 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-04-18 17:26:11,031 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-04-18 17:26:11,031 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-04-18 17:26:28,984 INFO  [WorkerThread-LastJob] scheduler.SchedulerListener (SchedulerListener.java:75) - Scheduler Error: org.quartz.SchedulerException: Job threw an unhandled exception. [See nested exception: java.lang.NullPointerException]
+2016-04-18 17:26:31,000 INFO  [WorkerThread-LastJob] scheduler.SchedulerListener (SchedulerListener.java:31) - Job trigger finalized: myTrigger
+2016-04-18 17:26:31,984 INFO  [WorkerThread-LastJob] scheduler.SchedulerListener (SchedulerListener.java:55) - Job deleted: ifImportExport
