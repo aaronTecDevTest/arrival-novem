@@ -73,18 +73,18 @@ public class JobManger {
     }
 
     public static void main(String[] args) {
-      /*  CSVImportSQLProcess csvImportSQLProcess = new CSVImportSQLProcess(new DBJobConfigTable());
-        JobManger schedulerController = new JobManger((IFImportExport) csvImportSQLProcess,
+        DBJobConfigTable confi = new DBJobConfigTable();
+
+      CSVImportSQLProcess csvImportSQLProcess = new CSVImportSQLProcess(confi);
+        try {
+            JobManger schedulerController = new JobManger((IFImportExport) csvImportSQLProcess,
                 csvImportSQLProcess.getClass().getSimpleName(),
                 csvImportSQLProcess.getClass().getName(),
                 csvImportSQLProcess.getJobBuilder());
-        try {
-            schedulerController.iniJob();
+            schedulerController.runJob(confi);
         } catch (SchedulerException e) {
             e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }*/
+        }
     }
 
     private void iniJob(IFImportExport ifImportExport, String simpleName, String className) throws SchedulerException, InterruptedException {

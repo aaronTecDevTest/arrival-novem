@@ -5,10 +5,7 @@ import com.mexxon.windows.model.DBJobConfigTable;
 import com.opencsv.CSVReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.quartz.Job;
-import org.quartz.JobBuilder;
-import org.quartz.JobExecutionContext;
-import org.quartz.JobExecutionException;
+import org.quartz.*;
 
 import java.io.FileReader;
 import java.sql.Connection;
@@ -118,9 +115,21 @@ public class CSVImportProcess implements IFImportExport, Job{
         this.jobConfig = jobConfig;
     }
 
-    @Override
-    public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
+    public void execute(JobExecutionContext jobContext) throws JobExecutionException {
+        JobDetail jobDetail = jobContext.getJobDetail();
+
+        IFImportExport csvImportExport = (IFImportExport) jobDetail.getJobDataMap().get("csvImportExport");
+
+        log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
+        log.info("--------------------------------------------------------------------");
+        log.info("JobExecution start: " + jobContext.getFireTime());
+        log.info("Job name is: " + jobDetail.getJobDataMap().getString("example"));
+
         importCSVUsingDBLoad();
+
+        log.info("JobExecution end: " + jobContext.getJobRunTime() + ", key: " + jobDetail.getKey());
+        log.info("JobExecution next scheduled time: " + jobContext.getNextFireTime());
+        log.info("--------------------------------------------------------------------\n");
     }
 
     @Override

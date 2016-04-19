@@ -22,6 +22,7 @@
         <version.commons.csv>1.2</version.commons.csv>
         <version.opencsv>3.7</version.opencsv>
         <version.mysql.connector.java>5.1.38</version.mysql.connector.java>
+        <veerion.slf4j>1.7.21</veerion.slf4j>
 
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -80,6 +81,13 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${version.mysql.connector.java}</version>
             </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>log4j-over-slf4j</artifactId>
+                <version>${veerion.slf4j}</version>
+            </dependency>
+
         </dependencies>
     <!--/dependencyManagement-->
 

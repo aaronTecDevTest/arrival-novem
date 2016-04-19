@@ -54,12 +54,13 @@ public class DBJobConfigTable {
     private SimpleStringProperty expired_time;
     private SimpleStringProperty export_sql;
     private SimpleStringProperty csv_separator;
+    private SimpleStringProperty job_status;
 
     public DBJobConfigTable() {
-        this((long) 0,"","","","","","","","","","");
+        this((long) 0,"","","","","","","","","","","IDEAL");
     }
 
-    public DBJobConfigTable(Long job_id, String job_description, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator) {
+    public DBJobConfigTable(Long job_id, String job_description, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator, String job_status) {
         this.job_id = new SimpleLongProperty(job_id);
         this.job_typ = new SimpleStringProperty(job_typ);
         this.job_description = new SimpleStringProperty(job_description);
@@ -71,9 +72,10 @@ public class DBJobConfigTable {
         this.expired_time = new SimpleStringProperty(expired_time);
         this.export_sql = new SimpleStringProperty(export_sql);
         this.csv_separator = new SimpleStringProperty(csv_separator);
+        this.job_status = new SimpleStringProperty(job_status);
     }
 
-    public Long getJob_id() {
+    public long getJob_id() {
         return job_id.get();
     }
 
@@ -81,7 +83,7 @@ public class DBJobConfigTable {
         return job_id;
     }
 
-    public void setJob_id(Integer job_id) {
+    public void setJob_id(long job_id) {
         this.job_id.set(job_id);
     }
 
@@ -203,5 +205,17 @@ public class DBJobConfigTable {
 
     public void setCsv_separator(String csv_separator) {
         this.csv_separator.set(csv_separator);
+    }
+
+    public String getJob_status() {
+        return job_status.get();
+    }
+
+    public SimpleStringProperty job_statusProperty() {
+        return job_status;
+    }
+
+    public void setJob_status(String job_status) {
+        this.job_status.set(job_status);
     }
 }

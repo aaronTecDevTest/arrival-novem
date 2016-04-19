@@ -22,6 +22,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.quartz.SchedulerException;
 
 import java.io.IOException;
 import java.net.URL;
@@ -40,8 +41,13 @@ public class FXMLArrivalMainController implements Initializable {
     /**
      * @param jobManger for all scheduler Job from DB
      */
-    private static JobManger jobManger = new JobManger();
+    private static JobManger jobManger;
+    /**
+     * @param authentication static login var
+     */
     private Authentication authentication = Authentication.getInstance();
+
+
     @FXML
     private Menu mnuFile;
     @FXML
@@ -83,7 +89,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TextField txtEndTime;
     @FXML
-    private TextField txtSeparator;
+    private TextField txtJobStatus;
     @FXML
     private TableView<DBJobConfigTable> tbvJobConfig;
     @FXML
@@ -96,6 +102,9 @@ public class FXMLArrivalMainController implements Initializable {
     private TableColumn<DBJobConfigTable, String> tbcExportSQL;
     @FXML
     private TableColumn<DBJobConfigTable, String> tbcCSVSeparator;
+    @FXML
+    private TableColumn<DBJobConfigTable, String> tbcJobStatus;
+
     /**
      * @param bundle for Internationalization
      * @param dataJobConfig observer list for all config data in the DB
@@ -126,6 +135,7 @@ public class FXMLArrivalMainController implements Initializable {
         tbcJobDescription.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_description"));
         tbcExportSQL.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("export_sql"));
         tbcCSVSeparator.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("csv_separator"));
+        tbcJobStatus.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_status"));
 
         /*tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
         tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
@@ -140,9 +150,17 @@ public class FXMLArrivalMainController implements Initializable {
         //Setup TableView
         //tbvJobConfig.getSelectionModel().setCellSelectionEnabled(true);
         tbvJobConfig.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
+
         //Setup Data to TableView
         tbvJobConfig.setItems(dataJobConfig);
         addTableViewListener();
+
+        //Ini JobManger
+        try {
+            jobManger = new JobManger();
+        } catch (SchedulerException e) {
+            log.error("Fail to ini " + jobManger.getClass().getSimpleName() + ": " + e.getMessage());
+        }
     }
 
 
@@ -238,11 +256,13 @@ public class FXMLArrivalMainController implements Initializable {
         }
     }
 
+
     @FXML
     public void updateConfigTable(ActionEvent actionEvent) {
         log.info("UpdateConfig Clicked:" + ((Button) actionEvent.getSource()).getText());
         getJobConfFromDB();
     }
+
 
     @FXML
     public void showLogInOut(ActionEvent actionEvent) {
@@ -272,6 +292,7 @@ public class FXMLArrivalMainController implements Initializable {
         }
     }
 
+
     @FXML
     public void menuCloseApp(ActionEvent actionEvent){
         log.info("Exit Clicked:" + ((MenuItem) actionEvent.getSource()).getText());
@@ -279,10 +300,12 @@ public class FXMLArrivalMainController implements Initializable {
         new WindowsDialogs().closeWindowsConfirmation(log, null);
     }
 
+
     @FXML
     public void menuAbout(ActionEvent actionEvent) {
 
     }
+
 
     @FXML
     public void menuLogin(ActionEvent actionEvent) {
@@ -290,7 +313,7 @@ public class FXMLArrivalMainController implements Initializable {
     }
 
 
-        private void getJobConfFromDB() {
+    private void getJobConfFromDB() {
         ArrayList<DBJobConfigTable> temptDataList = new ArrayList<>();
         DBManger dbManger = new DBManger();
         temptDataList = dbManger.getJobConfigTable(Authentication.getDbConnection().getConnection(),
@@ -299,6 +322,7 @@ public class FXMLArrivalMainController implements Initializable {
         dataJobConfig = FXCollections.observableArrayList(temptDataList);
         tbvJobConfig.setItems(dataJobConfig);
     }
+
 
     private void addTableViewListener() {
         tbvJobConfig.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
@@ -311,7 +335,8 @@ public class FXMLArrivalMainController implements Initializable {
                 txtScheduler.setText(tempData.getScheduler());
                 txtProcessUser.setText(tempData.getCsv_separator());
                 txtStartTime.setText(tempData.getStart_time());
-                txtSeparator.setText(tempData.getCsv_separator());
+                txtJobStatus.setText(tempData.getJob_status()
+                );
             }
         });
     }
