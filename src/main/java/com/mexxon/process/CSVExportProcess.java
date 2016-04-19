@@ -5,6 +5,7 @@ import com.mexxon.windows.model.DBJobConfigTable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.Job;
+import org.quartz.JobBuilder;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
@@ -27,10 +28,14 @@ public class CSVExportProcess  implements IFImportExport, Job{
     private static final Logger log = LogManager.getLogger(CSVExportProcess.class);
     private static final EMProcessTyp processTyp = EXPORT;
 
-    private static Long processID;
+    private DBJobConfigTable jobConfig;
+    private JobBuilder jobBuilder;
+    private Long processID;
 
-    public CSVExportProcess(){
-
+    public CSVExportProcess(DBJobConfigTable jobConfig){
+        this.jobConfig = jobConfig;
+        this.jobBuilder = JobBuilder.newJob(CSVExportProcess.class);
+        this.processID = jobConfig.getJob_id();
     }
 
     public void exportToCSV(){
@@ -58,28 +63,29 @@ public class CSVExportProcess  implements IFImportExport, Job{
         }
     }
 
-    @Override
-    public void runProcess() {
-        
-    }
 
     @Override
     public DBJobConfigTable getJobConfig() {
-        return null;
+        return jobConfig;
     }
 
     @Override
     public void setJobConfig(DBJobConfigTable jobConfig) {
-
+        this.jobConfig = jobConfig;
     }
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-
+        exportToCSV();
     }
 
     @Override
     public void setProcessID(Long processID) {
         this.processID = processID;
+    }
+
+    @Override
+    public JobBuilder getJobBuilder() {
+        return jobBuilder;
     }
 }

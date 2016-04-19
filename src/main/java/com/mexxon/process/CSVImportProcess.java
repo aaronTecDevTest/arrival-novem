@@ -6,6 +6,7 @@ import com.opencsv.CSVReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.Job;
+import org.quartz.JobBuilder;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
@@ -28,12 +29,18 @@ public class CSVImportProcess implements IFImportExport, Job{
     private static final Logger log = LogManager.getLogger(CSVImportProcess.class);
     private static final EMProcessTyp processTyp = IMPORT;
 
+    private DBJobConfigTable jobConfig;
+    private JobBuilder jobBuilder;
+    private Long processID;
 
-    private static Long processID;
     private FileReader fileReader;
     private String filePath = "../arrival-novem/src/main/resources/testingData/fileToImport.csv";
 
-
+    public CSVImportProcess(DBJobConfigTable jobConfig) {
+        this.jobConfig = jobConfig;
+        this.jobBuilder = JobBuilder.newJob(CSVImportProcess.class);
+        this.processID = jobConfig.getJob_id();
+    }
 
     public static void main(String[] args) {
         /**
@@ -45,7 +52,7 @@ public class CSVImportProcess implements IFImportExport, Job{
          `terminal_id`  bigint(20) NULL DEFAULT NULL ,
          PRIMARY KEY (`txn_id`))
          */
-        CSVImportProcess csvImportProcess = new CSVImportProcess();
+        CSVImportProcess csvImportProcess = new CSVImportProcess( new DBJobConfigTable() );
         //csvImportProcess.importCSV();
         csvImportProcess.importCSVUsingDBLoad();
     }
@@ -102,27 +109,27 @@ public class CSVImportProcess implements IFImportExport, Job{
     }
 
     @Override
-    public void setJobConfig(DBJobConfigTable jobConfig) {
-
+    public DBJobConfigTable getJobConfig() {
+        return jobConfig;
     }
 
     @Override
-    public DBJobConfigTable getJobConfig() {
-        return null;
+    public void setJobConfig(DBJobConfigTable jobConfig) {
+        this.jobConfig = jobConfig;
     }
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-
-    }
-
-    @Override
-    public void runProcess() {
-
+        importCSVUsingDBLoad();
     }
 
     @Override
     public void setProcessID(Long processID) {
         this.processID = processID;
+    }
+
+    @Override
+    public JobBuilder getJobBuilder() {
+        return jobBuilder;
     }
 }

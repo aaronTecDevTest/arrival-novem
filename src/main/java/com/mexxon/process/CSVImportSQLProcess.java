@@ -6,6 +6,7 @@ import com.opencsv.CSVReader;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.Job;
+import org.quartz.JobBuilder;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
@@ -14,7 +15,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 
-import static com.mexxon.process.EMProcessTyp.IMPORT_WITH_SQL;
+import static com.mexxon.process.EMProcessTyp.IMPORT_SQL;
 
 /**
  * @author: Aaron Kutekidila
@@ -26,12 +27,22 @@ import static com.mexxon.process.EMProcessTyp.IMPORT_WITH_SQL;
 
 public class CSVImportSQLProcess implements IFImportExport, Job{
     private static final Logger log = LogManager.getLogger(CSVImportSQLProcess.class);
-    private static final EMProcessTyp processTyp = IMPORT_WITH_SQL;
+    private static final EMProcessTyp processTyp = IMPORT_SQL;
 
-    private static Long processID;
+    private DBJobConfigTable jobConfig;
+    private JobBuilder jobBuilder;
+    private Long processID;
 
     private FileReader fileReader;
     private String filePath = "../arrival-novem/src/main/resources/testingData/fileToImport.csv";
+
+
+    public CSVImportSQLProcess(DBJobConfigTable jobConfig) {
+        this.jobConfig = jobConfig;
+        this.jobBuilder = JobBuilder.newJob(CSVImportSQLProcess.class);
+        this.processID = jobConfig.getJob_id();
+    }
+
 
     public static void main(String[] args) {
         /**
@@ -43,7 +54,7 @@ public class CSVImportSQLProcess implements IFImportExport, Job{
          `terminal_id`  bigint(20) NULL DEFAULT NULL ,
          PRIMARY KEY (`txn_id`))
          */
-        CSVImportSQLProcess csvImportProcess = new CSVImportSQLProcess();
+        CSVImportSQLProcess csvImportProcess = new CSVImportSQLProcess(null);
         //csvImportProcess.importCSV();
         csvImportProcess.importCSVUsingDBLoad();
     }
@@ -100,27 +111,27 @@ public class CSVImportSQLProcess implements IFImportExport, Job{
     }
 
     @Override
-    public void setJobConfig(DBJobConfigTable jobConfig) {
-
+    public DBJobConfigTable getJobConfig() {
+        return jobConfig;
     }
 
     @Override
-    public DBJobConfigTable getJobConfig() {
-        return null;
+    public void setJobConfig(DBJobConfigTable jobConfig) {
+        this.jobConfig = jobConfig;
     }
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-
-    }
-
-    @Override
-    public void runProcess() {
-
+        importCSV();
     }
 
     @Override
     public void setProcessID(Long processID) {
         this.processID = processID;
+    }
+
+    @Override
+    public JobBuilder getJobBuilder() {
+        return jobBuilder;
     }
 }

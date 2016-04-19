@@ -5,6 +5,7 @@ import com.mexxon.windows.model.DBJobConfigTable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.Job;
+import org.quartz.JobBuilder;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 
@@ -13,7 +14,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import static com.mexxon.process.EMProcessTyp.EXPORT_WITH_SQL;
+import static com.mexxon.process.EMProcessTyp.EXPORT_SQL;
 
 /**
  * @author: Aaron Kutekidila
@@ -25,13 +26,16 @@ import static com.mexxon.process.EMProcessTyp.EXPORT_WITH_SQL;
 
 public class CSVExportSQLProcess implements IFImportExport, Job{
     private static final Logger log = LogManager.getLogger(CSVExportSQLProcess.class);
-    private static final EMProcessTyp processTyp = EXPORT_WITH_SQL;
+    private static final EMProcessTyp processTyp = EXPORT_SQL;
 
+    private DBJobConfigTable jobConfig;
+    private JobBuilder jobBuilder;
+    private Long processID;
 
-    private static Long processID;
-
-    public CSVExportSQLProcess(){
-
+    public CSVExportSQLProcess(DBJobConfigTable jobConfig){
+        this.jobConfig = jobConfig;
+        this.jobBuilder = JobBuilder.newJob(CSVExportProcess.class);
+        this.processID = jobConfig.getJob_id();
     }
 
     public void exportToCSV(){
@@ -60,27 +64,27 @@ public class CSVExportSQLProcess implements IFImportExport, Job{
     }
 
     @Override
-    public void setJobConfig(DBJobConfigTable jobConfig) {
-
+    public DBJobConfigTable getJobConfig() {
+        return jobConfig;
     }
 
     @Override
-    public DBJobConfigTable getJobConfig() {
-        return null;
+    public void setJobConfig(DBJobConfigTable jobConfig) {
+        this.jobConfig = jobConfig;
     }
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
-
-    }
-
-    @Override
-    public void runProcess() {
-
+        exportToCSV();
     }
 
     @Override
     public void setProcessID(Long processID) {
         this.processID = processID;
+    }
+
+    @Override
+    public JobBuilder getJobBuilder() {
+        return jobBuilder;
     }
 }

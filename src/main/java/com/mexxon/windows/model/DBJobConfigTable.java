@@ -2,6 +2,7 @@ package com.mexxon.windows.model;
 
 import javafx.beans.property.SimpleDoubleProperty;
 import javafx.beans.property.SimpleIntegerProperty;
+import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -42,7 +43,7 @@ import org.apache.logging.log4j.Logger;
 public class DBJobConfigTable {
     private static final Logger log = LogManager.getLogger(DBJobConfigTable.class);
 
-    private SimpleIntegerProperty job_id;
+    private SimpleLongProperty   job_id;
     private SimpleStringProperty job_typ;
     private SimpleStringProperty job_description;
     private SimpleStringProperty from;
@@ -55,11 +56,11 @@ public class DBJobConfigTable {
     private SimpleStringProperty csv_separator;
 
     public DBJobConfigTable() {
-        this(0,"","","","","","","","","","");
+        this((long) 0,"","","","","","","","","","");
     }
 
-    public DBJobConfigTable(Integer job_id, String job_description, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator) {
-        this.job_id = new SimpleIntegerProperty(job_id);
+    public DBJobConfigTable(Long job_id, String job_description, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator) {
+        this.job_id = new SimpleLongProperty(job_id);
         this.job_typ = new SimpleStringProperty(job_typ);
         this.job_description = new SimpleStringProperty(job_description);
         this.from = new SimpleStringProperty(from);
@@ -72,11 +73,11 @@ public class DBJobConfigTable {
         this.csv_separator = new SimpleStringProperty(csv_separator);
     }
 
-    public double getJob_id() {
+    public Long getJob_id() {
         return job_id.get();
     }
 
-    public SimpleIntegerProperty job_idProperty() {
+    public SimpleLongProperty job_idProperty() {
         return job_id;
     }
 
