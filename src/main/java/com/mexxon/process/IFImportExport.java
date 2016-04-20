@@ -6,7 +6,7 @@ import org.quartz.JobBuilder;
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
- * Created: 31.03.2016.
+ * Created: 20.04.2016.
  * @since: 1.0
  * Package: com.mexxon.controller
  */

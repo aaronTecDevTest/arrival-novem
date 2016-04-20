@@ -29,6 +29,10 @@ public class CSVExportProcess  implements IFImportExport, Job{
     private JobBuilder jobBuilder;
     private Long processID;
 
+
+    public CSVExportProcess() {
+    }
+
     public CSVExportProcess(DBJobConfigTable jobConfig){
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVExportProcess.class);
@@ -60,6 +64,11 @@ public class CSVExportProcess  implements IFImportExport, Job{
         }
     }
 
+    public void setDBJobConfigTable(DBJobConfigTable jobConfig) {
+        this.jobConfig = jobConfig;
+        this.jobBuilder = JobBuilder.newJob(CSVExportMexxonProcess.class);
+        this.processID = jobConfig.getJob_id();
+    }
 
     @Override
     public DBJobConfigTable getJobConfig() {
@@ -71,15 +80,15 @@ public class CSVExportProcess  implements IFImportExport, Job{
         this.jobConfig = jobConfig;
     }
 
+    @Override
     public void execute(JobExecutionContext jobContext) throws JobExecutionException {
         JobDetail jobDetail = jobContext.getJobDetail();
-
         IFImportExport csvImportExport = (IFImportExport) jobDetail.getJobDataMap().get("csvImportExport");
 
         log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
         log.info("--------------------------------------------------------------------");
         log.info("JobExecution start: " + jobContext.getFireTime());
-        log.info("Job name is: " + jobDetail.getJobDataMap().getString("example"));
+        log.info("Job name is: " + jobDetail.getJobDataMap().getString(csvImportExport.getClass().getSimpleName()));
 
         exportToCSV();
 

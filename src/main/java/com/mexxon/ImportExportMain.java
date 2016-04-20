@@ -2,9 +2,11 @@ package com.mexxon;
 
 import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
+import com.mexxon.windows.controller.FXMLArrivalMainController;
 import com.mexxon.windows.view.ViewArrivalLogIn;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 
 /**
  * @author: Aaron Kutekidila
@@ -31,7 +33,9 @@ public class ImportExportMain {
         {
             logInView = new ViewArrivalLogIn();
             logInView.run();
+            FXMLArrivalMainController.JOB_MANGER.stopScheduler();
         }
         log.info("Stop -------------------------- Mexxon ------------------------- ImportExportTool");
+
     }
 }

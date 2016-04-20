@@ -29,13 +29,16 @@ public class CSVExportSQLProcess implements IFImportExport, Job{
     private JobBuilder jobBuilder;
     private Long processID;
 
+    public CSVExportSQLProcess() {
+    }
+
     public CSVExportSQLProcess(DBJobConfigTable jobConfig){
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVExportProcess.class);
         this.processID = jobConfig.getJob_id();
     }
 
-    public void exportToCSV(){
+    public void exportToCSVSQL(){
         String filename ="Desktop:test.csv";
         try {
             FileWriter fw = new FileWriter(filename);
@@ -60,6 +63,11 @@ public class CSVExportSQLProcess implements IFImportExport, Job{
         }
     }
 
+    public void setDBJobConfigTable(DBJobConfigTable jobConfig) {
+        this.jobConfig = jobConfig;
+        this.jobBuilder = JobBuilder.newJob(CSVExportMexxonProcess.class);
+        this.processID = jobConfig.getJob_id();
+    }
     @Override
     public DBJobConfigTable getJobConfig() {
         return jobConfig;
@@ -70,6 +78,7 @@ public class CSVExportSQLProcess implements IFImportExport, Job{
         this.jobConfig = jobConfig;
     }
 
+    @Override
     public void execute(JobExecutionContext jobContext) throws JobExecutionException {
         JobDetail jobDetail = jobContext.getJobDetail();
 
@@ -78,9 +87,9 @@ public class CSVExportSQLProcess implements IFImportExport, Job{
         log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
         log.info("--------------------------------------------------------------------");
         log.info("JobExecution start: " + jobContext.getFireTime());
-        log.info("Job name is: " + jobDetail.getJobDataMap().getString("example"));
+        log.info("Job name is: " + jobDetail.getJobDataMap().getString(csvImportExport.getClass().getSimpleName()));
 
-        exportToCSV();
+        exportToCSVSQL();
 
         log.info("JobExecution end: " + jobContext.getJobRunTime() + ", key: " + jobDetail.getKey());
         log.info("JobExecution next scheduled time: " + jobContext.getNextFireTime());

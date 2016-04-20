@@ -39,9 +39,9 @@ import java.util.ResourceBundle;
 public class FXMLArrivalMainController implements Initializable {
     private static final Logger log = LogManager.getLogger(FXMLArrivalMainController.class);
     /**
-     * @param jobManger for all scheduler Job from DB
+     * @param JOB_MANGER for all scheduler Job from DB
      */
-    private static JobManger jobManger;
+    public static JobManger JOB_MANGER;
     /**
      * @param authentication static login var
      */
@@ -130,12 +130,12 @@ public class FXMLArrivalMainController implements Initializable {
         dataJobConfig = FXCollections.observableArrayList();
 
         //Setup Table-Column Properties
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_id"));
-        tbcJobTyp.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_typ"));
-        tbcJobDescription.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_description"));
-        tbcExportSQL.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("export_sql"));
-        tbcCSVSeparator.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("csv_separator"));
-        tbcJobStatus.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable, String>("job_status"));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<>("job_id"));
+        tbcJobTyp.setCellValueFactory(new PropertyValueFactory<>("job_typ"));
+        tbcJobDescription.setCellValueFactory(new PropertyValueFactory<>("job_description"));
+        tbcExportSQL.setCellValueFactory(new PropertyValueFactory<>("export_sql"));
+        tbcCSVSeparator.setCellValueFactory(new PropertyValueFactory<>("csv_separator"));
+        tbcJobStatus.setCellValueFactory(new PropertyValueFactory<>("job_status"));
 
         /*tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
         tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
@@ -157,9 +157,10 @@ public class FXMLArrivalMainController implements Initializable {
 
         //Ini JobManger
         try {
-            jobManger = new JobManger();
+            JOB_MANGER = new JobManger();
+            JOB_MANGER.startScheduler();
         } catch (SchedulerException e) {
-            log.error("Fail to ini " + jobManger.getClass().getSimpleName() + ": " + e.getMessage());
+            log.error("Fail to ini " + JOB_MANGER.getClass().getSimpleName() + ": " + e.getMessage());
         }
     }
 
@@ -214,13 +215,13 @@ public class FXMLArrivalMainController implements Initializable {
         log.info("Run Clicked:" + ((Button) actionEvent.getSource()).getText());
         try {
             DBJobConfigTable jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
-            if (jobManger.isJobRunning(jobConfig)) {
-                jobManger.runJob(jobConfig);
-            } else {
-                new WindowsDialogs().jobRunDialog();
-            }
+           // if (JOB_MANGER.isJobRunning(jobConfig)) {
+                JOB_MANGER.runJob(jobConfig);
+            //} else {
+               // new WindowsDialogs().jobRunDialog();
+            //}
         } catch (Exception e) {
-            log.error("" + e.getMessage());
+            log.error("Job not started: " + e.getMessage());
         }
     }
 
@@ -230,8 +231,8 @@ public class FXMLArrivalMainController implements Initializable {
         log.info("Reset Clicked:" + ((Button) actionEvent.getSource()).getText());
         try {
             DBJobConfigTable jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
-            if (jobManger.isJobRunning(jobConfig)) {
-                jobManger.resetJob(jobConfig);
+            if (JOB_MANGER.isJobRunning(jobConfig)) {
+                JOB_MANGER.resetJob(jobConfig);
             } else {
                 new WindowsDialogs().jobStopResetDialog();
             }
@@ -246,8 +247,8 @@ public class FXMLArrivalMainController implements Initializable {
         log.info("Stop Clicked:" + ((Button) actionEvent.getSource()).getText());
         try {
             DBJobConfigTable jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
-            if (jobManger.isJobRunning(jobConfig)) {
-                jobManger.stopJob(jobConfig);
+            if (JOB_MANGER.isJobRunning(jobConfig)) {
+                JOB_MANGER.stopJob(jobConfig);
             } else {
                 new WindowsDialogs().jobStopResetDialog();
             }

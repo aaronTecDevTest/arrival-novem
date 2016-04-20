@@ -73,62 +73,69 @@ public class JobManger {
     }
 
     public static void main(String[] args) {
-        DBJobConfigTable confi = new DBJobConfigTable();
+            DBJobConfigTable confi = new DBJobConfigTable((long) 3,
+                "Beschreibung kklsdf",
+                "import",
+                "ttto",
+                "tt",
+                "dddd",
+                "fff",
+                "df",
+                "dfd",
+                "sddf",
+                ";",
+                "ideal");
 
-      CSVImportSQLProcess csvImportSQLProcess = new CSVImportSQLProcess(confi);
-        try {
-            JobManger schedulerController = new JobManger((IFImportExport) csvImportSQLProcess,
-                csvImportSQLProcess.getClass().getSimpleName(),
-                csvImportSQLProcess.getClass().getName(),
-                csvImportSQLProcess.getJobBuilder());
-            schedulerController.runJob(confi);
-        } catch (SchedulerException e) {
-            e.printStackTrace();
-        }
+            CSVImportSQLProcess csvImportSQLProcess = new CSVImportSQLProcess();
+            csvImportSQLProcess.setDBJobConfigTable(confi);
+            try {
+                JobManger jobManger = new JobManger();
+                jobManger.runJob(confi);
+            } catch (SchedulerException e) {
+                e.printStackTrace();
+            }
     }
 
-    private void iniJob(IFImportExport ifImportExport, String simpleName, String className) throws SchedulerException, InterruptedException {
-        //Start the scheduler
-        scheduler.start();
+    private void jobScheduler(IFImportExport ifImportExport, String simpleName, String className) throws SchedulerException, InterruptedException {
+        String group = ifImportExport.getJobConfig().getJob_typ();
+        String jobID = String.valueOf(ifImportExport.getJobConfig().getJob_id());
 
-        // Define the job and tie it to our HelloJob class
-        //JobBuilder jobBuilder = JobBuilder.newJob(JobExecution.class);
+        // Define the job and tie it to our the class
         jobBuilder = ifImportExport.getJobBuilder();
         JobDataMap data = new JobDataMap();
-        data.put("ifImportExport", ifImportExport);
+        data.put("csvImportExport", ifImportExport);
 
+        //Define job details
         JobDetail jobDetail = jobBuilder.usingJobData(simpleName, className)
                 .usingJobData(data)
-                //.withIdentity(String.valueOf(ifImportExport.getJobConfig().getJob_id()), "group1")
-                .withIdentity(String.valueOf(ifImportExport.getJobConfig().getJob_id()), ifImportExport.getJobConfig().getJob_typ())
+                .withIdentity(jobID, group)
                 .build();
 
         // Trigger the job to run now, and then every 40 seconds
         Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity("myTrigger", "group1")
+                .withIdentity("myTrigger" + jobID, group)
                 .startNow()
                 //.startAt(DateBuilder.todayAt(13,32,00))
                 .withSchedule(SimpleScheduleBuilder.simpleSchedule()
+                       //.withRepeatCount(i--)
                         .withIntervalInSeconds(4))
                 //.withSchedule(CronScheduleBuilder.cronSchedule("0 " + "(min + 1)" + " " + "hour" + " * * ? *"))
                 .build();
 
-        // Tell quartz to schedule the job using our trigger
+        // Tell quartz to schedule the job using our trigger (run the job)
         scheduler.scheduleJob(jobDetail, trigger);
 
-        //End the scheduler
-        /*
-        log.info("All triggers executed. Shutdown scheduler");
-        scheduler.shutdown();*/
+
     }
 
     public void runJob(DBJobConfigTable jobConfig){
-
-        switch (EMProcessTyp.formString(jobConfig.getJob_typ())) {
+        EMProcessTyp emProcessTyp = EMProcessTyp.formString(jobConfig.getJob_typ());
+        switch (emProcessTyp) {
             case EXPORT_MEXXON_CSV:{
                 try {
-                    CSVExportMexxonProcess job = new CSVExportMexxonProcess(jobConfig);
-                    iniJob(job,
+                    CSVExportMexxonProcess job = new CSVExportMexxonProcess();
+                    job.setDBJobConfigTable(jobConfig);
+                    jobScheduler(job,
                             job.getClass().getSimpleName(),
                             job.getClass().getName());
                 } catch (SchedulerException e) {
@@ -136,11 +143,13 @@ public class JobManger {
                 } catch (InterruptedException e) {
                     log.error(e.getMessage());
                 }
+                break;
             }
             case IMPORT:{
                 try {
-                    CSVImportProcess job = new CSVImportProcess(jobConfig);
-                    iniJob(job,
+                    CSVImportProcess job = new CSVImportProcess();
+                    job.setDBJobConfigTable(jobConfig);
+                    jobScheduler(job,
                             job.getClass().getSimpleName(),
                             job.getClass().getName());
                 } catch (SchedulerException e) {
@@ -148,11 +157,13 @@ public class JobManger {
                 } catch (InterruptedException e) {
                     log.error(e.getMessage());
                 }
+                break;
             }
             case EXPORT:{
                 try {
-                    CSVExportProcess job = new CSVExportProcess(jobConfig);
-                    iniJob(job,
+                    CSVExportProcess job = new CSVExportProcess();
+                    job.setDBJobConfigTable(jobConfig);
+                    jobScheduler(job,
                             job.getClass().getSimpleName(),
                             job.getClass().getName());
                 } catch (SchedulerException e) {
@@ -160,11 +171,13 @@ public class JobManger {
                 } catch (InterruptedException e) {
                     log.error(e.getMessage());
                 }
+                break;
             }
             case IMPORT_SQL:{
                 try {
-                    CSVImportSQLProcess job = new CSVImportSQLProcess(jobConfig);
-                    iniJob(job,
+                    CSVImportSQLProcess job = new CSVImportSQLProcess();
+                    job.setDBJobConfigTable(jobConfig);
+                    jobScheduler(job,
                             job.getClass().getSimpleName(),
                             job.getClass().getName());
                 } catch (SchedulerException e) {
@@ -172,11 +185,13 @@ public class JobManger {
                 } catch (InterruptedException e) {
                     log.error(e.getMessage());
                 }
+                break;
             }
             case EXPORT_SQL:{
                 try {
-                    CSVExportSQLProcess job = new CSVExportSQLProcess(jobConfig);
-                    iniJob(job,
+                    CSVExportSQLProcess job = new CSVExportSQLProcess();
+                    job.setDBJobConfigTable(jobConfig);
+                    jobScheduler(job,
                             job.getClass().getSimpleName(),
                             job.getClass().getName());
                 } catch (SchedulerException e) {
@@ -184,6 +199,7 @@ public class JobManger {
                 } catch (InterruptedException e) {
                     log.error(e.getMessage());
                 }
+                break;
             }
             default: new WindowsDialogs().jobStopResetDialog();
         }
@@ -191,26 +207,49 @@ public class JobManger {
 
     public  void resetJob(DBJobConfigTable jobConfig){
         try {
-            schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).shutdown();
+            schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).clear();
             schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).start();
         } catch (SchedulerException e) {
-            e.printStackTrace();
+            log.error("Rest scheduler fail:" + e.getMessage());
         }
     }
 
     public void stopJob(DBJobConfigTable jobConfig){
         try {
-            schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).shutdown();
             schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).clear();
         } catch (SchedulerException e) {
-            e.printStackTrace();
+            log.error("Stop scheduler fail:" + e.getMessage());
         }
     }
 
     public boolean isJobRunning(DBJobConfigTable jobConfig){
         boolean isJobRunning = false;
-
+        try {
+            String key =String.valueOf(jobConfig.getJob_id());
+            return schedulerFactory.getScheduler(key).checkExists(new JobKey(key));
+        } catch (SchedulerException e) {
+            log.error("Get scheduler status fail:" + e.getMessage());
+        }
         return isJobRunning;
+    }
+
+    public void startScheduler(){
+        //Start the scheduler
+        try {
+            scheduler.start();
+        } catch (SchedulerException e) {
+           log.error("Start scheduler fail:" + e.getMessage());
+        }
+    }
+
+    public void stopScheduler(){
+        try {
+            //End the scheduler
+            log.info("All triggers executed. Shutdown scheduler");
+            scheduler.shutdown();
+        } catch (SchedulerException e) {
+            log.error("Stop scheduler fail:" + e.getMessage());
+        }
     }
 
     public IFImportExport getIfImportExport() {

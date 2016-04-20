@@ -33,13 +33,14 @@ public class CSVImportSQLProcess implements IFImportExport, Job{
     private FileReader fileReader;
     private String filePath = "../arrival-novem/src/main/resources/testingData/fileToImport.csv";
 
+    public CSVImportSQLProcess() {
+    }
 
     public CSVImportSQLProcess(DBJobConfigTable jobConfig) {
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVImportSQLProcess.class);
         this.processID = jobConfig.getJob_id();
     }
-
 
     public static void main(String[] args) {
         /**
@@ -51,9 +52,9 @@ public class CSVImportSQLProcess implements IFImportExport, Job{
          `terminal_id`  bigint(20) NULL DEFAULT NULL ,
          PRIMARY KEY (`txn_id`))
          */
-        CSVImportSQLProcess csvImportProcess = new CSVImportSQLProcess(null);
-        //csvImportProcess.importCSV();
-        csvImportProcess.importCSVUsingDBLoad();
+        CSVImportSQLProcess csvImportProcess = new CSVImportSQLProcess();
+        csvImportProcess.setDBJobConfigTable(new DBJobConfigTable());
+        csvImportProcess.importCSV();
     }
 
     public void importCSV() {
@@ -86,25 +87,10 @@ public class CSVImportSQLProcess implements IFImportExport, Job{
         }
     }
 
-    public void importCSVUsingDBLoad() {
-        DBConnection dbConnection = new DBConnection();
-
-        try (Connection connection = dbConnection.getConnection()) {
-            String loadQuery =
-                    "LOAD DATA LOCAL INFILE '"
-                            + filePath
-                            + "' INTO TABLE txn_tbl "
-                            + "FIELDS TERMINATED BY ','"
-                            + " LINES TERMINATED BY '\n' "
-                            + "(txn_amount, card_number, terminal_id) ";
-
-            Statement stmt = connection.createStatement();
-            stmt.execute(loadQuery);
-            log.info(loadQuery);
-            log.info("Data Successfully import!");
-        } catch (Exception e) {
-            log.error(e.getMessage());
-        }
+    public void setDBJobConfigTable(DBJobConfigTable jobConfig) {
+        this.jobConfig = jobConfig;
+        this.jobBuilder = JobBuilder.newJob(CSVExportMexxonProcess.class);
+        this.processID = jobConfig.getJob_id();
     }
 
     @Override
@@ -117,6 +103,7 @@ public class CSVImportSQLProcess implements IFImportExport, Job{
         this.jobConfig = jobConfig;
     }
 
+    @Override
     public void execute(JobExecutionContext jobContext) throws JobExecutionException {
         JobDetail jobDetail = jobContext.getJobDetail();
 
@@ -125,7 +112,7 @@ public class CSVImportSQLProcess implements IFImportExport, Job{
         log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
         log.info("--------------------------------------------------------------------");
         log.info("JobExecution start: " + jobContext.getFireTime());
-        log.info("Job name is: " + jobDetail.getJobDataMap().getString("example"));
+        log.info("Job name is: " + jobDetail.getJobDataMap().getString(csvImportExport.getClass().getSimpleName()));
 
         importCSV();
 

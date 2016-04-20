@@ -33,6 +33,9 @@ public class CSVImportProcess implements IFImportExport, Job{
     private FileReader fileReader;
     private String filePath = "../arrival-novem/src/main/resources/testingData/fileToImport.csv";
 
+    public CSVImportProcess() {
+    }
+
     public CSVImportProcess(DBJobConfigTable jobConfig) {
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVImportProcess.class);
@@ -49,39 +52,9 @@ public class CSVImportProcess implements IFImportExport, Job{
          `terminal_id`  bigint(20) NULL DEFAULT NULL ,
          PRIMARY KEY (`txn_id`))
          */
-        CSVImportProcess csvImportProcess = new CSVImportProcess( new DBJobConfigTable() );
-        //csvImportProcess.importCSV();
+        CSVImportProcess csvImportProcess = new CSVImportProcess();
+        csvImportProcess.setDBJobConfigTable(new DBJobConfigTable());
         csvImportProcess.importCSVUsingDBLoad();
-    }
-
-    public void importCSV() {
-        try {
-            CSVReader reader = new CSVReader(new FileReader(filePath), ',');
-
-            DBConnection dbConnection = new DBConnection();
-            Connection connection = dbConnection.getConnection();
-
-            String insertQuery = "Insert into txn_tbl (txn_id,txn_amount, card_number, terminal_id) values (null,?,?,?)";
-            PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
-
-            String[] rowData = null;
-            int i = 0;
-            while ((rowData = reader.readNext()) != null) {
-                for (String data : rowData) {
-                    preparedStatement.setString((i % 3) + 1, data);
-
-                    if (++i % 3 == 0)
-                        preparedStatement.addBatch();// add batch
-
-                    if (i % 30 == 0)// insert when the batch size is 10
-                        preparedStatement.executeBatch();
-                }
-            }
-            connection.close();
-            log.info("Data Successfully import!");
-        } catch (Exception e) {
-            log.error(e.getMessage());
-        }
     }
 
     public void importCSVUsingDBLoad() {
@@ -105,6 +78,12 @@ public class CSVImportProcess implements IFImportExport, Job{
         }
     }
 
+    public void setDBJobConfigTable(DBJobConfigTable jobConfig) {
+        this.jobConfig = jobConfig;
+        this.jobBuilder = JobBuilder.newJob(CSVExportMexxonProcess.class);
+        this.processID = jobConfig.getJob_id();
+    }
+
     @Override
     public DBJobConfigTable getJobConfig() {
         return jobConfig;
@@ -115,6 +94,7 @@ public class CSVImportProcess implements IFImportExport, Job{
         this.jobConfig = jobConfig;
     }
 
+    @Override
     public void execute(JobExecutionContext jobContext) throws JobExecutionException {
         JobDetail jobDetail = jobContext.getJobDetail();
 
@@ -123,7 +103,7 @@ public class CSVImportProcess implements IFImportExport, Job{
         log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
         log.info("--------------------------------------------------------------------");
         log.info("JobExecution start: " + jobContext.getFireTime());
-        log.info("Job name is: " + jobDetail.getJobDataMap().getString("example"));
+        log.info("Job name is: " + jobDetail.getJobDataMap().getString(csvImportExport.getClass().getSimpleName()));
 
         importCSVUsingDBLoad();
 
