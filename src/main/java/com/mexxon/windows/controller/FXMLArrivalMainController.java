@@ -1,5 +1,6 @@
 package com.mexxon.windows.controller;
 
+import com.mexxon.ImportExportMain;
 import com.mexxon.database.DBManger;
 import com.mexxon.scheduler.JobManger;
 import com.mexxon.utilities.Authentication;
@@ -38,14 +39,17 @@ import java.util.ResourceBundle;
  */
 public class FXMLArrivalMainController implements Initializable {
     private static final Logger log = LogManager.getLogger(FXMLArrivalMainController.class);
+
     /**
      * @param JOB_MANGER for all scheduler Job from DB
      */
-    public static JobManger JOB_MANGER;
+    private static JobManger JOB_MANGER = ImportExportMain.JOB_MANGER;
+
     /**
      * @param authentication static login var
      */
     private Authentication authentication = Authentication.getInstance();
+
 
 
     @FXML

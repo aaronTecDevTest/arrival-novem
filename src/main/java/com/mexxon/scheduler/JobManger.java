@@ -8,6 +8,8 @@ import org.apache.logging.log4j.Logger;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
+import static com.mexxon.scheduler.EMSchaduler.*;
+
 
 /**
  * @author: Aaron Kutekidila
@@ -112,15 +114,7 @@ public class JobManger {
                 .build();
 
         // Trigger the job to run now, and then every 40 seconds
-        Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity("myTrigger" + jobID, group)
-                .startNow()
-                //.startAt(DateBuilder.todayAt(13,32,00))
-                .withSchedule(SimpleScheduleBuilder.simpleSchedule()
-                       //.withRepeatCount(i--)
-                        .withIntervalInSeconds(4))
-                //.withSchedule(CronScheduleBuilder.cronSchedule("0 " + "(min + 1)" + " " + "hour" + " * * ? *"))
-                .build();
+        Trigger trigger = getTrigger(ifImportExport.getJobConfig());
 
         // Tell quartz to schedule the job using our trigger (run the job)
         scheduler.scheduleJob(jobDetail, trigger);
@@ -249,6 +243,27 @@ public class JobManger {
             scheduler.shutdown();
         } catch (SchedulerException e) {
             log.error("Stop scheduler fail:" + e.getMessage());
+        }
+    }
+
+    public  static Trigger getTrigger(DBJobConfigTable jobConfig){
+        String scheduler = jobConfig.getScheduler();
+
+        switch (EMSchaduler.fromString(scheduler)){
+            case EVERY_MIN:
+                return JobTrigger.getEveryMin(jobConfig);
+            case EVERY_HOUR:
+                return JobTrigger.getEveryHour(jobConfig);
+            case DAILY:
+                return JobTrigger.getDaily(jobConfig);
+            case WEEKLY:
+                return JobTrigger.getWeekly(jobConfig);
+            case MONTHLY:
+                return JobTrigger.getMonthly(jobConfig);
+            case YEARLY:
+                return JobTrigger.getYearly(jobConfig);
+            default:
+                return null;
         }
     }
 

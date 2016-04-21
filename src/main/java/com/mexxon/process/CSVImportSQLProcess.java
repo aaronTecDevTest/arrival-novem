@@ -110,15 +110,19 @@ public class CSVImportSQLProcess implements IFImportExport, Job{
         IFImportExport csvImportExport = (IFImportExport) jobDetail.getJobDataMap().get("csvImportExport");
 
         log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
-        log.info("--------------------------------------------------------------------");
+        log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         log.info("JobExecution start: " + jobContext.getFireTime());
         log.info("Job name is: " + jobDetail.getJobDataMap().getString(csvImportExport.getClass().getSimpleName()));
+        log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
         importCSV();
 
+        log.info("--------------------------------------------------------------------");
+        log.info("--------------------------------------------------------------------");
         log.info("JobExecution end: " + jobContext.getJobRunTime() + ", key: " + jobDetail.getKey());
         log.info("JobExecution next scheduled time: " + jobContext.getNextFireTime());
-        log.info("--------------------------------------------------------------------\n");
+        log.info("--------------------------------------------------------------------");
+        log.info("--------------------------------------------------------------------");
     }
 
     @Override
