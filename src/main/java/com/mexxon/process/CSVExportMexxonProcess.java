@@ -65,13 +65,16 @@ public class CSVExportMexxonProcess implements IFImportExport, Job {
         log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         log.info("JobExecution start: " + jobContext.getFireTime());
         log.info("Job name is: " + jobDetail.getJobDataMap().getString(csvImportExport.getClass().getSimpleName()));
+        log.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
 
         exportMexxonCSV();
 
+        log.info("-----------------------------------------------------------------------");
+        log.info("-----------------------------------------------------------------------");
         log.info("JobExecution end: " + jobContext.getJobRunTime() + ", key: " + jobDetail.getKey());
         log.info("JobExecution next scheduled time: " + jobContext.getNextFireTime());
-        log.info("-----------------------------------------------------------------------\n");
-        log.info("-----------------------------------------------------------------------\n");
+        log.info("-----------------------------------------------------------------------");
+        log.info("-----------------------------------------------------------------------");
     }
 
     @Override

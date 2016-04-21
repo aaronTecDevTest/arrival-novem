@@ -1,8 +1,8 @@
 package com.mexxon;
 
+import com.mexxon.scheduler.JobManger;
 import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
-import com.mexxon.windows.controller.FXMLArrivalMainController;
 import com.mexxon.windows.view.ViewArrivalLogIn;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,7 +18,14 @@ import org.apache.logging.log4j.Logger;
 
 public class ImportExportMain {
     private static final Logger log = LogManager.getLogger(ImportExportMain.class);
+    /**
+     * @param logInView  show the login view
+     */
     public ViewArrivalLogIn logInView;
+    /**
+     * @param JOB_MANGER for all scheduler Job from DB
+     */
+    public static JobManger JOB_MANGER;
 
     public static void main(String[] args) {
         SystemPreferences.getInstance();
@@ -29,13 +36,12 @@ public class ImportExportMain {
     }
 
     public void runLogIn() {
-        log.info("Start ------------------------- Mexxon ------------------------ ImportExportTool");
+        log.info(" -------------------------Start Mexxon ImportExportTool------------------------ ");
         {
             logInView = new ViewArrivalLogIn();
             logInView.run();
-            FXMLArrivalMainController.JOB_MANGER.stopScheduler();
+            JOB_MANGER.stopScheduler();
         }
-        log.info("Stop -------------------------- Mexxon ------------------------- ImportExportTool");
-
+        log.info(" --------------------------Stop Mexxon ImportExportTool------------------------- ");
     }
 }
