@@ -1,6 +1,6 @@
 package com.mexxon.process;
 
-import com.mexxon.windows.model.DBJobConfigTable;
+import com.mexxon.windows.model.DBJobConfigEntity;
 import org.quartz.JobBuilder;
 
 /**
@@ -14,7 +14,8 @@ import org.quartz.JobBuilder;
 
 public interface IFImportExport {
     void setProcessID (Long processID);
-    void setJobConfig (DBJobConfigTable jobConfig);
+    void setJobConfig (DBJobConfigEntity jobConfig);
     JobBuilder  getJobBuilder();
-    DBJobConfigTable getJobConfig();
+    DBJobConfigEntity getJobConfig();
+    void runJob();
 }

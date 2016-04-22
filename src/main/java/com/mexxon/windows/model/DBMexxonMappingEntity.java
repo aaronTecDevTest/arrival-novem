@@ -10,9 +10,9 @@ import org.apache.logging.log4j.Logger;
  * @since: 1.0
  * Package: com.mexxon.model
  */
-public class DBPendingTable {
-    private static final Logger log = LogManager.getLogger(DBPendingTable.class);
+public class DBMexxonMappingEntity {
+    private static final Logger log = LogManager.getLogger(DBMexxonMappingEntity.class);
 
-    public DBPendingTable() {
+    public DBMexxonMappingEntity() {
     }
 }

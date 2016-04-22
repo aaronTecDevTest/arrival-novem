@@ -1,6 +1,7 @@
 package com.mexxon.process;
 
-import com.mexxon.windows.model.DBJobConfigTable;
+import com.mexxon.scheduler.JobExecution;
+import com.mexxon.windows.model.DBJobConfigEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.*;
@@ -18,14 +19,14 @@ public class CSVExportMexxonProcess implements IFImportExport, Job {
     private static final Logger log = LogManager.getLogger(CSVExportMexxonProcess.class);
     private static final EMProcessTyp processTyp = EXPORT_MEXXON_CSV;
 
-    private DBJobConfigTable jobConfig;
+    private DBJobConfigEntity jobConfig;
     private JobBuilder jobBuilder;
     private Long processID;
 
     public CSVExportMexxonProcess() {
     }
 
-    public CSVExportMexxonProcess(DBJobConfigTable jobConfig) {
+    public CSVExportMexxonProcess(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVExportMexxonProcess.class);
         this.processID = jobConfig.getJob_id();
@@ -39,42 +40,25 @@ public class CSVExportMexxonProcess implements IFImportExport, Job {
         }
     }
 
-    public void setDBJobConfigTable(DBJobConfigTable jobConfig) {
+    public void setDBJobConfigTable(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVExportMexxonProcess.class);
         this.processID = jobConfig.getJob_id();
     }
 
     @Override
-    public DBJobConfigTable getJobConfig() {
+    public DBJobConfigEntity getJobConfig() {
         return jobConfig;
     }
 
     @Override
-    public void setJobConfig(DBJobConfigTable jobConfig) {
+    public void setJobConfig(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
     }
 
     @Override
     public void execute(JobExecutionContext jobContext) throws JobExecutionException {
-        JobDetail jobDetail = jobContext.getJobDetail();
-
-        IFImportExport csvImportExport = (IFImportExport) jobDetail.getJobDataMap().get("csvImportExport");
-
-        log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
-        log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        log.info("JobExecution start: " + jobContext.getFireTime());
-        log.info("Job name is: " + jobDetail.getJobDataMap().getString(csvImportExport.getClass().getSimpleName()));
-        log.info("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-
-        exportMexxonCSV();
-
-        log.info("-----------------------------------------------------------------------");
-        log.info("-----------------------------------------------------------------------");
-        log.info("JobExecution end: " + jobContext.getJobRunTime() + ", key: " + jobDetail.getKey());
-        log.info("JobExecution next scheduled time: " + jobContext.getNextFireTime());
-        log.info("-----------------------------------------------------------------------");
-        log.info("-----------------------------------------------------------------------");
+        JobExecution.jobExecution(jobContext,log);
     }
 
     @Override
@@ -85,5 +69,10 @@ public class CSVExportMexxonProcess implements IFImportExport, Job {
     @Override
     public JobBuilder getJobBuilder() {
         return jobBuilder;
+    }
+
+    @Override
+    public void runJob() {
+        exportMexxonCSV();
     }
 }

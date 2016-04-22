@@ -1,7 +1,5 @@
 package com.mexxon.windows.model;
 
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
@@ -19,7 +17,7 @@ import org.apache.logging.log4j.Logger;
  * ClassModel for Config and Process Status
  *
  CREATE TABLE `job_configuration` (
- `job_id` long NOT NULL AUTO_INCREMENT,
+ `job_id` int NOT NULL AUTO_INCREMENT,
  `job_typ` char(100) NOT NULL,
  `job_description` char(100) NOT NULL,
  `from` char(100) NOT NULL COMMENT 'Kann eine TabelleName in der DB oder eine Dateinpath+Dateiname sein (C:....xxx.csv).',
@@ -40,8 +38,8 @@ import org.apache.logging.log4j.Logger;
  INSERT INTO importexport.job_configuration VALUES(NULL,'export_sql','export frome the db','txn_tbl','c:\dadf\dd','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
  */
 
-public class DBJobConfigTable {
-    private static final Logger log = LogManager.getLogger(DBJobConfigTable.class);
+public class DBJobConfigEntity {
+    private static final Logger log = LogManager.getLogger(DBJobConfigEntity.class);
 
     private SimpleLongProperty   job_id;
     private SimpleStringProperty job_typ;
@@ -56,11 +54,11 @@ public class DBJobConfigTable {
     private SimpleStringProperty csv_separator;
     private SimpleStringProperty job_status;
 
-    public DBJobConfigTable() {
+    public DBJobConfigEntity() {
         this((long) 0,"","","","","","","","","","","IDEAL");
     }
 
-    public DBJobConfigTable(Long job_id, String job_description, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator, String job_status) {
+    public DBJobConfigEntity(Long job_id, String job_description, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator, String job_status) {
         this.job_id = new SimpleLongProperty(job_id);
         this.job_typ = new SimpleStringProperty(job_typ);
         this.job_description = new SimpleStringProperty(job_description);

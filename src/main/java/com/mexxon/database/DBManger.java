@@ -1,7 +1,7 @@
 package com.mexxon.database;
 
 import com.mexxon.utilities.SystemPreferences;
-import com.mexxon.windows.model.DBJobConfigTable;
+import com.mexxon.windows.model.DBJobConfigEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -28,10 +28,10 @@ public class DBManger {
         DBConnection dbConnection = new DBConnection();
         String sql = "SELECT * FROM importexport.job_configuration;";
         DBManger dbManger = new DBManger();
-        ArrayList<DBJobConfigTable> listJobConfig = dbManger.getJobConfigTable(dbConnection.getConnection(), sql);
+        ArrayList<DBJobConfigEntity> listJobConfig = dbManger.getJobConfigTable(dbConnection.getConnection(), sql);
 
         //Test read from db
-        for (DBJobConfigTable jobConfigTable : listJobConfig) {
+        for (DBJobConfigEntity jobConfigTable : listJobConfig) {
             System.out.println(jobConfigTable.getJob_id());
             System.out.println(jobConfigTable.getJob_typ());
             System.out.println(jobConfigTable.getEnd_time());
@@ -56,12 +56,12 @@ public class DBManger {
         return resultSet;
     }
 
-    public boolean setJobConfigTable(Connection connection, ArrayList<DBJobConfigTable> dbJobConfigTables) {
+    public boolean setJobConfigTable(Connection connection, ArrayList<DBJobConfigEntity> dbJobConfigEntities) {
         boolean updateSuccessful = false;
         ArrayList<String> sqlList = new ArrayList<String>();
 
         try {
-            for (DBJobConfigTable data: dbJobConfigTables){
+            for (DBJobConfigEntity data: dbJobConfigEntities){
                 String sql = SystemPreferences.getResourceBundle("arrivalSQL").getString("table.job_config.setData");
                 sql = sql +"("
                         +"NULL,"
@@ -101,19 +101,19 @@ public class DBManger {
         return updateSuccessful;
     }
 
-    public ArrayList<DBJobConfigTable> getJobConfigTable (Connection connection, String sql){
-        ArrayList<DBJobConfigTable> jobConfigTables = new ArrayList<>();
+    public ArrayList<DBJobConfigEntity> getJobConfigTable (Connection connection, String sql){
+        ArrayList<DBJobConfigEntity> jobConfigTables = new ArrayList<>();
         try {
             resultSet = readFromDB(connection, sql);
             while (resultSet.next()) {
-                DBJobConfigTable temp = new DBJobConfigTable();
+                DBJobConfigEntity temp = new DBJobConfigEntity();
                 temp.setJob_id(resultSet.getInt(1));
                 temp.setJob_typ(resultSet.getString(2));
                 temp.setJob_description(resultSet.getString(3));
                 temp.setFrom(resultSet.getString(4));
                 temp.setTo(resultSet.getString(5));
-                temp.setStart_time(resultSet.getString(6));
-                temp.setEnd_time(resultSet.getString(7));
+                temp.setStart_time(resultSet.getDate(6).toString() +" "+ resultSet.getTime(6).toString());
+                temp.setEnd_time(resultSet.getDate(7).toString() +" "+ resultSet.getTime(7).toString());
                 temp.setScheduler(resultSet.getString(8));
                 temp.setExpired_time(resultSet.getString(9));
                 temp.setExport_sql(resultSet.getString(10));

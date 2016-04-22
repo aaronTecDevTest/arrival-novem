@@ -1,6 +1,6 @@
 package com.mexxon.scheduler;
 
-import com.mexxon.windows.model.DBJobConfigTable;
+import com.mexxon.windows.model.DBJobConfigEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.Trigger;
@@ -24,7 +24,6 @@ public class JobTrigger {
     private static final Logger log = LogManager.getLogger(JobTrigger.class);
 
     public JobTrigger() {
-
     }
 
     public static void main(String[] args) {
@@ -32,7 +31,7 @@ public class JobTrigger {
         System.out.println(getToDayAT("2016-04-12 12:36:36"));
     }
 
-    public static Trigger getEveryMin(DBJobConfigTable jobConfig){
+    public static Trigger getEveryMin(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
@@ -45,7 +44,7 @@ public class JobTrigger {
         return trigger;
     }
 
-    public static Trigger getEveryHour(DBJobConfigTable jobConfig){
+    public static Trigger getEveryHour(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
@@ -58,7 +57,7 @@ public class JobTrigger {
         return trigger;
     }
 
-    public static Trigger getDaily(DBJobConfigTable jobConfig){
+    public static Trigger getDaily(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
@@ -70,7 +69,7 @@ public class JobTrigger {
         return trigger;
     }
 
-    public static Trigger getWeekly(DBJobConfigTable jobConfig){
+    public static Trigger getWeekly(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
@@ -82,7 +81,7 @@ public class JobTrigger {
         return trigger;
     }
 
-    public static Trigger getMonthly(DBJobConfigTable jobConfig){
+    public static Trigger getMonthly(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
@@ -94,7 +93,7 @@ public class JobTrigger {
         return trigger;
     }
 
-    public static Trigger getYearly(DBJobConfigTable jobConfig){
+    public static Trigger getYearly(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
                 .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
@@ -143,7 +142,7 @@ public class JobTrigger {
 
         int hh = Integer.valueOf(spitTime[0]);
         int mm = Integer.valueOf(spitTime[1]);
-        int ss = Integer.valueOf(spitTime[2]);
+        int ss = Integer.valueOf(spitTime[2].split(".")[1]);
 
         return todayAt(hh,mm,ss);
     }

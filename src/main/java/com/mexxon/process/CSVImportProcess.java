@@ -1,15 +1,14 @@
 package com.mexxon.process;
 
 import com.mexxon.database.DBConnection;
-import com.mexxon.windows.model.DBJobConfigTable;
-import com.opencsv.CSVReader;
+import com.mexxon.scheduler.JobExecution;
+import com.mexxon.windows.model.DBJobConfigEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.*;
 
 import java.io.FileReader;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.Statement;
 
 import static com.mexxon.process.EMProcessTyp.IMPORT;
@@ -26,7 +25,7 @@ public class CSVImportProcess implements IFImportExport, Job{
     private static final Logger log = LogManager.getLogger(CSVImportProcess.class);
     private static final EMProcessTyp processTyp = IMPORT;
 
-    private DBJobConfigTable jobConfig;
+    private DBJobConfigEntity jobConfig;
     private JobBuilder jobBuilder;
     private Long processID;
 
@@ -36,7 +35,7 @@ public class CSVImportProcess implements IFImportExport, Job{
     public CSVImportProcess() {
     }
 
-    public CSVImportProcess(DBJobConfigTable jobConfig) {
+    public CSVImportProcess(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVImportProcess.class);
         this.processID = jobConfig.getJob_id();
@@ -53,7 +52,7 @@ public class CSVImportProcess implements IFImportExport, Job{
          PRIMARY KEY (`txn_id`))
          */
         CSVImportProcess csvImportProcess = new CSVImportProcess();
-        csvImportProcess.setDBJobConfigTable(new DBJobConfigTable());
+        csvImportProcess.setDBJobConfigTable(new DBJobConfigEntity());
         csvImportProcess.importCSVUsingDBLoad();
     }
 
@@ -71,49 +70,33 @@ public class CSVImportProcess implements IFImportExport, Job{
 
             Statement stmt = connection.createStatement();
             stmt.execute(loadQuery);
-            log.info(loadQuery);
+            log.info("SQL-Query:" + loadQuery);
             log.info("Data Successfully import!");
+            Thread.sleep(20000);
         } catch (Exception e) {
             log.error(e.getMessage());
         }
     }
 
-    public void setDBJobConfigTable(DBJobConfigTable jobConfig) {
+    public void setDBJobConfigTable(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVExportMexxonProcess.class);
         this.processID = jobConfig.getJob_id();
     }
 
     @Override
-    public DBJobConfigTable getJobConfig() {
+    public DBJobConfigEntity getJobConfig() {
         return jobConfig;
     }
 
     @Override
-    public void setJobConfig(DBJobConfigTable jobConfig) {
+    public void setJobConfig(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
     }
 
     @Override
     public void execute(JobExecutionContext jobContext) throws JobExecutionException {
-        JobDetail jobDetail = jobContext.getJobDetail();
-
-        IFImportExport csvImportExport = (IFImportExport) jobDetail.getJobDataMap().get("csvImportExport");
-
-        log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
-        log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-        log.info("JobExecution start: " + jobContext.getFireTime());
-        log.info("Job name is: " + jobDetail.getJobDataMap().getString(csvImportExport.getClass().getSimpleName()));
-        log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-
-        importCSVUsingDBLoad();
-
-        log.info("--------------------------------------------------------------------");
-        log.info("--------------------------------------------------------------------");
-        log.info("JobExecution end: " + jobContext.getJobRunTime() + ", key: " + jobDetail.getKey());
-        log.info("JobExecution next scheduled time: " + jobContext.getNextFireTime());
-        log.info("--------------------------------------------------------------------");
-        log.info("--------------------------------------------------------------------");
+        JobExecution.jobExecution(jobContext,log);
     }
 
     @Override
@@ -124,5 +107,10 @@ public class CSVImportProcess implements IFImportExport, Job{
     @Override
     public JobBuilder getJobBuilder() {
         return jobBuilder;
+    }
+
+    @Override
+    public void runJob() {
+        importCSVUsingDBLoad();
     }
 }

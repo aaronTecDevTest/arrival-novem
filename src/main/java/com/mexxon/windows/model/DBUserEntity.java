@@ -10,8 +10,8 @@ import org.apache.logging.log4j.Logger;
  * @since: 1.0
  * Package: com.mexxon.model
  */
-public class DBUserTable {
-    private static final Logger log = LogManager.getLogger(DBUserTable.class);
+public class DBUserEntity {
+    private static final Logger log = LogManager.getLogger(DBUserEntity.class);
 
     private long id;
     private String firstName;
@@ -19,10 +19,10 @@ public class DBUserTable {
     private String gender;
     private int age;
 
-    public DBUserTable() {
+    public DBUserEntity() {
     }
 
-    public DBUserTable(long id, String firstName, String lastName, String gender, int age) {
+    public DBUserEntity(long id, String firstName, String lastName, String gender, int age) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -76,7 +76,7 @@ public class DBUserTable {
 
     @Override
     public String toString() {
-        return "DBUserTable{" +
+        return "DBUserEntity{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +

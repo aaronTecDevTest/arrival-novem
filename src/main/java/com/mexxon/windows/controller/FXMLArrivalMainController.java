@@ -6,7 +6,7 @@ import com.mexxon.scheduler.JobManger;
 import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.SystemPreferences;
 import com.mexxon.utilities.WindowsDialogs;
-import com.mexxon.windows.model.DBJobConfigTable;
+import com.mexxon.windows.model.DBJobConfigEntity;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -49,7 +49,6 @@ public class FXMLArrivalMainController implements Initializable {
      * @param authentication static login var
      */
     private Authentication authentication = Authentication.getInstance();
-
 
 
     @FXML
@@ -95,26 +94,26 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TextField txtJobStatus;
     @FXML
-    private TableView<DBJobConfigTable> tbvJobConfig;
+    private TableView<DBJobConfigEntity> tbvJobConfig;
     @FXML
-    private TableColumn<DBJobConfigTable, String> tbcJobID;
+    private TableColumn<DBJobConfigEntity, String> tbcJobID;
     @FXML
-    private TableColumn<DBJobConfigTable, String> tbcJobTyp;
+    private TableColumn<DBJobConfigEntity, String> tbcJobTyp;
     @FXML
-    private TableColumn<DBJobConfigTable, String> tbcJobDescription;
+    private TableColumn<DBJobConfigEntity, String> tbcJobDescription;
     @FXML
-    private TableColumn<DBJobConfigTable, String> tbcExportSQL;
+    private TableColumn<DBJobConfigEntity, String> tbcExportSQL;
     @FXML
-    private TableColumn<DBJobConfigTable, String> tbcCSVSeparator;
+    private TableColumn<DBJobConfigEntity, String> tbcCSVSeparator;
     @FXML
-    private TableColumn<DBJobConfigTable, String> tbcJobStatus;
+    private TableColumn<DBJobConfigEntity, String> tbcJobStatus;
 
     /**
      * @param bundle for Internationalization
      * @param dataJobConfig observer list for all config data in the DB
      */
     private ResourceBundle bundle;
-    private ObservableList<DBJobConfigTable> dataJobConfig;
+    private ObservableList<DBJobConfigEntity> dataJobConfig;
 
     /**
      * Called to initialize a controller after its root element has been
@@ -141,15 +140,17 @@ public class FXMLArrivalMainController implements Initializable {
         tbcCSVSeparator.setCellValueFactory(new PropertyValueFactory<>("csv_separator"));
         tbcJobStatus.setCellValueFactory(new PropertyValueFactory<>("job_status"));
 
-        /*tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigTable,String>(""));*/
+        /*
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
+        */
 
         //Setup TableView
         //tbvJobConfig.getSelectionModel().setCellSelectionEnabled(true);
@@ -218,7 +219,7 @@ public class FXMLArrivalMainController implements Initializable {
     public void runJob(ActionEvent actionEvent) {
         log.info("Run Clicked:" + ((Button) actionEvent.getSource()).getText());
         try {
-            DBJobConfigTable jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
+            DBJobConfigEntity jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
            // if (JOB_MANGER.isJobRunning(jobConfig)) {
                 JOB_MANGER.runJob(jobConfig);
             //} else {
@@ -234,7 +235,7 @@ public class FXMLArrivalMainController implements Initializable {
     public void resetJob(ActionEvent actionEvent) {
         log.info("Reset Clicked:" + ((Button) actionEvent.getSource()).getText());
         try {
-            DBJobConfigTable jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
+            DBJobConfigEntity jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
             if (JOB_MANGER.isJobRunning(jobConfig)) {
                 JOB_MANGER.resetJob(jobConfig);
             } else {
@@ -250,7 +251,7 @@ public class FXMLArrivalMainController implements Initializable {
     public void stopJob(ActionEvent actionEvent) {
         log.info("Stop Clicked:" + ((Button) actionEvent.getSource()).getText());
         try {
-            DBJobConfigTable jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
+            DBJobConfigEntity jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
             if (JOB_MANGER.isJobRunning(jobConfig)) {
                 JOB_MANGER.stopJob(jobConfig);
             } else {
@@ -319,7 +320,7 @@ public class FXMLArrivalMainController implements Initializable {
 
 
     private void getJobConfFromDB() {
-        ArrayList<DBJobConfigTable> temptDataList = new ArrayList<>();
+        ArrayList<DBJobConfigEntity> temptDataList = new ArrayList<>();
         DBManger dbManger = new DBManger();
         temptDataList = dbManger.getJobConfigTable(Authentication.getDbConnection().getConnection(),
                 SystemPreferences.getResourceBundle("arrivalSQL").getString("table.job_config.getData"));
@@ -332,7 +333,7 @@ public class FXMLArrivalMainController implements Initializable {
     private void addTableViewListener() {
         tbvJobConfig.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
-                DBJobConfigTable tempData = tbvJobConfig.getSelectionModel().getSelectedItem();
+                DBJobConfigEntity tempData = tbvJobConfig.getSelectionModel().getSelectedItem();
                 txtEndTime.setText(tempData.getEnd_time());
                 txtExpiredTime.setText(tempData.getExpired_time());
                 txtFrom.setText(tempData.getFrom());

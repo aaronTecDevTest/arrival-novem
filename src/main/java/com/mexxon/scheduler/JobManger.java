@@ -2,13 +2,11 @@ package com.mexxon.scheduler;
 
 import com.mexxon.process.*;
 import com.mexxon.utilities.WindowsDialogs;
-import com.mexxon.windows.model.DBJobConfigTable;
+import com.mexxon.windows.model.DBJobConfigEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
-
-import static com.mexxon.scheduler.EMSchaduler.*;
 
 
 /**
@@ -75,7 +73,7 @@ public class JobManger {
     }
 
     public static void main(String[] args) {
-            DBJobConfigTable confi = new DBJobConfigTable((long) 3,
+            DBJobConfigEntity confi = new DBJobConfigEntity((long) 3,
                 "Beschreibung kklsdf",
                 "import",
                 "ttto",
@@ -102,7 +100,7 @@ public class JobManger {
         String group = ifImportExport.getJobConfig().getJob_typ();
         String jobID = String.valueOf(ifImportExport.getJobConfig().getJob_id());
 
-        // Define the job and tie it to our the class
+        //Define the job and tie it to our the class
         jobBuilder = ifImportExport.getJobBuilder();
         JobDataMap data = new JobDataMap();
         data.put("csvImportExport", ifImportExport);
@@ -113,16 +111,14 @@ public class JobManger {
                 .withIdentity(jobID, group)
                 .build();
 
-        // Trigger the job to run now, and then every 40 seconds
+        //Trigger the job to run now, and then every 40 seconds
         Trigger trigger = getTrigger(ifImportExport.getJobConfig());
 
-        // Tell quartz to schedule the job using our trigger (run the job)
+        //Tell quartz to schedule the job using our trigger (run the job)
         scheduler.scheduleJob(jobDetail, trigger);
-
-
     }
 
-    public void runJob(DBJobConfigTable jobConfig){
+    public void runJob(DBJobConfigEntity jobConfig){
         EMProcessTyp emProcessTyp = EMProcessTyp.formString(jobConfig.getJob_typ());
         switch (emProcessTyp) {
             case EXPORT_MEXXON_CSV:{
@@ -199,7 +195,7 @@ public class JobManger {
         }
     }
 
-    public  void resetJob(DBJobConfigTable jobConfig){
+    public  void resetJob(DBJobConfigEntity jobConfig){
         try {
             schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).clear();
             schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).start();
@@ -208,15 +204,16 @@ public class JobManger {
         }
     }
 
-    public void stopJob(DBJobConfigTable jobConfig){
+    public void stopJob(DBJobConfigEntity jobConfig){
         try {
-            schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).clear();
+            String key  = jobConfig.getJob_typ() + "."+String.valueOf(jobConfig.getJob_id());
+            schedulerFactory.getScheduler(key).clear();
         } catch (SchedulerException e) {
             log.error("Stop scheduler fail:" + e.getMessage());
         }
     }
 
-    public boolean isJobRunning(DBJobConfigTable jobConfig){
+    public boolean isJobRunning(DBJobConfigEntity jobConfig){
         boolean isJobRunning = false;
         try {
             String key =String.valueOf(jobConfig.getJob_id());
@@ -246,7 +243,7 @@ public class JobManger {
         }
     }
 
-    public  static Trigger getTrigger(DBJobConfigTable jobConfig){
+    public  static Trigger getTrigger(DBJobConfigEntity jobConfig){
         String scheduler = jobConfig.getScheduler();
 
         switch (EMSchaduler.fromString(scheduler)){
