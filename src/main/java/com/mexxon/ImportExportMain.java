@@ -6,6 +6,7 @@ import com.mexxon.utilities.SystemPreferences;
 import com.mexxon.windows.view.ViewArrivalLogIn;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.quartz.SchedulerException;
 
 
 /**
@@ -38,6 +39,12 @@ public class ImportExportMain {
     public void runLogIn() {
         log.info(" -------------------------Start Mexxon ImportExportTool------------------------ ");
         {
+            try {
+                JOB_MANGER = new JobManger();
+            } catch (SchedulerException e) {
+                e.printStackTrace();
+            }
+            JOB_MANGER.startScheduler();
             logInView = new ViewArrivalLogIn();
             logInView.run();
             JOB_MANGER.stopScheduler();

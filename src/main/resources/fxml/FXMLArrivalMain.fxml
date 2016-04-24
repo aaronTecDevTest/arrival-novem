@@ -72,11 +72,11 @@
                   <RowConstraints vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button fx:id="btnReset" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#resetJob" prefHeight="34.0" prefWidth="34.0" text="Reset" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                  <Button fx:id="btnPause" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#pauseJob" prefHeight="34.0" prefWidth="34.0" text="Pause" GridPane.columnIndex="3" GridPane.rowIndex="4">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../icon/reset.png" />
+                              <Image url="@../icon/pause.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -87,7 +87,7 @@
                         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
                      </padding>
                      <tooltip>
-                        <Tooltip text="\%toolbar.reset" />
+                        <Tooltip text="\\%toolbar.pause" />
                      </tooltip>
                      <GridPane.margin>
                         <Insets bottom="5.0" top="10.0" />

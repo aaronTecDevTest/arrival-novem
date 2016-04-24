@@ -3,10 +3,16 @@ package com.mexxon.scheduler;
 import com.mexxon.process.*;
 import com.mexxon.utilities.WindowsDialogs;
 import com.mexxon.windows.model.DBJobConfigEntity;
+import com.sun.javafx.collections.MappingChange;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.*;
+import org.quartz.core.QuartzScheduler;
+import org.quartz.impl.StdScheduler;
 import org.quartz.impl.StdSchedulerFactory;
+
+import java.util.HashMap;
+import java.util.Map;
 
 
 /**
@@ -51,6 +57,7 @@ public class JobManger {
     private JobBuilder jobBuilder;
     private SchedulerFactory schedulerFactory = new StdSchedulerFactory();
     private Scheduler scheduler;
+    private Map <String,Scheduler> schedulerMap;
 
 
     /**
@@ -60,6 +67,7 @@ public class JobManger {
         this.schedulerFactory = new StdSchedulerFactory();
         this.scheduler = schedulerFactory.getScheduler();
         this.scheduler.getListenerManager().addSchedulerListener(new SchedulerListener(scheduler));
+        this.schedulerMap = new HashMap();
     }
 
     /**
@@ -195,19 +203,30 @@ public class JobManger {
         }
     }
 
-    public  void resetJob(DBJobConfigEntity jobConfig){
+    public  void pauseJob(DBJobConfigEntity jobConfig){
         try {
-            schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).clear();
-            schedulerFactory.getScheduler(String.valueOf(jobConfig.getJob_id())).start();
+            String key  = jobConfig.getJob_typ() + "."+String.valueOf(jobConfig.getJob_id());
+            scheduler.resumeJob(JobKey.jobKey("1"));
         } catch (SchedulerException e) {
-            log.error("Rest scheduler fail:" + e.getMessage());
+            log.error("Pause scheduler fail:" + e.getMessage());
         }
+
+        /*
+// Define a new Trigger
+Trigger trigger = newTrigger()
+    .withIdentity("newTrigger", "group1")
+    .startNow()
+    .build();
+
+// tell the scheduler to remove the old trigger with the given key, and put the new one in its place
+sched.rescheduleJob(triggerKey("oldTrigger", "group1"), trigger);*/
     }
 
     public void stopJob(DBJobConfigEntity jobConfig){
+
         try {
             String key  = jobConfig.getJob_typ() + "."+String.valueOf(jobConfig.getJob_id());
-            schedulerFactory.getScheduler(key).clear();
+            scheduler.deleteJob(JobKey.jobKey("import.1"));
         } catch (SchedulerException e) {
             log.error("Stop scheduler fail:" + e.getMessage());
         }

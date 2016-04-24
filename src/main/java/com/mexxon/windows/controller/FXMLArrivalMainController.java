@@ -23,7 +23,6 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.quartz.SchedulerException;
 
 import java.io.IOException;
 import java.net.URL;
@@ -68,7 +67,7 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private Button btnLogInOut;
     @FXML
-    private Button btnReset;
+    private Button btnPause;
     @FXML
     private Button btnRun;
     @FXML
@@ -161,12 +160,14 @@ public class FXMLArrivalMainController implements Initializable {
         addTableViewListener();
 
         //Ini JobManger
-        try {
+       /* try {
             JOB_MANGER = new JobManger();
             JOB_MANGER.startScheduler();
         } catch (SchedulerException e) {
             log.error("Fail to ini " + JOB_MANGER.getClass().getSimpleName() + ": " + e.getMessage());
-        }
+        }*/
+
+       // JOB_MANGER.startScheduler();
     }
 
 
@@ -181,7 +182,7 @@ public class FXMLArrivalMainController implements Initializable {
         btnAllStates.getTooltip().setText(bundle.getString("button.allStatus"));
         btnExit.getTooltip().setText(bundle.getString("button.exit"));
         btnLogInOut.getTooltip().setText(bundle.getString("button.login"));
-        btnReset.getTooltip().setText(bundle.getString("button.reset"));
+        btnPause.getTooltip().setText(bundle.getString("button.reset"));
         btnRun.getTooltip().setText(bundle.getString("button.run"));
         btnStop.getTooltip().setText(bundle.getString("button.stop"));
         btnUpdate.getTooltip().setText(bundle.getString("button.Update"));
@@ -191,14 +192,14 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void showAllStatus(ActionEvent actionEvent) {
-        log.info("ShowAllStatus Clicked:" + ((Button) actionEvent.getSource()).getText());
+        log.info("ShowAllStatus Clicked: " + ((Button) actionEvent.getSource()).getText());
 
     }
 
 
     @FXML
     public void closeApp(ActionEvent actionEvent) {
-        log.info("Exit Clicked:" + ((Button) actionEvent.getSource()).getText());
+        log.info("Exit Clicked: " + ((Button) actionEvent.getSource()).getText());
         authentication.logout();
         new WindowsDialogs().closeWindowsConfirmation(log, null);
     }
@@ -206,7 +207,7 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void loadConfig(ActionEvent actionEvent) {
-        log.info("LoadConfig Clicked:" + ((Button) actionEvent.getSource()).getText());
+        log.info("LoadConfig Clicked: " + ((Button) actionEvent.getSource()).getText());
         if (dataJobConfig.isEmpty()) {
             getJobConfFromDB();
         } else {
@@ -217,7 +218,7 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void runJob(ActionEvent actionEvent) {
-        log.info("Run Clicked:" + ((Button) actionEvent.getSource()).getText());
+        log.info("Run Clicked: " + ((Button) actionEvent.getSource()).getText());
         try {
             DBJobConfigEntity jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
            // if (JOB_MANGER.isJobRunning(jobConfig)) {
@@ -232,12 +233,12 @@ public class FXMLArrivalMainController implements Initializable {
 
 
     @FXML
-    public void resetJob(ActionEvent actionEvent) {
-        log.info("Reset Clicked:" + ((Button) actionEvent.getSource()).getText());
+    public void pauseJob(ActionEvent actionEvent) {
+        log.info("Pause Clicked: " + ((Button) actionEvent.getSource()).getText());
         try {
             DBJobConfigEntity jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
             if (JOB_MANGER.isJobRunning(jobConfig)) {
-                JOB_MANGER.resetJob(jobConfig);
+                JOB_MANGER.pauseJob(jobConfig);
             } else {
                 new WindowsDialogs().jobStopResetDialog();
             }
@@ -249,14 +250,14 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void stopJob(ActionEvent actionEvent) {
-        log.info("Stop Clicked:" + ((Button) actionEvent.getSource()).getText());
+        log.info("Stop Clicked: " + ((Button) actionEvent.getSource()).getText());
         try {
             DBJobConfigEntity jobConfig = tbvJobConfig.getSelectionModel().getSelectedItem();
-            if (JOB_MANGER.isJobRunning(jobConfig)) {
+           // if (JOB_MANGER.isJobRunning(jobConfig)) {
                 JOB_MANGER.stopJob(jobConfig);
-            } else {
-                new WindowsDialogs().jobStopResetDialog();
-            }
+            //} else {
+              //  new WindowsDialogs().jobStopResetDialog();
+            //}
         } catch (Exception e) {
             log.error("" + e.getMessage());
         }
@@ -265,14 +266,14 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void updateConfigTable(ActionEvent actionEvent) {
-        log.info("UpdateConfig Clicked:" + ((Button) actionEvent.getSource()).getText());
+        log.info("UpdateConfig Clicked: " + ((Button) actionEvent.getSource()).getText());
         getJobConfFromDB();
     }
 
 
     @FXML
     public void showLogInOut(ActionEvent actionEvent) {
-        log.info("ShowLog Clicked:" + ((Button) actionEvent.getSource()).getText());
+        log.info("ShowLog Clicked: " + ((Button) actionEvent.getSource()).getText());
 
         try {
             URL url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
@@ -301,7 +302,7 @@ public class FXMLArrivalMainController implements Initializable {
 
     @FXML
     public void menuCloseApp(ActionEvent actionEvent){
-        log.info("Exit Clicked:" + ((MenuItem) actionEvent.getSource()).getText());
+        log.info("Exit Clicked: " + ((MenuItem) actionEvent.getSource()).getText());
         authentication.logout();
         new WindowsDialogs().closeWindowsConfirmation(log, null);
     }

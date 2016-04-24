@@ -142,7 +142,7 @@ public class JobTrigger {
 
         int hh = Integer.valueOf(spitTime[0]);
         int mm = Integer.valueOf(spitTime[1]);
-        int ss = Integer.valueOf(spitTime[2].split(".")[1]);
+        int ss = Integer.valueOf(spitTime[2]);
 
         return todayAt(hh,mm,ss);
     }
