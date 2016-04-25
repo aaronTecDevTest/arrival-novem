@@ -21,7 +21,7 @@ import static com.mexxon.process.EMProcessTyp.IMPORT;
  * Package: com.mexxon.controller
  */
 
-public class CSVImportProcess implements IFImportExport, Job{
+public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
     private static final Logger log = LogManager.getLogger(CSVImportProcess.class);
     private static final EMProcessTyp processTyp = IMPORT;
 
@@ -97,6 +97,11 @@ public class CSVImportProcess implements IFImportExport, Job{
     @Override
     public void execute(JobExecutionContext jobContext) throws JobExecutionException {
         JobExecution.jobExecution(jobContext,log);
+    }
+
+    @Override
+    public void interrupt() throws UnableToInterruptJobException {
+        JobExecution.jobInterruption();
     }
 
     @Override

@@ -3,12 +3,9 @@ package com.mexxon.scheduler;
 import com.mexxon.process.*;
 import com.mexxon.utilities.WindowsDialogs;
 import com.mexxon.windows.model.DBJobConfigEntity;
-import com.sun.javafx.collections.MappingChange;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.*;
-import org.quartz.core.QuartzScheduler;
-import org.quartz.impl.StdScheduler;
 import org.quartz.impl.StdSchedulerFactory;
 
 import java.util.HashMap;
@@ -226,7 +223,8 @@ sched.rescheduleJob(triggerKey("oldTrigger", "group1"), trigger);*/
 
         try {
             String key  = jobConfig.getJob_typ() + "."+String.valueOf(jobConfig.getJob_id());
-            scheduler.deleteJob(JobKey.jobKey("import.1"));
+            //scheduler.interrupt("1.import");
+            scheduler.interrupt(JobKey.jobKey("1","import"));
         } catch (SchedulerException e) {
             log.error("Stop scheduler fail:" + e.getMessage());
         }

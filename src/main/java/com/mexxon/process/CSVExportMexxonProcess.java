@@ -15,7 +15,7 @@ import static com.mexxon.process.EMProcessTyp.EXPORT_MEXXON_CSV;
  * @since: 1.0
  * Package: com.mexxon.process
  */
-public class CSVExportMexxonProcess implements IFImportExport, Job {
+public class CSVExportMexxonProcess implements IFImportExport, Job, InterruptableJob {
     private static final Logger log = LogManager.getLogger(CSVExportMexxonProcess.class);
     private static final EMProcessTyp processTyp = EXPORT_MEXXON_CSV;
 
@@ -59,6 +59,11 @@ public class CSVExportMexxonProcess implements IFImportExport, Job {
     @Override
     public void execute(JobExecutionContext jobContext) throws JobExecutionException {
         JobExecution.jobExecution(jobContext,log);
+    }
+
+    @Override
+    public void interrupt() throws UnableToInterruptJobException {
+        JobExecution.jobInterruption();
     }
 
     @Override

@@ -1472,3 +1472,579 @@ The last packet successfully received from the server was 43.073 milliseconds ag
 2016-04-23 23:43:02,937 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Sat Apr 23 23:43:26 CEST 2016
 2016-04-23 23:43:02,937 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
 2016-04-23 23:43:02,937 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:26:47,618 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-25 12:26:47,633 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-25 12:26:47,635 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:40) -  -------------------------Start Mexxon ImportExportTool------------------------ 
+2016-04-25 12:26:47,751 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-25 12:26:47,751 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-04-25 12:26:47,756 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:72) - LogIn show up
+2016-04-25 12:26:54,407 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-04-25 12:26:57,724 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:210) - LoadConfig Clicked: LoadConfig
+2016-04-25 12:26:57,730 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:28:18,063 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:269) - UpdateConfig Clicked: Update
+2016-04-25 12:28:18,069 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:28:37,752 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:221) - Run Clicked: Run
+2016-04-25 12:29:27,654 INFO  [JavaFX Application Thread] scheduler.SchedulerListener (SchedulerListener.java:51) - Job added: 1
+2016-04-25 12:29:27,655 INFO  [JavaFX Application Thread] scheduler.SchedulerListener (SchedulerListener.java:23) - Job scheduled: 1
+2016-04-25 12:29:27,673 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:29:27,674 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:29:27,675 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:29:27 CEST 2016
+2016-04-25 12:29:27,675 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:29:27,676 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:29:27,683 INFO  [DefaultQuartzScheduler_Worker-1] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:29:31,569 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-25 12:29:31,589 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-25 12:29:31,593 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:40) -  -------------------------Start Mexxon ImportExportTool------------------------ 
+2016-04-25 12:29:31,728 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-25 12:29:31,729 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-04-25 12:29:31,735 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:72) - LogIn show up
+2016-04-25 12:29:37,101 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-04-25 12:29:38,267 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:210) - LoadConfig Clicked: LoadConfig
+2016-04-25 12:29:38,275 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:29:40,155 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:221) - Run Clicked: Run
+2016-04-25 12:29:42,627 INFO  [JavaFX Application Thread] scheduler.SchedulerListener (SchedulerListener.java:51) - Job added: 1
+2016-04-25 12:29:42,628 INFO  [JavaFX Application Thread] scheduler.SchedulerListener (SchedulerListener.java:23) - Job scheduled: 1
+2016-04-25 12:29:42,642 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:29:42,643 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:29:42,644 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:29:42 CEST 2016
+2016-04-25 12:29:42,644 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:29:42,645 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:29:42,649 INFO  [DefaultQuartzScheduler_Worker-1] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:29:42,656 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:29:42,657 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:30:02,660 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:30:02,660 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:30:02,661 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:30:02,661 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:30:02,662 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:30:42 CEST 2016
+2016-04-25 12:30:02,662 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:30:02,663 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:30:13,205 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:253) - Stop Clicked: Stop
+2016-04-25 12:30:42,622 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:30:42,623 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:30:42,623 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:30:42 CEST 2016
+2016-04-25 12:30:42,624 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:30:42,624 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:30:42,629 INFO  [DefaultQuartzScheduler_Worker-2] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:30:42,645 INFO  [DefaultQuartzScheduler_Worker-2] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:30:42,645 INFO  [DefaultQuartzScheduler_Worker-2] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:30:54,526 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:253) - Stop Clicked: Stop
+2016-04-25 12:31:02,647 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:31:02,648 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:31:02,648 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:31:02,649 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:31:02,649 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:31:42 CEST 2016
+2016-04-25 12:31:02,649 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:31:02,650 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:31:42,622 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:31:42,622 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:31:42,623 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:31:42 CEST 2016
+2016-04-25 12:31:42,623 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:31:42,624 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:31:42,629 INFO  [DefaultQuartzScheduler_Worker-3] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:31:42,644 INFO  [DefaultQuartzScheduler_Worker-3] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:31:42,644 INFO  [DefaultQuartzScheduler_Worker-3] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:32:02,646 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:32:02,646 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:32:02,647 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:32:02,647 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:32:02,648 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:32:42 CEST 2016
+2016-04-25 12:32:02,648 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:32:02,649 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:32:18,274 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:253) - Stop Clicked: Stop
+2016-04-25 12:32:42,622 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:32:42,623 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:32:42,623 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:32:42 CEST 2016
+2016-04-25 12:32:42,624 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:32:42,625 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:32:42,630 INFO  [DefaultQuartzScheduler_Worker-4] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:32:42,639 INFO  [DefaultQuartzScheduler_Worker-4] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:32:42,639 INFO  [DefaultQuartzScheduler_Worker-4] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:33:02,641 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:33:02,641 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:33:02,642 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:33:02,643 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:33:02,643 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:33:42 CEST 2016
+2016-04-25 12:33:02,644 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:33:02,644 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:33:42,622 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:33:42,623 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:33:42,623 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:33:42 CEST 2016
+2016-04-25 12:33:42,624 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:33:42,624 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:33:42,629 INFO  [DefaultQuartzScheduler_Worker-5] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:33:42,640 INFO  [DefaultQuartzScheduler_Worker-5] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:33:42,640 INFO  [DefaultQuartzScheduler_Worker-5] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:34:02,642 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:34:02,643 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:34:02,643 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:34:02,643 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:34:02,644 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:34:42 CEST 2016
+2016-04-25 12:34:02,644 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:34:02,645 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:34:42,622 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:34:42,623 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:34:42,623 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:34:42 CEST 2016
+2016-04-25 12:34:42,624 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:34:42,624 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:34:42,629 INFO  [DefaultQuartzScheduler_Worker-6] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:34:42,640 INFO  [DefaultQuartzScheduler_Worker-6] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:34:42,641 INFO  [DefaultQuartzScheduler_Worker-6] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:35:02,642 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:35:02,642 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:35:02,643 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:35:02,643 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:35:02,644 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:35:42 CEST 2016
+2016-04-25 12:35:02,644 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:35:02,644 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:35:42,623 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:35:42,623 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:35:42,624 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:35:42 CEST 2016
+2016-04-25 12:35:42,624 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:35:42,625 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:35:42,630 INFO  [DefaultQuartzScheduler_Worker-7] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:35:42,648 INFO  [DefaultQuartzScheduler_Worker-7] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:35:42,649 INFO  [DefaultQuartzScheduler_Worker-7] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:36:02,650 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:36:02,651 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:36:02,651 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:36:02,651 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:36:02,652 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:36:42 CEST 2016
+2016-04-25 12:36:02,652 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:36:02,653 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:36:42,622 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:36:42,622 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:36:42,623 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:36:42 CEST 2016
+2016-04-25 12:36:42,623 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:36:42,624 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:36:42,628 INFO  [DefaultQuartzScheduler_Worker-8] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:36:42,635 INFO  [DefaultQuartzScheduler_Worker-8] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:36:42,636 INFO  [DefaultQuartzScheduler_Worker-8] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:37:02,637 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:37:02,637 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:37:02,638 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:37:02,638 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:37:02,639 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:37:42 CEST 2016
+2016-04-25 12:37:02,640 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:37:02,640 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:37:42,622 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:37:42,622 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:37:42,623 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:37:42 CEST 2016
+2016-04-25 12:37:42,623 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:37:42,624 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:37:42,629 INFO  [DefaultQuartzScheduler_Worker-9] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:37:42,636 INFO  [DefaultQuartzScheduler_Worker-9] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:37:42,636 INFO  [DefaultQuartzScheduler_Worker-9] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:38:02,637 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:38:02,637 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:38:02,638 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:38:02,638 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:38:02,639 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:38:42 CEST 2016
+2016-04-25 12:38:02,639 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:38:02,639 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:38:42,622 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:38:42,622 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:38:42,623 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:38:42 CEST 2016
+2016-04-25 12:38:42,623 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:38:42,623 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:38:42,628 INFO  [DefaultQuartzScheduler_Worker-10] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:38:42,637 INFO  [DefaultQuartzScheduler_Worker-10] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:38:42,638 INFO  [DefaultQuartzScheduler_Worker-10] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:39:02,638 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:39:02,638 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:39:02,639 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:39:02,639 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:39:02,640 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:39:42 CEST 2016
+2016-04-25 12:39:02,640 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:39:02,641 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:39:42,621 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:39:42,621 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:39:42,622 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:39:42 CEST 2016
+2016-04-25 12:39:42,622 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:39:42,623 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:39:42,627 INFO  [DefaultQuartzScheduler_Worker-1] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:39:42,641 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:39:42,641 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:40:02,641 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:40:02,641 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:40:02,642 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:40:02,642 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:40:02,643 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:40:42 CEST 2016
+2016-04-25 12:40:02,643 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:40:02,643 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:40:42,621 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:40:42,621 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:40:42,622 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:40:42 CEST 2016
+2016-04-25 12:40:42,622 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:40:42,623 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:40:42,627 INFO  [DefaultQuartzScheduler_Worker-2] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:40:42,637 INFO  [DefaultQuartzScheduler_Worker-2] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:40:42,637 INFO  [DefaultQuartzScheduler_Worker-2] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:41:02,636 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:41:02,636 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:41:02,637 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:41:02,637 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:41:02,638 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:41:42 CEST 2016
+2016-04-25 12:41:02,638 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:41:02,638 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:41:42,621 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:41:42,621 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:41:42,622 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:41:42 CEST 2016
+2016-04-25 12:41:42,622 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:41:42,623 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:41:42,629 INFO  [DefaultQuartzScheduler_Worker-3] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:41:42,639 INFO  [DefaultQuartzScheduler_Worker-3] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:41:42,640 INFO  [DefaultQuartzScheduler_Worker-3] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:42:02,639 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:42:02,639 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:42:02,640 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:42:02,640 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:42:02,641 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:42:42 CEST 2016
+2016-04-25 12:42:02,641 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:42:02,642 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:42:42,621 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:42:42,621 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:42:42,622 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:42:42 CEST 2016
+2016-04-25 12:42:42,622 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:42:42,623 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:42:42,628 INFO  [DefaultQuartzScheduler_Worker-4] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:42:42,638 INFO  [DefaultQuartzScheduler_Worker-4] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:42:42,638 INFO  [DefaultQuartzScheduler_Worker-4] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:43:02,638 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:43:02,638 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:43:02,639 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:43:02,639 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:43:02,640 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:43:42 CEST 2016
+2016-04-25 12:43:02,640 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:43:02,640 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:43:42,621 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:43:42,621 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:43:42,622 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:43:42 CEST 2016
+2016-04-25 12:43:42,622 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:43:42,623 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:43:42,627 INFO  [DefaultQuartzScheduler_Worker-5] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:43:42,635 INFO  [DefaultQuartzScheduler_Worker-5] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:43:42,635 INFO  [DefaultQuartzScheduler_Worker-5] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:44:02,635 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:44:02,635 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:44:02,636 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:44:02,636 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:44:02,637 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:44:42 CEST 2016
+2016-04-25 12:44:02,637 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:44:02,637 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:44:42,621 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:44:42,622 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:44:42,622 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:44:42 CEST 2016
+2016-04-25 12:44:42,623 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:44:42,623 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:44:42,628 INFO  [DefaultQuartzScheduler_Worker-6] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:44:42,638 INFO  [DefaultQuartzScheduler_Worker-6] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:44:42,639 INFO  [DefaultQuartzScheduler_Worker-6] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:45:02,638 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:45:02,638 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:45:02,639 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:45:02,639 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:45:02,640 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:45:42 CEST 2016
+2016-04-25 12:45:02,640 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:45:02,641 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:45:42,621 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:45:42,622 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:45:42,622 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:45:42 CEST 2016
+2016-04-25 12:45:42,622 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:45:42,623 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:45:42,627 INFO  [DefaultQuartzScheduler_Worker-7] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:45:42,637 INFO  [DefaultQuartzScheduler_Worker-7] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:45:42,638 INFO  [DefaultQuartzScheduler_Worker-7] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:46:02,637 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:46:02,637 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:46:02,638 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:46:02,638 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:46:02,639 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:46:42 CEST 2016
+2016-04-25 12:46:02,639 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:46:02,640 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:46:42,621 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:46:42,621 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:46:42,622 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:46:42 CEST 2016
+2016-04-25 12:46:42,622 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:46:42,623 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:46:42,627 INFO  [DefaultQuartzScheduler_Worker-8] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:46:42,639 INFO  [DefaultQuartzScheduler_Worker-8] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:46:42,639 INFO  [DefaultQuartzScheduler_Worker-8] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:47:02,639 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:47:02,639 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:47:02,640 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:47:02,640 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:47:02,640 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:47:42 CEST 2016
+2016-04-25 12:47:02,640 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:47:02,641 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:47:42,621 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:47:42,621 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:47:42,622 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:47:42 CEST 2016
+2016-04-25 12:47:42,622 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:47:42,623 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:47:42,628 INFO  [DefaultQuartzScheduler_Worker-9] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:47:42,637 INFO  [DefaultQuartzScheduler_Worker-9] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:47:42,637 INFO  [DefaultQuartzScheduler_Worker-9] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:48:02,637 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:48:02,637 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:48:02,638 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:48:02,638 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:48:02,639 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:48:42 CEST 2016
+2016-04-25 12:48:02,639 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:48:02,640 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:48:42,621 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:48:42,621 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:48:42,622 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:48:42 CEST 2016
+2016-04-25 12:48:42,622 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:48:42,623 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:48:42,627 INFO  [DefaultQuartzScheduler_Worker-10] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:48:42,647 INFO  [DefaultQuartzScheduler_Worker-10] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:48:42,647 INFO  [DefaultQuartzScheduler_Worker-10] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:49:02,648 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:49:02,648 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:49:02,649 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:49:02,649 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:49:02,650 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:49:42 CEST 2016
+2016-04-25 12:49:02,650 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:49:02,650 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:49:42,622 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:49:42,622 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:49:42,623 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:49:42 CEST 2016
+2016-04-25 12:49:42,623 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:49:42,624 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:49:42,628 INFO  [DefaultQuartzScheduler_Worker-1] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:49:42,646 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:49:42,647 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:50:02,648 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:50:02,648 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:50:02,649 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:50:02,649 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:50:02,649 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:50:42 CEST 2016
+2016-04-25 12:50:02,650 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:50:02,650 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:50:42,622 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:50:42,622 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:50:42,623 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:50:42 CEST 2016
+2016-04-25 12:50:42,623 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:50:42,624 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:50:42,628 INFO  [DefaultQuartzScheduler_Worker-2] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:50:42,638 INFO  [DefaultQuartzScheduler_Worker-2] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:50:42,638 INFO  [DefaultQuartzScheduler_Worker-2] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:51:02,640 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:51:02,640 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:51:02,641 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:51:02,641 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:51:02,641 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:51:42 CEST 2016
+2016-04-25 12:51:02,642 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:51:02,642 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:51:42,622 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:51:42,622 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:51:42,623 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:51:42 CEST 2016
+2016-04-25 12:51:42,623 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:51:42,623 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:51:42,627 INFO  [DefaultQuartzScheduler_Worker-3] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:51:42,637 INFO  [DefaultQuartzScheduler_Worker-3] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:51:42,638 INFO  [DefaultQuartzScheduler_Worker-3] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:52:02,639 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:52:02,639 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:52:02,640 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:52:02,640 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:52:02,640 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:52:42 CEST 2016
+2016-04-25 12:52:02,641 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:52:02,641 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:52:42,622 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:52:42,622 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:52:42,623 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:52:42 CEST 2016
+2016-04-25 12:52:42,623 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:52:42,623 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:52:42,626 INFO  [DefaultQuartzScheduler_Worker-4] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:52:42,637 INFO  [DefaultQuartzScheduler_Worker-4] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:52:42,637 INFO  [DefaultQuartzScheduler_Worker-4] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:53:02,638 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:53:02,638 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:53:02,639 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:53:02,639 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:53:02,640 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:53:42 CEST 2016
+2016-04-25 12:53:02,640 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:53:02,640 INFO  [DefaultQuartzScheduler_Worker-4] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:53:42,622 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:53:42,622 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:53:42,623 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:53:42 CEST 2016
+2016-04-25 12:53:42,623 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:53:42,624 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:53:42,628 INFO  [DefaultQuartzScheduler_Worker-5] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:53:42,638 INFO  [DefaultQuartzScheduler_Worker-5] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:53:42,639 INFO  [DefaultQuartzScheduler_Worker-5] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:54:02,640 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:54:02,640 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:54:02,641 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:54:02,641 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:54:02,642 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:54:42 CEST 2016
+2016-04-25 12:54:02,642 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:54:02,642 INFO  [DefaultQuartzScheduler_Worker-5] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:54:42,622 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:54:42,622 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:54:42,623 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:54:42 CEST 2016
+2016-04-25 12:54:42,623 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:54:42,624 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:54:42,628 INFO  [DefaultQuartzScheduler_Worker-6] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:54:42,636 INFO  [DefaultQuartzScheduler_Worker-6] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:54:42,636 INFO  [DefaultQuartzScheduler_Worker-6] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:55:02,637 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:55:02,637 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:55:02,638 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:55:02,638 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:55:02,639 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:55:42 CEST 2016
+2016-04-25 12:55:02,639 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:55:02,640 INFO  [DefaultQuartzScheduler_Worker-6] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:55:42,622 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:55:42,622 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:55:42,623 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:55:42 CEST 2016
+2016-04-25 12:55:42,623 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:55:42,623 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:55:42,628 INFO  [DefaultQuartzScheduler_Worker-7] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:55:42,645 INFO  [DefaultQuartzScheduler_Worker-7] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:55:42,645 INFO  [DefaultQuartzScheduler_Worker-7] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:56:02,636 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:56:02,636 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:56:02,637 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:56:02,637 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:56:02,637 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:56:42 CEST 2016
+2016-04-25 12:56:02,638 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:56:02,638 INFO  [DefaultQuartzScheduler_Worker-7] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:56:42,621 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:56:42,621 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:56:42,622 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:56:42 CEST 2016
+2016-04-25 12:56:42,622 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:56:42,623 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:56:42,627 INFO  [DefaultQuartzScheduler_Worker-8] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:56:42,637 INFO  [DefaultQuartzScheduler_Worker-8] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:56:42,638 INFO  [DefaultQuartzScheduler_Worker-8] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:57:02,615 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:57:02,615 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:57:02,616 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:57:02,616 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:57:02,617 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:57:42 CEST 2016
+2016-04-25 12:57:02,617 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:57:02,617 INFO  [DefaultQuartzScheduler_Worker-8] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:57:42,621 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:57:42,621 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:57:42,622 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:57:42 CEST 2016
+2016-04-25 12:57:42,622 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:57:42,623 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:57:42,627 INFO  [DefaultQuartzScheduler_Worker-9] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:57:42,635 INFO  [DefaultQuartzScheduler_Worker-9] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:57:42,635 INFO  [DefaultQuartzScheduler_Worker-9] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:58:02,612 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:58:02,612 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:58:02,613 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:58:02,613 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:58:02,614 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:58:42 CEST 2016
+2016-04-25 12:58:02,614 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:58:02,614 INFO  [DefaultQuartzScheduler_Worker-9] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:58:42,621 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:58:42,622 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:58:42,622 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:58:42 CEST 2016
+2016-04-25 12:58:42,623 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:58:42,623 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:58:42,627 INFO  [DefaultQuartzScheduler_Worker-10] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:58:42,637 INFO  [DefaultQuartzScheduler_Worker-10] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:58:42,637 INFO  [DefaultQuartzScheduler_Worker-10] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 12:59:02,615 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 12:59:02,615 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 12:59:02,616 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:59:02,616 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 12:59:02,616 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 12:59:42 CEST 2016
+2016-04-25 12:59:02,617 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 12:59:02,617 INFO  [DefaultQuartzScheduler_Worker-10] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 12:59:42,621 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 12:59:42,621 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:59:42,621 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 12:59:42 CEST 2016
+2016-04-25 12:59:42,622 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 12:59:42,622 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 12:59:42,625 INFO  [DefaultQuartzScheduler_Worker-1] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 12:59:42,635 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 12:59:42,635 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 13:00:02,613 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 13:00:02,613 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 13:00:02,614 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 13:00:02,614 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 13:00:02,615 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 13:00:42 CEST 2016
+2016-04-25 13:00:02,615 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 13:00:02,615 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 13:00:42,621 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 13:00:42,621 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 13:00:42,622 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 13:00:42 CEST 2016
+2016-04-25 13:00:42,622 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 13:00:42,623 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 13:00:42,627 INFO  [DefaultQuartzScheduler_Worker-2] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 13:00:42,638 INFO  [DefaultQuartzScheduler_Worker-2] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 13:00:42,639 INFO  [DefaultQuartzScheduler_Worker-2] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 13:01:02,622 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 13:01:02,622 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 13:01:02,623 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 13:01:02,623 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 13:01:02,624 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 13:01:42 CEST 2016
+2016-04-25 13:01:02,624 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 13:01:02,624 INFO  [DefaultQuartzScheduler_Worker-2] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 13:01:42,621 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-25 13:01:42,621 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 13:01:42,622 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Mon Apr 25 13:01:42 CEST 2016
+2016-04-25 13:01:42,622 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 13:01:42,622 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-25 13:01:42,626 INFO  [DefaultQuartzScheduler_Worker-3] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-25 13:01:42,640 INFO  [DefaultQuartzScheduler_Worker-3] process.CSVImportProcess (CSVImportProcess.java:73) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/fileToImport.csv' INTO TABLE txn_tbl FIELDS TERMINATED BY ',' LINES TERMINATED BY '
+' (txn_amount, card_number, terminal_id) 
+2016-04-25 13:01:42,641 INFO  [DefaultQuartzScheduler_Worker-3] process.CSVImportProcess (CSVImportProcess.java:74) - Data Successfully import!
+2016-04-25 13:02:02,632 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-25 13:02:02,632 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-25 13:02:02,633 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-25 13:02:02,633 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-25 13:02:02,633 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Mon Apr 25 13:02:42 CEST 2016
+2016-04-25 13:02:02,634 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-25 13:02:02,634 INFO  [DefaultQuartzScheduler_Worker-3] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------
+2016-04-25 13:07:35,180 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-25 13:07:35,202 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-25 13:07:35,205 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:40) -  -------------------------Start Mexxon ImportExportTool------------------------ 
+2016-04-25 13:07:35,347 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-25 13:07:35,347 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-04-25 13:07:35,355 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:72) - LogIn show up
+2016-04-25 13:17:31,289 ERROR [JavaFX Application Thread] utilities.WindowsDialogs (WindowsDialogs.java:91) - null
+2016-04-25 13:17:31,295 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:74) - LogIn show down
+2016-04-25 13:17:31,296 INFO  [main] scheduler.JobManger (JobManger.java:259) - All triggers executed. Shutdown scheduler
+2016-04-25 13:17:31,297 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-04-25 13:17:31,298 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-04-25 13:17:31,299 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-04-25 13:17:31,299 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:52) -  --------------------------Stop Mexxon ImportExportTool------------------------- 

@@ -39,4 +39,10 @@ public class JobExecution {
         log.info("--------------------------------------------------------------------");
         log.info("--------------------------------------------------------------------");
     }
+
+    public static  void jobInterruption(){
+        Thread tread = Thread.currentThread();
+        if (tread != null)
+            tread.interrupt();
+    }
 }

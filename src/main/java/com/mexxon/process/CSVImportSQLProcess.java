@@ -22,7 +22,7 @@ import static com.mexxon.process.EMProcessTyp.IMPORT_SQL;
  * Package: com.mexxon.controller
  */
 
-public class CSVImportSQLProcess implements IFImportExport, Job{
+public class CSVImportSQLProcess implements IFImportExport, Job, InterruptableJob{
     private static final Logger log = LogManager.getLogger(CSVImportSQLProcess.class);
     private static final EMProcessTyp processTyp = IMPORT_SQL;
 
@@ -106,6 +106,11 @@ public class CSVImportSQLProcess implements IFImportExport, Job{
     @Override
     public void execute(JobExecutionContext jobContext) throws JobExecutionException {
         JobExecution.jobExecution(jobContext,log);
+    }
+
+    @Override
+    public void interrupt() throws UnableToInterruptJobException {
+        JobExecution.jobInterruption();
     }
 
     @Override
