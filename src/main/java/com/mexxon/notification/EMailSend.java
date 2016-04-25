@@ -22,7 +22,7 @@ import java.util.Properties;
  * @since: 1.0
  * Package: com.mexxon.notification
  */
-
+//http://www.journaldev.com/2532/java-program-to-send-email-using-smtp-gmail-tls-ssl-attachment-image-example
 public class EMailSend {
     private static final Logger log = LogManager.getLogger(EMailSend.class);
 
