@@ -1,6 +1,6 @@
 package com.mexxon.database;
 
-import com.mexxon.utilities.SystemPreferences;
+import com.mexxon.ImportExportMain;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
  */
 public class DBConnection {
     private static final Logger log = LogManager.getLogger(DBConnection.class);
-    private static ResourceBundle bundle = SystemPreferences.getResourceBundle("arrivalConfig");
+    private static ResourceBundle bundle = ImportExportMain.BUNDLE_CONFIG;
 
     private Connection connection = null;
     private String url = bundle.getString("db.url.host");

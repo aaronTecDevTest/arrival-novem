@@ -101,7 +101,12 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
 
     @Override
     public void interrupt() throws UnableToInterruptJobException {
-        JobExecution.jobInterruption();
+//        JobExecution.jobInterruption();
+
+        Thread tread = Thread.currentThread();
+        if (tread != null)
+            tread.interrupt();
+
     }
 
     @Override

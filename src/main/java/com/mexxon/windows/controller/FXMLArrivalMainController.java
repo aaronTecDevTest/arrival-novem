@@ -4,7 +4,6 @@ import com.mexxon.ImportExportMain;
 import com.mexxon.database.DBManger;
 import com.mexxon.scheduler.JobManger;
 import com.mexxon.utilities.Authentication;
-import com.mexxon.utilities.SystemPreferences;
 import com.mexxon.utilities.WindowsDialogs;
 import com.mexxon.windows.model.DBJobConfigEntity;
 import javafx.collections.FXCollections;
@@ -277,7 +276,7 @@ public class FXMLArrivalMainController implements Initializable {
 
         try {
             URL url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
-            FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
+            FXMLLoader loader = new FXMLLoader(url, ImportExportMain.BUNDLE_LOGIN);
 
             Parent root = loader.load();
             Scene scene = new Scene(root, 400, 240);
@@ -324,7 +323,7 @@ public class FXMLArrivalMainController implements Initializable {
         ArrayList<DBJobConfigEntity> temptDataList = new ArrayList<>();
         DBManger dbManger = new DBManger();
         temptDataList = dbManger.getJobConfigTable(Authentication.getDbConnection().getConnection(),
-                SystemPreferences.getResourceBundle("arrivalSQL").getString("table.job_config.getData"));
+               ImportExportMain.BUNDLE_SQL.getString("table.job_config.getData"));
 
         dataJobConfig = FXCollections.observableArrayList(temptDataList);
         tbvJobConfig.setItems(dataJobConfig);

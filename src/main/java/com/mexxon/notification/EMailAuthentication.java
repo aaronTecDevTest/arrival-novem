@@ -1,10 +1,13 @@
 package com.mexxon.notification;
 
+import com.mexxon.ImportExportMain;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.mail.Authenticator;
 import javax.mail.PasswordAuthentication;
+import java.util.ResourceBundle;
+
 
 /**
  * @author: Aaron Kutekidila
@@ -15,6 +18,11 @@ import javax.mail.PasswordAuthentication;
  */
 public class EMailAuthentication extends Authenticator {
     private static final Logger log = LogManager.getLogger(EMailAuthentication.class);
+    private static ResourceBundle bundle = ImportExportMain.BUNDLE_CONFIG;
+
+    private String emailAccount = bundle.getString("email.test.form.account");
+    private String emailPassword =bundle.getString ("email.test.from.password");
+
 
     public EMailAuthentication() {
     }
@@ -23,7 +31,8 @@ public class EMailAuthentication extends Authenticator {
         //return new PasswordAuthentication("r.mattiello@mexxon.com","mexmattiello");
         // 20150223--------------
         //Account serviceinfo@mexxon.com angelegt, PW ist "????".
-        return new PasswordAuthentication("serviceinfo@mexxon.com","Sicherheit123$");
+        log.info("Account Authentication:");
+        return new PasswordAuthentication(emailAccount,emailPassword);
         // 20150223--------------
         //return new PasswordAuthentication("drrmattiello@googlemail.com","deedle_doo");
         //return new PasswordAuthentication("r.mattiello@mexxon.com","deedle_doo");

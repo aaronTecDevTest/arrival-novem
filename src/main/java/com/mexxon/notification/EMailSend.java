@@ -1,5 +1,6 @@
 package com.mexxon.notification;
 
+import com.mexxon.ImportExportMain;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -14,6 +15,7 @@ import java.io.File;
 import java.io.UnsupportedEncodingException;
 import java.util.Date;
 import java.util.Properties;
+import java.util.ResourceBundle;
 
 /**
  * @author: Aaron Kutekidila
@@ -25,14 +27,16 @@ import java.util.Properties;
 //http://www.journaldev.com/2532/java-program-to-send-email-using-smtp-gmail-tls-ssl-attachment-image-example
 public class EMailSend {
     private static final Logger log = LogManager.getLogger(EMailSend.class);
+    private static ResourceBundle bundle = ImportExportMain.BUNDLE_CONFIG;
 
     private Properties properties;
     private String toAddress;
     private String ccAddress;
     private String bccAddress;
     private String fromAddress;
-    private String serverTyp;
+
     private String host;
+    private String port;
 
     /**
      * Standard Constructor
@@ -51,26 +55,33 @@ public class EMailSend {
     }
 
     public static void main(String[] args) {
-        String from = "serviceinfo@mexxon.com";
-        String to = "aaron.kutekidila@stroeer.de";
+        String from = "aarontectesting@gmail.com";
+        String to = "aarontectesting@gmail.come";
 
         EMailSend eMailSend = new EMailSend();
         eMailSend.sendSMTPEmail(from,to,"testing", "hallo hallo aaron");
     }
 
     private void iniSMTPServer(){
-        properties     = new Properties();
-        serverTyp   = "mail.smtp.host";
-        host        = "mail.de2.hostedoffice.ag";
+        properties  = System.getProperties();
+        host        = bundle.getString("email.test.host");
+        port        = bundle.getString("email.test.port");
 
-        properties.put(serverTyp,host);
-        properties.put("mail.smtp.starttls.enable","true");
+
+        properties.put("mail.smtp.socketFactory.port", port);
+        properties.put("mail.smtp.socketFactory.class","javax.net.ssl.SSLSocketFactory");
         properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.host", host);
+        properties.put("mail.smtp.port",port);
+
+        //Debug ON
         properties.put("mail.debug", "true");
 
         // TLS
         properties.put("mail.smtp.starttls.enable", "true");
-        properties.put("mail.smtp.port", "587");
+
+        //SSL
+        properties.put("mail.smtp.ssl.enable", "true");
     }
 
     public void sendSMTPEmail(String subject, String textMessage){
@@ -99,8 +110,11 @@ public class EMailSend {
 
             log.info("is sending");
         }
-        catch (MessagingException e) {} catch (UnsupportedEncodingException e) {
+        catch (MessagingException e) {
             log.error("EMail error: " + e.getMessage());
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
     }
 
@@ -148,6 +162,7 @@ public class EMailSend {
 
         } catch (MessagingException e) {
             log.error("EMail with Attachments error: " + e.getMessage());
+            log.error("EMail with Attachments error: " + e.getStackTrace().toString());
         }
     }
 

@@ -1,12 +1,16 @@
 package com.mexxon.database;
 
-import com.mexxon.utilities.SystemPreferences;
+import com.mexxon.ImportExportMain;
 import com.mexxon.windows.model.DBJobConfigEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 
 /**
  * @author: Aaron Kutekidila
@@ -18,6 +22,8 @@ import java.util.ArrayList;
 
 public class DBManger {
     private static final Logger log = LogManager.getLogger(DBManger.class);
+    private static ResourceBundle bundle = ImportExportMain.BUNDLE_CONFIG;
+
     PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
 
@@ -62,7 +68,7 @@ public class DBManger {
 
         try {
             for (DBJobConfigEntity data: dbJobConfigEntities){
-                String sql = SystemPreferences.getResourceBundle("arrivalSQL").getString("table.job_config.setData");
+                String sql = bundle.getString("table.job_config.setData");
                 sql = sql +"("
                         +"NULL,"
                         +"'" + data.getJob_typ() +"',"

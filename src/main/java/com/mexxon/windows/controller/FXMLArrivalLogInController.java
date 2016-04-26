@@ -8,11 +8,9 @@ package com.mexxon.windows.controller;
  * Package: com.arrival.windows.controller
  */
 
+import com.mexxon.ImportExportMain;
 import com.mexxon.utilities.Authentication;
-import com.mexxon.utilities.SystemPreferences;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -24,8 +22,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
-import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -84,7 +80,7 @@ public class FXMLArrivalLogInController implements Initializable {
     private void showMainView(ActionEvent actionEvent) {
         try {
             URL url = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
-            FXMLLoader loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalMain"));
+            FXMLLoader loader = new FXMLLoader(url, ImportExportMain.BUNDLE_MAIN);
 
             Parent root = loader.load();
             Scene scene = new Scene(root,1300, 746);

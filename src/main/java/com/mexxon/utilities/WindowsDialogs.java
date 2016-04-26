@@ -8,6 +8,7 @@ package com.mexxon.utilities;
  * Package: com.arrival.utilities
  */
 
+import com.mexxon.ImportExportMain;
 import javafx.application.Platform;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
@@ -21,7 +22,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class WindowsDialogs {
-    private ResourceBundle bundle = SystemPreferences.getResourceBundle("bundleDialogs");
+    private ResourceBundle bundle = ImportExportMain.BUNDLE_DIALOGS;
     private URL iconURL =  getClass().getResource("/icon/appIcons.png");
 
     public WindowsDialogs() {

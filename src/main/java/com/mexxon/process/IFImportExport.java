@@ -18,4 +18,5 @@ public interface IFImportExport {
     JobBuilder  getJobBuilder();
     DBJobConfigEntity getJobConfig();
     void runJob();
+    //void stopJob();
 }

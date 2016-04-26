@@ -1,5 +1,6 @@
 package com.mexxon.windows.view;
 
+import com.mexxon.ImportExportMain;
 import com.mexxon.utilities.SystemPreferences;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -9,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.net.URL;
 
@@ -29,7 +31,7 @@ public class ViewArrivalMainApp extends Application {
 
         URL urlMain = getClass().getResource("/fxml/FXMLArrivalMain.fxml");
         URL applicationIcon = getClass().getResource("/icon/appIcons.png");
-        Parent root = FXMLLoader.load(urlMain, SystemPreferences.getResourceBundle("arrivalMain"));
+        Parent root = FXMLLoader.load(urlMain, ImportExportMain.BUNDLE_MAIN);
 
         Scene scene = new Scene(root, 1300, 746);
         scene.getStylesheets().add("/css/arrivalMain.css");

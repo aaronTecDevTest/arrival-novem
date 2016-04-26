@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.SchedulerException;
 
+import java.util.ResourceBundle;
 
 /**
  * @author: Aaron Kutekidila
@@ -27,6 +28,20 @@ public class ImportExportMain {
      * @param JOB_MANGER for all scheduler Job from DB
      */
     public static JobManger JOB_MANGER;
+
+    /**
+     * @param BUNDLE_CONFIG
+     * @param BUNDLE_SQL
+     * @param BUNDLE_MAIN
+     * @param BUNDLE_LOGIN
+     * @param BUNDLE_DIALOGS
+     */
+    public static ResourceBundle BUNDLE_CONFIG = SystemPreferences.getResourceBundle("arrivalConfig");
+    public static ResourceBundle BUNDLE_SQL = SystemPreferences.getResourceBundle("arrivalSQL");
+    public static ResourceBundle BUNDLE_MAIN = SystemPreferences.getResourceBundle("arrivalMain");
+    public static ResourceBundle BUNDLE_LOGIN = SystemPreferences.getResourceBundle("arrivalLogIn");
+    public static ResourceBundle BUNDLE_DIALOGS= SystemPreferences.getResourceBundle("arrivalDialogs");
+
 
     public static void main(String[] args) {
         SystemPreferences.getInstance();

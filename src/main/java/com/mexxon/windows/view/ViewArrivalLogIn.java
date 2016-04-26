@@ -8,6 +8,7 @@ package com.mexxon.windows.view;
  * Package: com.arrival.windows.view
  */
 
+import com.mexxon.ImportExportMain;
 import com.mexxon.utilities.SystemPreferences;
 import com.mexxon.utilities.WindowsDialogs;
 import javafx.application.Application;
@@ -20,6 +21,7 @@ import javafx.stage.Stage;
 import javafx.stage.WindowEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
 import java.io.IOException;
 import java.net.URL;
 
@@ -40,7 +42,7 @@ public class ViewArrivalLogIn extends Application {
         SystemPreferences.getInstance();
         url = getClass().getResource("/fxml/FXMLArrivalLogIn.fxml");
         applicationIcon = getClass().getResource("/icon/appIcons.png");
-        loader = new FXMLLoader(url, SystemPreferences.getResourceBundle("arrivalLogIn"));
+        loader = new FXMLLoader(url, ImportExportMain.BUNDLE_LOGIN);
         root = loader.load();
 
         Scene scene = new Scene(root, 400, 240);

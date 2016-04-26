@@ -18,7 +18,7 @@ import java.util.Map;
  * Created: 31.03.2016.
  * @since: 1.0
  * Package: com.mexxon.controller
- */
+ **/
 
 /**
  * For more Info: "https://examples.javacodegeeks.com/enterprise-java/quartz/quartz-scheduler-tutorial/
@@ -222,9 +222,14 @@ sched.rescheduleJob(triggerKey("oldTrigger", "group1"), trigger);*/
     public void stopJob(DBJobConfigEntity jobConfig){
 
         try {
-            String key  = jobConfig.getJob_typ() + "."+String.valueOf(jobConfig.getJob_id());
-            //scheduler.interrupt("1.import");
-            scheduler.interrupt(JobKey.jobKey("1","import"));
+            JobKey key  = new JobKey(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ());
+
+            //scheduler.interrupt("1.mport");
+            //scheduler.interrupt(JobKey.jobKey("1","import"));
+            //JobDetail jobDetail = scheduler.getJobDetail(new JobKey("1", "import"));
+           // ((IFImportExport) jobDetail.getJobDataMap().get("csvImportExport")).stopJob();
+            scheduler.interrupt("import");
+                    //System.out.println("dddddd" +  scheduler.interrupt(key.getName(), key.getGroup()));
         } catch (SchedulerException e) {
             log.error("Stop scheduler fail:" + e.getMessage());
         }
