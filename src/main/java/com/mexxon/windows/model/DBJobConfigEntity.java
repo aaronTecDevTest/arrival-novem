@@ -17,7 +17,8 @@ import org.apache.logging.log4j.Logger;
  * ClassModel for Config and Process Status
  *
  CREATE TABLE `job_configuration` (
- `job_id` int NOT NULL AUTO_INCREMENT,
+ `job_id` int NOT NUL
+ L AUTO_INCREMENT,
  `job_typ` char(100) NOT NULL,
  `job_description` char(100) NOT NULL,
  `from` char(100) NOT NULL COMMENT 'Kann eine TabelleName in der DB oder eine Dateinpath+Dateiname sein (C:....xxx.csv).',

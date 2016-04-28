@@ -226,10 +226,10 @@ sched.rescheduleJob(triggerKey("oldTrigger", "group1"), trigger);*/
 
             //scheduler.interrupt("1.mport");
             //scheduler.interrupt(JobKey.jobKey("1","import"));
-            //JobDetail jobDetail = scheduler.getJobDetail(new JobKey("1", "import"));
-           // ((IFImportExport) jobDetail.getJobDataMap().get("csvImportExport")).stopJob();
+            JobDetail jobDetail = scheduler.getJobDetail(new JobKey("1", "import"));
+
             scheduler.interrupt("import");
-                    //System.out.println("dddddd" +  scheduler.interrupt(key.getName(), key.getGroup()));
+             //System.out.println("dddddd" +  scheduler.interrupt(key.getName(), key.getGroup()));
         } catch (SchedulerException e) {
             log.error("Stop scheduler fail:" + e.getMessage());
         }
