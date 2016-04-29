@@ -14,9 +14,13 @@ import org.quartz.JobBuilder;
 
 public interface IFImportExport {
     void setProcessID (Long processID);
-    void setJobConfig (DBJobConfigEntity jobConfig);
-    JobBuilder  getJobBuilder();
-    DBJobConfigEntity getJobConfig();
+
     void runJob();
+
+    JobBuilder  getJobBuilder();
+
+    DBJobConfigEntity getJobConfig();
+
+    void setJobConfig (DBJobConfigEntity jobConfig);
     //void stopJob();
 }

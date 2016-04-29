@@ -91,14 +91,35 @@ public class JobManger {
                 ";",
                 "ideal");
 
-            CSVImportSQLProcess csvImportSQLProcess = new CSVImportSQLProcess();
-            csvImportSQLProcess.setDBJobConfigTable(confi);
+            CSVTableToTable csvTableToTable = new CSVTableToTable();
+            csvTableToTable.setDBJobConfigTable(confi);
             try {
                 JobManger jobManger = new JobManger();
                 jobManger.runJob(confi);
             } catch (SchedulerException e) {
                 e.printStackTrace();
             }
+    }
+
+    public  static Trigger getTrigger(DBJobConfigEntity jobConfig){
+        String scheduler = jobConfig.getScheduler();
+
+        switch (EMSchaduler.fromString(scheduler)){
+            case EVERY_MIN:
+                return JobTrigger.getEveryMin(jobConfig);
+            case EVERY_HOUR:
+                return JobTrigger.getEveryHour(jobConfig);
+            case DAILY:
+                return JobTrigger.getDaily(jobConfig);
+            case WEEKLY:
+                return JobTrigger.getWeekly(jobConfig);
+            case MONTHLY:
+                return JobTrigger.getMonthly(jobConfig);
+            case YEARLY:
+                return JobTrigger.getYearly(jobConfig);
+            default:
+                return null;
+        }
     }
 
     private void jobScheduler(IFImportExport ifImportExport, String simpleName, String className) throws SchedulerException, InterruptedException {
@@ -168,9 +189,9 @@ public class JobManger {
                 }
                 break;
             }
-            case IMPORT_SQL:{
+            case TABLE_TO_TABLE:{
                 try {
-                    CSVImportSQLProcess job = new CSVImportSQLProcess();
+                    CSVTableToTable job = new CSVTableToTable();
                     job.setDBJobConfigTable(jobConfig);
                     jobScheduler(job,
                             job.getClass().getSimpleName(),
@@ -262,27 +283,6 @@ sched.rescheduleJob(triggerKey("oldTrigger", "group1"), trigger);*/
             scheduler.shutdown();
         } catch (SchedulerException e) {
             log.error("Stop scheduler fail:" + e.getMessage());
-        }
-    }
-
-    public  static Trigger getTrigger(DBJobConfigEntity jobConfig){
-        String scheduler = jobConfig.getScheduler();
-
-        switch (EMSchaduler.fromString(scheduler)){
-            case EVERY_MIN:
-                return JobTrigger.getEveryMin(jobConfig);
-            case EVERY_HOUR:
-                return JobTrigger.getEveryHour(jobConfig);
-            case DAILY:
-                return JobTrigger.getDaily(jobConfig);
-            case WEEKLY:
-                return JobTrigger.getWeekly(jobConfig);
-            case MONTHLY:
-                return JobTrigger.getMonthly(jobConfig);
-            case YEARLY:
-                return JobTrigger.getYearly(jobConfig);
-            default:
-                return null;
         }
     }
 

@@ -12,7 +12,7 @@ import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import static com.mexxon.process.EMProcessTyp.IMPORT_SQL;
+import static com.mexxon.process.EMProcessTyp.TABLE_TO_TABLE;
 
 /**
  * @author: Aaron Kutekidila
@@ -22,49 +22,43 @@ import static com.mexxon.process.EMProcessTyp.IMPORT_SQL;
  * Package: com.mexxon.controller
  */
 
-public class CSVImportSQLProcess implements IFImportExport, Job, InterruptableJob{
-    private static final Logger log = LogManager.getLogger(CSVImportSQLProcess.class);
-    private static final EMProcessTyp processTyp = IMPORT_SQL;
+public class CSVTableToTable implements IFImportExport, Job, InterruptableJob{
+    private static final Logger log = LogManager.getLogger(CSVTableToTable.class);
+    private static final EMProcessTyp processTyp = TABLE_TO_TABLE;
 
     private DBJobConfigEntity jobConfig;
     private JobBuilder jobBuilder;
     private Long processID;
 
     private FileReader fileReader;
-    private String filePath = "../arrival-novem/src/main/resources/testingData/fileToImport.csv";
+    private String filePath = "../arrival-novem/src/main/resources/testingData/order.csv";
 
-    public CSVImportSQLProcess() {
+    public CSVTableToTable() {
     }
 
-    public CSVImportSQLProcess(DBJobConfigEntity jobConfig) {
+    public CSVTableToTable(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
-        this.jobBuilder = JobBuilder.newJob(CSVImportSQLProcess.class);
+        this.jobBuilder = JobBuilder.newJob(CSVTableToTable.class);
         this.processID = jobConfig.getJob_id();
     }
 
     public static void main(String[] args) {
-        /**
-         *
-         CREATE TABLE `txn_tbl` (
-         `txn_id`  int(11) NOT NULL AUTO_INCREMENT ,
-         `txn_amount`  double NOT NULL ,
-         `card_number`  bigint(20) NOT NULL ,
-         `terminal_id`  bigint(20) NULL DEFAULT NULL ,
-         PRIMARY KEY (`txn_id`))
-         */
-        CSVImportSQLProcess csvImportProcess = new CSVImportSQLProcess();
-        csvImportProcess.setDBJobConfigTable(new DBJobConfigEntity());
-        csvImportProcess.importCSV();
+        CSVTableToTable csvTableToTable = new CSVTableToTable();
+        csvTableToTable.setDBJobConfigTable(new DBJobConfigEntity());
+        csvTableToTable.tableToTable();
     }
 
-    public void importCSV() {
+    public void tableToTable() {
         try {
-            CSVReader reader = new CSVReader(new FileReader(filePath), ',');
+            CSVReader reader = new CSVReader(new FileReader(filePath), ';');
 
             DBConnection dbConnection = new DBConnection();
             Connection connection = dbConnection.getConnection();
 
-            String insertQuery = "Insert into txn_tbl (txn_id,txn_amount, card_number, terminal_id) values (null,?,?,?)";
+            String insertQuery = "Insert into `order` (ClientOrder, POI, ProductID, ClientAccountID, AccountID, " +
+                                                    "Gender, LastName, MaidenName,FirstName, Street, House, HouseADD, " +
+                                                    "ZIP, City, Country, DOB, Phone, Email)" +
+                    "values (null,?,?,?)";
             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery);
 
             String[] rowData = null;
@@ -125,6 +119,6 @@ public class CSVImportSQLProcess implements IFImportExport, Job, InterruptableJo
 
     @Override
     public void runJob() {
-        importCSV();
+        tableToTable();
     }
 }

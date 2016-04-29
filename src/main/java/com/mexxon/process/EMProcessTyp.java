@@ -10,8 +10,7 @@ package com.mexxon.process;
 public enum EMProcessTyp {
     IMPORT,
     EXPORT,
-    IMPORT_SQL,
-    EXPORT_SQL,
+    TABLE_TO_TABLE,
     EXPORT_MEXXON_CSV;
 
    public static EMProcessTyp formString(String value) {
@@ -24,14 +23,10 @@ public enum EMProcessTyp {
             case "Export":
             case "EXPORT":
                 return EXPORT;
-            case "import_sql":
-            case "Import_Sql":
-            case "IMPORT_SQL":
-                return IMPORT_SQL;
-            case "export_sql":
-            case "Export_Sql":
-            case "EXPOR_SQL":
-                return EXPORT_SQL;
+            case "table_to_table":
+            case "Table_To_Table":
+            case "TABLE_TO_TABLE":
+                return TABLE_TO_TABLE;
             case "export_mexxon_csv":
             case "Export_Mexxon_Csv":
             case "EXPORT_MEXXON_CSV":
