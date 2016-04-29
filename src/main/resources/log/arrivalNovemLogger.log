@@ -1,0 +1,43 @@
+2016-04-29 15:41:42,269 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-29 15:41:42,541 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-29 15:41:42,552 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:99) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/order.csv'INTO TABLE `order` FIELDS TERMINATED BY ';'LINES TERMINATED BY '
+' (ClientOrder, POI, ProductID, ClientAccountID, AccountID, Gender, LastName, MaidenName, FirstName, Street, House, HouseADD, ZIP, City, Country, DOB, Phone, Email)
+2016-04-29 15:41:42,552 INFO  [main] process.CSVImportProcess (CSVImportProcess.java:100) - Data Successfully import!
+2016-04-29 15:41:47,622 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-04-29 15:41:47,636 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-04-29 15:41:47,637 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:55) -  -------------------------Start Mexxon ImportExportTool------------------------ 
+2016-04-29 15:41:47,803 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-04-29 15:41:47,804 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-04-29 15:41:47,809 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:74) - LogIn show up
+2016-04-29 15:41:54,363 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-04-29 15:41:56,064 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:209) - LoadConfig Clicked: LoadConfig
+2016-04-29 15:41:56,071 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-29 15:42:00,847 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:220) - Run Clicked: Run
+2016-04-29 15:42:00,886 INFO  [JavaFX Application Thread] scheduler.SchedulerListener (SchedulerListener.java:51) - Job added: 1
+2016-04-29 15:42:00,887 INFO  [JavaFX Application Thread] scheduler.SchedulerListener (SchedulerListener.java:23) - Job scheduled: 1
+2016-04-29 15:42:00,905 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:26) - Job ID: 1
+2016-04-29 15:42:00,905 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:27) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-29 15:42:00,905 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:28) - JobExecution start: Fri Apr 29 15:42:00 CEST 2016
+2016-04-29 15:42:00,906 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:29) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-29 15:42:00,906 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:30) - +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+2016-04-29 15:42:00,911 INFO  [DefaultQuartzScheduler_Worker-1] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-04-29 15:42:00,916 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:99) - SQL-Query:LOAD DATA LOCAL INFILE '../arrival-novem/src/main/resources/testingData/order.csv'INTO TABLE `order` FIELDS TERMINATED BY ';'LINES TERMINATED BY '
+' (ClientOrder, POI, ProductID, ClientAccountID, AccountID, Gender, LastName, MaidenName, FirstName, Street, House, HouseADD, ZIP, City, Country, DOB, Phone, Email)
+2016-04-29 15:42:00,916 INFO  [DefaultQuartzScheduler_Worker-1] process.CSVImportProcess (CSVImportProcess.java:100) - Data Successfully import!
+2016-04-29 15:42:09,663 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:252) - Stop Clicked: Stop
+2016-04-29 15:42:12,271 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:201) - Exit Clicked: Exit
+2016-04-29 15:42:12,273 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-29 15:42:19,084 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-04-29 15:42:19,092 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:76) - LogIn show down
+2016-04-29 15:42:19,101 INFO  [main] scheduler.JobManger (JobManger.java:268) - All triggers executed. Shutdown scheduler
+2016-04-29 15:42:19,103 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-04-29 15:42:19,104 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-04-29 15:42:19,104 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-04-29 15:42:19,105 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:67) -  --------------------------Stop Mexxon ImportExportTool------------------------- 
+2016-04-29 15:42:20,918 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:34) - --------------------------------------------------------------------
+2016-04-29 15:42:20,918 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:35) - --------------------------------------------------------------------
+2016-04-29 15:42:20,919 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:36) - Job name is: com.mexxon.process.CSVImportProcess
+2016-04-29 15:42:20,920 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:37) - JobExecution end: -1, key: import.1
+2016-04-29 15:42:20,920 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:38) - JobExecution next scheduled time: Fri Apr 29 15:43:00 CEST 2016
+2016-04-29 15:42:20,921 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:39) - --------------------------------------------------------------------
+2016-04-29 15:42:20,922 INFO  [DefaultQuartzScheduler_Worker-1] scheduler.JobExecution (JobExecution.java:40) - --------------------------------------------------------------------

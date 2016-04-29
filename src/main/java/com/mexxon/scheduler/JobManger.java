@@ -203,20 +203,6 @@ public class JobManger {
                 }
                 break;
             }
-            case EXPORT_SQL:{
-                try {
-                    CSVExportSQLProcess job = new CSVExportSQLProcess();
-                    job.setDBJobConfigTable(jobConfig);
-                    jobScheduler(job,
-                            job.getClass().getSimpleName(),
-                            job.getClass().getName());
-                } catch (SchedulerException e) {
-                    log.error(e.getMessage());
-                } catch (InterruptedException e) {
-                    log.error(e.getMessage());
-                }
-                break;
-            }
             default: new WindowsDialogs().jobStopResetDialog();
         }
     }
