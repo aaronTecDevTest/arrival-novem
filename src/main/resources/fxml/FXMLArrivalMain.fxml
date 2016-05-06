@@ -35,8 +35,8 @@
                   <TableColumn fx:id="tbcHasHeader" maxWidth="667.0" minWidth="0.0" prefWidth="83.0" text="HasHeader" />
                   <TableColumn fx:id="tbcType" maxWidth="667.0" minWidth="0.0" prefWidth="62.0" text="Type" />
                   <TableColumn fx:id="tbcPartner" maxWidth="667.0" minWidth="0.0" prefWidth="130.0" text="Partner" />
-                  <TableColumn fx:id="tbcCreated" maxWidth="667.0" minWidth="0.0" prefWidth="109.0" text="Created" />
-                  <TableColumn fx:id="tbcLastModified" maxWidth="667.0" minWidth="0.0" prefWidth="160.0" text="LastModified" />
+                  <TableColumn fx:id="tbcCreated" maxWidth="667.0" minWidth="0.0" prefWidth="135.0" text="Created" />
+                  <TableColumn fx:id="tbcLastModified" maxWidth="667.0" minWidth="0.0" prefWidth="134.0" text="LastModified" />
                   <TableColumn fx:id="tbcIsDeleted" maxWidth="667.0" minWidth="0.0" prefWidth="65.0" text="IsDeleted" />
                   <TableColumn fx:id="tbcStatus" maxWidth="667.0" minWidth="0.0" prefWidth="68.0" text="Status" />
               </columns>

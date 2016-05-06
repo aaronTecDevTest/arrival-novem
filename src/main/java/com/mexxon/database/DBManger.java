@@ -68,7 +68,8 @@ public class DBManger {
 
         try {
             for (DBJobConfigEntity data: dbJobConfigEntities){
-                String sql = bundle.getString("table.job_config.setData");
+                String sql = ImportExportMain.BUNDLE_SQL.getString("table.job_config.setData");
+                //String sql = "INSERT INTO importexport.job_configuration VALUES";
                 sql = sql +"("
                         +"NULL,"
                         +"'" + data.getJobTyp() +"',"
@@ -81,15 +82,15 @@ public class DBManger {
                         +"'" + data.getInterval() +"',"
                         +"'" + data.getFileExtension() +"',"
                         +"'" + data.getSeparator() +"',"
-                        +"'" + data.getEncoding() +"'"
-                        +"'" + data.getEmail() +"'"
-                        +"'" + data.getHasHeader() +"'"
-                        +"'" + data.getType() +"'"
-                        +"'" + data.getPartner() +"'"
-                        +"'" + data.getCreated() +"'"
-                        +"'" + data.getLastModified() +"'"
-                        +"'" + data.getIsDeleted() +"'"
-                        +"'" + data.getUserName() +"'"
+                        +"'" + data.getEncoding() +"',"
+                        +"'" + data.getEmail() +"',"
+                        +"'" + data.getHasHeader() +"',"
+                        +"'" + data.getType() +"',"
+                        +"'" + data.getPartner() +"',"
+                        +"'" + data.getCreated() +"',"
+                        +"'" + data.getLastModified() +"',"
+                        +"'" + data.getIsDeleted() +"',"
+                        +"'" + data.getUserName() +"',"
                         +"'" + data.getStatus() +"'"
                         +");";
                 sqlList.add(sql);

@@ -73,3 +73,129 @@
 2016-05-06 14:35:22,706 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
 2016-05-06 14:36:06,274 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
 2016-05-06 14:36:06,603 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:46:41,703 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-05-06 14:46:41,710 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:76) - LogIn show down
+2016-05-06 14:46:41,711 INFO  [main] scheduler.JobManger (JobManger.java:277) - All triggers executed. Shutdown scheduler
+2016-05-06 14:46:41,711 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-05-06 14:46:41,712 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-05-06 14:46:41,713 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-05-06 14:46:41,714 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:67) -  --------------------------Stop Mexxon ImportExportTool------------------------- 
+2016-05-06 14:47:40,458 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 14:47:40,760 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:49:21,297 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 14:49:21,560 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:49:49,980 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 14:49:50,263 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:55:16,839 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 14:55:17,128 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:55:33,793 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 14:55:34,063 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:55:34,096 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:55:37,949 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 14:55:38,172 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:55:38,201 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:57:53,182 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 14:57:53,202 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-05-06 14:57:53,207 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:55) -  -------------------------Start Mexxon ImportExportTool------------------------ 
+2016-05-06 14:57:53,358 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-05-06 14:57:53,359 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-05-06 14:57:53,365 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:74) - LogIn show up
+2016-05-06 14:58:02,506 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-05-06 14:58:04,365 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:223) - LoadConfig Clicked: LoadConfig
+2016-05-06 14:58:04,377 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 14:58:53,676 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-05-06 14:58:53,690 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:76) - LogIn show down
+2016-05-06 14:58:53,691 INFO  [main] scheduler.JobManger (JobManger.java:277) - All triggers executed. Shutdown scheduler
+2016-05-06 14:58:53,691 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-05-06 14:58:53,692 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-05-06 14:58:53,692 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-05-06 14:58:53,693 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:67) -  --------------------------Stop Mexxon ImportExportTool------------------------- 
+2016-05-06 14:59:12,145 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 14:59:12,453 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:00:05,349 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:00:05,625 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:00:09,116 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:00:09,131 INFO  [main] database.DBManger (DBManger.java:172) - ------------------------------------------ SQLException caught --------------------------------------
+2016-05-06 15:00:09,131 INFO  [main] database.DBManger (DBManger.java:175) - Message   : Column count doesn't match value count at row 1
+2016-05-06 15:00:09,132 INFO  [main] database.DBManger (DBManger.java:176) - SQLState  : 21S01
+2016-05-06 15:00:09,132 INFO  [main] database.DBManger (DBManger.java:177) - ErrorCode : 1136
+2016-05-06 15:00:09,132 INFO  [main] database.DBManger (DBManger.java:178) - ------------------------------------------- SQLException end ----------------------------------------
+2016-05-06 15:00:28,886 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:00:29,173 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:00:29,203 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:03:25,603 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:03:25,915 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:03:25,944 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:03:25,956 INFO  [main] database.DBManger (DBManger.java:172) - ------------------------------------------ SQLException caught --------------------------------------
+2016-05-06 15:03:25,956 INFO  [main] database.DBManger (DBManger.java:175) - Message   : Column count doesn't match value count at row 1
+2016-05-06 15:03:25,957 INFO  [main] database.DBManger (DBManger.java:176) - SQLState  : 21S01
+2016-05-06 15:03:25,957 INFO  [main] database.DBManger (DBManger.java:177) - ErrorCode : 1136
+2016-05-06 15:03:25,957 INFO  [main] database.DBManger (DBManger.java:178) - ------------------------------------------- SQLException end ----------------------------------------
+2016-05-06 15:04:09,146 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:04:09,448 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:04:09,476 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:04:09,488 INFO  [main] database.DBManger (DBManger.java:172) - ------------------------------------------ SQLException caught --------------------------------------
+2016-05-06 15:04:09,488 INFO  [main] database.DBManger (DBManger.java:175) - Message   : Column count doesn't match value count at row 1
+2016-05-06 15:04:09,488 INFO  [main] database.DBManger (DBManger.java:176) - SQLState  : 21S01
+2016-05-06 15:04:09,489 INFO  [main] database.DBManger (DBManger.java:177) - ErrorCode : 1136
+2016-05-06 15:04:09,489 INFO  [main] database.DBManger (DBManger.java:178) - ------------------------------------------- SQLException end ----------------------------------------
+2016-05-06 15:05:05,916 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:05:06,207 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:05:06,237 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:05:06,251 INFO  [main] database.DBManger (DBManger.java:172) - ------------------------------------------ SQLException caught --------------------------------------
+2016-05-06 15:05:06,252 INFO  [main] database.DBManger (DBManger.java:175) - Message   : Column count doesn't match value count at row 1
+2016-05-06 15:05:06,252 INFO  [main] database.DBManger (DBManger.java:176) - SQLState  : 21S01
+2016-05-06 15:05:06,252 INFO  [main] database.DBManger (DBManger.java:177) - ErrorCode : 1136
+2016-05-06 15:05:06,253 INFO  [main] database.DBManger (DBManger.java:178) - ------------------------------------------- SQLException end ----------------------------------------
+2016-05-06 15:05:58,152 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:05:58,446 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:05:58,478 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:05:58,492 INFO  [main] database.DBManger (DBManger.java:172) - ------------------------------------------ SQLException caught --------------------------------------
+2016-05-06 15:05:58,492 INFO  [main] database.DBManger (DBManger.java:175) - Message   : Column count doesn't match value count at row 1
+2016-05-06 15:05:58,492 INFO  [main] database.DBManger (DBManger.java:176) - SQLState  : 21S01
+2016-05-06 15:05:58,493 INFO  [main] database.DBManger (DBManger.java:177) - ErrorCode : 1136
+2016-05-06 15:05:58,493 INFO  [main] database.DBManger (DBManger.java:178) - ------------------------------------------- SQLException end ----------------------------------------
+2016-05-06 15:06:12,347 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:06:12,650 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:06:12,680 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:06:12,692 INFO  [main] database.DBManger (DBManger.java:172) - ------------------------------------------ SQLException caught --------------------------------------
+2016-05-06 15:06:12,693 INFO  [main] database.DBManger (DBManger.java:175) - Message   : Column count doesn't match value count at row 1
+2016-05-06 15:06:12,693 INFO  [main] database.DBManger (DBManger.java:176) - SQLState  : 21S01
+2016-05-06 15:06:12,694 INFO  [main] database.DBManger (DBManger.java:177) - ErrorCode : 1136
+2016-05-06 15:06:12,694 INFO  [main] database.DBManger (DBManger.java:178) - ------------------------------------------- SQLException end ----------------------------------------
+2016-05-06 15:06:30,337 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:06:30,637 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:06:30,666 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:07:31,394 INFO  [main] database.DBManger (DBManger.java:172) - ------------------------------------------ SQLException caught --------------------------------------
+2016-05-06 15:07:31,395 INFO  [main] database.DBManger (DBManger.java:175) - Message   : Column count doesn't match value count at row 1
+2016-05-06 15:07:31,396 INFO  [main] database.DBManger (DBManger.java:176) - SQLState  : 21S01
+2016-05-06 15:07:33,864 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:07:34,207 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:07:34,237 INFO  [main] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:08:24,054 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-06 15:08:24,069 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-05-06 15:08:24,072 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:55) -  -------------------------Start Mexxon ImportExportTool------------------------ 
+2016-05-06 15:08:24,210 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-05-06 15:08:24,211 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-05-06 15:08:24,215 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:74) - LogIn show up
+2016-05-06 15:08:30,069 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-05-06 15:08:31,944 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:223) - LoadConfig Clicked: LoadConfig
+2016-05-06 15:08:31,955 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:09:05,586 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:282) - UpdateConfig Clicked: Update
+2016-05-06 15:09:05,591 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-06 15:12:13,354 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:266) - Stop Clicked: Stop
+2016-05-06 15:12:14,130 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:266) - Stop Clicked: Stop
+2016-05-06 15:12:14,274 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:266) - Stop Clicked: Stop
+2016-05-06 15:12:14,674 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:250) - Pause Clicked: Pause
+2016-05-06 15:12:14,675 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:259) - null
+2016-05-06 15:12:15,178 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:234) - Run Clicked: Run
+2016-05-06 15:12:15,187 ERROR [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:243) - Job not started: null
+2016-05-06 15:12:29,059 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:215) - Exit Clicked: Exit
+2016-05-06 15:12:29,061 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-05-06 15:12:29,792 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-05-06 15:12:29,804 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:76) - LogIn show down
+2016-05-06 15:12:29,805 INFO  [main] scheduler.JobManger (JobManger.java:277) - All triggers executed. Shutdown scheduler
+2016-05-06 15:12:29,806 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-05-06 15:12:29,808 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-05-06 15:12:29,809 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-05-06 15:12:29,810 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:67) -  --------------------------Stop Mexxon ImportExportTool------------------------- 

@@ -50,6 +50,27 @@ public class DBJobConfigEntity {
     private ArrayList <DBColumnConfigEntity> columnConfigEntities;
 
     public DBJobConfigEntity() {
+        this.jobID = new SimpleLongProperty();
+        this.jobTyp = new SimpleStringProperty();
+        this.jobDescription = new SimpleStringProperty();
+        this.table = new SimpleStringProperty();
+        this.schema = new SimpleStringProperty();
+        this.startTime = new SimpleStringProperty();
+        this.endTime = new SimpleStringProperty();
+        this.scheduler = new SimpleStringProperty();
+        this.interval = new SimpleStringProperty();
+        this.separator = new SimpleStringProperty();
+        this.fileExtension = new SimpleStringProperty();
+        this.encoding = new SimpleStringProperty();
+        this.email = new SimpleStringProperty();
+        this.hasHeader = new SimpleStringProperty();
+        this.type = new SimpleStringProperty();
+        this.partner = new SimpleStringProperty();
+        this.created = new SimpleStringProperty();
+        this.lastModified = new SimpleStringProperty();
+        this.isDeleted = new SimpleStringProperty();
+        this.userName = new SimpleStringProperty();
+        this.status = new SimpleLongProperty();
     }
 
     public DBJobConfigEntity(long jobID, String jobTyp, String jobDescription, String table, String schema,
