@@ -9,8 +9,9 @@ import org.quartz.TriggerBuilder;
 import java.util.Date;
 
 import static org.quartz.CalendarIntervalScheduleBuilder.calendarIntervalSchedule;
-import static org.quartz.SimpleScheduleBuilder.*;
-import static org.quartz.DateBuilder.*;
+import static org.quartz.DateBuilder.dateOf;
+import static org.quartz.DateBuilder.todayAt;
+import static org.quartz.SimpleScheduleBuilder.simpleSchedule;
 
 /**
  * @author: Aaron Kutekidila
@@ -34,9 +35,9 @@ public class JobTrigger {
     public static Trigger getEveryMin(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
+                .withIdentity(String.valueOf(jobConfig.getJobID()), jobConfig.getJobTyp())
                 .startNow()
-                .endAt(getDateOf(jobConfig.getEnd_time()))
+                .endAt(getDateOf(jobConfig.getEndTime()))
                 .withSchedule(simpleSchedule()
                         .withIntervalInMinutes(1)
                         .repeatForever())
@@ -47,9 +48,9 @@ public class JobTrigger {
     public static Trigger getEveryHour(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
+                .withIdentity(String.valueOf(jobConfig.getJobID()), jobConfig.getJobTyp())
                 .startNow()
-                .endAt(getDateOf(jobConfig.getEnd_time()))
+                .endAt(getDateOf(jobConfig.getEndTime()))
                 .withSchedule(simpleSchedule()
                         .withIntervalInHours(1)
                         .repeatForever())
@@ -60,9 +61,9 @@ public class JobTrigger {
     public static Trigger getDaily(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
-                .startAt(getToDayAT(jobConfig.getStart_time()))
-                .endAt(getDateOf(jobConfig.getEnd_time()))
+                .withIdentity(String.valueOf(jobConfig.getJobID()), jobConfig.getJobTyp())
+                .startAt(getToDayAT(jobConfig.getStartTime()))
+                .endAt(getDateOf(jobConfig.getEndTime()))
                 .withSchedule(calendarIntervalSchedule()
                         .withIntervalInDays(1))
                 .build();
@@ -72,9 +73,9 @@ public class JobTrigger {
     public static Trigger getWeekly(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
-                .startAt(getToDayAT(jobConfig.getStart_time()))
-                .endAt(getDateOf(jobConfig.getEnd_time()))
+                .withIdentity(String.valueOf(jobConfig.getJobID()), jobConfig.getJobTyp())
+                .startAt(getToDayAT(jobConfig.getStartTime()))
+                .endAt(getDateOf(jobConfig.getEndTime()))
                 .withSchedule(calendarIntervalSchedule()
                         .withIntervalInWeeks(1))
                 .build();
@@ -84,9 +85,9 @@ public class JobTrigger {
     public static Trigger getMonthly(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
-                .startAt(getToDayAT(jobConfig.getStart_time()))
-                .endAt(getDateOf(jobConfig.getEnd_time()))
+                .withIdentity(String.valueOf(jobConfig.getJobID()), jobConfig.getJobTyp())
+                .startAt(getToDayAT(jobConfig.getStartTime()))
+                .endAt(getDateOf(jobConfig.getEndTime()))
                 .withSchedule(calendarIntervalSchedule()
                         .withIntervalInMonths(1))
                 .build();
@@ -96,9 +97,9 @@ public class JobTrigger {
     public static Trigger getYearly(DBJobConfigEntity jobConfig){
 
         Trigger trigger = TriggerBuilder.newTrigger()
-                .withIdentity(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ())
-                .startAt(getToDayAT(jobConfig.getStart_time()))
-                .endAt(getDateOf(jobConfig.getEnd_time()))
+                .withIdentity(String.valueOf(jobConfig.getJobID()), jobConfig.getJobTyp())
+                .startAt(getToDayAT(jobConfig.getStartTime()))
+                .endAt(getDateOf(jobConfig.getEndTime()))
                 .withSchedule(calendarIntervalSchedule()
                         .withIntervalInYears(1))
                 .build();
@@ -126,7 +127,7 @@ public class JobTrigger {
         return dateOf(hh,mm,ss,dd,mmm,yyyy);
     }
 
-    private static   Date getToDayAT(String date){
+    private static  Date getToDayAT(String date){
         // 2016-04-12 12:30:30 ("yyyy-mmm-dd hh:mm:ss");
         String []date1 = date.split(" ");
 

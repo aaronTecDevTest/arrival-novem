@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.ToolBar?>
-<?import javafx.scene.control.Tooltip?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.RowConstraints?>
-<?import javafx.scene.layout.VBox?>
-
-<VBox prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
 
     <children>
         <MenuBar VBox.vgrow="NEVER">
@@ -46,10 +28,17 @@
               <columns>
                   <TableColumn fx:id="tbcJobID" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobID" />
                   <TableColumn fx:id="tbcJobTyp" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobTyp" />
-                  <TableColumn fx:id="tbcJobDescription" maxWidth="600.0" minWidth="100.0" prefWidth="213.0" text="JobDescription" />
-                  <TableColumn fx:id="tbcExportSQL" maxWidth="652.0" minWidth="205.0" prefWidth="652.0" text="ExportSQL" />
-                  <TableColumn fx:id="tbcCSVSeparator" maxWidth="600.0" minWidth="43.0" prefWidth="123.0" text="CSVSeparator" />
-                  <TableColumn fx:id="tbcJobStatus" maxWidth="600.0" minWidth="0.0" prefWidth="112.0" text="JobStatus" />
+                  <TableColumn fx:id="tbcJobDescription" maxWidth="600.0" minWidth="100.0" prefWidth="161.0" text="JobDescription" />
+                  <TableColumn fx:id="tbcFileExtension" maxWidth="652.0" minWidth="79.0" prefWidth="79.0" text="FileExtension" />
+                  <TableColumn fx:id="tbcSeparator" maxWidth="682.0" minWidth="43.0" prefWidth="125.0" text="Separator" />
+                  <TableColumn fx:id="tbcEncoding" maxWidth="667.0" minWidth="0.0" prefWidth="58.0" text="Encoding" />
+                  <TableColumn fx:id="tbcHasHeader" maxWidth="667.0" minWidth="0.0" prefWidth="83.0" text="HasHeader" />
+                  <TableColumn fx:id="tbcType" maxWidth="667.0" minWidth="0.0" prefWidth="62.0" text="Type" />
+                  <TableColumn fx:id="tbcPartner" maxWidth="667.0" minWidth="0.0" prefWidth="130.0" text="Partner" />
+                  <TableColumn fx:id="tbcCreated" maxWidth="667.0" minWidth="0.0" prefWidth="109.0" text="Created" />
+                  <TableColumn fx:id="tbcLastModified" maxWidth="667.0" minWidth="0.0" prefWidth="160.0" text="LastModified" />
+                  <TableColumn fx:id="tbcIsDeleted" maxWidth="667.0" minWidth="0.0" prefWidth="65.0" text="IsDeleted" />
+                  <TableColumn fx:id="tbcStatus" maxWidth="667.0" minWidth="0.0" prefWidth="68.0" text="Status" />
               </columns>
             </TableView>
          </center>
@@ -135,7 +124,7 @@
                         <Insets bottom="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Label text="From:">
+                  <Label text="Table:">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
@@ -145,21 +134,21 @@
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Job Status:" GridPane.rowIndex="2">
+                  <Label text="Scheduler:" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Process User:" GridPane.rowIndex="3">
+                  <Label text="User Name:" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <TextField fx:id="txtFrom" disable="true" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtTable" disable="true" GridPane.columnIndex="1" />
                   <TextField fx:id="txtStartTime" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField fx:id="txtJobStatus" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <TextField fx:id="txtProcessUser" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField fx:id="txtTo" disable="true" GridPane.columnIndex="6">
+                  <TextField fx:id="txtScheduler" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="txtUserName" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="txtSchema" disable="true" GridPane.columnIndex="6">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
@@ -169,17 +158,17 @@
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <TextField fx:id="txtScheduler" disable="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                  <TextField fx:id="txtInterval" disable="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <TextField fx:id="txtExpiredTime" disable="true" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                  <TextField fx:id="txtEMail" disable="true" GridPane.columnIndex="6" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Label text="To:" GridPane.columnIndex="5">
+                  <Label text="Schema:" GridPane.columnIndex="5">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
@@ -189,12 +178,12 @@
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Scheduler:" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                  <Label text="Interval:" GridPane.columnIndex="5" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Expired Time:" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                  <Label text="EMail:" GridPane.columnIndex="5" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>

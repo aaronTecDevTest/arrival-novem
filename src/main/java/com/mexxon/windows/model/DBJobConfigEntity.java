@@ -5,216 +5,365 @@ import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.ArrayList;
+
 /**
  * @author: Aaron Kutekidila
  * @version: 1.0
- * Created: 05.04.2016.
+ * Created: 05.04.2016
  * @since: 1.0
  * Package: com.mexxon.model
  */
 
 /**
  * ClassModel for Config and Process Status
+ ***********************************************************************************************************************
  *
- CREATE TABLE `job_configuration` (
- `job_id` int NOT NUL
- L AUTO_INCREMENT,
- `job_typ` char(100) NOT NULL,
- `job_description` char(100) NOT NULL,
- `from` char(100) NOT NULL COMMENT 'Kann eine TabelleName in der DB oder eine Dateinpath+Dateiname sein (C:....xxx.csv).',
- `to` char(100) NOT NULL COMMENT 'Kann eine TabelleName in der DB oder eine Dateinpath+Dateiname sein (C:....xxx.csv).',
- `start_time` datetime DEFAULT '2030-11-20 16:00:00',
- `end_time` datetime DEFAULT '2030-11-20 16:00:00',
- `scheduler` char(100) DEFAULT NULL COMMENT 'Eine Liste mit dem Werte: Daily, Weekly, 1st of the Month,15th of the Month',
- `expired_time` time DEFAULT NULL,
- `export_sql` text,
- `csv_separator` CHAR(1),
- PRIMARY KEY (`job_id`),
- KEY `job_config_job_id_index` (`job_id`)
- ) ENGINE=InnoDB DEFAULT CHARSET=utf8
- ******************************************************************************************************************************************************************
- INSERT INTO importexport.job_configuration VALUES(NULL,'import','import to    the db','c:\dadf\dd','txn_tbl','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
- INSERT INTO importexport.job_configuration VALUES(NULL,'export','export frome the db','txn_tbl','c:\dadf\dd','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
- INSERT INTO importexport.job_configuration VALUES(NULL,'import_sql','import to    the db','c:\dadf\dd','txn_tbl','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
- INSERT INTO importexport.job_configuration VALUES(NULL,'export_sql','export frome the db','txn_tbl','c:\dadf\dd','2016-04-12 12:30:30.0','2016-04-12 12:30:30.0','daily','12:30:30','select *from txn_tbl',';');
+ *
  */
 
 public class DBJobConfigEntity {
     private static final Logger log = LogManager.getLogger(DBJobConfigEntity.class);
 
-    private SimpleLongProperty   job_id;
-    private SimpleStringProperty job_typ;
-    private SimpleStringProperty job_description;
-    private SimpleStringProperty from;
-    private SimpleStringProperty to;
-    private SimpleStringProperty start_time;
-    private SimpleStringProperty end_time;
+    private SimpleLongProperty jobID;
+    private SimpleStringProperty jobTyp;
+    private SimpleStringProperty jobDescription;
+    private SimpleStringProperty table;
+    private SimpleStringProperty schema;
+    private SimpleStringProperty startTime;
+    private SimpleStringProperty endTime;
     private SimpleStringProperty scheduler;
-    private SimpleStringProperty expired_time;
-    private SimpleStringProperty export_sql;
-    private SimpleStringProperty csv_separator;
-    private SimpleStringProperty job_status;
+    private SimpleStringProperty interval;
+    private SimpleStringProperty fileExtension;
+    private SimpleStringProperty separator;
+    private SimpleStringProperty encoding;
+    private SimpleStringProperty email;
+    private SimpleStringProperty hasHeader;
+    private SimpleStringProperty type;
+    private SimpleStringProperty partner;
+    private SimpleStringProperty created;
+    private SimpleStringProperty lastModified;
+    private SimpleStringProperty isDeleted;
+    private SimpleStringProperty userName;
+    private SimpleLongProperty status;
+
+    private ArrayList <DBColumnConfigEntity> columnConfigEntities;
 
     public DBJobConfigEntity() {
-        this((long) 0,"","","","","","","","","","","IDEAL");
     }
 
-    public DBJobConfigEntity(Long job_id, String job_description, String job_typ, String from, String to, String start_time, String end_time, String scheduler, String expired_time, String export_sql, String csv_separator, String job_status) {
-        this.job_id = new SimpleLongProperty(job_id);
-        this.job_typ = new SimpleStringProperty(job_typ);
-        this.job_description = new SimpleStringProperty(job_description);
-        this.from = new SimpleStringProperty(from);
-        this.to = new SimpleStringProperty(to);
-        this.start_time = new SimpleStringProperty(start_time);
-        this.end_time = new SimpleStringProperty(end_time);
+    public DBJobConfigEntity(long jobID, String jobTyp, String jobDescription, String table, String schema,
+                             String startTime, String endTime, String scheduler, String interval,String fileExtension,
+                             String separator, String encoding, String email, String hasHeader, String type,
+                             String partner, String created, String lastModified, String isDeleted, String userName, long status) {
+
+        this.jobID = new SimpleLongProperty(jobID);
+        this.jobTyp = new SimpleStringProperty(jobTyp);
+        this.jobDescription = new SimpleStringProperty(jobDescription);
+        this.table = new SimpleStringProperty(table);
+        this.schema = new SimpleStringProperty(schema);
+        this.startTime = new SimpleStringProperty(startTime);
+        this.endTime = new SimpleStringProperty(endTime);
         this.scheduler = new SimpleStringProperty(scheduler);
-        this.expired_time = new SimpleStringProperty(expired_time);
-        this.export_sql = new SimpleStringProperty(export_sql);
-        this.csv_separator = new SimpleStringProperty(csv_separator);
-        this.job_status = new SimpleStringProperty(job_status);
+        this.interval = new SimpleStringProperty(interval);
+        this.separator = new SimpleStringProperty(separator);
+        this.fileExtension = new SimpleStringProperty(fileExtension);
+        this.encoding = new SimpleStringProperty(encoding);
+        this.email = new SimpleStringProperty(email);
+        this.hasHeader = new SimpleStringProperty(hasHeader);
+        this.type = new SimpleStringProperty(type);
+        this.partner = new SimpleStringProperty(partner);
+        this.created = new SimpleStringProperty(created);
+        this.lastModified = new SimpleStringProperty(lastModified);
+        this.isDeleted = new SimpleStringProperty(isDeleted);
+        this.userName = new SimpleStringProperty(userName);
+        this.status = new SimpleLongProperty(status);
     }
 
-    public long getJob_id() {
-        return job_id.get();
+    public long getJobID() {
+        return jobID.get();
     }
 
-    public SimpleLongProperty job_idProperty() {
-        return job_id;
+    public void setJobID(long jobID) {
+        this.jobID.set(jobID);
     }
 
-    public void setJob_id(long job_id) {
-        this.job_id.set(job_id);
+    public SimpleLongProperty jobIDProperty() {
+        return jobID;
     }
 
-    public String getJob_typ() {
-        return job_typ.get();
+    public String getJobTyp() {
+        return jobTyp.get();
     }
 
-    public SimpleStringProperty job_typProperty() {
-        return job_typ;
+    public void setJobTyp(String jobTyp) {
+        this.jobTyp.set(jobTyp);
     }
 
-    public void setJob_typ(String job_typ) {
-        this.job_typ.set(job_typ);
+    public SimpleStringProperty jobTypProperty() {
+        return jobTyp;
     }
 
-    public String getJob_description() {
-        return job_description.get();
+    public String getJobDescription() {
+        return jobDescription.get();
     }
 
-    public SimpleStringProperty job_descriptionProperty() {
-        return job_description;
+    public void setJobDescription(String jobDescription) {
+        this.jobDescription.set(jobDescription);
     }
 
-    public void setJob_description(String job_description) {
-        this.job_description.set(job_description);
+    public SimpleStringProperty jobDescriptionProperty() {
+        return jobDescription;
     }
 
-    public String getFrom() {
-        return from.get();
+    public String getTable() {
+        return table.get();
     }
 
-    public SimpleStringProperty fromProperty() {
-        return from;
+    public void setTable(String table) {
+        this.table.set(table);
     }
 
-    public void setFrom(String from) {
-        this.from.set(from);
+    public SimpleStringProperty tableProperty() {
+        return table;
     }
 
-    public String getTo() {
-        return to.get();
+    public String getSchema() {
+        return schema.get();
     }
 
-    public SimpleStringProperty toProperty() {
-        return to;
+    public void setSchema(String schema) {
+        this.schema.set(schema);
     }
 
-    public void setTo(String to) {
-        this.to.set(to);
+    public SimpleStringProperty schemaProperty() {
+        return schema;
     }
 
-    public String getStart_time() {
-        return start_time.get();
+    public String getStartTime() {
+        return startTime.get();
     }
 
-    public SimpleStringProperty start_timeProperty() {
-        return start_time;
+    public void setStartTime(String startTime) {
+        this.startTime.set(startTime);
     }
 
-    public void setStart_time(String start_time) {
-        this.start_time.set(start_time);
+    public SimpleStringProperty startTimeProperty() {
+        return startTime;
     }
 
-    public String getEnd_time() {
-        return end_time.get();
+    public String getEndTime() {
+        return endTime.get();
     }
 
-    public SimpleStringProperty end_timeProperty() {
-        return end_time;
+    public void setEndTime(String endTime) {
+        this.endTime.set(endTime);
     }
 
-    public void setEnd_time(String end_time) {
-        this.end_time.set(end_time);
+    public SimpleStringProperty endTimeProperty() {
+        return endTime;
     }
 
     public String getScheduler() {
         return scheduler.get();
     }
 
-    public SimpleStringProperty schedulerProperty() {
-        return scheduler;
-    }
-
     public void setScheduler(String scheduler) {
         this.scheduler.set(scheduler);
     }
 
-    public String getExpired_time() {
-        return expired_time.get();
+    public SimpleStringProperty schedulerProperty() {
+        return scheduler;
     }
 
-    public SimpleStringProperty expired_timeProperty() {
-        return expired_time;
+    public String getInterval() {
+        return interval.get();
     }
 
-    public void setExpired_time(String expired_time) {
-        this.expired_time.set(expired_time);
+    public void setInterval(String interval) {
+        this.interval.set(interval);
     }
 
-    public String getExport_sql() {
-        return export_sql.get();
+    public SimpleStringProperty intervalProperty() {
+        return interval;
     }
 
-    public SimpleStringProperty export_sqlProperty() {
-        return export_sql;
+    public String getFileExtension() {
+        return fileExtension.get();
     }
 
-    public void setExport_sql(String export_sql) {
-        this.export_sql.set(export_sql);
+    public void setFileExtension(String fileExtension) {
+        this.fileExtension.set(fileExtension);
     }
 
-    public String getCsv_separator() {
-        return csv_separator.get();
+    public SimpleStringProperty fileExtensionProperty() {
+        return fileExtension;
     }
 
-    public SimpleStringProperty csv_separatorProperty() {
-        return csv_separator;
+    public String getSeparator() {
+        return separator.get();
     }
 
-    public void setCsv_separator(String csv_separator) {
-        this.csv_separator.set(csv_separator);
+    public void setSeparator(String separator) {
+        this.separator.set(separator);
     }
 
-    public String getJob_status() {
-        return job_status.get();
+    public SimpleStringProperty separatorProperty() {
+        return separator;
     }
 
-    public SimpleStringProperty job_statusProperty() {
-        return job_status;
+    public String getEncoding() {
+        return encoding.get();
     }
 
-    public void setJob_status(String job_status) {
-        this.job_status.set(job_status);
+    public void setEncoding(String encoding) {
+        this.encoding.set(encoding);
+    }
+
+    public SimpleStringProperty encodingProperty() {
+        return encoding;
+    }
+
+    public String getEmail() {
+        return email.get();
+    }
+
+    public void setEmail(String email) {
+        this.email.set(email);
+    }
+
+    public SimpleStringProperty emailProperty() {
+        return email;
+    }
+
+    public String getHasHeader() {
+        return hasHeader.get();
+    }
+
+    public void setHasHeader(String hasHeader) {
+        this.hasHeader.set(hasHeader);
+    }
+
+    public SimpleStringProperty hasHeaderProperty() {
+        return hasHeader;
+    }
+
+    public String getType() {
+        return type.get();
+    }
+
+    public void setType(String type) {
+        this.type.set(type);
+    }
+
+    public SimpleStringProperty typeProperty() {
+        return type;
+    }
+
+    public String getPartner() {
+        return partner.get();
+    }
+
+    public void setPartner(String partner) {
+        this.partner.set(partner);
+    }
+
+    public SimpleStringProperty partnerProperty() {
+        return partner;
+    }
+
+    public String getCreated() {
+        return created.get();
+    }
+
+    public void setCreated(String created) {
+        this.created.set(created);
+    }
+
+    public SimpleStringProperty createdProperty() {
+        return created;
+    }
+
+    public String getLastModified() {
+        return lastModified.get();
+    }
+
+    public void setLastModified(String lastModified) {
+        this.lastModified.set(lastModified);
+    }
+
+    public SimpleStringProperty lastModifiedProperty() {
+        return lastModified;
+    }
+
+    public String getIsDeleted() {
+        return isDeleted.get();
+    }
+
+    public void setIsDeleted(String isDeleted) {
+        this.isDeleted.set(isDeleted);
+    }
+
+    public SimpleStringProperty isDeletedProperty() {
+        return isDeleted;
+    }
+
+    public String getUserName() {
+        return userName.get();
+    }
+
+    public void setUserName(String userName) {
+        this.userName.set(userName);
+    }
+
+    public SimpleStringProperty userNameProperty() {
+        return userName;
+    }
+
+    public long getStatus() {
+        return status.get();
+    }
+
+    public void setStatus(long status) {
+        this.status.set(status);
+    }
+
+    public SimpleLongProperty statusProperty() {
+        return status;
+    }
+
+    public ArrayList<DBColumnConfigEntity> getColumnConfigEntities() {
+        return columnConfigEntities;
+    }
+
+    public void setColumnConfigEntities(ArrayList<DBColumnConfigEntity> columnConfigEntities) {
+        this.columnConfigEntities = columnConfigEntities;
+    }
+
+    @Override
+    public String toString() {
+        return "DBJobConfigEntity{" +
+                "jobID=" + jobID +
+                ", jobTyp=" + jobTyp +
+                ", jobDescription=" + jobDescription +
+                ", table=" + table +
+                ", schema=" + schema +
+                ", startTime=" + startTime +
+                ", endTime=" + endTime +
+                ", scheduler=" + scheduler +
+                ", interval=" + interval +
+                ", fileExtension=" + fileExtension +
+                ", separator=" + separator +
+                ", encoding=" + encoding +
+                ", email=" + email +
+                ", hasHeader=" + hasHeader +
+                ", type=" + type +
+                ", partner=" + partner +
+                ", created=" + created +
+                ", lastModified=" + lastModified +
+                ", isDeleted=" + isDeleted +
+                ", userName=" + userName +
+                ", status=" + status +
+                '}';
     }
 }

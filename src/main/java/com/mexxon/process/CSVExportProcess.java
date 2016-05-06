@@ -37,7 +37,7 @@ public class CSVExportProcess  implements IFImportExport, Job, InterruptableJob{
     public CSVExportProcess(DBJobConfigEntity jobConfig){
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVExportProcess.class);
-        this.processID = jobConfig.getJob_id();
+        this.processID = jobConfig.getJobID();
     }
 
     public void exportToCSV(){
@@ -68,7 +68,7 @@ public class CSVExportProcess  implements IFImportExport, Job, InterruptableJob{
     public void setDBJobConfigTable(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVExportMexxonProcess.class);
-        this.processID = jobConfig.getJob_id();
+        this.processID = jobConfig.getJobID();
     }
 
     @Override

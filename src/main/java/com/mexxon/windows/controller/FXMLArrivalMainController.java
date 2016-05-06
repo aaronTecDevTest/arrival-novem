@@ -75,24 +75,27 @@ public class FXMLArrivalMainController implements Initializable {
     private Button btnUpdate;
     @FXML
     private Button btnLoadConfig;
+
     @FXML
-    private TextField txtTo;
+    private TextField txtTable;
+    @FXML
+    private TextField txtSchema;
     @FXML
     private TextField txtStartTime;
     @FXML
-    private TextField txtFrom;
+    private TextField txtEndTime;
     @FXML
     private TextField txtScheduler;
     @FXML
-    private TextField txtProcessUser;
+    private TextField txtInterval;
     @FXML
-    private TextField txtExpiredTime;
+    private TextField txtUserName;
     @FXML
-    private TextField txtEndTime;
-    @FXML
-    private TextField txtJobStatus;
+    private TextField txtEMail;
+
     @FXML
     private TableView<DBJobConfigEntity> tbvJobConfig;
+
     @FXML
     private TableColumn<DBJobConfigEntity, String> tbcJobID;
     @FXML
@@ -100,11 +103,26 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TableColumn<DBJobConfigEntity, String> tbcJobDescription;
     @FXML
-    private TableColumn<DBJobConfigEntity, String> tbcExportSQL;
+    private TableColumn<DBJobConfigEntity, String> tbcFileExtension;
     @FXML
-    private TableColumn<DBJobConfigEntity, String> tbcCSVSeparator;
+    private TableColumn<DBJobConfigEntity, String> tbcSeparator;
     @FXML
-    private TableColumn<DBJobConfigEntity, String> tbcJobStatus;
+    private TableColumn<DBJobConfigEntity, String> tbcEncoding;
+    @FXML
+    private TableColumn<DBJobConfigEntity, String> tbcHasHeader;
+    @FXML
+    private TableColumn<DBJobConfigEntity, String> tbcType;
+    @FXML
+    private TableColumn<DBJobConfigEntity, String> tbcPartner;
+    @FXML
+    private TableColumn<DBJobConfigEntity, String> tbcCreated;
+    @FXML
+    private TableColumn<DBJobConfigEntity, String> tbcLastModified;
+    @FXML
+    private TableColumn<DBJobConfigEntity, String> tbcIsDeleted;
+    @FXML
+    private TableColumn<DBJobConfigEntity, String> tbcStatus;
+
 
     /**
      * @param bundle for Internationalization
@@ -131,24 +149,20 @@ public class FXMLArrivalMainController implements Initializable {
         dataJobConfig = FXCollections.observableArrayList();
 
         //Setup Table-Column Properties
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<>("job_id"));
-        tbcJobTyp.setCellValueFactory(new PropertyValueFactory<>("job_typ"));
-        tbcJobDescription.setCellValueFactory(new PropertyValueFactory<>("job_description"));
-        tbcExportSQL.setCellValueFactory(new PropertyValueFactory<>("export_sql"));
-        tbcCSVSeparator.setCellValueFactory(new PropertyValueFactory<>("csv_separator"));
-        tbcJobStatus.setCellValueFactory(new PropertyValueFactory<>("job_status"));
+        tbcJobID.setCellValueFactory(new PropertyValueFactory<>("jobID"));
+        tbcJobTyp.setCellValueFactory(new PropertyValueFactory<>("jobTyp"));
+        tbcJobDescription.setCellValueFactory(new PropertyValueFactory<>("jobDescription"));
+        tbcFileExtension.setCellValueFactory(new PropertyValueFactory<>("fileExtension"));
+        tbcSeparator.setCellValueFactory(new PropertyValueFactory<>("separator"));
+        tbcEncoding.setCellValueFactory(new PropertyValueFactory<>("encoding"));
+        tbcHasHeader.setCellValueFactory(new PropertyValueFactory<>("hasHeader"));
+        tbcType.setCellValueFactory(new PropertyValueFactory<>("type"));
+        tbcPartner.setCellValueFactory(new PropertyValueFactory<>("partner"));
+        tbcCreated.setCellValueFactory(new PropertyValueFactory<>("created"));
+        tbcLastModified.setCellValueFactory(new PropertyValueFactory<>("lastModified"));
+        tbcIsDeleted.setCellValueFactory(new PropertyValueFactory<>("isDeleted"));
+        tbcStatus.setCellValueFactory(new PropertyValueFactory<>("status"));
 
-        /*
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
-        tbcJobID.setCellValueFactory(new PropertyValueFactory<DBJobConfigEntity,String>(""));
-        */
 
         //Setup TableView
         //tbvJobConfig.getSelectionModel().setCellSelectionEnabled(true);
@@ -334,15 +348,15 @@ public class FXMLArrivalMainController implements Initializable {
         tbvJobConfig.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
                 DBJobConfigEntity tempData = tbvJobConfig.getSelectionModel().getSelectedItem();
-                txtEndTime.setText(tempData.getEnd_time());
-                txtExpiredTime.setText(tempData.getExpired_time());
-                txtFrom.setText(tempData.getFrom());
-                txtTo.setText(tempData.getTo());
+                //txtEndTime.setText(tempData.getEndTime()
+                txtTable.setText(tempData.getTable());
+                txtSchema.setText(tempData.getSchema());
+                txtStartTime.setText(tempData.getStartTime());
+                txtEndTime.setText(tempData.getEndTime());
                 txtScheduler.setText(tempData.getScheduler());
-                txtProcessUser.setText(tempData.getCsv_separator());
-                txtStartTime.setText(tempData.getStart_time());
-                txtJobStatus.setText(tempData.getJob_status()
-                );
+                txtInterval.setText(tempData.getInterval());
+                txtUserName.setText(tempData.getUserName());
+                txtEMail.setText(tempData.getEmail());
             }
         });
     }

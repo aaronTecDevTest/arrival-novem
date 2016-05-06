@@ -38,10 +38,10 @@ public class DBManger {
 
         //Test read from db
         for (DBJobConfigEntity jobConfigTable : listJobConfig) {
-            System.out.println(jobConfigTable.getJob_id());
-            System.out.println(jobConfigTable.getJob_typ());
-            System.out.println(jobConfigTable.getEnd_time());
-            System.out.println(jobConfigTable.end_timeProperty());
+            System.out.println(jobConfigTable.getJobID());
+            System.out.println(jobConfigTable.getJobTyp());
+            System.out.println(jobConfigTable.getEndTime());
+            System.out.println(jobConfigTable.endTimeProperty());
         }
 
         //Test write to db
@@ -71,16 +71,26 @@ public class DBManger {
                 String sql = bundle.getString("table.job_config.setData");
                 sql = sql +"("
                         +"NULL,"
-                        +"'" + data.getJob_typ() +"',"
-                        +"'" + data.getJob_description() +"',"
-                        +"'" + data.getFrom() +"',"
-                        +"'" + data.getTo() +"',"
-                        +"'" + data.getStart_time() +"',"
-                        +"'" + data.getEnd_time() +"',"
+                        +"'" + data.getJobTyp() +"',"
+                        +"'" + data.getJobDescription() +"',"
+                        +"'" + data.getTable() +"',"
+                        +"'" + data.getSchema() +"',"
+                        +"'" + data.getStartTime() +"',"
+                        +"'" + data.getEndTime() +"',"
                         +"'" + data.getScheduler() +"',"
-                        +"'" + data.getExpired_time() +"',"
-                        +"'" + data.getExport_sql() +"',"
-                        +"'" + data.getCsv_separator() +"'"
+                        +"'" + data.getInterval() +"',"
+                        +"'" + data.getFileExtension() +"',"
+                        +"'" + data.getSeparator() +"',"
+                        +"'" + data.getEncoding() +"'"
+                        +"'" + data.getEmail() +"'"
+                        +"'" + data.getHasHeader() +"'"
+                        +"'" + data.getType() +"'"
+                        +"'" + data.getPartner() +"'"
+                        +"'" + data.getCreated() +"'"
+                        +"'" + data.getLastModified() +"'"
+                        +"'" + data.getIsDeleted() +"'"
+                        +"'" + data.getUserName() +"'"
+                        +"'" + data.getStatus() +"'"
                         +");";
                 sqlList.add(sql);
             }
@@ -113,17 +123,27 @@ public class DBManger {
             resultSet = readFromDB(connection, sql);
             while (resultSet.next()) {
                 DBJobConfigEntity temp = new DBJobConfigEntity();
-                temp.setJob_id(resultSet.getInt(1));
-                temp.setJob_typ(resultSet.getString(2));
-                temp.setJob_description(resultSet.getString(3));
-                temp.setFrom(resultSet.getString(4));
-                temp.setTo(resultSet.getString(5));
-                temp.setStart_time(resultSet.getDate(6).toString() +" "+ resultSet.getTime(6).toString());
-                temp.setEnd_time(resultSet.getDate(7).toString() +" "+ resultSet.getTime(7).toString());
+                temp.setJobID((long) resultSet.getInt(1));
+                temp.setJobTyp(resultSet.getString(2));
+                temp.setJobDescription(resultSet.getString(3));
+                temp.setTable(resultSet.getString(4));
+                temp.setSchema(resultSet.getString(5));
+                temp.setStartTime(resultSet.getDate(6).toString() +" "+ resultSet.getTime(6).toString());
+                temp.setEndTime(resultSet.getDate(7).toString() +" "+ resultSet.getTime(7).toString());
                 temp.setScheduler(resultSet.getString(8));
-                temp.setExpired_time(resultSet.getString(9));
-                temp.setExport_sql(resultSet.getString(10));
-                temp.setCsv_separator(resultSet.getString(11));
+                temp.setInterval(resultSet.getString(9));
+                temp.setFileExtension(resultSet.getString(10));
+                temp.setSeparator(resultSet.getString(11));
+                temp.setEncoding(resultSet.getString(12));
+                temp.setEmail(resultSet.getString(13));
+                temp.setHasHeader(resultSet.getString(14));
+                temp.setType(resultSet.getString(15));
+                temp.setPartner(resultSet.getString(16));
+                temp.setCreated(resultSet.getDate(17).toString() +" "+ resultSet.getTime(17).toString());
+                temp.setLastModified(resultSet.getDate(18).toString() +" "+ resultSet.getTime(18).toString());
+                temp.setIsDeleted(resultSet.getString(19));
+                temp.setUserName(resultSet.getString(20));
+                temp.setStatus((long) resultSet.getInt(21));
                 jobConfigTables.add(temp);
             }
         } catch (SQLException e) {
@@ -148,7 +168,7 @@ public class DBManger {
     }
 
     private void slqErrorMessage(SQLException e) {
-        log.info("------------------------------------------ SQLException caught --------------------------------------");
+            log.info("------------------------------------------ SQLException caught --------------------------------------");
         // iterate and get all of the errors as much as possible.
         while (e != null) {
             log.info("Message   : " + e.getMessage());

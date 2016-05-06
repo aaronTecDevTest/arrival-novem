@@ -40,7 +40,7 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
     public CSVImportProcess(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVImportProcess.class);
-        this.processID = jobConfig.getJob_id();
+        this.processID = jobConfig.getJobID();
     }
 
     public static void main(String[] args) {
@@ -107,7 +107,7 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
     public void setDBJobConfigTable(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
         this.jobBuilder = JobBuilder.newJob(CSVExportMexxonProcess.class);
-        this.processID = jobConfig.getJob_id();
+        this.processID = jobConfig.getJobID();
     }
 
     @Override

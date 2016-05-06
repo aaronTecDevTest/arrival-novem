@@ -23,7 +23,7 @@ public class JobExecution {
         IFImportExport csvImportExport = (IFImportExport) jobDetail.getJobDataMap().get("csvImportExport");
         String jobName =jobDetail.getJobDataMap().getString(csvImportExport.getClass().getSimpleName());
 
-        log.info("Job ID: " + csvImportExport.getJobConfig().getJob_id());
+        log.info("Job ID: " + csvImportExport.getJobConfig().getJobID());
         log.info("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         log.info("JobExecution start: " + jobContext.getFireTime());
         log.info("Job name is: " + jobName);

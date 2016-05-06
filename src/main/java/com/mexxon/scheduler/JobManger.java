@@ -89,7 +89,16 @@ public class JobManger {
                 "dfd",
                 "sddf",
                 ";",
-                "ideal");
+                "ideal",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    (long)22);
 
             CSVTableToTable csvTableToTable = new CSVTableToTable();
             csvTableToTable.setDBJobConfigTable(confi);
@@ -123,8 +132,8 @@ public class JobManger {
     }
 
     private void jobScheduler(IFImportExport ifImportExport, String simpleName, String className) throws SchedulerException, InterruptedException {
-        String group = ifImportExport.getJobConfig().getJob_typ();
-        String jobID = String.valueOf(ifImportExport.getJobConfig().getJob_id());
+        String group = ifImportExport.getJobConfig().getJobTyp();
+        String jobID = String.valueOf(ifImportExport.getJobConfig().getJobID());
 
         //Define the job and tie it to our the class
         jobBuilder = ifImportExport.getJobBuilder();
@@ -145,7 +154,7 @@ public class JobManger {
     }
 
     public void runJob(DBJobConfigEntity jobConfig){
-        EMProcessTyp emProcessTyp = EMProcessTyp.formString(jobConfig.getJob_typ());
+        EMProcessTyp emProcessTyp = EMProcessTyp.formString(jobConfig.getJobTyp());
         switch (emProcessTyp) {
             case EXPORT_MEXXON_CSV:{
                 try {
@@ -209,7 +218,7 @@ public class JobManger {
 
     public  void pauseJob(DBJobConfigEntity jobConfig){
         try {
-            String key  = jobConfig.getJob_typ() + "."+String.valueOf(jobConfig.getJob_id());
+            String key  = jobConfig.getJobTyp() + "."+String.valueOf(jobConfig.getJobID());
             scheduler.resumeJob(JobKey.jobKey("1"));
         } catch (SchedulerException e) {
             log.error("Pause scheduler fail:" + e.getMessage());
@@ -229,7 +238,7 @@ sched.rescheduleJob(triggerKey("oldTrigger", "group1"), trigger);*/
     public void stopJob(DBJobConfigEntity jobConfig){
 
         try {
-            JobKey key  = new JobKey(String.valueOf(jobConfig.getJob_id()), jobConfig.getJob_typ());
+            JobKey key  = new JobKey(String.valueOf(jobConfig.getJobID()), jobConfig.getJobTyp());
 
             //scheduler.interrupt("1.mport");
             //scheduler.interrupt(JobKey.jobKey("1","import"));
@@ -245,7 +254,7 @@ sched.rescheduleJob(triggerKey("oldTrigger", "group1"), trigger);*/
     public boolean isJobRunning(DBJobConfigEntity jobConfig){
         boolean isJobRunning = false;
         try {
-            String key =String.valueOf(jobConfig.getJob_id());
+            String key =String.valueOf(jobConfig.getJobID());
             return schedulerFactory.getScheduler(key).checkExists(new JobKey(key));
         } catch (SchedulerException e) {
             log.error("Get scheduler status fail:" + e.getMessage());
