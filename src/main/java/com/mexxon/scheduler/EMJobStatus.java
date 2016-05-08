@@ -4,7 +4,7 @@ package com.mexxon.scheduler;
  * @version: 1.0
  * Created: 19.04.2016.
  * @since: 1.0
- * Package: com.mexxon.utilities
+ * Package: com.mexxon.scheduler
  */
 
 public enum EMJobStatus {

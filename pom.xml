@@ -22,8 +22,8 @@
         <version.commons.csv>1.2</version.commons.csv>
         <version.opencsv>3.7</version.opencsv>
         <version.mysql.connector.java>5.1.38</version.mysql.connector.java>
-        <veerion.slf4j.api>1.7.21</veerion.slf4j.api>
-
+        <version.slf4j.api>1.7.21</version.slf4j.api>
+        <version.hibernate>5.1.0.Final</version.hibernate>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
 
@@ -64,12 +64,6 @@
                 <version>${version.javax.mail-api}</version>
             </dependency>
 
-            <!--dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-csv</artifactId>
-                <version>${version.commons.csv}</version>
-            </dependency-->
-
             <dependency>
                 <groupId>com.opencsv</groupId>
                 <artifactId>opencsv</artifactId>
@@ -85,7 +79,32 @@
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>${veerion.slf4j.api}</version>
+                <version>${version.slf4j.api}</version>
+            </dependency>
+
+            <!--dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-search-orm</artifactId>
+                <version>5.5.3.Final</version>
+            </dependency-->
+
+            <!--dependency>
+                <groupId>org.apache.lucene</groupId>
+                <artifactId>lucene-core</artifactId>
+                <version>5.3.1</version>
+            </dependency-->
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-core</artifactId>
+                <version>${version.hibernate}</version>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.hibernate</groupId>
+                <artifactId>hibernate-entitymanager</artifactId>
+                <version>${version.hibernate}</version>
             </dependency>
 
         </dependencies>

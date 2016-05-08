@@ -19,7 +19,7 @@ import static com.mexxon.process.EMProcessTyp.EXPORT;
  * @version: 1.0
  * Created: 31.03.2016.
  * @since: 1.0
- * Package: com.mexxon.controller
+ * Package: com.mexxon.process
  */
 
 public class CSVExportProcess  implements IFImportExport, Job, InterruptableJob{

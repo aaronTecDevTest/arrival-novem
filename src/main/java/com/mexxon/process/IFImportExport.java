@@ -8,7 +8,7 @@ import org.quartz.JobBuilder;
  * @version: 1.0
  * Created: 20.04.2016.
  * @since: 1.0
- * Package: com.mexxon.controller
+ * Package: com.mexxon.process
  */
 
 

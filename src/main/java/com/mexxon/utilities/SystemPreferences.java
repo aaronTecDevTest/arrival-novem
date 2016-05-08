@@ -16,7 +16,7 @@ import java.util.ResourceBundle;
  * @version: 1.0
  * Created: 31.03.2016.
  * @since: 1.0
- * Package: utilities
+ * Package: com.mexxon.utilities
  */
 
 public class SystemPreferences {

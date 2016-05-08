@@ -19,7 +19,7 @@ import static com.mexxon.process.EMProcessTyp.TABLE_TO_TABLE;
  * @version: 1.0
  * Created: 31.03.2016.
  * @since: 1.0
- * Package: com.mexxon.controller
+ * Package: com.mexxon.process
  */
 
 public class CSVTableToTable implements IFImportExport, Job, InterruptableJob{
@@ -31,7 +31,7 @@ public class CSVTableToTable implements IFImportExport, Job, InterruptableJob{
     private Long processID;
 
     private FileReader fileReader;
-    private String filePath = "../arrival-novem/src/main/resources/testingData/order.csv";
+    private String filePath = "../arrival-novem/src/main/resources/testingData/orderWithHeader.csv";
 
     public CSVTableToTable() {
     }

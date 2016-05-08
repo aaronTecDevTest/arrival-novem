@@ -5,7 +5,7 @@ package com.mexxon.process;
  * @version: 1.0
  * Created: 13.04.2016.
  * @since: 1.0
- * Package: com.mexxon.utilities
+ * Package: com.mexxon.process
  */
 public enum EMProcessTyp {
     IMPORT,

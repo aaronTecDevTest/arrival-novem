@@ -1,17 +1,21 @@
 package com.mexxon.process;
 
-import com.mexxon.database.DBConnection;
+import com.mexxon.database.DAO.DBOrderDao;
 import com.mexxon.scheduler.JobExecution;
 import com.mexxon.windows.model.DBJobConfigEntity;
+import com.mexxon.database.entity.DBOrderEntity;
 import com.opencsv.CSVReader;
+import com.opencsv.bean.ColumnPositionMappingStrategy;
+import com.opencsv.bean.CsvToBean;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.*;
 
 import java.io.FileReader;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import static com.mexxon.process.EMProcessTyp.IMPORT;
 
@@ -32,7 +36,7 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
     private Long processID;
 
     private FileReader fileReader;
-    private String filePath = "../arrival-novem/src/main/resources/testingData/order.csv";
+    private String filePath = "../arrival-novem/src/main/resources/testingData/orderWithHeader.csv";
 
     public CSVImportProcess() {
     }
@@ -45,11 +49,56 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
 
     public static void main(String[] args) {
         CSVImportProcess csvImportProcess = new CSVImportProcess();
-        csvImportProcess.setDBJobConfigTable(new DBJobConfigEntity());
-        csvImportProcess.importCSVUsingDBLoad();
+        DBJobConfigEntity jobConfig = new DBJobConfigEntity();
+        jobConfig.setSeparator(";");
+        csvImportProcess.setDBJobConfigTable(jobConfig);
+        csvImportProcess.importCSV();
     }
 
 
+    public void importCSV() {
+        try {
+            /**
+             * http://opencsv.sourceforge.net/
+             * Header
+             * Client_Order;POI;ProductID;ClientAccountID;AccountID;Gender;LastName;MaidenName;firstName;Street;House;HouseADD;ZIP;City;Country;DOB;Phone;Email
+             * */
+            Character separator = jobConfig.getSeparator().charAt(0);
+            CSVReader reader = new CSVReader(new FileReader(filePath), separator);
+
+            ColumnPositionMappingStrategy mappingStrategy = new ColumnPositionMappingStrategy();
+            mappingStrategy.setType(DBOrderEntity.class);
+
+            Map<String, Integer> testData = new HashMap();
+            testData.put("ClientOrder",0);
+            testData.put("ZIP",3);
+            testData.put("City",5);
+            testData.put("Gender",6);
+            testData.put("Street",7);
+            testData.put("HouseADD",9);
+            testData.put("Phone",10);
+            testData.put("POI",11);
+            //String[] columns = new DBOrderEntity().getConfigHeader(testData);
+            String[] columns = new String[] {"ClientOrder","POI", "ProductID",
+                                             "ClientAccountID","AccountID","Gender","LastName",
+                                             "MaidenName","FirstName","Street","House", "HouseADD",
+                                             "ZIP","City","County","DOB","Phone","Email"};
+            mappingStrategy.setColumnMapping(columns);
+
+            CsvToBean csv = new CsvToBean();
+            List list = csv.parse(mappingStrategy, reader);
+
+            ArrayList<Object> dataEntity = new ArrayList<>(list);
+            DBOrderDao pm = new DBOrderDao();
+            pm.writeItemsToDB(dataEntity);
+
+            log.info("Data Successfully import!");
+        } catch (Exception e) {
+            log.error(e.getMessage());
+        }
+    }
+
+    /***
     public void importCSV() {
         try {
             CSVReader reader = new CSVReader(new FileReader(filePath), ',');
@@ -79,8 +128,6 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
             log.error(e.getMessage());
         }
     }
-
-
     public void importCSVUsingDBLoad() {
         DBConnection dbConnection = new DBConnection();
 
@@ -103,6 +150,7 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
             log.error(e.getMessage());
         }
     }
+**/
 
     public void setDBJobConfigTable(DBJobConfigEntity jobConfig) {
         this.jobConfig = jobConfig;
@@ -127,12 +175,10 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
 
     @Override
     public void interrupt() throws UnableToInterruptJobException {
-//        JobExecution.jobInterruption();
-
+//      JobExecution.jobInterruption();
         Thread tread = Thread.currentThread();
         if (tread != null)
             tread.interrupt();
-
     }
 
     @Override
@@ -147,6 +193,6 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
 
     @Override
     public void runJob() {
-        importCSVUsingDBLoad();
+        importCSV();
     }
 }

@@ -17,7 +17,7 @@ import java.util.Map;
  * @version: 1.0
  * Created: 31.03.2016.
  * @since: 1.0
- * Package: com.mexxon.controller
+ * Package: com.mexxon.scheduler
  **/
 
 /**
