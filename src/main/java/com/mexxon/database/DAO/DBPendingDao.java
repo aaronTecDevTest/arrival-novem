@@ -1,4 +1,4 @@
-package com.mexxon.database.DAO;
+package com.mexxon.database.dao;
 import com.mexxon.database.entity.DBOrderEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
