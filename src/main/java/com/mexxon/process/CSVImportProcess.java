@@ -1,6 +1,6 @@
 package com.mexxon.process;
 
-import com.mexxon.database.dao.DBOrderDao;
+import com.mexxon.database.DAO.DBOrderDao;
 import com.mexxon.database.entity.DBOrderEntity;
 import com.mexxon.scheduler.JobExecution;
 import com.mexxon.windows.model.DBJobConfigEntity;
@@ -55,20 +55,25 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
         csvImportProcess.importCSV();
     }
 
-
     public void importCSV() {
         try {
             /**
              * http://opencsv.sourceforge.net/
              * Header
-             * Client_Order;POI;ProductID;ClientAccountID;AccountID;Gender;LastName;MaidenName;firstName;Street;House;HouseADD;ZIP;City;Country;DOB;Phone;Email
+             * ClientOrder;POI;ProductID;ClientAccountID;AccountID;Gender;LastName;MaidenName;firstName;Street;House;HouseADD;ZIP;City;Country;DOB;Phone;Email
              * */
             Character separator = jobConfig.getSeparator().charAt(0);
-            CSVReader reader = new CSVReader(new FileReader(filePath), separator);
+            /*
+              Skipp the first line
+             */
+            CSVReader reader = new CSVReader(new FileReader(filePath), separator, '\"', 1);
 
             ColumnPositionMappingStrategy mappingStrategy = new ColumnPositionMappingStrategy();
             mappingStrategy.setType(DBOrderEntity.class);
 
+            /**
+             * Column Mapping
+             */
             Map<String, Integer> testData = new HashMap();
             testData.put("ClientOrder",0);
             testData.put("ZIP",3);
@@ -78,19 +83,18 @@ public class CSVImportProcess implements IFImportExport, Job, InterruptableJob{
             testData.put("HouseADD",9);
             testData.put("Phone",10);
             testData.put("POI",11);
+
             //String[] columns = new DBOrderEntity().getConfigHeader(testData);
-            String[] columns = new String[] {"ClientOrder","POI", "ProductID",
-                                             "ClientAccountID","AccountID","Gender","LastName",
-                                             "MaidenName","FirstName","Street","House", "HouseADD",
-                                             "ZIP","City","County","DOB","Phone","Email"};
+            String[] columns = new DBOrderEntity().getDefaultHeader();
+
             mappingStrategy.setColumnMapping(columns);
 
             CsvToBean csv = new CsvToBean();
             List list = csv.parse(mappingStrategy, reader);
 
             ArrayList<Object> dataEntity = new ArrayList<>(list);
-            DBOrderDao pm = new DBOrderDao();
-            pm.writeItemsToDB(dataEntity);
+            DBOrderDao dbAccess = new DBOrderDao();
+            dbAccess.writeItemsToDB(dataEntity);
 
             log.info("Data Successfully import!");
         } catch (Exception e) {

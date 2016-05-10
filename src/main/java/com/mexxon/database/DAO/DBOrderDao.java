@@ -17,7 +17,6 @@ import java.util.ArrayList;
  * Package: com.mexxon.database
  */
 
-
 public class DBOrderDao {
    // INSTANCE;
     private static final Logger log = LogManager.getLogger(DBOrderDao.class);
@@ -35,17 +34,25 @@ public class DBOrderDao {
 
     public static void main(String[] args) {
         DBOrderEntity dbOrderEntity1 = new DBOrderEntity(
-                (int) System.currentTimeMillis(),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
+                (int)(System.currentTimeMillis()),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
                 "adf","ss","fff", "adf","fff","ss", "adf","sss","fff");
         DBOrderEntity dbOrderEntity2 = new DBOrderEntity(
-                (int) (System.currentTimeMillis()+10),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
+                (int)( (System.currentTimeMillis()+10)),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
                 "adf","ss","fff", "adf","fff","ss", "adf","sss","fff");
 
         ArrayList<Object> dataList = new ArrayList<>();
+
         dataList.add(dbOrderEntity1);
         dataList.add(dbOrderEntity2);
         DBOrderDao pm = new DBOrderDao();
-        pm.writeItemsToDB(dataList);
+        //pm.writeItemsToDB(dataList);
+
+        ArrayList<DBOrderEntity> dataList2 = new ArrayList<>();
+        dataList2 = pm.readItemsFromDB();
+
+        for (Object date: dataList) {
+            System.out.println(((DBOrderEntity) date).getClientOrder());
+        }
         //System.out.println(pm.readItemsFromDB());
         /*EntityManager em = pm.getEntityManager();
         em.getTransaction().begin();
@@ -79,14 +86,15 @@ public class DBOrderDao {
         close();
     }
 
-    public ArrayList<Object> readItemsFromDB(){
-        ArrayList<Object> dataList = new ArrayList<>();
+    public ArrayList<DBOrderEntity> readItemsFromDB(){
+        ArrayList<DBOrderEntity> dataList = new ArrayList<>();
 
         EntityManager em = getEntityManager();
         em.getTransaction().begin();
-        dataList.addAll(em.createQuery("select u from order_table").getResultList());
+        dataList.addAll(em.createQuery("from DBOrderEntity").getResultList());
         em.getTransaction().commit();
         em.close();
+        close();
         return dataList;
     }
 

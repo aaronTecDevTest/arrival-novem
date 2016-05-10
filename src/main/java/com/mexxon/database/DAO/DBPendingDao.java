@@ -1,4 +1,4 @@
-package com.mexxon.database.dao;
+package com.mexxon.database.DAO;
 import com.mexxon.database.entity.DBOrderEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -34,10 +34,10 @@ public class DBPendingDao {
 
     public static void main(String[] args) {
         DBOrderEntity dbOrderEntity1 = new DBOrderEntity(
-                (int) System.currentTimeMillis(),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
+                (int)(System.currentTimeMillis()),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
                 "adf","ss","fff", "adf","fff","ss", "adf","sss","fff");
         DBOrderEntity dbOrderEntity2 = new DBOrderEntity(
-                (int) (System.currentTimeMillis()+10),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
+                (int)( (System.currentTimeMillis()+10)),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
                 "adf","ss","fff", "adf","fff","ss", "adf","sss","fff");
 
         ArrayList<Object> dataList = new ArrayList<>();
@@ -80,11 +80,11 @@ public class DBPendingDao {
     }
 
     public ArrayList<Object> readIteamsFromDB(){
-        ArrayList<Object> dataListe = new ArrayList<>();
+        ArrayList<Object> dataList = new ArrayList<>();
 
         EntityManager em = getEntityManager();
         em.getTransaction().begin();
-        return dataListe;
+        return dataList;
     }
 
 

@@ -4,8 +4,8 @@ import com.opencsv.bean.CsvBind;
 import com.opencsv.bean.HeaderColumnNameMappingStrategy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.util.StringBuilders;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -29,110 +29,74 @@ import java.util.Map;
 public class DBOrderEntity implements IFMapping {
     private static final Logger log = LogManager.getLogger(DBOrderEntity.class);
 
-
-    @CsvBind(required = true)
     @Id
-    @Column(name = "ClientOrder")
-    private Integer ClientOrder;
+    @CsvBind(required = true)
+    private int ClientOrder;
     @CsvBind
-    @Column(name = "POI")
     private String POI;
     @CsvBind
-    @Column(name = "ProductID")
     private String ProductID;
     @CsvBind
-    @Column(name = "ClientAccountID")
     private String ClientAccountID;
     @CsvBind
-    @Column(name = "AccountID")
     private String AccountID;
     @CsvBind
-    @Column(name = "Gender")
     private String Gender;
     @CsvBind
-    @Column(name = "LastName")
     private String LastName;
     @CsvBind
-    @Column(name = "MaidenName")
     private String MaidenName;
     @CsvBind
-    @Column(name = "FirstName")
     private String FirstName;
     @CsvBind
-    @Column(name = "Street")
     private String Street;
     @CsvBind
-    @Column(name = "House")
     private String House;
     @CsvBind
-    @Column(name = "HouseADD")
     private String HouseADD;
     @CsvBind
-    @Column(name = "ZIP")
     private String ZIP;
     @CsvBind
-    @Column(name = "City")
     private String City;
     @CsvBind
-    @Column(name = "Country")
     private String Country;
     @CsvBind
-    @Column(name = "DOB")
     private String DOB;
     @CsvBind
-    @Column(name = "Phone")
     private String Phone;
     @CsvBind
-    @Column(name = "Email")
     private String Email;
 
     public DBOrderEntity() {
     }
 
-    public DBOrderEntity(Integer clientOrder, String POI, String productID, String clientAccountID, String accountID,
-                         String gender, String lastName, String maidenName, String firstName, String street, String house,
-                         String houseADD, String ZIP, String city, String country, String DOB, String phone, String email) {
-        this.ClientOrder = clientOrder;
+    public DBOrderEntity(int clientOrder, String POI, String productID, String clientAccountID, String accountID, String gender, String lastName, String maidenName, String firstName, String street, String house, String houseADD, String ZIP, String city, String country, String DOB, String phone, String email) {
+        ClientOrder = clientOrder;
         this.POI = POI;
-        this.ProductID = productID;
-        this.ClientAccountID = clientAccountID;
-        this.AccountID = accountID;
-        this.Gender = gender;
-        this.LastName = lastName;
-        this.MaidenName = maidenName;
-        this.FirstName = firstName;
-        this.Street = street;
-        this.House = house;
-        this.HouseADD = houseADD;
+        ProductID = productID;
+        ClientAccountID = clientAccountID;
+        AccountID = accountID;
+        Gender = gender;
+        LastName = lastName;
+        MaidenName = maidenName;
+        FirstName = firstName;
+        Street = street;
+        House = house;
+        HouseADD = houseADD;
         this.ZIP = ZIP;
-        this.City = city;
-        this.Country = country;
+        City = city;
+        Country = country;
         this.DOB = DOB;
-        this.Phone = phone;
-        this.Email = email;
+        Phone = phone;
+        Email = email;
     }
 
-    public static void main(String[] args) {
-        DBOrderEntity dbOrderEntity = new DBOrderEntity();
-
-        Map<String, Integer> testData = new HashMap();
-        testData.put("ClientOrder", 0);
-        testData.put("ZIP", 3);
-        testData.put("City", 5);
-        testData.put("Gender", 6);
-        testData.put("Street", 7);
-        testData.put("HouseADD", 9);
-        testData.put("Phone", 10);
-        testData.put("POI", 11);
-        dbOrderEntity.getConfigHeader(testData);
-    }
-
-    public Integer getClientOrder() {
+    public int getClientOrder() {
         return ClientOrder;
     }
 
-    public void setClientOrder(Integer clientOrder) {
-        this.ClientOrder = clientOrder;
+    public void setClientOrder(int clientOrder) {
+        ClientOrder = clientOrder;
     }
 
     public String getPOI() {
@@ -148,7 +112,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setProductID(String productID) {
-        this.ProductID = productID;
+        ProductID = productID;
     }
 
     public String getClientAccountID() {
@@ -156,7 +120,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setClientAccountID(String clientAccountID) {
-        this.ClientAccountID = clientAccountID;
+        ClientAccountID = clientAccountID;
     }
 
     public String getAccountID() {
@@ -164,7 +128,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setAccountID(String accountID) {
-        this.AccountID = accountID;
+        AccountID = accountID;
     }
 
     public String getGender() {
@@ -172,7 +136,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setGender(String gender) {
-        this.Gender = gender;
+        Gender = gender;
     }
 
     public String getLastName() {
@@ -180,7 +144,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setLastName(String lastName) {
-        this.LastName = lastName;
+        LastName = lastName;
     }
 
     public String getMaidenName() {
@@ -188,7 +152,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setMaidenName(String maidenName) {
-        this.MaidenName = maidenName;
+        MaidenName = maidenName;
     }
 
     public String getFirstName() {
@@ -196,7 +160,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setFirstName(String firstName) {
-        this.FirstName = firstName;
+        FirstName = firstName;
     }
 
     public String getStreet() {
@@ -204,7 +168,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setStreet(String street) {
-        this.Street = street;
+        Street = street;
     }
 
     public String getHouse() {
@@ -212,7 +176,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setHouse(String house) {
-        this.House = house;
+        House = house;
     }
 
     public String getHouseADD() {
@@ -220,7 +184,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setHouseADD(String houseADD) {
-        this.HouseADD = houseADD;
+        HouseADD = houseADD;
     }
 
     public String getZIP() {
@@ -236,7 +200,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setCity(String city) {
-        this.City = city;
+        City = city;
     }
 
     public String getCountry() {
@@ -244,7 +208,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setCountry(String country) {
-        this.Country = country;
+        Country = country;
     }
 
     public String getDOB() {
@@ -260,7 +224,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setPhone(String phone) {
-        this.Phone = phone;
+        Phone = phone;
     }
 
     public String getEmail() {
@@ -268,7 +232,7 @@ public class DBOrderEntity implements IFMapping {
     }
 
     public void setEmail(String email) {
-        this.Email = email;
+        Email = email;
     }
 
     public HeaderColumnNameMappingStrategy<DBOrderEntity> getMappingStrategy() {
@@ -277,13 +241,28 @@ public class DBOrderEntity implements IFMapping {
         return strategy;
     }
 
-    @Override
-    public String[] getConfigHeader(Map<String, Integer> columnConfig) {
-        String defaultHeader[] = getDefaultHeader();
-        String configHeader[] = new String[defaultHeader.length];
+    public static void main(String[] args) {
+        DBOrderEntity dbOrderEntity = new DBOrderEntity();
 
-        for (int i = 0; i < defaultHeader.length; i++) {
-            if (columnConfig.get(defaultHeader[i]) != null) {
+        Map<String, Integer> testData = new HashMap();
+        testData.put("ClientOrder",0);
+        testData.put("ZIP",3);
+        testData.put("City",5);
+        testData.put("Gender",6);
+        testData.put("Street",7);
+        testData.put("HouseADD",9);
+        testData.put("Phone",10);
+        testData.put("POI",11);
+        dbOrderEntity.getConfigHeader(testData);
+    }
+
+    @Override
+    public String[] getConfigHeader(Map<String,Integer> columnConfig) {
+        String defaultHeader[] = getDefaultHeader();
+        String configHeader [] = new String[defaultHeader.length];
+
+        for (int i = 0; i < defaultHeader.length ; i++) {
+            if(columnConfig.get( defaultHeader[i])!= null ){
                 int p = columnConfig.get(defaultHeader[i]);
                 configHeader[p] = defaultHeader[i];
             }

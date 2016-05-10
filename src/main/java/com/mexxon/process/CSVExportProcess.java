@@ -1,16 +1,18 @@
 package com.mexxon.process;
 
-import com.mexxon.database.DBConnection;
+import com.mexxon.database.DAO.DBOrderDao;
+import com.mexxon.database.entity.DBOrderEntity;
 import com.mexxon.scheduler.JobExecution;
 import com.mexxon.windows.model.DBJobConfigEntity;
+import com.opencsv.CSVWriter;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.quartz.*;
 
 import java.io.FileWriter;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.mexxon.process.EMProcessTyp.EXPORT;
 
@@ -30,6 +32,8 @@ public class CSVExportProcess  implements IFImportExport, Job, InterruptableJob{
     private JobBuilder jobBuilder;
     private Long processID;
 
+    private FileWriter fileWriter;
+    private String filePath = "../arrival-novem/src/main/resources/testingData/orderWithHeaderWrite.csv";
 
     public CSVExportProcess() {
     }
@@ -41,26 +45,14 @@ public class CSVExportProcess  implements IFImportExport, Job, InterruptableJob{
     }
 
     public void exportToCSV(){
-        String filename ="Desktop:test.csv";
         try {
-            FileWriter fw = new FileWriter(filename);
-            Connection conn = new DBConnection().getConnection();
-            String query = "select * from testtable";
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                fw.append(rs.getString(1));
-                fw.append(',');
-                fw.append(rs.getString(2));
-                fw.append(',');
-                fw.append(rs.getString(3));
-                fw.append('\n');
-            }
-            fw.flush();
-            fw.close();
-            conn.close();
-            System.out.println("CSV File is created successfully.");
-        } catch (Exception e) {
+            Character separator = jobConfig.getSeparator().charAt(0);
+
+            CSVWriter writer = new CSVWriter(new FileWriter(filePath), separator);
+            ArrayList<DBOrderEntity> dataList = new DBOrderDao().readItemsFromDB();
+            List<DBOrderEntity> dataListString =  dataList.subList(0,dataList.size());
+
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
