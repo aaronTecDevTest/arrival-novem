@@ -83,14 +83,14 @@ public class FXMLArrivalLogInController implements Initializable {
             FXMLLoader loader = new FXMLLoader(url, ImportExportMain.BUNDLE_MAIN);
 
             Parent root = loader.load();
-            Scene scene = new Scene(root,1300, 746);
+            Scene scene = new Scene(root,1500, 746);
             Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
             scene.getStylesheets().add("/css/arrivalMain.css");
 
             //primaryStage.hide();
             primaryStage.setScene(scene);
-            primaryStage.setTitle("");
+            primaryStage.setTitle("Mexxon: ImportExportTool");
             primaryStage.setResizable(false);
 
             Rectangle2D primScreenBounds = Screen.getPrimary().getVisualBounds();

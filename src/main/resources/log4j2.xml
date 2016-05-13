@@ -35,7 +35,7 @@
         </RollingFile>
     </Appenders>
     <Loggers>
-        <Logger name='com.arrival.com.mexxon.utilities.log' level='debug'/>
+        <Logger name='com.mexxon.utilities.log' level='debug'/>
         <Root level='trace'>
             <AppenderRef ref='Stdout'/>
             <AppenderRef ref='Logfile'/>

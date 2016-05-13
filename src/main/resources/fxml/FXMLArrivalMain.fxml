@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<VBox xmlns:fx="http://javafx.com/fxml/1" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mexxon.windows.controller.FXMLArrivalMainController">
 
     <children>
         <MenuBar VBox.vgrow="NEVER">
@@ -23,30 +41,13 @@
             </menus>
         </MenuBar>
       <BorderPane prefHeight="700.0">
-         <center>
-            <TableView fx:id="tbvJobConfig" BorderPane.alignment="CENTER">
-              <columns>
-                  <TableColumn fx:id="tbcJobID" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobID" />
-                  <TableColumn fx:id="tbcJobTyp" maxWidth="600.0" minWidth="90.0" prefWidth="-1.0" text="JobTyp" />
-                  <TableColumn fx:id="tbcJobDescription" maxWidth="600.0" minWidth="100.0" prefWidth="161.0" text="JobDescription" />
-                  <TableColumn fx:id="tbcFileExtension" maxWidth="652.0" minWidth="79.0" prefWidth="79.0" text="FileExtension" />
-                  <TableColumn fx:id="tbcSeparator" maxWidth="682.0" minWidth="43.0" prefWidth="125.0" text="Separator" />
-                  <TableColumn fx:id="tbcEncoding" maxWidth="667.0" minWidth="0.0" prefWidth="58.0" text="Encoding" />
-                  <TableColumn fx:id="tbcHasHeader" maxWidth="667.0" minWidth="0.0" prefWidth="83.0" text="HasHeader" />
-                  <TableColumn fx:id="tbcType" maxWidth="667.0" minWidth="0.0" prefWidth="62.0" text="Type" />
-                  <TableColumn fx:id="tbcPartner" maxWidth="667.0" minWidth="0.0" prefWidth="130.0" text="Partner" />
-                  <TableColumn fx:id="tbcCreated" maxWidth="667.0" minWidth="0.0" prefWidth="135.0" text="Created" />
-                  <TableColumn fx:id="tbcLastModified" maxWidth="667.0" minWidth="0.0" prefWidth="134.0" text="LastModified" />
-                  <TableColumn fx:id="tbcIsDeleted" maxWidth="667.0" minWidth="0.0" prefWidth="65.0" text="IsDeleted" />
-                  <TableColumn fx:id="tbcStatus" maxWidth="667.0" minWidth="0.0" prefWidth="68.0" text="Status" />
-              </columns>
-            </TableView>
-         </center>
          <bottom>
-            <GridPane minWidth="-Infinity" prefWidth="1300.0" style="-fx-background-color: CBC8CC;" BorderPane.alignment="CENTER">
+            <GridPane minWidth="-Infinity" style="-fx-background-color: CBC8CC;" BorderPane.alignment="CENTER">
                <columnConstraints>
                    <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="100.0" minWidth="50.0" prefWidth="50.0" />
                   <ColumnConstraints hgrow="SOMETIMES" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="100.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="40.0" minWidth="40.0" prefWidth="40.0" />
@@ -61,7 +62,7 @@
                   <RowConstraints vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <Button fx:id="btnPause" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#pauseJob" prefHeight="34.0" prefWidth="34.0" text="Pause" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                  <Button fx:id="btnPause" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#pauseJob" prefHeight="34.0" prefWidth="34.0" text="Pause" GridPane.columnIndex="5" GridPane.rowIndex="4">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -82,7 +83,7 @@
                         <Insets bottom="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="btnStop" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#stopJob" prefHeight="34.0" prefWidth="34.0" text="Stop" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                  <Button fx:id="btnStop" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#stopJob" prefHeight="34.0" prefWidth="34.0" text="Stop" GridPane.columnIndex="6" GridPane.rowIndex="4">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -103,7 +104,7 @@
                         <Insets bottom="5.0" top="10.0" />
                      </GridPane.margin>
                   </Button>
-                  <Button fx:id="btnRun" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#runJob" prefHeight="34.0" prefWidth="34.0" text="Run" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                  <Button fx:id="btnRun" maxHeight="34.0" maxWidth="34.0" minHeight="34.0" minWidth="34.0" mnemonicParsing="false" onAction="#runJob" prefHeight="34.0" prefWidth="34.0" text="Run" GridPane.columnIndex="4" GridPane.rowIndex="4">
                      <graphic>
                         <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -148,42 +149,42 @@
                   <TextField fx:id="txtStartTime" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField fx:id="txtScheduler" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField fx:id="txtUserName" disable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <TextField fx:id="txtSchema" disable="true" GridPane.columnIndex="6">
+                  <TextField fx:id="txtSchema" disable="true" GridPane.columnIndex="8">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <TextField fx:id="txtEndTime" disable="true" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                  <TextField fx:id="txtEndTime" disable="true" GridPane.columnIndex="8" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <TextField fx:id="txtInterval" disable="true" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                  <TextField fx:id="txtInterval" disable="true" GridPane.columnIndex="8" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <TextField fx:id="txtEMail" disable="true" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                  <TextField fx:id="txtEMail" disable="true" GridPane.columnIndex="8" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets right="5.0" />
                      </GridPane.margin>
                   </TextField>
-                  <Label text="Schema:" GridPane.columnIndex="5">
+                  <Label text="Schema:" GridPane.columnIndex="7">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="End Time:" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                  <Label text="End Time:" GridPane.columnIndex="7" GridPane.rowIndex="1">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="Interval:" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                  <Label text="Interval:" GridPane.columnIndex="7" GridPane.rowIndex="2">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
                   </Label>
-                  <Label text="EMail:" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                  <Label text="EMail:" GridPane.columnIndex="7" GridPane.rowIndex="3">
                      <GridPane.margin>
                         <Insets left="5.0" right="5.0" />
                      </GridPane.margin>
@@ -287,6 +288,26 @@
                     </items>
                 </ToolBar>
          </top>
+         <center>
+            <TableView fx:id="tbvJobConfig" BorderPane.alignment="CENTER">
+              <columns>
+                  <TableColumn fx:id="tbcJobID" maxWidth="600.0" minWidth="59.0" prefWidth="69.0" text="JobID" />
+                  <TableColumn fx:id="tbcJobTyp" maxWidth="600.0" minWidth="90.0" prefWidth="111.0" text="JobTyp" />
+                  <TableColumn fx:id="tbcJobDescription" maxWidth="600.0" minWidth="100.0" prefWidth="133.0" text="JobDescription" />
+                  <TableColumn fx:id="tbcFileSource" maxWidth="652.0" minWidth="79.0" prefWidth="107.0" text="FileSource" />
+                  <TableColumn fx:id="tbcFileExtension" maxWidth="652.0" minWidth="79.0" prefWidth="107.0" text="FileExtension" />
+                  <TableColumn fx:id="tbcSeparator" maxWidth="682.0" minWidth="43.0" prefWidth="125.0" text="Separator" />
+                  <TableColumn fx:id="tbcEncoding" maxWidth="667.0" minWidth="0.0" prefWidth="104.0" text="Encoding" />
+                  <TableColumn fx:id="tbcHasHeader" maxWidth="667.0" minWidth="0.0" prefWidth="122.0" text="HasHeader" />
+                  <TableColumn fx:id="tbcType" maxWidth="667.0" minWidth="0.0" prefWidth="87.0" text="Type" />
+                  <TableColumn fx:id="tbcPartner" maxWidth="667.0" minWidth="0.0" prefWidth="113.0" text="Partner" />
+                  <TableColumn fx:id="tbcCreated" maxWidth="667.0" minWidth="0.0" prefWidth="129.0" text="Created" />
+                  <TableColumn fx:id="tbcLastModified" maxWidth="667.0" minWidth="0.0" prefWidth="130.0" text="LastModified" />
+                  <TableColumn fx:id="tbcIsDeleted" maxWidth="667.0" minWidth="0.0" text="IsDeleted" />
+                  <TableColumn fx:id="tbcStatus" maxWidth="667.0" minWidth="0.0" prefWidth="68.0" text="Status" />
+              </columns>
+            </TableView>
+         </center>
       </BorderPane>
       <Pane prefHeight="7.0" prefWidth="1300.0" />
     </children>

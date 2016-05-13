@@ -32,6 +32,7 @@ public class DBPendingDao {
         emFactory = Persistence.createEntityManagerFactory(persistenceUnitName);
     }
 
+    /*
     public static void main(String[] args) {
         DBOrderEntity dbOrderEntity1 = new DBOrderEntity(
                 (int)(System.currentTimeMillis()),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
@@ -60,8 +61,9 @@ public class DBPendingDao {
         em.getTransaction().commit();
 
         em.close();
-        pm.close();*/
+        pm.close();
     }
+    */
 
     public void writeItemsToDB(ArrayList<Object> dataList){
 

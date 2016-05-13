@@ -34,6 +34,7 @@ public class DBJobConfigEntity {
     private SimpleStringProperty endTime;
     private SimpleStringProperty scheduler;
     private SimpleStringProperty interval;
+    private SimpleStringProperty fileSource;
     private SimpleStringProperty fileExtension;
     private SimpleStringProperty separator;
     private SimpleStringProperty encoding;
@@ -60,6 +61,7 @@ public class DBJobConfigEntity {
         this.scheduler = new SimpleStringProperty();
         this.interval = new SimpleStringProperty();
         this.separator = new SimpleStringProperty();
+        this.fileSource = new SimpleStringProperty();
         this.fileExtension = new SimpleStringProperty();
         this.encoding = new SimpleStringProperty();
         this.email = new SimpleStringProperty();
@@ -74,7 +76,7 @@ public class DBJobConfigEntity {
     }
 
     public DBJobConfigEntity(long jobID, String jobTyp, String jobDescription, String table, String schema,
-                             String startTime, String endTime, String scheduler, String interval,String fileExtension,
+                             String startTime, String endTime, String scheduler, String interval,String fileSource,String fileExtension,
                              String separator, String encoding, String email, String hasHeader, String type,
                              String partner, String created, String lastModified, String isDeleted, String userName, long status) {
 
@@ -88,6 +90,7 @@ public class DBJobConfigEntity {
         this.scheduler = new SimpleStringProperty(scheduler);
         this.interval = new SimpleStringProperty(interval);
         this.separator = new SimpleStringProperty(separator);
+        this.fileSource = new SimpleStringProperty(fileSource);
         this.fileExtension = new SimpleStringProperty(fileExtension);
         this.encoding = new SimpleStringProperty(encoding);
         this.email = new SimpleStringProperty(email);
@@ -207,6 +210,18 @@ public class DBJobConfigEntity {
 
     public SimpleStringProperty intervalProperty() {
         return interval;
+    }
+
+    public String getFileSource() {
+        return fileSource.get();
+    }
+
+    public SimpleStringProperty fileSourceProperty() {
+        return fileSource;
+    }
+
+    public void setFileSource(String fileSource) {
+        this.fileSource.set(fileSource);
     }
 
     public String getFileExtension() {
@@ -373,6 +388,7 @@ public class DBJobConfigEntity {
                 ", endTime=" + endTime +
                 ", scheduler=" + scheduler +
                 ", interval=" + interval +
+                ", fileSource=" + fileSource +
                 ", fileExtension=" + fileExtension +
                 ", separator=" + separator +
                 ", encoding=" + encoding +

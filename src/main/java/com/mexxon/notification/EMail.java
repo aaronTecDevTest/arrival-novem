@@ -25,8 +25,9 @@ import java.util.ResourceBundle;
  * Package: com.mexxon.notification
  */
 //http://www.journaldev.com/2532/java-program-to-send-email-using-smtp-gmail-tls-ssl-attachment-image-example
-public class EMailSend {
-    private static final Logger log = LogManager.getLogger(EMailSend.class);
+
+public class EMail {
+    private static final Logger log = LogManager.getLogger(EMail.class);
     private static ResourceBundle bundle = ImportExportMain.BUNDLE_CONFIG;
 
     private Properties properties;
@@ -41,14 +42,14 @@ public class EMailSend {
     /**
      * Standard Constructor
      */
-    public EMailSend() {
+    public EMail() {
         iniSMTPServer();
     }
 
     /**
      * Standard General
      */
-    public EMailSend(String fromAddress, String toAddress) {
+    public EMail(String fromAddress, String toAddress) {
         this.fromAddress    = fromAddress;
         this.toAddress      = toString();
         iniSMTPServer();
@@ -58,7 +59,7 @@ public class EMailSend {
         String from = "aarontectesting@gmail.com";
         String to = "aarontectesting@gmail.come";
 
-        EMailSend eMailSend = new EMailSend();
+        EMail eMailSend = new EMail();
         eMailSend.sendSMTPEmail(from,to,"testing", "hallo hallo aaron");
     }
 

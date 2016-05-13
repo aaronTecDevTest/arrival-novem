@@ -7,7 +7,7 @@ package com.mexxon.scheduler;
  * @since: 1.0
  * Package: com.mexxon.scheduler
  */
-public enum EMSchaduler {
+public enum EMScheduler {
     EVERY_MIN,
     EVERY_HOUR,
     DAILY,
@@ -15,7 +15,7 @@ public enum EMSchaduler {
     MONTHLY,
     YEARLY;
 
-    public static EMSchaduler fromString(String values) {
+    public static EMScheduler fromString(String values) {
         switch (values) {
             case "every_min":
             case "Every_Min":

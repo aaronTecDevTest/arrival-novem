@@ -6,6 +6,7 @@ import com.mexxon.scheduler.JobManger;
 import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.WindowsDialogs;
 import com.mexxon.windows.model.DBJobConfigEntity;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -20,6 +21,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -103,6 +105,8 @@ public class FXMLArrivalMainController implements Initializable {
     @FXML
     private TableColumn<DBJobConfigEntity, String> tbcJobDescription;
     @FXML
+    private TableColumn<DBJobConfigEntity, String> tbcFileSource;
+    @FXML
     private TableColumn<DBJobConfigEntity, String> tbcFileExtension;
     @FXML
     private TableColumn<DBJobConfigEntity, String> tbcSeparator;
@@ -152,6 +156,7 @@ public class FXMLArrivalMainController implements Initializable {
         tbcJobID.setCellValueFactory(new PropertyValueFactory<>("jobID"));
         tbcJobTyp.setCellValueFactory(new PropertyValueFactory<>("jobTyp"));
         tbcJobDescription.setCellValueFactory(new PropertyValueFactory<>("jobDescription"));
+        tbcFileSource.setCellValueFactory(new PropertyValueFactory<>("fileSource"));
         tbcFileExtension.setCellValueFactory(new PropertyValueFactory<>("fileExtension"));
         tbcSeparator.setCellValueFactory(new PropertyValueFactory<>("separator"));
         tbcEncoding.setCellValueFactory(new PropertyValueFactory<>("encoding"));

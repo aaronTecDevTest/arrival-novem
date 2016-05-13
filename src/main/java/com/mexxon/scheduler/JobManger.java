@@ -98,6 +98,7 @@ public class JobManger {
                     "",
                     "",
                     "",
+                    "",
                     (long)22);
 
             CSVTableToTable csvTableToTable = new CSVTableToTable();
@@ -113,7 +114,7 @@ public class JobManger {
     public  static Trigger getTrigger(DBJobConfigEntity jobConfig){
         String scheduler = jobConfig.getScheduler();
 
-        switch (EMSchaduler.fromString(scheduler)){
+        switch (EMScheduler.fromString(scheduler)){
             case EVERY_MIN:
                 return JobTrigger.getEveryMin(jobConfig);
             case EVERY_HOUR:

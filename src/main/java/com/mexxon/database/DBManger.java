@@ -133,18 +133,19 @@ public class DBManger {
                 temp.setEndTime(resultSet.getDate(7).toString() +" "+ resultSet.getTime(7).toString());
                 temp.setScheduler(resultSet.getString(8));
                 temp.setInterval(resultSet.getString(9));
-                temp.setFileExtension(resultSet.getString(10));
-                temp.setSeparator(resultSet.getString(11));
-                temp.setEncoding(resultSet.getString(12));
-                temp.setEmail(resultSet.getString(13));
-                temp.setHasHeader(resultSet.getString(14));
-                temp.setType(resultSet.getString(15));
-                temp.setPartner(resultSet.getString(16));
-                temp.setCreated(resultSet.getDate(17).toString() +" "+ resultSet.getTime(17).toString());
-                temp.setLastModified(resultSet.getDate(18).toString() +" "+ resultSet.getTime(18).toString());
-                temp.setIsDeleted(resultSet.getString(19));
-                temp.setUserName(resultSet.getString(20));
-                temp.setStatus((long) resultSet.getInt(21));
+                temp.setFileSource(resultSet.getString(10));
+                temp.setFileExtension(resultSet.getString(11));
+                temp.setSeparator(resultSet.getString(12));
+                temp.setEncoding(resultSet.getString(13));
+                temp.setEmail(resultSet.getString(14));
+                temp.setHasHeader(resultSet.getString(15));
+                temp.setType(resultSet.getString(16));
+                temp.setPartner(resultSet.getString(17));
+                temp.setCreated(resultSet.getDate(18).toString() +" "+ resultSet.getTime(18).toString());
+                temp.setLastModified(resultSet.getDate(19).toString() +" "+ resultSet.getTime(19).toString());
+                temp.setIsDeleted(resultSet.getString(20));
+                temp.setUserName(resultSet.getString(21));
+                temp.setStatus((long) resultSet.getInt(22));
                 jobConfigTables.add(temp);
             }
         } catch (SQLException e) {

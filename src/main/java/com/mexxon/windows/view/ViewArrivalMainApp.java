@@ -33,7 +33,7 @@ public class ViewArrivalMainApp extends Application {
         URL applicationIcon = getClass().getResource("/icon/appIcons.png");
         Parent root = FXMLLoader.load(urlMain, ImportExportMain.BUNDLE_MAIN);
 
-        Scene scene = new Scene(root, 1300, 746);
+        Scene scene = new Scene(root, 1500, 746);
         scene.getStylesheets().add("/css/arrivalMain.css");
 
         primaryStage.setScene(scene);

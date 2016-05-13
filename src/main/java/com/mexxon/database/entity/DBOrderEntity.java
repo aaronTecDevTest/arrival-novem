@@ -4,7 +4,6 @@ import com.opencsv.bean.CsvBind;
 import com.opencsv.bean.HeaderColumnNameMappingStrategy;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.util.StringBuilders;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -90,6 +89,22 @@ public class DBOrderEntity implements IFMapping {
         Phone = phone;
         Email = email;
     }
+
+//    public static void main(String[] args) {
+//        DBOrderEntity dbOrderEntity = new DBOrderEntity();
+//
+//        Map<String, Integer> testData = new HashMap();
+//        testData.put("ClientOrder",0);
+//        testData.put("ZIP",3);
+//        testData.put("City",5);
+//        testData.put("Gender",6);
+//        testData.put("Street",7);
+//        testData.put("HouseADD",9);
+//        testData.put("Phone",10);
+//        testData.put("POI",11);
+//        dbOrderEntity.getConfigHeader(testData);
+//    }
+
 
     public int getClientOrder() {
         return ClientOrder;
@@ -241,20 +256,7 @@ public class DBOrderEntity implements IFMapping {
         return strategy;
     }
 
-    public static void main(String[] args) {
-        DBOrderEntity dbOrderEntity = new DBOrderEntity();
 
-        Map<String, Integer> testData = new HashMap();
-        testData.put("ClientOrder",0);
-        testData.put("ZIP",3);
-        testData.put("City",5);
-        testData.put("Gender",6);
-        testData.put("Street",7);
-        testData.put("HouseADD",9);
-        testData.put("Phone",10);
-        testData.put("POI",11);
-        dbOrderEntity.getConfigHeader(testData);
-    }
 
     @Override
     public String[] getConfigHeader(Map<String,Integer> columnConfig) {
