@@ -1,6 +1,6 @@
 package com.mexxon.process;
 
-import com.mexxon.database.DAO.DBOrderDao;
+import com.mexxon.database.dao.DBOrderDao;
 import com.mexxon.database.entity.DBOrderEntity;
 import com.mexxon.scheduler.JobExecution;
 import com.mexxon.windows.model.DBJobConfigEntity;

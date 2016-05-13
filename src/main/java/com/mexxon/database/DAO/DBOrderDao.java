@@ -1,4 +1,5 @@
-package com.mexxon.database.DAO;
+package com.mexxon.database.dao;
+
 import com.mexxon.database.entity.DBOrderEntity;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -7,7 +8,6 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import java.util.ArrayList;
-
 
 /**
  * @author: Aaron Kutekidila
@@ -34,26 +34,24 @@ public class DBOrderDao {
 
     public static void main(String[] args) {
         DBOrderEntity dbOrderEntity1 = new DBOrderEntity(
-                (int)(System.currentTimeMillis()),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
+                (int) System.currentTimeMillis(),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
                 "adf","ss","fff", "adf","fff","ss", "adf","sss","fff");
         DBOrderEntity dbOrderEntity2 = new DBOrderEntity(
-                (int)( (System.currentTimeMillis()+10)),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
+                (int) (System.currentTimeMillis()+10),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
                 "adf","ss","fff", "adf","fff","ss", "adf","sss","fff");
 
         ArrayList<Object> dataList = new ArrayList<>();
-
         dataList.add(dbOrderEntity1);
         dataList.add(dbOrderEntity2);
         DBOrderDao pm = new DBOrderDao();
-        //pm.writeItemsToDB(dataList);
 
-        ArrayList<DBOrderEntity> dataList2 = new ArrayList<>();
-        dataList2 = pm.readItemsFromDB();
+       //pm.writeItemsToDB(dataList);
 
-        for (Object date: dataList) {
-            System.out.println(((DBOrderEntity) date).getClientOrder());
+        ArrayList<DBOrderEntity> dataList2 = pm.readItemsFromDB();
+        for (int i = 0; i <dataList.size() ; i++) {
+            System.out.printf(dataList2.get(i).getClientAccountID());
         }
-        //System.out.println(pm.readItemsFromDB());
+
         /*EntityManager em = pm.getEntityManager();
         em.getTransaction().begin();
 
@@ -91,10 +89,10 @@ public class DBOrderDao {
 
         EntityManager em = getEntityManager();
         em.getTransaction().begin();
-        dataList.addAll(em.createQuery("from DBOrderEntity").getResultList());
+        dataList = (ArrayList<DBOrderEntity>) em.createQuery("from DBOrderEntity").getResultList();
+       //dataList = (ArrayList<DBOrderEntity>) em.createNativeQuery("select * from order_table").getResultList();
         em.getTransaction().commit();
         em.close();
-        close();
         return dataList;
     }
 

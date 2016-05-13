@@ -7,7 +7,7 @@
     <groupId>com.mexxon.arrival-novem</groupId>
     <artifactId>arrival-novem</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
 
     <modules>
     </modules>
@@ -27,8 +27,9 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
 
-        <maven.compiler.plugin>3.3</maven.compiler.plugin>
-        <maven.assembly.plugin>2.5.4</maven.assembly.plugin>
+        <maven.compiler.plugin>3.5.1</maven.compiler.plugin>
+        <maven.assembly.plugin>2.6</maven.assembly.plugin>
+        <version.surefire.plugin>2.12.4</version.surefire.plugin>
     </properties>
 
     <!--dependencyManagement-->
@@ -83,6 +84,18 @@
             </dependency>
 
             <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.7.21</version>
+            </dependency>
+
+            <!--dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-simple</artifactId>
+                <version>1.7.21</version>
+            </dependency-->
+
+            <dependency>
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-core</artifactId>
                 <version>${version.hibernate}</version>
@@ -116,28 +129,12 @@
     <!--/dependencyManagement-->
 
     <build>
+        <!--finalName>arrival-novem</finalName-->
         <pluginManagement>
             <plugins>
-                <!-- Plugin to make  jar file with dependencies -->
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <version>${maven.assembly.plugin}</version>
-                    <configuration>
-                        <descriptorRefs>
-                            <descriptorRef>jar-with-dependencies</descriptorRef>
-                        </descriptorRefs>
-                        <archive>
-                            <manifest>
-                                <mainClass>com.mexxon.ImportExportMain</mainClass>
-                            </manifest>
-                        </archive>
-                    </configuration>
-                </plugin>
-
                 <!--Plugin to compile java in class file-->
                 <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
+                    <!--groupId>org.apache.maven.plugins</groupId-->
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>${maven.compiler.plugin}</version>
                     <configuration>
@@ -145,8 +142,68 @@
                         <target>${maven.compiler.target}</target>
                     </configuration>
                 </plugin>
+
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${version.surefire.plugin}</version>
+                    <dependencies>
+                        <dependency>
+                            <groupId>org.apache.maven.surefire</groupId>
+                            <artifactId>surefire-junit47</artifactId>
+                            <version>${version.surefire.plugin}</version>
+                        </dependency>
+                    </dependencies>
+                    <configuration>
+                        <skip>false</skip>
+                    </configuration>
+                </plugin>
+
+                <!-- Plugin to make  jar file with dependencies -->
+                <plugin>
+                    <!--groupId>org.apache.maven.plugins</groupId-->
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>${maven.assembly.plugin}</version>
+
+                    <configuration>
+                        <!-- get all project dependencies -->
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <!-- MainClass in mainfest make a executable jar -->
+                        <archive>
+                            <manifest>
+                                <mainClass>com.mexxon.ImportExportMain</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
+
+                    <executions>
+                        <execution>
+                            <id>make-assembly</id>
+                            <!-- bind to the packaging phase-->
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
             </plugins>
         </pluginManagement>
     </build>
+
+    <!--Deploy to the Localhost-->
+    <distributionManagement>
+        <repository>
+            <id>archiva.internal</id>
+            <name>Internal Release Repository</name>
+            <url>dav:http://192.168.1.7:8081/archiva/repository/internal</url>
+        </repository>
+        <snapshotRepository>
+            <id>archiva.snapshots</id>
+            <name>Internal Snapshot Repository</name>
+            <url>dav:http://192.168.1.7:8081/archiva/repository/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
