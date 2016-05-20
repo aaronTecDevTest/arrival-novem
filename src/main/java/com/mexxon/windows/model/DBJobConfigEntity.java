@@ -1,11 +1,13 @@
 package com.mexxon.windows.model;
 
+import javafx.beans.property.LongProperty;
 import javafx.beans.property.SimpleLongProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.ArrayList;
+import javax.persistence.*;
 
 /**
  * @author: Aaron Kutekidila
@@ -16,39 +18,66 @@ import java.util.ArrayList;
  */
 
 /**
+ *
  * ClassModel for Config and Process Status
  ***********************************************************************************************************************
  *
- *
  */
 
+
+@Entity
+@Table(name = "job_configuration_new", schema = "importexport_config")
 public class DBJobConfigEntity {
     private static final Logger log = LogManager.getLogger(DBJobConfigEntity.class);
 
-    private SimpleLongProperty jobID;
-    private SimpleStringProperty jobTyp;
-    private SimpleStringProperty jobDescription;
-    private SimpleStringProperty table;
-    private SimpleStringProperty schema;
-    private SimpleStringProperty startTime;
-    private SimpleStringProperty endTime;
-    private SimpleStringProperty scheduler;
-    private SimpleStringProperty interval;
-    private SimpleStringProperty fileSource;
-    private SimpleStringProperty fileExtension;
-    private SimpleStringProperty separator;
-    private SimpleStringProperty encoding;
-    private SimpleStringProperty email;
-    private SimpleStringProperty hasHeader;
-    private SimpleStringProperty type;
-    private SimpleStringProperty partner;
-    private SimpleStringProperty created;
-    private SimpleStringProperty lastModified;
-    private SimpleStringProperty isDeleted;
-    private SimpleStringProperty userName;
-    private SimpleLongProperty status;
-
-    private ArrayList <DBColumnConfigEntity> columnConfigEntities;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column (name = "jobID")
+    private final LongProperty jobID;
+    @Column(name = "jobTyp")
+    private final StringProperty jobTyp;
+    @Column(name = "jobDescription")
+    private final StringProperty jobDescription;
+    @Column(name = "table")
+    private final StringProperty table;
+    @Column(name = "schema")
+    private final StringProperty schema;
+    @Column(name = "startTime")
+    private final StringProperty startTime;
+    @Column(name = "endTime")
+    private final StringProperty endTime;
+    @Column(name = "Scheduler")
+    private final StringProperty scheduler;
+    @Column(name = "interval")
+    private final StringProperty interval;
+    @Column(name = "filePath")
+    private final StringProperty filePath;
+    @Column(name = "fileExtension")
+    private final StringProperty fileExtension;
+    @Column(name = "separator")
+    private final StringProperty separator;
+    @Column(name = "encoding")
+    private final StringProperty encoding;
+    @Column(name = "email")
+    private final StringProperty email;
+    @Column(name = "hasHeader")
+    private final StringProperty hasHeader;
+    @Column(name = "type")
+    private final StringProperty type;
+    @Column(name = "partner")
+    private final StringProperty partner;
+    @Column(name = "created")
+    private final StringProperty created;
+    @Column(name = "lastModified")
+    private final StringProperty lastModified;
+    @Column(name = "deleted")
+    private final StringProperty isDeleted;
+    @Column(name = "userName")
+    private final StringProperty userName;
+    @Column(name = "status")
+    private final LongProperty status;
+//
+//    private final ArrayList <DBColumnConfigEntity> columnConfigEntities;
 
     public DBJobConfigEntity() {
         this.jobID = new SimpleLongProperty();
@@ -61,7 +90,7 @@ public class DBJobConfigEntity {
         this.scheduler = new SimpleStringProperty();
         this.interval = new SimpleStringProperty();
         this.separator = new SimpleStringProperty();
-        this.fileSource = new SimpleStringProperty();
+        this.filePath = new SimpleStringProperty();
         this.fileExtension = new SimpleStringProperty();
         this.encoding = new SimpleStringProperty();
         this.email = new SimpleStringProperty();
@@ -76,7 +105,7 @@ public class DBJobConfigEntity {
     }
 
     public DBJobConfigEntity(long jobID, String jobTyp, String jobDescription, String table, String schema,
-                             String startTime, String endTime, String scheduler, String interval,String fileSource,String fileExtension,
+                             String startTime, String endTime, String scheduler, String interval, String filePath, String fileExtension,
                              String separator, String encoding, String email, String hasHeader, String type,
                              String partner, String created, String lastModified, String isDeleted, String userName, long status) {
 
@@ -90,7 +119,7 @@ public class DBJobConfigEntity {
         this.scheduler = new SimpleStringProperty(scheduler);
         this.interval = new SimpleStringProperty(interval);
         this.separator = new SimpleStringProperty(separator);
-        this.fileSource = new SimpleStringProperty(fileSource);
+        this.filePath = new SimpleStringProperty(filePath);
         this.fileExtension = new SimpleStringProperty(fileExtension);
         this.encoding = new SimpleStringProperty(encoding);
         this.email = new SimpleStringProperty(email);
@@ -112,7 +141,7 @@ public class DBJobConfigEntity {
         this.jobID.set(jobID);
     }
 
-    public SimpleLongProperty jobIDProperty() {
+    public LongProperty jobIDProperty() {
         return jobID;
     }
 
@@ -124,7 +153,7 @@ public class DBJobConfigEntity {
         this.jobTyp.set(jobTyp);
     }
 
-    public SimpleStringProperty jobTypProperty() {
+    public StringProperty jobTypProperty() {
         return jobTyp;
     }
 
@@ -136,7 +165,7 @@ public class DBJobConfigEntity {
         this.jobDescription.set(jobDescription);
     }
 
-    public SimpleStringProperty jobDescriptionProperty() {
+    public StringProperty jobDescriptionProperty() {
         return jobDescription;
     }
 
@@ -148,7 +177,7 @@ public class DBJobConfigEntity {
         this.table.set(table);
     }
 
-    public SimpleStringProperty tableProperty() {
+    public StringProperty tableProperty() {
         return table;
     }
 
@@ -160,7 +189,7 @@ public class DBJobConfigEntity {
         this.schema.set(schema);
     }
 
-    public SimpleStringProperty schemaProperty() {
+    public StringProperty schemaProperty() {
         return schema;
     }
 
@@ -172,7 +201,7 @@ public class DBJobConfigEntity {
         this.startTime.set(startTime);
     }
 
-    public SimpleStringProperty startTimeProperty() {
+    public StringProperty startTimeProperty() {
         return startTime;
     }
 
@@ -184,7 +213,7 @@ public class DBJobConfigEntity {
         this.endTime.set(endTime);
     }
 
-    public SimpleStringProperty endTimeProperty() {
+    public StringProperty endTimeProperty() {
         return endTime;
     }
 
@@ -196,7 +225,7 @@ public class DBJobConfigEntity {
         this.scheduler.set(scheduler);
     }
 
-    public SimpleStringProperty schedulerProperty() {
+    public StringProperty schedulerProperty() {
         return scheduler;
     }
 
@@ -208,20 +237,20 @@ public class DBJobConfigEntity {
         this.interval.set(interval);
     }
 
-    public SimpleStringProperty intervalProperty() {
+    public StringProperty intervalProperty() {
         return interval;
     }
 
-    public String getFileSource() {
-        return fileSource.get();
+    public String getFilePath() {
+        return filePath.get();
     }
 
-    public SimpleStringProperty fileSourceProperty() {
-        return fileSource;
+    public void setFilePath(String filePath) {
+        this.filePath.set(filePath);
     }
 
-    public void setFileSource(String fileSource) {
-        this.fileSource.set(fileSource);
+    public StringProperty filePathProperty() {
+        return filePath;
     }
 
     public String getFileExtension() {
@@ -232,7 +261,7 @@ public class DBJobConfigEntity {
         this.fileExtension.set(fileExtension);
     }
 
-    public SimpleStringProperty fileExtensionProperty() {
+    public StringProperty fileExtensionProperty() {
         return fileExtension;
     }
 
@@ -244,7 +273,7 @@ public class DBJobConfigEntity {
         this.separator.set(separator);
     }
 
-    public SimpleStringProperty separatorProperty() {
+    public StringProperty separatorProperty() {
         return separator;
     }
 
@@ -256,7 +285,7 @@ public class DBJobConfigEntity {
         this.encoding.set(encoding);
     }
 
-    public SimpleStringProperty encodingProperty() {
+    public StringProperty encodingProperty() {
         return encoding;
     }
 
@@ -268,7 +297,7 @@ public class DBJobConfigEntity {
         this.email.set(email);
     }
 
-    public SimpleStringProperty emailProperty() {
+    public StringProperty emailProperty() {
         return email;
     }
 
@@ -280,7 +309,7 @@ public class DBJobConfigEntity {
         this.hasHeader.set(hasHeader);
     }
 
-    public SimpleStringProperty hasHeaderProperty() {
+    public StringProperty hasHeaderProperty() {
         return hasHeader;
     }
 
@@ -292,7 +321,7 @@ public class DBJobConfigEntity {
         this.type.set(type);
     }
 
-    public SimpleStringProperty typeProperty() {
+    public StringProperty typeProperty() {
         return type;
     }
 
@@ -304,7 +333,7 @@ public class DBJobConfigEntity {
         this.partner.set(partner);
     }
 
-    public SimpleStringProperty partnerProperty() {
+    public StringProperty partnerProperty() {
         return partner;
     }
 
@@ -316,7 +345,7 @@ public class DBJobConfigEntity {
         this.created.set(created);
     }
 
-    public SimpleStringProperty createdProperty() {
+    public StringProperty createdProperty() {
         return created;
     }
 
@@ -328,7 +357,7 @@ public class DBJobConfigEntity {
         this.lastModified.set(lastModified);
     }
 
-    public SimpleStringProperty lastModifiedProperty() {
+    public StringProperty lastModifiedProperty() {
         return lastModified;
     }
 
@@ -340,7 +369,7 @@ public class DBJobConfigEntity {
         this.isDeleted.set(isDeleted);
     }
 
-    public SimpleStringProperty isDeletedProperty() {
+    public StringProperty isDeletedProperty() {
         return isDeleted;
     }
 
@@ -352,7 +381,7 @@ public class DBJobConfigEntity {
         this.userName.set(userName);
     }
 
-    public SimpleStringProperty userNameProperty() {
+    public StringProperty userNameProperty() {
         return userName;
     }
 
@@ -364,43 +393,7 @@ public class DBJobConfigEntity {
         this.status.set(status);
     }
 
-    public SimpleLongProperty statusProperty() {
+    public LongProperty statusProperty() {
         return status;
-    }
-
-    public ArrayList<DBColumnConfigEntity> getColumnConfigEntities() {
-        return columnConfigEntities;
-    }
-
-    public void setColumnConfigEntities(ArrayList<DBColumnConfigEntity> columnConfigEntities) {
-        this.columnConfigEntities = columnConfigEntities;
-    }
-
-    @Override
-    public String toString() {
-        return "DBJobConfigEntity{" +
-                "jobID=" + jobID +
-                ", jobTyp=" + jobTyp +
-                ", jobDescription=" + jobDescription +
-                ", table=" + table +
-                ", schema=" + schema +
-                ", startTime=" + startTime +
-                ", endTime=" + endTime +
-                ", scheduler=" + scheduler +
-                ", interval=" + interval +
-                ", fileSource=" + fileSource +
-                ", fileExtension=" + fileExtension +
-                ", separator=" + separator +
-                ", encoding=" + encoding +
-                ", email=" + email +
-                ", hasHeader=" + hasHeader +
-                ", type=" + type +
-                ", partner=" + partner +
-                ", created=" + created +
-                ", lastModified=" + lastModified +
-                ", isDeleted=" + isDeleted +
-                ", userName=" + userName +
-                ", status=" + status +
-                '}';
     }
 }

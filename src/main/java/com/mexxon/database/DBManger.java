@@ -87,7 +87,7 @@ public class DBManger {
                         +"'" + data.getHasHeader() +"',"
                         +"'" + data.getType() +"',"
                         +"'" + data.getPartner() +"',"
-                        +"'" + data.getCreated() +"',"
+                      //  +"'" + data.getCreatedDate() +"',"
                         +"'" + data.getLastModified() +"',"
                         +"'" + data.getIsDeleted() +"',"
                         +"'" + data.getUserName() +"',"
@@ -133,7 +133,7 @@ public class DBManger {
                 temp.setEndTime(resultSet.getDate(7).toString() +" "+ resultSet.getTime(7).toString());
                 temp.setScheduler(resultSet.getString(8));
                 temp.setInterval(resultSet.getString(9));
-                temp.setFileSource(resultSet.getString(10));
+                temp.setFilePath(resultSet.getString(10));
                 temp.setFileExtension(resultSet.getString(11));
                 temp.setSeparator(resultSet.getString(12));
                 temp.setEncoding(resultSet.getString(13));
@@ -141,7 +141,7 @@ public class DBManger {
                 temp.setHasHeader(resultSet.getString(15));
                 temp.setType(resultSet.getString(16));
                 temp.setPartner(resultSet.getString(17));
-                temp.setCreated(resultSet.getDate(18).toString() +" "+ resultSet.getTime(18).toString());
+             //   temp.setCreatedDate(resultSet.getDate(18).toString() +" "+ resultSet.getTime(18).toString());
                 temp.setLastModified(resultSet.getDate(19).toString() +" "+ resultSet.getTime(19).toString());
                 temp.setIsDeleted(resultSet.getString(20));
                 temp.setUserName(resultSet.getString(21));

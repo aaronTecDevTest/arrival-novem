@@ -1,10 +1,9 @@
 package com.mexxon.windows.model;
 
-import javafx.beans.property.SimpleLongProperty;
-import javafx.beans.property.SimpleStringProperty;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 
 /**
@@ -15,30 +14,30 @@ import java.util.ArrayList;
  * Package: com.mexxon.model
  */
 
+@Entity
+@Table(name = "column_configuration", schema = "importexport_config")
 public class DBColumnConfigEntity {
     private static final Logger log = LogManager.getLogger(DBColumnConfigEntity.class);
 
-    private SimpleLongProperty columnConfigID;
-    private SimpleLongProperty jobID;
-    private SimpleStringProperty key;
-    private SimpleStringProperty column;
-    private SimpleStringProperty orgColumn;
-    private SimpleStringProperty length;
-    private SimpleStringProperty created;
-    private SimpleStringProperty lastModified;
-    private SimpleStringProperty userName;
-    private SimpleStringProperty isDeleted;
-    private SimpleStringProperty status;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long columnConfigID;
+    private Long jobID;
+    private Long key;
+    private String column;
+    private String orgColumn;
+    private String length;
+    private String created;
+    private String lastModified;
+    private String userName;
+    private String isDeleted;
+    private String status;
 
     private ArrayList<DBTransformationEntity> transformationEntities;
 
-    public DBColumnConfigEntity() {
-    }
-
-    public DBColumnConfigEntity(SimpleLongProperty columnConfigID, SimpleLongProperty jobID, SimpleStringProperty key,
-                                SimpleStringProperty column, SimpleStringProperty orgColumn, SimpleStringProperty length,
-                                SimpleStringProperty created, SimpleStringProperty lastModified, SimpleStringProperty userName,
-                                SimpleStringProperty isDeleted, SimpleStringProperty status) {
+    public DBColumnConfigEntity(Long columnConfigID, Long jobID, Long key, String column, String orgColumn, String length,
+                                String created, String lastModified, String userName, String isDeleted, String status,
+                                ArrayList<DBTransformationEntity> transformationEntities) {
         this.columnConfigID = columnConfigID;
         this.jobID = jobID;
         this.key = key;
@@ -50,138 +49,95 @@ public class DBColumnConfigEntity {
         this.userName = userName;
         this.isDeleted = isDeleted;
         this.status = status;
+        this.transformationEntities = transformationEntities;
     }
 
-    public long getColumnConfigID() {
-        return columnConfigID.get();
-    }
-
-    public void setColumnConfigID(long columnConfigID) {
-        this.columnConfigID.set(columnConfigID);
-    }
-
-    public SimpleLongProperty columnConfigIDProperty() {
+    public Long getColumnConfigID() {
         return columnConfigID;
     }
 
-    public long getJobID() {
-        return jobID.get();
+    public void setColumnConfigID(Long columnConfigID) {
+        this.columnConfigID = columnConfigID;
     }
 
-    public void setJobID(long jobID) {
-        this.jobID.set(jobID);
-    }
-
-    public SimpleLongProperty jobIDProperty() {
+    public Long getJobID() {
         return jobID;
     }
 
-    public String getKey() {
-        return key.get();
+    public void setJobID(Long jobID) {
+        this.jobID = jobID;
     }
 
-    public void setKey(String key) {
-        this.key.set(key);
-    }
-
-    public SimpleStringProperty keyProperty() {
+    public Long getKey() {
         return key;
     }
 
+    public void setKey(Long key) {
+        this.key = key;
+    }
+
     public String getColumn() {
-        return column.get();
-    }
-
-    public void setColumn(String column) {
-        this.column.set(column);
-    }
-
-    public SimpleStringProperty columnProperty() {
         return column;
     }
 
+    public void setColumn(String column) {
+        this.column = column;
+    }
+
     public String getOrgColumn() {
-        return orgColumn.get();
-    }
-
-    public void setOrgColumn(String orgColumn) {
-        this.orgColumn.set(orgColumn);
-    }
-
-    public SimpleStringProperty orgColumnProperty() {
         return orgColumn;
     }
 
+    public void setOrgColumn(String orgColumn) {
+        this.orgColumn = orgColumn;
+    }
+
     public String getLength() {
-        return length.get();
-    }
-
-    public void setLength(String length) {
-        this.length.set(length);
-    }
-
-    public SimpleStringProperty lengthProperty() {
         return length;
     }
 
+    public void setLength(String length) {
+        this.length = length;
+    }
+
     public String getCreated() {
-        return created.get();
-    }
-
-    public void setCreated(String created) {
-        this.created.set(created);
-    }
-
-    public SimpleStringProperty createdProperty() {
         return created;
     }
 
+    public void setCreated(String created) {
+        this.created = created;
+    }
+
     public String getLastModified() {
-        return lastModified.get();
-    }
-
-    public void setLastModified(String lastModified) {
-        this.lastModified.set(lastModified);
-    }
-
-    public SimpleStringProperty lastModifiedProperty() {
         return lastModified;
     }
 
+    public void setLastModified(String lastModified) {
+        this.lastModified = lastModified;
+    }
+
     public String getUserName() {
-        return userName.get();
-    }
-
-    public void setUserName(String userName) {
-        this.userName.set(userName);
-    }
-
-    public SimpleStringProperty userNameProperty() {
         return userName;
     }
 
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
     public String getIsDeleted() {
-        return isDeleted.get();
-    }
-
-    public void setIsDeleted(String isDeleted) {
-        this.isDeleted.set(isDeleted);
-    }
-
-    public SimpleStringProperty isDeletedProperty() {
         return isDeleted;
     }
 
+    public void setIsDeleted(String isDeleted) {
+        this.isDeleted = isDeleted;
+    }
+
     public String getStatus() {
-        return status.get();
+        return status;
     }
 
     public void setStatus(String status) {
-        this.status.set(status);
-    }
-
-    public SimpleStringProperty statusProperty() {
-        return status;
+        this.status = status;
     }
 
     public ArrayList<DBTransformationEntity> getTransformationEntities() {
@@ -198,14 +154,15 @@ public class DBColumnConfigEntity {
                 "columnConfigID=" + columnConfigID +
                 ", jobID=" + jobID +
                 ", key=" + key +
-                ", column=" + column +
-                ", orgColumn=" + orgColumn +
-                ", length=" + length +
-                ", created=" + created +
-                ", lastModified=" + lastModified +
-                ", userName=" + userName +
-                ", isDeleted=" + isDeleted +
-                ", status=" + status +
+                ", column='" + column + '\'' +
+                ", orgColumn='" + orgColumn + '\'' +
+                ", length='" + length + '\'' +
+                ", created='" + created + '\'' +
+                ", lastModified='" + lastModified + '\'' +
+                ", userName='" + userName + '\'' +
+                ", isDeleted='" + isDeleted + '\'' +
+                ", status='" + status + '\'' +
+                ", transformationEntities=" + transformationEntities +
                 '}';
     }
 }

@@ -11,6 +11,7 @@ package com.mexxon.windows.controller;
 import com.mexxon.ImportExportMain;
 import com.mexxon.utilities.Authentication;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -22,6 +23,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -57,6 +60,7 @@ public class FXMLArrivalLogInController implements Initializable {
      */
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        //addKeyPressedLister();
         checkAuthentication();
     }
 
@@ -65,17 +69,19 @@ public class FXMLArrivalLogInController implements Initializable {
         login(actionEvent);
     }
 
-  /* @FXML
+
+    //Todo: in der main app integrieren
+   @FXML
     public void enterPressed(KeyEvent keyEvent){
         login.setOnKeyPressed(new EventHandler<KeyEvent>() {
             @Override
             public void handle(KeyEvent event) {
-                if(event.getCode() == KeyCode.ENTER) {
-                    login(new ActionEvent());
+                if (event.getCode() == KeyCode.ENTER) {
+                    btnLogIn.fire();
                 }
             }
         });
-    }*/
+    }
 
     private void showMainView(ActionEvent actionEvent) {
         try {
@@ -83,7 +89,7 @@ public class FXMLArrivalLogInController implements Initializable {
             FXMLLoader loader = new FXMLLoader(url, ImportExportMain.BUNDLE_MAIN);
 
             Parent root = loader.load();
-            Scene scene = new Scene(root,1500, 746);
+            Scene scene = new Scene(root, 1500, 746);
             Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
 
             scene.getStylesheets().add("/css/arrivalMain.css");
@@ -102,23 +108,23 @@ public class FXMLArrivalLogInController implements Initializable {
         }
     }
 
-    private void checkAuthentication(){
-        if(authentication.getLoginStatus()) {
+    private void checkAuthentication() {
+        if (authentication.getLoginStatus()) {
             txfUsername.setText(authentication.getUsername());
             pwfPassword.setText(authentication.getUserpassword());
             btnLogIn.setText("LogOut");
         }
     }
 
-    private void login(ActionEvent actionEvent){
+    private void login(ActionEvent actionEvent) {
         String loginTyp = btnLogIn.getText();
         if (loginTyp.equals("LogIn")) {
             String username = txfUsername.getText();
             String password = pwfPassword.getText();
 
-            if(username.isEmpty() && password.isEmpty()){
+            if (username.isEmpty() && password.isEmpty()) {
                 lblFailLogIn.setVisible(true);
-            }else {
+            } else {
                 authentication.login(username, password);
                 if (authentication.getLoginStatus()) {
                     showMainView(actionEvent);
@@ -130,7 +136,7 @@ public class FXMLArrivalLogInController implements Initializable {
 
         if (loginTyp.equals("LogOut")) {
             authentication.logout();
-            if(!authentication.getLoginStatus()){
+            if (!authentication.getLoginStatus()) {
                 txfUsername.setText("");
                 pwfPassword.setText("");
                 btnLogIn.setText("LogIn");

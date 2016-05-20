@@ -6,7 +6,6 @@ import com.mexxon.scheduler.JobManger;
 import com.mexxon.utilities.Authentication;
 import com.mexxon.utilities.WindowsDialogs;
 import com.mexxon.windows.model.DBJobConfigEntity;
-
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -21,7 +20,6 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -347,6 +345,7 @@ public class FXMLArrivalMainController implements Initializable {
         dataJobConfig = FXCollections.observableArrayList(temptDataList);
         tbvJobConfig.setItems(dataJobConfig);
     }
+
 
 
     private void addTableViewListener() {
