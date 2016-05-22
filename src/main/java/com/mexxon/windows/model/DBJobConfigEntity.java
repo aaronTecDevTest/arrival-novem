@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 
 /**
  * @author: Aaron Kutekidila
@@ -26,7 +27,8 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "job_configuration_new", schema = "importexport_config")
+@Table(name = "job_configuration_new", schema = "importexport")
+//@Access(value = AccessType.PROPERTY)
 public class DBJobConfigEntity {
     private static final Logger log = LogManager.getLogger(DBJobConfigEntity.class);
 
@@ -337,18 +339,6 @@ public class DBJobConfigEntity {
         return partner;
     }
 
-    public String getCreated() {
-        return created.get();
-    }
-
-    public void setCreated(String created) {
-        this.created.set(created);
-    }
-
-    public StringProperty createdProperty() {
-        return created;
-    }
-
     public String getLastModified() {
         return lastModified.get();
     }
@@ -395,5 +385,17 @@ public class DBJobConfigEntity {
 
     public LongProperty statusProperty() {
         return status;
+    }
+
+    public String getCreated() {
+        return created.get();
+    }
+
+    public StringProperty createdProperty() {
+        return created;
+    }
+
+    public void setCreated(String created) {
+        this.created.set(created);
     }
 }

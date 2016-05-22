@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 
 @Entity
-@Table(name = "column_configuration", schema = "importexport_config")
+@Table(name = "column_configuration", schema = "importexport")
 public class DBColumnConfigEntity {
     private static final Logger log = LogManager.getLogger(DBColumnConfigEntity.class);
 

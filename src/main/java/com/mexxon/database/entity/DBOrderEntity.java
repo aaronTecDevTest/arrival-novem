@@ -16,7 +16,7 @@ import java.util.Map;
  * @version: 1.0
  * Created: 27.05.2016.
  * @since: 1.0
- * Package:  com.mexxon.database.DAO
+ * Package:  com.mexxon.database.dao
  */
 
 /**

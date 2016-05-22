@@ -25,7 +25,7 @@ public class DBJobConfig {
 
 
     public DBJobConfig() {
-        emFactory = Persistence.createEntityManagerFactory("importexport_config");
+        emFactory = Persistence.createEntityManagerFactory("importexport");
     }
 
     public DBJobConfig(String persistenceUnitName) {

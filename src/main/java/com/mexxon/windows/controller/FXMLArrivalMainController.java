@@ -347,7 +347,6 @@ public class FXMLArrivalMainController implements Initializable {
     }
 
 
-
     private void addTableViewListener() {
         tbvJobConfig.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
             if (newSelection != null) {
