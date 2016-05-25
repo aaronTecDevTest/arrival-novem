@@ -1,14 +1,10 @@
 package com.mexxon.windows.model;
 
-import javafx.beans.property.LongProperty;
-import javafx.beans.property.SimpleLongProperty;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.beans.property.StringProperty;
+import javafx.beans.property.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.persistence.*;
-import java.text.SimpleDateFormat;
 
 /**
  * @author: Aaron Kutekidila
@@ -28,14 +24,15 @@ import java.text.SimpleDateFormat;
 
 @Entity
 @Table(name = "job_configuration_new", schema = "importexport")
-//@Access(value = AccessType.PROPERTY)
+@Access(value = AccessType.PROPERTY)
 public class DBJobConfigEntity {
     private static final Logger log = LogManager.getLogger(DBJobConfigEntity.class);
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column (name = "jobID")
-    private final LongProperty jobID;
+    private final IntegerProperty jobID;
+
     @Column(name = "jobTyp")
     private final StringProperty jobTyp;
     @Column(name = "jobDescription")
@@ -82,7 +79,7 @@ public class DBJobConfigEntity {
 //    private final ArrayList <DBColumnConfigEntity> columnConfigEntities;
 
     public DBJobConfigEntity() {
-        this.jobID = new SimpleLongProperty();
+        this.jobID = new SimpleIntegerProperty();
         this.jobTyp = new SimpleStringProperty();
         this.jobDescription = new SimpleStringProperty();
         this.table = new SimpleStringProperty();
@@ -106,12 +103,12 @@ public class DBJobConfigEntity {
         this.status = new SimpleLongProperty();
     }
 
-    public DBJobConfigEntity(long jobID, String jobTyp, String jobDescription, String table, String schema,
+    public DBJobConfigEntity(int jobID, String jobTyp, String jobDescription, String table, String schema,
                              String startTime, String endTime, String scheduler, String interval, String filePath, String fileExtension,
                              String separator, String encoding, String email, String hasHeader, String type,
                              String partner, String created, String lastModified, String isDeleted, String userName, long status) {
 
-        this.jobID = new SimpleLongProperty(jobID);
+        this.jobID = new SimpleIntegerProperty(jobID);
         this.jobTyp = new SimpleStringProperty(jobTyp);
         this.jobDescription = new SimpleStringProperty(jobDescription);
         this.table = new SimpleStringProperty(table);
@@ -135,18 +132,23 @@ public class DBJobConfigEntity {
         this.status = new SimpleLongProperty(status);
     }
 
+    @Id
+    @Access(value = AccessType.PROPERTY)
     public long getJobID() {
         return jobID.get();
     }
 
-    public void setJobID(long jobID) {
+    @Id
+    public void setJobID(int jobID) {
         this.jobID.set(jobID);
     }
 
-    public LongProperty jobIDProperty() {
+    public IntegerProperty jobIDProperty() {
         return jobID;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getJobTyp() {
         return jobTyp.get();
     }
@@ -159,6 +161,8 @@ public class DBJobConfigEntity {
         return jobTyp;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getJobDescription() {
         return jobDescription.get();
     }
@@ -171,6 +175,8 @@ public class DBJobConfigEntity {
         return jobDescription;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getTable() {
         return table.get();
     }
@@ -183,6 +189,8 @@ public class DBJobConfigEntity {
         return table;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getSchema() {
         return schema.get();
     }
@@ -195,6 +203,8 @@ public class DBJobConfigEntity {
         return schema;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getStartTime() {
         return startTime.get();
     }
@@ -207,6 +217,8 @@ public class DBJobConfigEntity {
         return startTime;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getEndTime() {
         return endTime.get();
     }
@@ -219,6 +231,8 @@ public class DBJobConfigEntity {
         return endTime;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getScheduler() {
         return scheduler.get();
     }
@@ -231,6 +245,8 @@ public class DBJobConfigEntity {
         return scheduler;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getInterval() {
         return interval.get();
     }
@@ -243,6 +259,7 @@ public class DBJobConfigEntity {
         return interval;
     }
 
+    @Access(value = AccessType.PROPERTY)
     public String getFilePath() {
         return filePath.get();
     }
@@ -255,6 +272,8 @@ public class DBJobConfigEntity {
         return filePath;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getFileExtension() {
         return fileExtension.get();
     }
@@ -267,6 +286,8 @@ public class DBJobConfigEntity {
         return fileExtension;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getSeparator() {
         return separator.get();
     }
@@ -278,6 +299,7 @@ public class DBJobConfigEntity {
     public StringProperty separatorProperty() {
         return separator;
     }
+
 
     public String getEncoding() {
         return encoding.get();
@@ -291,6 +313,8 @@ public class DBJobConfigEntity {
         return encoding;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getEmail() {
         return email.get();
     }
@@ -303,6 +327,8 @@ public class DBJobConfigEntity {
         return email;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getHasHeader() {
         return hasHeader.get();
     }
@@ -315,6 +341,8 @@ public class DBJobConfigEntity {
         return hasHeader;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getType() {
         return type.get();
     }
@@ -327,6 +355,8 @@ public class DBJobConfigEntity {
         return type;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getPartner() {
         return partner.get();
     }
@@ -339,6 +369,8 @@ public class DBJobConfigEntity {
         return partner;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getLastModified() {
         return lastModified.get();
     }
@@ -351,6 +383,9 @@ public class DBJobConfigEntity {
         return lastModified;
     }
 
+
+
+    @Access(value = AccessType.PROPERTY)
     public String getIsDeleted() {
         return isDeleted.get();
     }
@@ -363,6 +398,8 @@ public class DBJobConfigEntity {
         return isDeleted;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getUserName() {
         return userName.get();
     }
@@ -375,6 +412,8 @@ public class DBJobConfigEntity {
         return userName;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public long getStatus() {
         return status.get();
     }
@@ -387,15 +426,17 @@ public class DBJobConfigEntity {
         return status;
     }
 
+
+    @Access(value = AccessType.PROPERTY)
     public String getCreated() {
         return created.get();
     }
 
-    public StringProperty createdProperty() {
-        return created;
-    }
-
     public void setCreated(String created) {
         this.created.set(created);
+    }
+
+    public StringProperty createdProperty() {
+        return created;
     }
 }

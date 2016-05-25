@@ -59,11 +59,11 @@
             <property name="hibernate.hbm2ddl.auto" value="create"/>
             <!--property name="hibernate.search.index_uninverting_allowed" value="false"/-->
 
-            <!---Cash>
+            <!---Cash-->
             <property name="com.mexxon.windows.model.DBJobConfigEntity" value="read-write"/>
             <property name="com.mexxon.windows.model.DBColumnConfigEntity" value="read-write"/>
             <property name="com.mexxon.windows.model.DBTransformationEntity" value="read-write"/>
-            <property name="com.mexxon.windows.model.DBMexxonMappingEntity" value="read-write"/-->
+            <property name="com.mexxon.windows.model.DBMexxonMappingEntity" value="read-write"/>
 
             <!-- Configuring Connection Pool -->
             <property name="hibernate.c3p0.min_size" value="5"/>

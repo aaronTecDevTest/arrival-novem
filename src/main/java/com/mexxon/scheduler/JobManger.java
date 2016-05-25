@@ -78,7 +78,7 @@ public class JobManger {
     }
 
     public static void main(String[] args) {
-            DBJobConfigEntity confi = new DBJobConfigEntity((long) 3,
+            DBJobConfigEntity confi = new DBJobConfigEntity( 3,
                 "Beschreibung kklsdf",
                 "import",
                 "ttto",

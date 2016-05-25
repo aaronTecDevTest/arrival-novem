@@ -33,11 +33,11 @@ public class DBJobConfig {
     }
 
     public static void main(String[] args) {
-        DBJobConfigEntity dbJobConfig1 = new DBJobConfigEntity(
+        DBJobConfigEntity dbJobConfig1 = new DBJobConfigEntity((int)
                 System.currentTimeMillis(),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
                 "adf","ss","fff", "adf","fff","ss", "adf","sss","fff","dfsf","fsdf","sdfsf",(long) 20);
         DBJobConfigEntity dbJobConfig2 = new DBJobConfigEntity(
-                (System.currentTimeMillis()+10),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
+                (int) (System.currentTimeMillis()+10),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
                 "adf","ss","fff", "adf","fff","ss", "adf","sss","fff","sdf","sdfs","sfs",(long)20);
 
         ArrayList<Object> dataList = new ArrayList<>();

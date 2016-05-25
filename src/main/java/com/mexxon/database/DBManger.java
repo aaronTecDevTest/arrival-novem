@@ -124,7 +124,7 @@ public class DBManger {
             resultSet = readFromDB(connection, sql);
             while (resultSet.next()) {
                 DBJobConfigEntity temp = new DBJobConfigEntity();
-                temp.setJobID((long) resultSet.getInt(1));
+                temp.setJobID( resultSet.getInt(1));
                 temp.setJobTyp(resultSet.getString(2));
                 temp.setJobDescription(resultSet.getString(3));
                 temp.setTable(resultSet.getString(4));
@@ -141,7 +141,7 @@ public class DBManger {
                 temp.setHasHeader(resultSet.getString(15));
                 temp.setType(resultSet.getString(16));
                 temp.setPartner(resultSet.getString(17));
-             //   temp.setCreatedDate(resultSet.getDate(18).toString() +" "+ resultSet.getTime(18).toString());
+                temp.setCreated(resultSet.getDate(18).toString() +" "+ resultSet.getTime(18).toString());
                 temp.setLastModified(resultSet.getDate(19).toString() +" "+ resultSet.getTime(19).toString());
                 temp.setIsDeleted(resultSet.getString(20));
                 temp.setUserName(resultSet.getString(21));
