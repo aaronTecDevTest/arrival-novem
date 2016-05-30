@@ -23,7 +23,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = "job_configuration_new", schema = "importexport")
+@Table(name = "job_configuration", schema = "importexport_config")
 @Access(value = AccessType.PROPERTY)
 public class DBJobConfigEntity {
     private static final Logger log = LogManager.getLogger(DBJobConfigEntity.class);
@@ -384,7 +384,7 @@ public class DBJobConfigEntity {
     }
 
 
-
+/*
     @Access(value = AccessType.PROPERTY)
     public String getIsDeleted() {
         return isDeleted.get();
@@ -396,7 +396,7 @@ public class DBJobConfigEntity {
 
     public StringProperty isDeletedProperty() {
         return isDeleted;
-    }
+    }*/
 
 
     @Access(value = AccessType.PROPERTY)

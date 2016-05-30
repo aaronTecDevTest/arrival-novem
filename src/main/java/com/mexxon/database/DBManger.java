@@ -89,7 +89,7 @@ public class DBManger {
                         +"'" + data.getPartner() +"',"
                       //  +"'" + data.getCreatedDate() +"',"
                         +"'" + data.getLastModified() +"',"
-                        +"'" + data.getIsDeleted() +"',"
+                       // +"'" + data.getIsDeleted() +"',"
                         +"'" + data.getUserName() +"',"
                         +"'" + data.getStatus() +"'"
                         +");";
@@ -143,7 +143,7 @@ public class DBManger {
                 temp.setPartner(resultSet.getString(17));
                 temp.setCreated(resultSet.getDate(18).toString() +" "+ resultSet.getTime(18).toString());
                 temp.setLastModified(resultSet.getDate(19).toString() +" "+ resultSet.getTime(19).toString());
-                temp.setIsDeleted(resultSet.getString(20));
+             //   temp.setIsDeleted(resultSet.getString(20));
                 temp.setUserName(resultSet.getString(21));
                 temp.setStatus((long) resultSet.getInt(22));
                 jobConfigTables.add(temp);
