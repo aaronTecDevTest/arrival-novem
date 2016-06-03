@@ -6651,3 +6651,21 @@ com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'importexport_c
 2016-05-30 13:28:25,959 WARN  [main] spi.SqlExceptionHelper (SqlExceptionHelper.java:129) - SQL Error: 1146, SQLState: 42S02
 2016-05-30 13:28:25,959 ERROR [main] spi.SqlExceptionHelper (SqlExceptionHelper.java:131) - Table 'importexport_config.job_configuration' doesn't exist
 2016-05-30 13:28:25,965 DEBUG [main] spi.AbstractEntityManagerImpl (AbstractEntityManagerImpl.java:1494) - Mark transaction for rollback
+2016-05-31 11:20:23,384 INFO  [main] utilities.SystemPreferences (SystemPreferences.java:40) - class com.mexxon.utilities.SystemPreferences is loaded!!
+2016-05-31 11:20:23,393 INFO  [main] utilities.Authentication (Authentication.java:28) - class com.mexxon.utilities.Authentication is loaded!!
+2016-05-31 11:20:23,396 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:55) -  -------------------------Start Mexxon ImportExportTool------------------------ 
+2016-05-31 11:20:23,560 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:121) - Scheduler starting: DefaultQuartzScheduler
+2016-05-31 11:20:23,560 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:88) - Scheduler started: DefaultQuartzScheduler
+2016-05-31 11:20:23,566 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:74) - LogIn show up
+2016-05-31 11:20:32,146 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:65) - Successfully login to MySQLDB!
+2016-05-31 11:20:34,020 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:226) - LoadConfig Clicked: LoadConfig
+2016-05-31 11:20:34,029 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:46) - Successfully login to MySQLDB!
+2016-05-31 11:26:38,990 INFO  [JavaFX Application Thread] controller.FXMLArrivalMainController (FXMLArrivalMainController.java:218) - Exit Clicked: Exit
+2016-05-31 11:26:38,991 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-05-31 11:26:40,161 INFO  [JavaFX Application Thread] database.DBConnection (DBConnection.java:80) - Successfully logout from MySQLDB!
+2016-05-31 11:26:40,168 INFO  [main] view.ViewArrivalLogIn (ViewArrivalLogIn.java:76) - LogIn show down
+2016-05-31 11:26:40,169 INFO  [main] scheduler.JobManger (JobManger.java:278) - All triggers executed. Shutdown scheduler
+2016-05-31 11:26:40,170 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:80) - Scheduler put in standby mode: DefaultQuartzScheduler
+2016-05-31 11:26:40,170 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:104) - Scheduler shutting DefaultQuartzScheduler
+2016-05-31 11:26:40,171 INFO  [main] scheduler.SchedulerListener (SchedulerListener.java:96) - Scheduler shutdown: DefaultQuartzScheduler
+2016-05-31 11:26:40,171 INFO  [main] mexxon.ImportExportMain (ImportExportMain.java:67) -  --------------------------Stop Mexxon ImportExportTool------------------------- 
