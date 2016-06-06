@@ -99,7 +99,7 @@ public class JobManger {
                     "",
                     "",
                     "",
-                    (long)22);
+                    (long)22, columnConfigEntities);
 
             CSVTableToTable csvTableToTable = new CSVTableToTable();
             csvTableToTable.setDBJobConfigTable(confi);

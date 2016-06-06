@@ -6,6 +6,7 @@ import org.apache.logging.log4j.Logger;
 import java.util.ArrayList;
 
 /**
+ *
  * @author: Aaron Kutekidila
  * @version: 1.0
  * Created: 21.04.2016.
@@ -16,24 +17,20 @@ import java.util.ArrayList;
 public class TransformationRule {
     private static final Logger log = LogManager.getLogger(TransformationRule.class);
 
-
     public static String dateToString(String value, String rule){
         return null;
     }
-
 
     public static String stringToData(String value, String rule){
         return null;
     }
 
-
-    public static ArrayList<String> addresSplitter(String value, String rule){
+    public static String  addressCombine(ArrayList<String> values, String rule){
 
         return null;
     }
 
-
-    public static String  addressCombine(ArrayList<String> values, String rule){
+    public static ArrayList<String> addressSplitter(String value, String rule){
 
         return null;
     }

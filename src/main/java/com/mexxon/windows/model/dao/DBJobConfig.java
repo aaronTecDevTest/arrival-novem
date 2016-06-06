@@ -35,10 +35,10 @@ public class DBJobConfig {
     public static void main(String[] args) {
         DBJobConfigEntity dbJobConfig1 = new DBJobConfigEntity((int)
                 System.currentTimeMillis(),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
-                "adf","ss","fff", "adf","fff","ss", "adf","sss","fff","dfsf","fsdf","sdfsf",(long) 20);
+                "adf","ss","fff", "adf","fff","ss", "adf","sss","fff","dfsf","fsdf","sdfsf",(long) 20, columnConfigEntities);
         DBJobConfigEntity dbJobConfig2 = new DBJobConfigEntity(
                 (int) (System.currentTimeMillis()+10),"ddd","ddd","adf","fff","ddd", "adf","fff","sss",
-                "adf","ss","fff", "adf","fff","ss", "adf","sss","fff","sdf","sdfs","sfs",(long)20);
+                "adf","ss","fff", "adf","fff","ss", "adf","sss","fff","sdf","sdfs","sfs",(long)20, columnConfigEntities);
 
         ArrayList<Object> dataList = new ArrayList<>();
         dataList.add(dbJobConfig1);

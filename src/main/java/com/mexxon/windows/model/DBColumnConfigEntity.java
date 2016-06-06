@@ -4,7 +4,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 
 /**
  * @author: Aaron Kutekidila
@@ -33,11 +32,11 @@ public class DBColumnConfigEntity {
     private String isDeleted;
     private String status;
 
-    private ArrayList<DBTransformationEntity> transformationEntities;
+    private DBTransformationEntity transformationEntities;
 
     public DBColumnConfigEntity(Long columnConfigID, Long jobID, Long key, String column, String orgColumn, String length,
                                 String created, String lastModified, String userName, String isDeleted, String status,
-                                ArrayList<DBTransformationEntity> transformationEntities) {
+                                DBTransformationEntity transformationEntities) {
         this.columnConfigID = columnConfigID;
         this.jobID = jobID;
         this.key = key;
@@ -140,11 +139,11 @@ public class DBColumnConfigEntity {
         this.status = status;
     }
 
-    public ArrayList<DBTransformationEntity> getTransformationEntities() {
+    public DBTransformationEntity getTransformationEntities() {
         return transformationEntities;
     }
 
-    public void setTransformationEntities(ArrayList<DBTransformationEntity> transformationEntities) {
+    public void setTransformationEntities(DBTransformationEntity transformationEntities) {
         this.transformationEntities = transformationEntities;
     }
 

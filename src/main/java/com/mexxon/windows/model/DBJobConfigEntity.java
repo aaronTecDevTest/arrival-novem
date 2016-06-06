@@ -5,6 +5,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 
 /**
  * @author: Aaron Kutekidila
@@ -75,8 +76,8 @@ public class DBJobConfigEntity {
     private final StringProperty userName;
     @Column(name = "status")
     private final LongProperty status;
-//
-//    private final ArrayList <DBColumnConfigEntity> columnConfigEntities;
+
+    private final ArrayList<DBColumnConfigEntity> columnConfigEntities;
 
     public DBJobConfigEntity() {
         this.jobID = new SimpleIntegerProperty();
@@ -101,12 +102,13 @@ public class DBJobConfigEntity {
         this.isDeleted = new SimpleStringProperty();
         this.userName = new SimpleStringProperty();
         this.status = new SimpleLongProperty();
+        this.columnConfigEntities = new ArrayList<>();
     }
 
     public DBJobConfigEntity(int jobID, String jobTyp, String jobDescription, String table, String schema,
                              String startTime, String endTime, String scheduler, String interval, String filePath, String fileExtension,
                              String separator, String encoding, String email, String hasHeader, String type,
-                             String partner, String created, String lastModified, String isDeleted, String userName, long status) {
+                             String partner, String created, String lastModified, String isDeleted, String userName, long status, ArrayList<DBColumnConfigEntity> columnConfigEntities) {
 
         this.jobID = new SimpleIntegerProperty(jobID);
         this.jobTyp = new SimpleStringProperty(jobTyp);
@@ -130,6 +132,7 @@ public class DBJobConfigEntity {
         this.isDeleted = new SimpleStringProperty(isDeleted);
         this.userName = new SimpleStringProperty(userName);
         this.status = new SimpleLongProperty(status);
+        this.columnConfigEntities = columnConfigEntities;
     }
 
     @Id
@@ -383,8 +386,6 @@ public class DBJobConfigEntity {
         return lastModified;
     }
 
-
-/*
     @Access(value = AccessType.PROPERTY)
     public String getIsDeleted() {
         return isDeleted.get();
@@ -396,8 +397,7 @@ public class DBJobConfigEntity {
 
     public StringProperty isDeletedProperty() {
         return isDeleted;
-    }*/
-
+    }
 
     @Access(value = AccessType.PROPERTY)
     public String getUserName() {
@@ -438,5 +438,9 @@ public class DBJobConfigEntity {
 
     public StringProperty createdProperty() {
         return created;
+    }
+
+    public ArrayList<DBColumnConfigEntity> getColumnConfigEntities() {
+        return columnConfigEntities;
     }
 }
